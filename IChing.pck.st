@@ -1,14 +1,15 @@
-'From Cuis 6.0 [latest update: #5041] on 14 January 2022 at 1:14:43 pm'!
-'Description Book of Changes [I Ching] exploration mechanics'!
+'From Cuis 6.0 [latest update: #5041] on 14 January 2022 at 1:57:44 pm'!
+'Description Book of Changes [I Ching] exploration'!
 !provides: 'IChing' 1 4!
 !requires: 'Cuis-Base' 60 5041 nil!
+!requires: 'Graphics-Files-Additional' 1 24 nil!
 SystemOrganization addCategory: 'IChing'!
 
 
 !classDefinition: #HexaGram category: 'IChing'!
 Object subclass: #HexaGram
 	instanceVariableNames: 'upper lower'
-	classVariableNames: 'Names TrigramDoubleDict2KingWenIndex'
+	classVariableNames: 'Names PNGForms TrigramDoubleDict2KingWenIndex'
 	poolDictionaries: ''
 	category: 'IChing'!
 !classDefinition: 'HexaGram class' category: 'IChing'!
@@ -71,6 +72,11 @@ name
 	^ self nameFromBase
 	! !
 
+!HexaGram methodsFor: 'accessing' stamp: 'KenD 1/14/2022 13:56:42'!
+form
+
+	^ PNGForms at: self kingWenIndex ! !
+
 !HexaGram methodsFor: 'accessing' stamp: 'KenD 1/14/2022 12:38:23'!
 kingWenIndex
 
@@ -127,14 +133,15 @@ upper: topHexagram lower: bottomHexagram
 
 	^ self new :: upper: topHexagram lower: bottomHexagram! !
 
-!HexaGram class methodsFor: 'class initialization' stamp: 'KenD 1/14/2022 13:09:49'!
+!HexaGram class methodsFor: 'class initialization' stamp: 'KenD 1/14/2022 13:51:13'!
 initialize
 "
 	HexaGram initialize.
 "
 	self
 		initializeNames;
-		initializeKingWenLookup! !
+		initializeKingWenLookup;
+		initializePNGForms! !
 
 !HexaGram class methodsFor: 'class initialization' stamp: 'KenD 1/14/2022 13:08:12'!
 initializeKingWenLookup
@@ -327,6 +334,24 @@ initializeNames
 'BEFORE COMPLETION'
 )
 ! !
+
+!HexaGram class methodsFor: 'class initialization' stamp: 'KenD 1/14/2022 13:50:58'!
+initializePNGForms
+
+	| dirName |
+	dirName :=  ((self package) fullFileName upToLastPathSeparator), '/png/'.
+	PNGForms := Array new: 64.
+
+	1 to: 64 do: [ :idx |
+		PNGForms 
+			at: idx
+			put: (ImageReadWriter 
+				formFromFileNamed: 
+					dirName , 
+					'35px-Iching-hexagram-',
+					idx asString, 
+					'.png').
+	].! !
 
 !Rudiment methodsFor: 'accessing' stamp: 'KenD 1/13/2022 12:36:44'!
 number

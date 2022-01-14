@@ -1,2 +1,3 @@
 # IChing
-Operational Mechanics of the Book of Changes
+Operational Mechanics for the Book of Changes
+

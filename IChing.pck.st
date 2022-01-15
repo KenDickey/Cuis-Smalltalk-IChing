@@ -1,6 +1,6 @@
-'From Cuis 6.0 [latest update: #5041] on 15 January 2022 at 8:16:00 am'!
+'From Cuis 6.0 [latest update: #5041] on 15 January 2022 at 8:29:35 am'!
 'Description Book of Changes [I Ching] exploration'!
-!provides: 'IChing' 1 5!
+!provides: 'IChing' 1 6!
 !requires: 'Cuis-Base' 60 5041 nil!
 !requires: 'Graphics-Files-Additional' 1 24 nil!
 SystemOrganization addCategory: 'IChing'!
@@ -77,6 +77,11 @@ name
 form
 
 	^ PNGForms at: self kingWenIndex ! !
+
+!HexaGram methodsFor: 'accessing' stamp: 'KenD 1/15/2022 08:28:35'!
+icon
+
+	^ ImageMorph new image: (self form magnifyTo: 16@16)! !
 
 !HexaGram methodsFor: 'accessing' stamp: 'KenD 1/14/2022 12:38:23'!
 kingWenIndex
@@ -432,6 +437,26 @@ whole
 	
 	^ self new :: polarity: #whole! !
 
+!TriGram methodsFor: 'accessing' stamp: 'KenD 1/14/2022 12:40:17'!
+bottom
+
+	^ bottom ! !
+
+!TriGram methodsFor: 'accessing' stamp: 'KenD 1/14/2022 12:41:00'!
+lines
+
+	^ { top , middle , bottom }! !
+
+!TriGram methodsFor: 'accessing' stamp: 'KenD 1/14/2022 12:40:29'!
+middle
+
+	^ middle ! !
+
+!TriGram methodsFor: 'accessing' stamp: 'KenD 1/14/2022 12:41:13'!
+top
+
+	^ top ! !
+
 !TriGram methodsFor: 'private' stamp: 'KenD 1/14/2022 12:43:47'!
 midNameFromBroken
 
@@ -480,26 +505,6 @@ topNameFromWholeWhole
 	^ (top polarity = #whole)
 		ifTrue: [ #heaven ] 
 		ifFalse: [ #lake ]! !
-
-!TriGram methodsFor: 'accessing' stamp: 'KenD 1/14/2022 12:40:17'!
-bottom
-
-	^ bottom ! !
-
-!TriGram methodsFor: 'accessing' stamp: 'KenD 1/14/2022 12:41:00'!
-lines
-
-	^ { top , middle , bottom }! !
-
-!TriGram methodsFor: 'accessing' stamp: 'KenD 1/14/2022 12:40:29'!
-middle
-
-	^ middle ! !
-
-!TriGram methodsFor: 'accessing' stamp: 'KenD 1/14/2022 12:41:13'!
-top
-
-	^ top ! !
 
 !TriGram methodsFor: 'initialization' stamp: 'KenD 1/14/2022 12:42:29'!
 top: upperLine middle: middleLine bottom: lowerLine

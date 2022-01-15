@@ -1,6 +1,6 @@
-'From Cuis 6.0 [latest update: #5041] on 14 January 2022 at 1:57:44 pm'!
+'From Cuis 6.0 [latest update: #5041] on 15 January 2022 at 8:16:00 am'!
 'Description Book of Changes [I Ching] exploration'!
-!provides: 'IChing' 1 4!
+!provides: 'IChing' 1 5!
 !requires: 'Cuis-Base' 60 5041 nil!
 !requires: 'Graphics-Files-Additional' 1 24 nil!
 SystemOrganization addCategory: 'IChing'!
@@ -43,6 +43,7 @@ The third discernment is among compositions of preexisting categories.
 Coin Casting:
 
  (HexaGram fromArray: #( 8 9 6 7 8 8 )) hexagramForChange name.
+ Hexagram cast name.
 !
 
 !Rudiment commentStamp: '<historical>' prior: 0!
@@ -112,6 +113,28 @@ hexagramForChange
 	^ HexaGram 
 		upper: (self upper trigramForChange)
 		lower:  (self lower  trigramForChange)! !
+
+!HexaGram class methodsFor: 'instance creation' stamp: 'KenD 1/15/2022 08:15:36'!
+cast
+	"Emulate throwing coins and return new hexagram"
+
+	| newRand seed lineValues casting |
+	
+	[seed := (Time millisecondClockValue bitAnd: 16r3FFFFFFF). "bitXor: self hash."
+	 seed = 0] whileTrue: ["Try again if ever get a seed = 0"].
+
+	newRand := Random new seed: seed.
+	lineValues := Array new: 6.
+	casting := [ (newRand nextInteger: 2) + 1 ]. "2->yin;3->yang"
+	1 to: 6 do: [ :idx | | one two three |
+		one   := casting value.
+		two    := casting value.
+		three := casting value.
+		lineValues at: idx put: one + two + three.
+	].
+	^ self fromArray: lineValues
+
+! !
 
 !HexaGram class methodsFor: 'instance creation' stamp: 'KenD 1/14/2022 12:48:43'!
 fromArray: sixNumberArray

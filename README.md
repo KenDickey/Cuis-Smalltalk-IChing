@@ -12,6 +12,9 @@ There are many useful references on the Web:
 There is a great intro to usage at
   https://www.biroco.com/yijing/index.htm
 
-And an observation of haxagram structure
+Four translations are available at
+  http://www.russellcottrell.com/VirtualYarrowStalks/
+
+A very interesting observation of haxagram structure is at
   https://www.yijing.nl/structures/Gritter.html   
 

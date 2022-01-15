@@ -1,10 +1,21 @@
-'From Cuis 6.0 [latest update: #5041] on 15 January 2022 at 8:29:35 am'!
+'From Cuis 6.0 [latest update: #5041] on 15 January 2022 at 2:44:09 pm'!
 'Description Book of Changes [I Ching] exploration'!
-!provides: 'IChing' 1 6!
+!provides: 'IChing' 1 9!
 !requires: 'Cuis-Base' 60 5041 nil!
+!requires: 'UI-Panel' 1 19 nil!
 !requires: 'Graphics-Files-Additional' 1 24 nil!
 SystemOrganization addCategory: 'IChing'!
 
+
+!classDefinition: #HexagramDisplayPanel category: 'IChing'!
+Panel subclass: #HexagramDisplayPanel
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	category: 'IChing'!
+!classDefinition: 'HexagramDisplayPanel class' category: 'IChing'!
+HexagramDisplayPanel class
+	instanceVariableNames: ''!
 
 !classDefinition: #HexaGram category: 'IChing'!
 Object subclass: #HexaGram
@@ -36,6 +47,11 @@ Object subclass: #TriGram
 TriGram class
 	instanceVariableNames: ''!
 
+
+!HexagramDisplayPanel commentStamp: '<historical>' prior: 0!
+I display a hexagram, including its changes.
+
+(HexagramDisplayPanel forHexagram: (HexaGram cast)) openInWorld.!
 
 !HexaGram commentStamp: '<historical>' prior: 0!
 The third discernment is among compositions of preexisting categories.
@@ -73,12 +89,121 @@ name
 	^ self nameFromBase
 	! !
 
+!HexagramDisplayPanel methodsFor: 'GUI building' stamp: 'KenD 1/15/2022 14:43:42'!
+buildMorphicWindow
+	"Column of 4 rows: hexagram; changing lines; name; changed hexagram"
+
+	| hexagram topRow midRow changeHex lowerTitle lowerRow |
+	hexagram := self model.
+	self setLabel: hexagram name.
+	self titleMorph showButtonsNamed: #(close).
+	layoutMorph 
+		beColumn;
+		axisEdgeWeight: #center;
+		separation: 6.
+	topRow := self newRowFormAndTrigramNames: hexagram.
+	midRow := self changedLinesText.
+	changeHex := hexagram hexagramForChange.
+	lowerTitle := LabelMorph contents: 'Changes to ', changeHex name.
+	lowerRow := self newRowFormAndTrigramNames: changeHex.
+	layoutMorph 
+		addMorph: topRow 
+			layoutSpec: (LayoutSpec new :: offAxisEdgeWeight: #columnLeft);
+		addMorph: midRow
+			layoutSpec: (LayoutSpec new :: offAxisEdgeWeight: #columnLeft);
+		addMorph: lowerTitle 
+			layoutSpec: (LayoutSpec keepMorphExtent ::
+						offAxisEdgeWeight: #columnLeft);
+		addMorph: lowerRow
+			layoutSpec: (LayoutSpec new :: offAxisEdgeWeight: #columnLeft).
+	self morphExtent: self minimumExtent.! !
+
+!HexagramDisplayPanel methodsFor: 'GUI building' stamp: 'KenD 1/15/2022 14:38:26'!
+changedLinesText
+
+	"Convert string of lines into layout of labelMorphs"
+	| changes layout |
+	changes := self model changedLinesText lines.
+	layout := LayoutMorph newColumn :: axisEdgeWeight: #center.
+	changes do: [ :aString |
+		layout 
+			addMorph: (LabelMorph contents: aString) 
+			"layoutSpec: (LayoutSpec)."
+	].
+	^ layout! !
+
+!HexagramDisplayPanel methodsFor: 'GUI building' stamp: 'KenD 1/15/2022 14:13:35'!
+newRowFormAndTrigramNames: aHexagram
+
+	| rowLayout image colLayout |
+	rowLayout  := LayoutMorph newRow.
+	image := ImageMorph new :: image: (aHexagram form magnifyTo: 64@64).
+	rowLayout 
+		addMorph: image 
+		layoutSpec: (LayoutSpec keepMorphExtent) :: axisEdgeWeight: #rowLeft.
+	colLayout := LayoutMorph newColumn.
+	colLayout layoutSpec: 
+		(LayoutSpec proportionalWidth: 0.6 proportionalHeight: 0.8);
+		axisEdgeWeight: #center;
+		addMorph: (LabelMorph contents: aHexagram upper name) 
+			layoutSpec: (LayoutSpec new :: offAxisEdgeWeight: #columnLeft);
+		addMorph: (LabelMorph contents: aHexagram lower name) 
+			layoutSpec: (LayoutSpec new :: offAxisEdgeWeight: #columnLeft).
+	^ rowLayout addMorph: colLayout;
+		yourself
+! !
+
+!HexagramDisplayPanel class methodsFor: 'instance creation' stamp: 'KenD 1/15/2022 13:58:54'!
+forHexagram: aHexagram
+
+	^ self open: aHexagram ! !
+
+!HexagramDisplayPanel class methodsFor: 'new-morph participation' stamp: 'KenD 1/15/2022 14:39:28'!
+includeInNewMorphMenu
+	"Return true for all classes that can be instantiated from the menu"
+	^ false! !
+
+!HexaGram methodsFor: 'accessing' stamp: 'KenD 1/15/2022 13:54:33'!
+changedLinesText
+
+	"Answer string with changed line text"
+	| stringResult upperLines lowerLines |
+	stringResult := ''.
+	upperLines :=  upper lines.
+	lowerLines  :=  lower lines.
+	3 to: 1 by: -1 do: [ :idx | | upperLine |
+		upperLine := upperLines at: idx. "6 5 4"
+		(upperLine willChange)
+		ifTrue: [ | position |
+			position := idx + 3.
+			stringResult := 
+				stringResult,
+				upperLine number asString,
+				' in the ',
+				(#( '1st' '2nd' '3rd' '4th' '5th' 'top' ) at: position),
+				' place', 
+				String newLineString]
+	].
+	3 to: 1 by: -1 do: [ :place | | lowerLine |
+		lowerLine := lowerLines at: place. "3 2 1"
+		(lowerLine willChange) ifTrue: [ 
+			stringResult := 
+				stringResult,
+				lowerLine number asString,
+				' in the ',
+				(#( '1st' '2nd' '3rd' '4th' '5th' '6th' ) at: place),
+				' place', 
+				String newLineString
+		]
+	].
+	^ stringResult! !
+
 !HexaGram methodsFor: 'accessing' stamp: 'KenD 1/14/2022 13:56:42'!
 form
 
 	^ PNGForms at: self kingWenIndex ! !
 
-!HexaGram methodsFor: 'accessing' stamp: 'KenD 1/15/2022 08:28:35'!
+!HexaGram methodsFor: 'accessing' stamp: 'KenD 1/15/2022 11:50:10'!
 icon
 
 	^ ImageMorph new image: (self form magnifyTo: 16@16)! !
@@ -410,6 +535,12 @@ polarity: wholeOrBroken
 		ifFalse: [ wholeOrBroken signal: 'Must be #whole or #broken']
 		ifTrue: [ polarity := wholeOrBroken ].! !
 
+!Rudiment methodsFor: 'testing' stamp: 'KenD 1/15/2022 13:13:16'!
+willChange
+
+	"Answer true if old yin or old yang"
+	^ (number = 6) or: [number = 9]! !
+
 !Rudiment methodsFor: 'changing' stamp: 'KenD 1/14/2022 12:57:57'!
 lineForChange
 	"6 and 9 are changing lines" 
@@ -442,10 +573,10 @@ bottom
 
 	^ bottom ! !
 
-!TriGram methodsFor: 'accessing' stamp: 'KenD 1/14/2022 12:41:00'!
+!TriGram methodsFor: 'accessing' stamp: 'KenD 1/15/2022 13:33:18'!
 lines
 
-	^ { top , middle , bottom }! !
+	^ {  bottom.  middle. top. }! !
 
 !TriGram methodsFor: 'accessing' stamp: 'KenD 1/14/2022 12:40:29'!
 middle

@@ -15,6 +15,6 @@ There is a great intro to usage at
 Four translations are available at
   http://www.russellcottrell.com/VirtualYarrowStalks/
 
-A very interesting observation of haxagram structure is at
+A very interesting observation of hexagram structure is at
   https://www.yijing.nl/structures/Gritter.html   
 

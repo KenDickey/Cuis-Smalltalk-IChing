@@ -1,4 +1,4 @@
-# IChing
+# I Ching -- Book of Changes
 Operational Mechanics for the Book of Changes
 
 There is no interpretation here.

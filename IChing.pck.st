@@ -1,6 +1,6 @@
-'From Cuis 6.0 [latest update: #5041] on 15 January 2022 at 2:44:09 pm'!
+'From Cuis 6.0 [latest update: #5041] on 15 January 2022 at 6:18:09 pm'!
 'Description Book of Changes [I Ching] exploration'!
-!provides: 'IChing' 1 9!
+!provides: 'IChing' 1 10!
 !requires: 'Cuis-Base' 60 5041 nil!
 !requires: 'UI-Panel' 1 19 nil!
 !requires: 'Graphics-Files-Additional' 1 24 nil!
@@ -89,7 +89,7 @@ name
 	^ self nameFromBase
 	! !
 
-!HexagramDisplayPanel methodsFor: 'GUI building' stamp: 'KenD 1/15/2022 14:43:42'!
+!HexagramDisplayPanel methodsFor: 'GUI building' stamp: 'KenD 1/15/2022 18:10:01'!
 buildMorphicWindow
 	"Column of 4 rows: hexagram; changing lines; name; changed hexagram"
 
@@ -100,7 +100,7 @@ buildMorphicWindow
 	layoutMorph 
 		beColumn;
 		axisEdgeWeight: #center;
-		separation: 6.
+		separation: 12.
 	topRow := self newRowFormAndTrigramNames: hexagram.
 	midRow := self changedLinesText.
 	changeHex := hexagram hexagramForChange.
@@ -108,31 +108,34 @@ buildMorphicWindow
 	lowerRow := self newRowFormAndTrigramNames: changeHex.
 	layoutMorph 
 		addMorph: topRow 
-			layoutSpec: (LayoutSpec new :: offAxisEdgeWeight: #columnLeft);
+			layoutSpec: (LayoutSpec new :: offAxisEdgeWeight: #center);
 		addMorph: midRow
 			layoutSpec: (LayoutSpec new :: offAxisEdgeWeight: #columnLeft);
 		addMorph: lowerTitle 
-			layoutSpec: (LayoutSpec keepMorphExtent ::
+			layoutSpec: (LayoutSpec new ::
 						offAxisEdgeWeight: #columnLeft);
 		addMorph: lowerRow
-			layoutSpec: (LayoutSpec new :: offAxisEdgeWeight: #columnLeft).
+			layoutSpec: (LayoutSpec new :: offAxisEdgeWeight: #center).
 	self morphExtent: self minimumExtent.! !
 
-!HexagramDisplayPanel methodsFor: 'GUI building' stamp: 'KenD 1/15/2022 14:38:26'!
+!HexagramDisplayPanel methodsFor: 'GUI building' stamp: 'KenD 1/15/2022 17:54:53'!
 changedLinesText
 
 	"Convert string of lines into layout of labelMorphs"
 	| changes layout |
 	changes := self model changedLinesText lines.
-	layout := LayoutMorph newColumn :: axisEdgeWeight: #center.
+	layout := LayoutMorph newColumn ::
+		axisEdgeWeight: #center ; 
+		separation: 4.
 	changes do: [ :aString |
 		layout 
 			addMorph: (LabelMorph contents: aString) 
-			"layoutSpec: (LayoutSpec)."
+			layoutSpec: (LayoutSpec keepMorphExtent :: offAxisEdgeWeight: #columnLeft).
 	].
+	layout morphExtent: layoutMorph minimumExtent.
 	^ layout! !
 
-!HexagramDisplayPanel methodsFor: 'GUI building' stamp: 'KenD 1/15/2022 14:13:35'!
+!HexagramDisplayPanel methodsFor: 'GUI building' stamp: 'KenD 1/15/2022 17:42:55'!
 newRowFormAndTrigramNames: aHexagram
 
 	| rowLayout image colLayout |
@@ -140,11 +143,13 @@ newRowFormAndTrigramNames: aHexagram
 	image := ImageMorph new :: image: (aHexagram form magnifyTo: 64@64).
 	rowLayout 
 		addMorph: image 
-		layoutSpec: (LayoutSpec keepMorphExtent) :: axisEdgeWeight: #rowLeft.
+		layoutSpec: (LayoutSpec keepMorphExtent) :: axisEdgeWeight: #rowLeft;
+		axisEdgeWeight: #center.
 	colLayout := LayoutMorph newColumn.
 	colLayout layoutSpec: 
 		(LayoutSpec proportionalWidth: 0.6 proportionalHeight: 0.8);
 		axisEdgeWeight: #center;
+		separation: 6;
 		addMorph: (LabelMorph contents: aHexagram upper name) 
 			layoutSpec: (LayoutSpec new :: offAxisEdgeWeight: #columnLeft);
 		addMorph: (LabelMorph contents: aHexagram lower name) 

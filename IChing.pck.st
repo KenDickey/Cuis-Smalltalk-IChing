@@ -1,6 +1,6 @@
-'From Cuis 6.0 [latest update: #5041] on 15 January 2022 at 6:18:09 pm'!
+'From Cuis 6.0 [latest update: #5041] on 16 January 2022 at 3:36:29 pm'!
 'Description Book of Changes [I Ching] exploration'!
-!provides: 'IChing' 1 10!
+!provides: 'IChing' 1 11!
 !requires: 'Cuis-Base' 60 5041 nil!
 !requires: 'UI-Panel' 1 19 nil!
 !requires: 'Graphics-Files-Additional' 1 24 nil!
@@ -76,6 +76,11 @@ number is
 !TriGram commentStamp: '<historical>' prior: 0!
 The second discernment is among relations: above/same/below
 !
+
+!HexagramDisplayPanel class methodsFor: 'new-morph participation' stamp: 'KenD 1/16/2022 15:32:59'!
+initializedInstance
+
+	^ (HexagramDisplayPanel forHexagram: (HexaGram cast))! !
 
 !HexaGram methodsFor: 'accessing' stamp: 'KenD 1/14/2022 13:04:50'!
 name
@@ -163,10 +168,10 @@ forHexagram: aHexagram
 
 	^ self open: aHexagram ! !
 
-!HexagramDisplayPanel class methodsFor: 'new-morph participation' stamp: 'KenD 1/15/2022 14:39:28'!
+!HexagramDisplayPanel class methodsFor: 'new-morph participation' stamp: 'KenD 1/16/2022 15:35:01'!
 includeInNewMorphMenu
-	"Return true for all classes that can be instantiated from the menu"
-	^ false! !
+	"Not to be instantiated from the menu"
+	^ true! !
 
 !HexaGram methodsFor: 'accessing' stamp: 'KenD 1/15/2022 13:54:33'!
 changedLinesText

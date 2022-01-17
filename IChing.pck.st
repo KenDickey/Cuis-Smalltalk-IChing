@@ -1,6 +1,6 @@
-'From Cuis 6.0 [latest update: #5041] on 16 January 2022 at 3:36:29 pm'!
+'From Cuis 6.0 [latest update: #5041] on 17 January 2022 at 12:50:52 pm'!
 'Description Book of Changes [I Ching] exploration'!
-!provides: 'IChing' 1 11!
+!provides: 'IChing' 1 12!
 !requires: 'Cuis-Base' 60 5041 nil!
 !requires: 'UI-Panel' 1 19 nil!
 !requires: 'Graphics-Files-Additional' 1 24 nil!
@@ -94,14 +94,16 @@ name
 	^ self nameFromBase
 	! !
 
-!HexagramDisplayPanel methodsFor: 'GUI building' stamp: 'KenD 1/15/2022 18:10:01'!
+!HexagramDisplayPanel methodsFor: 'GUI building' stamp: 'KenD 1/17/2022 08:29:00'!
 buildMorphicWindow
 	"Column of 4 rows: hexagram; changing lines; name; changed hexagram"
 
 	| hexagram topRow midRow changeHex lowerTitle lowerRow |
 	hexagram := self model.
 	self setLabel: hexagram name.
-	self titleMorph showButtonsNamed: #(close).
+	self titleMorph 
+		showButtonsNamed: #(close); 
+		dontShrinkTitle.
 	layoutMorph 
 		beColumn;
 		axisEdgeWeight: #center;
@@ -213,8 +215,14 @@ form
 
 	^ PNGForms at: self kingWenIndex ! !
 
-!HexaGram methodsFor: 'accessing' stamp: 'KenD 1/15/2022 11:50:10'!
+!HexaGram methodsFor: 'accessing' stamp: 'KenD 1/17/2022 11:30:51'!
 icon
+	"Answer a form"
+
+	^ self form magnifyTo: 16@16! !
+
+!HexaGram methodsFor: 'accessing' stamp: 'KenD 1/17/2022 11:30:16'!
+image
 
 	^ ImageMorph new image: (self form magnifyTo: 16@16)! !
 

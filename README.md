@@ -4,6 +4,7 @@ Operational Mechanics for the Book of Changes
 ````smalltalk
   Feature require: 'IChing'.
   (HexagramDisplayPanel forHexagram: (HexaGram cast)) openInWorld.
+  "OR WorldMenu -> New Morph.. --> --> HexagramDisplayPanel"
 ````
 
 The Book of Changes is frequently consulted in uncertain, anxious times.

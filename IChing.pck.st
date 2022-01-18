@@ -1,6 +1,6 @@
-'From Cuis 6.0 [latest update: #5041] on 17 January 2022 at 5:04:19 pm'!
+'From Cuis 6.0 [latest update: #5041] on 17 January 2022 at 6:48:02 pm'!
 'Description Book of Changes [I Ching] exploration'!
-!provides: 'IChing' 1 13!
+!provides: 'IChing' 1 14!
 !requires: 'Cuis-Base' 60 5041 nil!
 !requires: 'UI-Panel' 1 19 nil!
 !requires: 'Graphics-Files-Additional' 1 24 nil!
@@ -524,24 +524,28 @@ initializePNGForms
 					'.png').
 	].! !
 
-!HexaGram class methodsFor: 'private' stamp: 'KenD 1/17/2022 17:03:35'!
+!HexaGram class methodsFor: 'private' stamp: 'KenD 1/17/2022 18:42:33'!
 gritterPattern
 
 	^ #(
 		#( 0 0 0 0 0 0 1 )
 		#( 3 0 5 0 0 0 0 7 0 9)
 		#( 0 0 0 0 0 0 11 )
-		#( 13 0 14 0 0 0 0 17 0 19 )
+		#( 13 0 15 0 0 0 0 17 0 19 )
+		#(0)
 		#( 21 0 23 0 0 0 0 25 0 27)
 		#( 0 0 0 0 0 0 29 )
 		#( 0 0 0 0 0 0 31 )
 		#( 33 0 35 0 0 0 0 37 0 39)
 		#( 0 0 0 0 0 0 41 )
-		#( 53 0 55 0 57 0 59 0 61)
+		#( 43 0 45 0 0 0 0 47 0 49)
+		#( 0 0 0 0 0 0 51 )
+		#( 53 0 55 0 0 0 0 59 0 61)
+		#( 0 0 0 0 0 0 57 )
 		#( 0 0 0 0 0 0 63 )
-	      )! !
+	      ) ! !
 
-!HexaGram class methodsFor: 'images' stamp: 'KenD 1/17/2022 17:01:53'!
+!HexaGram class methodsFor: 'images' stamp: 'KenD 1/17/2022 18:45:48'!
 gritterImage
 
 	| imagePlusSpace xPos yPos pattern displaySpace |
@@ -568,7 +572,7 @@ gritterImage
 			]
 		].
 	
-	^ displaySpace morphExtent: (760 @ 610);
+	^ displaySpace morphExtent: (784 @ 830);
 		yourself! !
 
 !HexaGram class methodsFor: 'images' stamp: 'KenD 1/17/2022 14:51:21'!

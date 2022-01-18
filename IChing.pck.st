@@ -1,6 +1,6 @@
-'From Cuis 6.0 [latest update: #5041] on 17 January 2022 at 6:57:55 pm'!
+'From Cuis 6.0 [latest update: #5045] on 18 January 2022 at 2:00:09 pm'!
 'Description Book of Changes [I Ching] exploration'!
-!provides: 'IChing' 1 15!
+!provides: 'IChing' 1 16!
 !requires: 'Cuis-Base' 60 5041 nil!
 !requires: 'UI-Panel' 1 19 nil!
 !requires: 'Graphics-Files-Additional' 1 24 nil!
@@ -544,12 +544,12 @@ gritterPattern
 		#( 0 0 0 0 0 0 63 )
 	      ) ! !
 
-!HexaGram class methodsFor: 'images' stamp: 'KenD 1/17/2022 18:01:34'!
+!HexaGram class methodsFor: 'images' stamp: 'KenD 1/18/2022 13:59:08'!
 gritterImage
-
+	"Illustrates https://www.yijing.nl/structures/Gritter.html  "
 	| imagePlusSpace xPos yPos pattern displaySpace |
 	imagePlusSpace := 35 + 14. "35@35 is image size"
-	pattern := self gritterPattern. "11 rows; 2*19 cols"
+	pattern := self gritterPattern. "13 rows; 5 doubled columns"
 	displaySpace := BoxedMorph new :: color: Color orange.
 	yPos := 0.
 	pattern do: [ :rowPattern |

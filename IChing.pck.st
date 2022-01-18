@@ -1,6 +1,6 @@
-'From Cuis 6.0 [latest update: #5041] on 17 January 2022 at 12:50:52 pm'!
+'From Cuis 6.0 [latest update: #5041] on 17 January 2022 at 5:04:19 pm'!
 'Description Book of Changes [I Ching] exploration'!
-!provides: 'IChing' 1 12!
+!provides: 'IChing' 1 13!
 !requires: 'Cuis-Base' 60 5041 nil!
 !requires: 'UI-Panel' 1 19 nil!
 !requires: 'Graphics-Files-Additional' 1 24 nil!
@@ -165,15 +165,15 @@ newRowFormAndTrigramNames: aHexagram
 		yourself
 ! !
 
-!HexagramDisplayPanel class methodsFor: 'instance creation' stamp: 'KenD 1/15/2022 13:58:54'!
-forHexagram: aHexagram
-
-	^ self open: aHexagram ! !
-
 !HexagramDisplayPanel class methodsFor: 'new-morph participation' stamp: 'KenD 1/16/2022 15:35:01'!
 includeInNewMorphMenu
 	"Not to be instantiated from the menu"
 	^ true! !
+
+!HexagramDisplayPanel class methodsFor: 'instance creation' stamp: 'KenD 1/15/2022 13:58:54'!
+forHexagram: aHexagram
+
+	^ self open: aHexagram ! !
 
 !HexaGram methodsFor: 'accessing' stamp: 'KenD 1/15/2022 13:54:33'!
 changedLinesText
@@ -221,10 +221,10 @@ icon
 
 	^ self form magnifyTo: 16@16! !
 
-!HexaGram methodsFor: 'accessing' stamp: 'KenD 1/17/2022 11:30:16'!
+!HexaGram methodsFor: 'accessing' stamp: 'KenD 1/17/2022 14:04:22'!
 image
 
-	^ ImageMorph new image: (self form magnifyTo: 16@16)! !
+	^ ImageMorph new image: (self form magnifyTo: 64@64)! !
 
 !HexaGram methodsFor: 'accessing' stamp: 'KenD 1/14/2022 12:38:23'!
 kingWenIndex
@@ -523,6 +523,61 @@ initializePNGForms
 					idx asString, 
 					'.png').
 	].! !
+
+!HexaGram class methodsFor: 'private' stamp: 'KenD 1/17/2022 17:03:35'!
+gritterPattern
+
+	^ #(
+		#( 0 0 0 0 0 0 1 )
+		#( 3 0 5 0 0 0 0 7 0 9)
+		#( 0 0 0 0 0 0 11 )
+		#( 13 0 14 0 0 0 0 17 0 19 )
+		#( 21 0 23 0 0 0 0 25 0 27)
+		#( 0 0 0 0 0 0 29 )
+		#( 0 0 0 0 0 0 31 )
+		#( 33 0 35 0 0 0 0 37 0 39)
+		#( 0 0 0 0 0 0 41 )
+		#( 53 0 55 0 57 0 59 0 61)
+		#( 0 0 0 0 0 0 63 )
+	      )! !
+
+!HexaGram class methodsFor: 'images' stamp: 'KenD 1/17/2022 17:01:53'!
+gritterImage
+
+	| imagePlusSpace xPos yPos pattern displaySpace |
+	imagePlusSpace := 35 + 14. "35@35 is image size"
+	pattern := self gritterPattern. "11 rows; 2*19 cols"
+	displaySpace := BoxedMorph new :: color: Color orange.
+	yPos := 0.
+	pattern do: [ :rowPattern |
+		yPos := yPos + imagePlusSpace.
+		xPos := imagePlusSpace.
+		rowPattern do: [ :index |
+			(index isZero) 
+				ifTrue: [xPos := imagePlusSpace + xPos.] 
+				ifFalse: [ | image | "Add hexagram and its pair"
+					image := self imageForKingWenIndex: index.
+					displaySpace addMorph: image.
+					image morphPosition: xPos @ yPos.
+					xPos := xPos + imagePlusSpace.
+					image := self imageForKingWenIndex: 1 + index.
+					displaySpace addMorph: image.
+					image morphPosition: xPos @ yPos.	
+					xPos := xPos + imagePlusSpace.
+				]
+			]
+		].
+	
+	^ displaySpace morphExtent: (760 @ 610);
+		yourself! !
+
+!HexaGram class methodsFor: 'images' stamp: 'KenD 1/17/2022 14:51:21'!
+imageForKingWenIndex: oneTo64
+
+	^ (oneTo64 isZero)
+		ifTrue: [ ImageMorph new  "Empty (non)Image"
+				image: (Form extent: 35@35 :: fillColor: Color transparent) ]
+		ifFalse: [ ImageMorph new image: (PNGForms at: oneTo64) ]! !
 
 !Rudiment methodsFor: 'accessing' stamp: 'KenD 1/13/2022 12:36:44'!
 number

@@ -1,6 +1,6 @@
-'From Cuis6.3 [latest update: #6163] on 12 January 2024 at 9:51:57 am'!
+'From Cuis6.3 [latest update: #6163] on 12 January 2024 at 11:10:10 am'!
 'Description Book of Changes [I Ching] exploration'!
-!provides: 'IChing' 1 17!
+!provides: 'IChing' 1 18!
 !requires: 'Cuis-Base' 60 5041 nil!
 !requires: 'UI-Panel' 1 19 nil!
 !requires: 'Graphics-Files-Additional' 1 24 nil!
@@ -67,7 +67,7 @@ Gritter Pattern:
 !
 
 !Rudiment commentStamp: '<historical>' prior: 0!
-The LINE is a rudiment of descernment.
+The LINE is a rudiment of discernment.
 
 polarity is #whole (yang/found/+/sun) or #broken (yin/absent/-/shade)
 
@@ -541,7 +541,7 @@ gritterPattern
 		#( 0 0 0 0 0 0 63 )
 	      ) ! !
 
-!HexaGram class methodsFor: 'images' stamp: 'KenD 1/12/2024 09:49:51'!
+!HexaGram class methodsFor: 'images' stamp: 'KenD 1/12/2024 10:14:09'!
 gritterImage
 	"Illustrates https://www.yijing.nl/structures/Gritter.html  
 	
@@ -552,8 +552,7 @@ HexaGram gritterImage openInWorld.
 	pattern := self gritterPattern. "13 rows; 5 doubled columns"
 	displaySpace := BoxedMorph new 
 				:: color: Color orange
-				:: morphExtent: (784 @ 784)
-				:: openInWorld.
+				:: morphExtent: (784 @ 784).
 	yPos := 0.
 	pattern do: [ :rowPattern |
 		yPos := yPos + imagePlusSpace.
@@ -597,6 +596,27 @@ imageForKingWenIndex: oneTo64
 		ifTrue: [ ImageMorph new  "Empty (non)Image"
 				image: (Form extent: 35@35 :: fillColor: Color transparent) ]
 		ifFalse: [ ImageMorph new image: (PNGForms at: oneTo64) ]! !
+
+!HexaGram class methodsFor: 'images' stamp: 'KenD 1/12/2024 11:08:52'!
+kingWenImage
+	"Answer simple 8x8 display  
+	
+HexaGram kingWenImage openInWorld.
+	"
+	| imagePlusSpace  displaySpace |
+	imagePlusSpace := 35 + 14. "35@35 is image size"
+	displaySpace := BoxedMorph new 
+				:: color: Color orange
+				:: morphExtent: (480 @ 480).
+	1 to: 8 do: [ :col |
+		1 to: 8 do: [ :row | | hexImage |
+			hexImage := self imageForKingWenIndex: row - 1 * 8 + col.
+			displaySpace addMorph: hexImage.
+			hexImage morphPosition: (col @ row) * imagePlusSpace
+		]
+	].
+	
+	^ displaySpace! !
 
 !Rudiment methodsFor: 'accessing' stamp: 'KenD 1/13/2022 12:36:44'!
 number

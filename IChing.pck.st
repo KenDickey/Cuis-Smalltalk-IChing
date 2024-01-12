@@ -1,6 +1,6 @@
-'From Cuis6.3 [latest update: #6163] on 12 January 2024 at 11:10:10 am'!
+'From Cuis6.3 [latest update: #6163] on 12 January 2024 at 12:26:09 pm'!
 'Description Book of Changes [I Ching] exploration'!
-!provides: 'IChing' 1 18!
+!provides: 'IChing' 1 19!
 !requires: 'Cuis-Base' 60 5041 nil!
 !requires: 'UI-Panel' 1 19 nil!
 !requires: 'Graphics-Files-Additional' 1 24 nil!
@@ -597,9 +597,9 @@ imageForKingWenIndex: oneTo64
 				image: (Form extent: 35@35 :: fillColor: Color transparent) ]
 		ifFalse: [ ImageMorph new image: (PNGForms at: oneTo64) ]! !
 
-!HexaGram class methodsFor: 'images' stamp: 'KenD 1/12/2024 11:08:52'!
+!HexaGram class methodsFor: 'images' stamp: 'KenD 1/12/2024 12:02:18'!
 kingWenImage
-	"Answer simple 8x8 display  
+	"Answer simple 8x8 display , left to right
 	
 HexaGram kingWenImage openInWorld.
 	"
@@ -616,6 +616,56 @@ HexaGram kingWenImage openInWorld.
 		]
 	].
 	
+	^ displaySpace! !
+
+!HexaGram class methodsFor: 'images' stamp: 'KenD 1/12/2024 12:25:00'!
+kingWenPlusSpecialsImage
+	"kingWen with marked out special pairs
+	
+HexaGram kingWenPlusSpecialsImage openInWorld.
+	"
+	|  displaySpace sameColor oppColor |
+	displaySpace := self kingWenImage.
+	
+	sameColor := TranslucentColor r: 0.195 g: 0.197 b: 0.804 alpha: 0.543. 
+	oppColor   :=  TranslucentColor r: 0.263 g: 0.884 b: 0.376 alpha: 0.409.
+
+	"Upper Hexagram = Lower Hexagram"
+	displaySpace addMorphFront: (BoxedMorph new 
+							:: color: sameColor
+							:: morphExtent: 104@50)
+				position: 40@40.
+	displaySpace addMorphFront: (BoxedMorph new 
+							:: color: sameColor
+							:: morphExtent: 104@50)
+				position: 233@187.
+	displaySpace addMorphFront: (BoxedMorph new 
+							:: color: sameColor
+							:: morphExtent: 104@50)
+				position: 135@335.
+	displaySpace addMorphFront: (BoxedMorph new 
+							:: color: sameColor
+							:: morphExtent: 104@50)
+				position: 40@385.				
+				
+	"Upper Hexagram is REVERSE of Lower Hexagram"
+	displaySpace addMorphFront: (BoxedMorph new 
+							:: color: oppColor
+							:: morphExtent: 104@50)
+				position: 137@90.
+	displaySpace addMorphFront: (BoxedMorph new 
+							:: color: oppColor
+							:: morphExtent: 104@50)
+				position: 334@188.
+	displaySpace addMorphFront: (BoxedMorph new 
+							:: color: oppColor
+							:: morphExtent: 104@50)
+				position: 40@234.
+	displaySpace addMorphFront: (BoxedMorph new 
+							:: color: oppColor
+							:: morphExtent: 104@50)
+				position: 333@382.
+
 	^ displaySpace! !
 
 !Rudiment methodsFor: 'accessing' stamp: 'KenD 1/13/2022 12:36:44'!

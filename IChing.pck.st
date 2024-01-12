@@ -1,6 +1,8 @@
-'From Cuis6.3 [latest update: #6163] on 12 January 2024 at 12:26:09 pm'!
-'Description Book of Changes [I Ching] exploration'!
-!provides: 'IChing' 1 19!
+'From Cuis6.3 [latest update: #6163] on 12 January 2024 at 12:56:01 pm'!
+'Description Book of Changes [I Ching] exploration.
+
+Note HexaGram class comment.'!
+!provides: 'IChing' 1 20!
 !requires: 'Cuis-Base' 60 5041 nil!
 !requires: 'UI-Panel' 1 19 nil!
 !requires: 'Graphics-Files-Additional' 1 24 nil!
@@ -61,10 +63,33 @@ Coin Casting:
  (HexaGram fromArray: #( 8 9 6 7 8 8 )) hexagramForChange name.
  Hexagram cast name.
 
-Gritter Pattern:
+Gritter Pattern: Gert Gritter noted a pattern based upon hexagram symmetry.
+  https://www.yijing.nl/structures/Gritter.html
 
- HexaGram gritterImage openInWorld.
-!
+Most hexagrams are paired with their image mirrored about their center.
+The King Wen pattern:
+    HexaGram kingWenImage openInWorld.
+
+Marking Special hexagram pairs which are the same or inverses:
+    HexaGram kingWenPlusSpecialsImage openInWorld.
+
+And rearranging a bit with the Specials down the center:
+    HexaGram gritterImage openInWorld.
+
+Number patterns mirror internal numeracy:
+  6 - Old      Yin     [changing line]
+  8 - Young Yin
+  9 - Old      Yang  [changing line]
+  7 - Young Yang
+
+Note that one can combine figures 6+9 == 8+7 = 15
+which is sum of "magic square" slice:
+      4 9 2
+      3 5 7
+      8 1 6
+
+There are many correspondences with the lunisolar calendar which came into use about the same time as the King Wen sequence.
+ https://en.wikipedia.org/wiki/Chinese_calendar!
 
 !Rudiment commentStamp: '<historical>' prior: 0!
 The LINE is a rudiment of discernment.

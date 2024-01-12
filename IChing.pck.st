@@ -1,49 +1,49 @@
-'From Cuis 6.0 [latest update: #5045] on 18 January 2022 at 2:00:09 pm'!
+'From Cuis6.3 [latest update: #6163] on 12 January 2024 at 9:51:57 am'!
 'Description Book of Changes [I Ching] exploration'!
-!provides: 'IChing' 1 16!
+!provides: 'IChing' 1 17!
 !requires: 'Cuis-Base' 60 5041 nil!
 !requires: 'UI-Panel' 1 19 nil!
 !requires: 'Graphics-Files-Additional' 1 24 nil!
-SystemOrganization addCategory: 'IChing'!
+SystemOrganization addCategory: #IChing!
 
 
-!classDefinition: #HexagramDisplayPanel category: 'IChing'!
+!classDefinition: #HexagramDisplayPanel category: #IChing!
 Panel subclass: #HexagramDisplayPanel
 	instanceVariableNames: ''
 	classVariableNames: ''
 	poolDictionaries: ''
 	category: 'IChing'!
-!classDefinition: 'HexagramDisplayPanel class' category: 'IChing'!
+!classDefinition: 'HexagramDisplayPanel class' category: #IChing!
 HexagramDisplayPanel class
 	instanceVariableNames: ''!
 
-!classDefinition: #HexaGram category: 'IChing'!
+!classDefinition: #HexaGram category: #IChing!
 Object subclass: #HexaGram
 	instanceVariableNames: 'upper lower'
 	classVariableNames: 'Names PNGForms TrigramDoubleDict2KingWenIndex'
 	poolDictionaries: ''
 	category: 'IChing'!
-!classDefinition: 'HexaGram class' category: 'IChing'!
+!classDefinition: 'HexaGram class' category: #IChing!
 HexaGram class
 	instanceVariableNames: ''!
 
-!classDefinition: #Rudiment category: 'IChing'!
+!classDefinition: #Rudiment category: #IChing!
 Object subclass: #Rudiment
 	instanceVariableNames: 'number polarity'
 	classVariableNames: ''
 	poolDictionaries: ''
 	category: 'IChing'!
-!classDefinition: 'Rudiment class' category: 'IChing'!
+!classDefinition: 'Rudiment class' category: #IChing!
 Rudiment class
 	instanceVariableNames: ''!
 
-!classDefinition: #TriGram category: 'IChing'!
+!classDefinition: #TriGram category: #IChing!
 Object subclass: #TriGram
 	instanceVariableNames: 'top middle bottom'
 	classVariableNames: ''
 	poolDictionaries: ''
 	category: 'IChing'!
-!classDefinition: 'TriGram class' category: 'IChing'!
+!classDefinition: 'TriGram class' category: #IChing!
 TriGram class
 	instanceVariableNames: ''!
 
@@ -60,6 +60,10 @@ Coin Casting:
 
  (HexaGram fromArray: #( 8 9 6 7 8 8 )) hexagramForChange name.
  Hexagram cast name.
+
+Gritter Pattern:
+
+ HexaGram gritterImage openInWorld.
 !
 
 !Rudiment commentStamp: '<historical>' prior: 0!
@@ -76,23 +80,6 @@ number is
 !TriGram commentStamp: '<historical>' prior: 0!
 The second discernment is among relations: above/same/below
 !
-
-!HexagramDisplayPanel class methodsFor: 'new-morph participation' stamp: 'KenD 1/16/2022 15:32:59'!
-initializedInstance
-
-	^ (HexagramDisplayPanel forHexagram: (HexaGram cast))! !
-
-!HexaGram methodsFor: 'accessing' stamp: 'KenD 1/14/2022 13:04:50'!
-name
-
-	^ Names at: self kingWenIndex ! !
-
-!TriGram methodsFor: 'accessing' stamp: 'KenD 1/13/2022 13:21:36'!
-name
-	"One of #(heaven earth water fire thunder mountain wind lake)"
-	
-	^ self nameFromBase
-	! !
 
 !HexagramDisplayPanel methodsFor: 'GUI building' stamp: 'KenD 1/17/2022 08:29:00'!
 buildMorphicWindow
@@ -170,6 +157,11 @@ includeInNewMorphMenu
 	"Not to be instantiated from the menu"
 	^ true! !
 
+!HexagramDisplayPanel class methodsFor: 'new-morph participation' stamp: 'KenD 1/16/2022 15:32:59'!
+initializedInstance
+
+	^ (HexagramDisplayPanel forHexagram: (HexaGram cast))! !
+
 !HexagramDisplayPanel class methodsFor: 'instance creation' stamp: 'KenD 1/15/2022 13:58:54'!
 forHexagram: aHexagram
 
@@ -236,6 +228,11 @@ kingWenIndex
 lower
 
 	^lower! !
+
+!HexaGram methodsFor: 'accessing' stamp: 'KenD 1/14/2022 13:04:50'!
+name
+
+	^ Names at: self kingWenIndex ! !
 
 !HexaGram methodsFor: 'accessing' stamp: 'KenD 1/14/2022 12:37:51'!
 unicodeIndex
@@ -544,13 +541,19 @@ gritterPattern
 		#( 0 0 0 0 0 0 63 )
 	      ) ! !
 
-!HexaGram class methodsFor: 'images' stamp: 'KenD 1/18/2022 13:59:08'!
+!HexaGram class methodsFor: 'images' stamp: 'KenD 1/12/2024 09:49:51'!
 gritterImage
-	"Illustrates https://www.yijing.nl/structures/Gritter.html  "
+	"Illustrates https://www.yijing.nl/structures/Gritter.html  
+	
+HexaGram gritterImage openInWorld.
+	"
 	| imagePlusSpace xPos yPos pattern displaySpace |
 	imagePlusSpace := 35 + 14. "35@35 is image size"
 	pattern := self gritterPattern. "13 rows; 5 doubled columns"
-	displaySpace := BoxedMorph new :: color: Color orange.
+	displaySpace := BoxedMorph new 
+				:: color: Color orange
+				:: morphExtent: (784 @ 784)
+				:: openInWorld.
 	yPos := 0.
 	pattern do: [ :rowPattern |
 		yPos := yPos + imagePlusSpace.
@@ -571,8 +574,21 @@ gritterImage
 			]
 		].
 	
-	^ displaySpace morphExtent: (784 @ 784);
-		yourself! !
+	"Hilight inner patterns: 6 8 9 7"
+	displaySpace addMorph: (BoxedMorph new "7"
+		:: color: (TranslucentColor r: 0.976 g: 0.958 b: 0.024 alpha: 0.255)
+		:: morphPosition: 40@584 extent: 700@144).
+	displaySpace addMorph: (BoxedMorph new "9"
+		:: color: (TranslucentColor r: 0.263 g: 0.410 b: 0.882 alpha: 0.409)
+		:: morphPosition: 40@434 extent: 700@144).
+	displaySpace addMorph: (BoxedMorph new "8"
+		:: color: (TranslucentColor r: 0.195 g: 0.197 b: 0.804 alpha: 0.543)
+		:: morphPosition: 40@191 extent: 700@144).
+	displaySpace addMorph: (BoxedMorph new  "6"
+		:: color:  (TranslucentColor r: 0.263 g: 0.884 b: 0.376 alpha: 0.409)
+		:: morphPosition: 40@44extent: 700@144).
+	
+	^ displaySpace! !
 
 !HexaGram class methodsFor: 'images' stamp: 'KenD 1/17/2022 14:51:21'!
 imageForKingWenIndex: oneTo64
@@ -658,6 +674,13 @@ lines
 middle
 
 	^ middle ! !
+
+!TriGram methodsFor: 'accessing' stamp: 'KenD 1/13/2022 13:21:36'!
+name
+	"One of #(heaven earth water fire thunder mountain wind lake)"
+	
+	^ self nameFromBase
+	! !
 
 !TriGram methodsFor: 'accessing' stamp: 'KenD 1/14/2022 12:41:13'!
 top

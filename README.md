@@ -48,8 +48,9 @@ I particularly like a recent reinterpretation:
 Four translations are available at
   http://www.russellcottrell.com/VirtualYarrowStalks/
 
-Chinese characters require Unicode to display, note another translation in
-   EnhancedText/Unicode/utf8.txt
+Chinese characters require Unicode to display.  To view in Cuis, 
+open or load IChing.txt into tha TextEditor, select All, 
+change font (cmd-k) to KiwiMaru Light.
 
 A very interesting observation of hexagram structure is at
   https://www.yijing.nl/structures/Gritter.html   

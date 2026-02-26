@@ -1,23 +1,13 @@
-'From Cuis6.3 [latest update: #6163] on 12 January 2024 at 12:56:01 pm'!
+'From Cuis7.7 [latest update: #7839] on 25 February 2026 at 4:18:16 pm'!
 'Description Book of Changes [I Ching] exploration.
 
 Note HexaGram class comment.'!
-!provides: 'IChing' 1 20!
-!requires: 'Cuis-Base' 60 5041 nil!
+!provides: 'IChing' 1 23!
+!requires: 'Cuis-Base' 77 7839 nil!
 !requires: 'UI-Panel' 1 19 nil!
 !requires: 'Graphics-Files-Additional' 1 24 nil!
 SystemOrganization addCategory: #IChing!
 
-
-!classDefinition: #HexagramDisplayPanel category: #IChing!
-Panel subclass: #HexagramDisplayPanel
-	instanceVariableNames: ''
-	classVariableNames: ''
-	poolDictionaries: ''
-	category: 'IChing'!
-!classDefinition: 'HexagramDisplayPanel class' category: #IChing!
-HexagramDisplayPanel class
-	instanceVariableNames: ''!
 
 !classDefinition: #HexaGram category: #IChing!
 Object subclass: #HexaGram
@@ -49,11 +39,16 @@ Object subclass: #TriGram
 TriGram class
 	instanceVariableNames: ''!
 
+!classDefinition: #HexagramDisplayPanel category: #IChing!
+Panel subclass: #HexagramDisplayPanel
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	category: 'IChing'!
+!classDefinition: 'HexagramDisplayPanel class' category: #IChing!
+HexagramDisplayPanel class
+	instanceVariableNames: ''!
 
-!HexagramDisplayPanel commentStamp: '<historical>' prior: 0!
-I display a hexagram, including its changes.
-
-(HexagramDisplayPanel forHexagram: (HexaGram cast)) openInWorld.!
 
 !HexaGram commentStamp: '<historical>' prior: 0!
 The third discernment is among compositions of preexisting categories.
@@ -106,93 +101,12 @@ number is
 The second discernment is among relations: above/same/below
 !
 
-!HexagramDisplayPanel methodsFor: 'GUI building' stamp: 'KenD 1/17/2022 08:29:00'!
-buildMorphicWindow
-	"Column of 4 rows: hexagram; changing lines; name; changed hexagram"
+!HexagramDisplayPanel commentStamp: '<historical>' prior: 0!
+I display a hexagram, including its changes.
 
-	| hexagram topRow midRow changeHex lowerTitle lowerRow |
-	hexagram := self model.
-	self setLabel: hexagram name.
-	self titleMorph 
-		showButtonsNamed: #(close); 
-		dontShrinkTitle.
-	layoutMorph 
-		beColumn;
-		axisEdgeWeight: #center;
-		separation: 12.
-	topRow := self newRowFormAndTrigramNames: hexagram.
-	midRow := self changedLinesText.
-	changeHex := hexagram hexagramForChange.
-	lowerTitle := LabelMorph contents: 'Changes to ', changeHex name.
-	lowerRow := self newRowFormAndTrigramNames: changeHex.
-	layoutMorph 
-		addMorph: topRow 
-			layoutSpec: (LayoutSpec new :: offAxisEdgeWeight: #center);
-		addMorph: midRow
-			layoutSpec: (LayoutSpec new :: offAxisEdgeWeight: #columnLeft);
-		addMorph: lowerTitle 
-			layoutSpec: (LayoutSpec new ::
-						offAxisEdgeWeight: #columnLeft);
-		addMorph: lowerRow
-			layoutSpec: (LayoutSpec new :: offAxisEdgeWeight: #center).
-	self morphExtent: self minimumExtent.! !
+(HexagramDisplayPanel forHexagram: (HexaGram cast)) openInWorld.!
 
-!HexagramDisplayPanel methodsFor: 'GUI building' stamp: 'KenD 1/15/2022 17:54:53'!
-changedLinesText
-
-	"Convert string of lines into layout of labelMorphs"
-	| changes layout |
-	changes := self model changedLinesText lines.
-	layout := LayoutMorph newColumn ::
-		axisEdgeWeight: #center ; 
-		separation: 4.
-	changes do: [ :aString |
-		layout 
-			addMorph: (LabelMorph contents: aString) 
-			layoutSpec: (LayoutSpec keepMorphExtent :: offAxisEdgeWeight: #columnLeft).
-	].
-	layout morphExtent: layoutMorph minimumExtent.
-	^ layout! !
-
-!HexagramDisplayPanel methodsFor: 'GUI building' stamp: 'KenD 1/15/2022 17:42:55'!
-newRowFormAndTrigramNames: aHexagram
-
-	| rowLayout image colLayout |
-	rowLayout  := LayoutMorph newRow.
-	image := ImageMorph new :: image: (aHexagram form magnifyTo: 64@64).
-	rowLayout 
-		addMorph: image 
-		layoutSpec: (LayoutSpec keepMorphExtent) :: axisEdgeWeight: #rowLeft;
-		axisEdgeWeight: #center.
-	colLayout := LayoutMorph newColumn.
-	colLayout layoutSpec: 
-		(LayoutSpec proportionalWidth: 0.6 proportionalHeight: 0.8);
-		axisEdgeWeight: #center;
-		separation: 6;
-		addMorph: (LabelMorph contents: aHexagram upper name) 
-			layoutSpec: (LayoutSpec new :: offAxisEdgeWeight: #columnLeft);
-		addMorph: (LabelMorph contents: aHexagram lower name) 
-			layoutSpec: (LayoutSpec new :: offAxisEdgeWeight: #columnLeft).
-	^ rowLayout addMorph: colLayout;
-		yourself
-! !
-
-!HexagramDisplayPanel class methodsFor: 'new-morph participation' stamp: 'KenD 1/16/2022 15:35:01'!
-includeInNewMorphMenu
-	"Not to be instantiated from the menu"
-	^ true! !
-
-!HexagramDisplayPanel class methodsFor: 'new-morph participation' stamp: 'KenD 1/16/2022 15:32:59'!
-initializedInstance
-
-	^ (HexagramDisplayPanel forHexagram: (HexaGram cast))! !
-
-!HexagramDisplayPanel class methodsFor: 'instance creation' stamp: 'KenD 1/15/2022 13:58:54'!
-forHexagram: aHexagram
-
-	^ self open: aHexagram ! !
-
-!HexaGram methodsFor: 'accessing' stamp: 'KenD 1/15/2022 13:54:33'!
+!HexaGram methodsFor: 'accessing' stamp: 'KenD 15/Jan/2022 13:54:33'!
 changedLinesText
 
 	"Answer string with changed line text"
@@ -227,64 +141,64 @@ changedLinesText
 	].
 	^ stringResult! !
 
-!HexaGram methodsFor: 'accessing' stamp: 'KenD 1/14/2022 13:56:42'!
+!HexaGram methodsFor: 'accessing' stamp: 'KenD 14/Jan/2022 13:56:42'!
 form
 
 	^ PNGForms at: self kingWenIndex ! !
 
-!HexaGram methodsFor: 'accessing' stamp: 'KenD 1/17/2022 11:30:51'!
+!HexaGram methodsFor: 'accessing' stamp: 'KenD 17/Jan/2022 11:30:51'!
 icon
 	"Answer a form"
 
 	^ self form magnifyTo: 16@16! !
 
-!HexaGram methodsFor: 'accessing' stamp: 'KenD 1/17/2022 14:04:22'!
+!HexaGram methodsFor: 'accessing' stamp: 'KenD 17/Jan/2022 14:04:22'!
 image
 
 	^ ImageMorph new image: (self form magnifyTo: 64@64)! !
 
-!HexaGram methodsFor: 'accessing' stamp: 'KenD 1/14/2022 12:38:23'!
+!HexaGram methodsFor: 'accessing' stamp: 'KenD 14/Jan/2022 12:38:23'!
 kingWenIndex
 
 	^ (TrigramDoubleDict2KingWenIndex at: lower name)
 		at: upper name! !
 
-!HexaGram methodsFor: 'accessing' stamp: 'KenD 1/14/2022 12:38:36'!
+!HexaGram methodsFor: 'accessing' stamp: 'KenD 14/Jan/2022 12:38:36'!
 lower
 
 	^lower! !
 
-!HexaGram methodsFor: 'accessing' stamp: 'KenD 1/14/2022 13:04:50'!
+!HexaGram methodsFor: 'accessing' stamp: 'KenD 14/Jan/2022 13:04:50'!
 name
 
 	^ Names at: self kingWenIndex ! !
 
-!HexaGram methodsFor: 'accessing' stamp: 'KenD 1/14/2022 12:37:51'!
+!HexaGram methodsFor: 'accessing' stamp: 'KenD 14/Jan/2022 12:37:51'!
 unicodeIndex
 	"Answer unicode index for character"
 
 	^ 19903 + self kingWenIndex! !
 
-!HexaGram methodsFor: 'accessing' stamp: 'KenD 1/14/2022 12:39:11'!
+!HexaGram methodsFor: 'accessing' stamp: 'KenD 14/Jan/2022 12:39:11'!
 upper
 
 	^upper! !
 
-!HexaGram methodsFor: 'initialization' stamp: 'KenD 1/14/2022 12:45:31'!
+!HexaGram methodsFor: 'initialization' stamp: 'KenD 14/Jan/2022 12:45:31'!
 upper: topHexagram lower: bottomHexagram
 
 	upper := topHexagram.
 	lower  := bottomHexagram.
 	! !
 
-!HexaGram methodsFor: 'changing' stamp: 'KenD 1/14/2022 12:45:54'!
+!HexaGram methodsFor: 'changing' stamp: 'KenD 14/Jan/2022 12:45:54'!
 hexagramForChange
 
 	^ HexaGram 
 		upper: (self upper trigramForChange)
 		lower:  (self lower  trigramForChange)! !
 
-!HexaGram class methodsFor: 'instance creation' stamp: 'KenD 1/15/2022 08:15:36'!
+!HexaGram class methodsFor: 'instance creation' stamp: 'KenD 15/Jan/2022 08:15:36'!
 cast
 	"Emulate throwing coins and return new hexagram"
 
@@ -306,7 +220,7 @@ cast
 
 ! !
 
-!HexaGram class methodsFor: 'instance creation' stamp: 'KenD 1/14/2022 12:48:43'!
+!HexaGram class methodsFor: 'instance creation' stamp: 'KenD 14/Jan/2022 12:48:43'!
 fromArray: sixNumberArray
 	"Line Numbers: low to high"
 	^ self 
@@ -321,12 +235,12 @@ fromArray: sixNumberArray
 			bottom: (Rudiment fromNumber: (sixNumberArray at: 1))
 			)! !
 
-!HexaGram class methodsFor: 'instance creation' stamp: 'KenD 1/14/2022 12:45:09'!
+!HexaGram class methodsFor: 'instance creation' stamp: 'KenD 14/Jan/2022 12:45:09'!
 upper: topHexagram lower: bottomHexagram
 
 	^ self new :: upper: topHexagram lower: bottomHexagram! !
 
-!HexaGram class methodsFor: 'class initialization' stamp: 'KenD 1/14/2022 13:51:13'!
+!HexaGram class methodsFor: 'class initialization' stamp: 'KenD 14/Jan/2022 13:51:13'!
 initialize
 "
 	HexaGram initialize.
@@ -336,10 +250,10 @@ initialize
 		initializeKingWenLookup;
 		initializePNGForms! !
 
-!HexaGram class methodsFor: 'class initialization' stamp: 'KenD 1/14/2022 13:08:12'!
+!HexaGram class methodsFor: 'class initialization' stamp: 'Install-IChing 25/Feb/2026 16:02:40'!
 initializeKingWenLookup
 
-	TrigramDoubleDict2KingWenIndex := Dictionary new: 8.
+	TrigramDoubleDict2KingWenIndex := Dictionary new.
 	
 	TrigramDoubleDict2KingWenIndex 
 		at: #heaven
@@ -455,7 +369,7 @@ initializeKingWenLookup
 				
 ! !
 
-!HexaGram class methodsFor: 'class initialization' stamp: 'KenD 1/14/2022 13:08:43'!
+!HexaGram class methodsFor: 'class initialization' stamp: 'KenD 14/Jan/2022 13:08:43'!
 initializeNames
 
 	"Unicode names"
@@ -528,7 +442,7 @@ initializeNames
 )
 ! !
 
-!HexaGram class methodsFor: 'class initialization' stamp: 'KenD 1/14/2022 13:50:58'!
+!HexaGram class methodsFor: 'class initialization' stamp: 'KenD 14/Jan/2022 13:50:58'!
 initializePNGForms
 
 	| dirName |
@@ -546,7 +460,7 @@ initializePNGForms
 					'.png').
 	].! !
 
-!HexaGram class methodsFor: 'private' stamp: 'KenD 1/17/2022 18:55:24'!
+!HexaGram class methodsFor: 'private' stamp: 'KenD 17/Jan/2022 18:55:24'!
 gritterPattern
 
 	^ #(
@@ -566,7 +480,7 @@ gritterPattern
 		#( 0 0 0 0 0 0 63 )
 	      ) ! !
 
-!HexaGram class methodsFor: 'images' stamp: 'KenD 1/12/2024 10:14:09'!
+!HexaGram class methodsFor: 'images' stamp: 'KenD 25/Feb/2026 16:16:42'!
 gritterImage
 	"Illustrates https://www.yijing.nl/structures/Gritter.html  
 	
@@ -575,7 +489,7 @@ HexaGram gritterImage openInWorld.
 	| imagePlusSpace xPos yPos pattern displaySpace |
 	imagePlusSpace := 35 + 14. "35@35 is image size"
 	pattern := self gritterPattern. "13 rows; 5 doubled columns"
-	displaySpace := BoxedMorph new 
+	displaySpace := BorderedBoxMorph new 
 				:: color: Color orange
 				:: morphExtent: (784 @ 784).
 	yPos := 0.
@@ -599,22 +513,22 @@ HexaGram gritterImage openInWorld.
 		].
 	
 	"Hilight inner patterns: 6 8 9 7"
-	displaySpace addMorph: (BoxedMorph new "7"
+	displaySpace addMorph: (BorderedBoxMorph new "7"
 		:: color: (TranslucentColor r: 0.976 g: 0.958 b: 0.024 alpha: 0.255)
-		:: morphPosition: 40@584 extent: 700@144).
-	displaySpace addMorph: (BoxedMorph new "9"
+		:: morphPosition: 40@584; morphExtent: 700@144).
+	displaySpace addMorph: (BorderedBoxMorph new "9"
 		:: color: (TranslucentColor r: 0.263 g: 0.410 b: 0.882 alpha: 0.409)
-		:: morphPosition: 40@434 extent: 700@144).
-	displaySpace addMorph: (BoxedMorph new "8"
+		:: morphPosition: 40@434; morphExtent: 700@144).
+	displaySpace addMorph: (BorderedBoxMorph new "8"
 		:: color: (TranslucentColor r: 0.195 g: 0.197 b: 0.804 alpha: 0.543)
-		:: morphPosition: 40@191 extent: 700@144).
-	displaySpace addMorph: (BoxedMorph new  "6"
+		:: morphPosition: 40@191; morphExtent: 700@144).
+	displaySpace addMorph: (BorderedBoxMorph new  "6"
 		:: color:  (TranslucentColor r: 0.263 g: 0.884 b: 0.376 alpha: 0.409)
-		:: morphPosition: 40@44extent: 700@144).
+		:: morphPosition: 40@44; morphExtent: 700@144).
 	
 	^ displaySpace! !
 
-!HexaGram class methodsFor: 'images' stamp: 'KenD 1/17/2022 14:51:21'!
+!HexaGram class methodsFor: 'images' stamp: 'KenD 17/Jan/2022 14:51:21'!
 imageForKingWenIndex: oneTo64
 
 	^ (oneTo64 isZero)
@@ -622,7 +536,7 @@ imageForKingWenIndex: oneTo64
 				image: (Form extent: 35@35 :: fillColor: Color transparent) ]
 		ifFalse: [ ImageMorph new image: (PNGForms at: oneTo64) ]! !
 
-!HexaGram class methodsFor: 'images' stamp: 'KenD 1/12/2024 12:02:18'!
+!HexaGram class methodsFor: 'images' stamp: 'KenD 12/Jan/2024 12:02:18'!
 kingWenImage
 	"Answer simple 8x8 display , left to right
 	
@@ -643,7 +557,7 @@ HexaGram kingWenImage openInWorld.
 	
 	^ displaySpace! !
 
-!HexaGram class methodsFor: 'images' stamp: 'KenD 1/12/2024 12:25:00'!
+!HexaGram class methodsFor: 'images' stamp: 'KenD 12/Jan/2024 12:25:00'!
 kingWenPlusSpecialsImage
 	"kingWen with marked out special pairs
 	
@@ -693,12 +607,12 @@ HexaGram kingWenPlusSpecialsImage openInWorld.
 
 	^ displaySpace! !
 
-!Rudiment methodsFor: 'accessing' stamp: 'KenD 1/13/2022 12:36:44'!
+!Rudiment methodsFor: 'accessing' stamp: 'KenD 13/Jan/2022 12:36:44'!
 number
 
 	^ number ! !
 
-!Rudiment methodsFor: 'accessing' stamp: 'KenD 1/14/2022 08:35:58'!
+!Rudiment methodsFor: 'accessing' stamp: 'KenD 14/Jan/2022 08:35:58'!
 number: lineValue
 
 	(#(6 7 8 9) includes: lineValue)
@@ -710,25 +624,25 @@ number: lineValue
 			ifFalse: [polarity := #broken]
 		 ].! !
 
-!Rudiment methodsFor: 'accessing' stamp: 'KenD 1/13/2022 12:36:55'!
+!Rudiment methodsFor: 'accessing' stamp: 'KenD 13/Jan/2022 12:36:55'!
 polarity
 
 	^ polarity ! !
 
-!Rudiment methodsFor: 'accessing' stamp: 'KenD 1/13/2022 12:39:57'!
+!Rudiment methodsFor: 'accessing' stamp: 'KenD 13/Jan/2022 12:39:57'!
 polarity: wholeOrBroken
 
 	(#(whole broken) includes: wholeOrBroken)
 		ifFalse: [ wholeOrBroken signal: 'Must be #whole or #broken']
 		ifTrue: [ polarity := wholeOrBroken ].! !
 
-!Rudiment methodsFor: 'testing' stamp: 'KenD 1/15/2022 13:13:16'!
+!Rudiment methodsFor: 'testing' stamp: 'KenD 15/Jan/2022 13:13:16'!
 willChange
 
 	"Answer true if old yin or old yang"
 	^ (number = 6) or: [number = 9]! !
 
-!Rudiment methodsFor: 'changing' stamp: 'KenD 1/14/2022 12:57:57'!
+!Rudiment methodsFor: 'changing' stamp: 'KenD 14/Jan/2022 12:57:57'!
 lineForChange
 	"6 and 9 are changing lines" 
 	
@@ -740,105 +654,105 @@ lineForChange
 		ifTrue: [ ^Rudiment fromNumber: 8]. "Young Yin"
 	^ self  "No change"! !
 
-!Rudiment class methodsFor: 'instance creation' stamp: 'KenD 1/13/2022 13:04:54'!
+!Rudiment class methodsFor: 'instance creation' stamp: 'KenD 13/Jan/2022 13:04:54'!
 broken
 	
 	^ self new :: polarity: #broken! !
 
-!Rudiment class methodsFor: 'instance creation' stamp: 'KenD 1/13/2022 13:10:52'!
+!Rudiment class methodsFor: 'instance creation' stamp: 'KenD 13/Jan/2022 13:10:52'!
 fromNumber: sixSevenEightNine
 	
 	^ self new :: number: sixSevenEightNine! !
 
-!Rudiment class methodsFor: 'instance creation' stamp: 'KenD 1/13/2022 13:05:06'!
+!Rudiment class methodsFor: 'instance creation' stamp: 'KenD 13/Jan/2022 13:05:06'!
 whole
 	
 	^ self new :: polarity: #whole! !
 
-!TriGram methodsFor: 'accessing' stamp: 'KenD 1/14/2022 12:40:17'!
+!TriGram methodsFor: 'accessing' stamp: 'KenD 14/Jan/2022 12:40:17'!
 bottom
 
 	^ bottom ! !
 
-!TriGram methodsFor: 'accessing' stamp: 'KenD 1/15/2022 13:33:18'!
+!TriGram methodsFor: 'accessing' stamp: 'KenD 15/Jan/2022 13:33:18'!
 lines
 
 	^ {  bottom.  middle. top. }! !
 
-!TriGram methodsFor: 'accessing' stamp: 'KenD 1/14/2022 12:40:29'!
+!TriGram methodsFor: 'accessing' stamp: 'KenD 14/Jan/2022 12:40:29'!
 middle
 
 	^ middle ! !
 
-!TriGram methodsFor: 'accessing' stamp: 'KenD 1/13/2022 13:21:36'!
+!TriGram methodsFor: 'accessing' stamp: 'KenD 13/Jan/2022 13:21:36'!
 name
 	"One of #(heaven earth water fire thunder mountain wind lake)"
 	
 	^ self nameFromBase
 	! !
 
-!TriGram methodsFor: 'accessing' stamp: 'KenD 1/14/2022 12:41:13'!
+!TriGram methodsFor: 'accessing' stamp: 'KenD 14/Jan/2022 12:41:13'!
 top
 
 	^ top ! !
 
-!TriGram methodsFor: 'private' stamp: 'KenD 1/14/2022 12:43:47'!
+!TriGram methodsFor: 'private' stamp: 'KenD 14/Jan/2022 12:43:47'!
 midNameFromBroken
 
 	^ ( middle polarity = #whole)
 		ifTrue: [ self topNameFromBrokenWhole ] 
 		ifFalse: [ self topNameFromBrokenBroken ]! !
 
-!TriGram methodsFor: 'private' stamp: 'KenD 1/14/2022 12:43:40'!
+!TriGram methodsFor: 'private' stamp: 'KenD 14/Jan/2022 12:43:40'!
 midNameFromWhole
 
 	^ ( middle polarity = #whole)
 		ifTrue: [ self topNameFromWholeWhole ] 
 		ifFalse: [ self topNameFromWholeBroken ]! !
 
-!TriGram methodsFor: 'private' stamp: 'KenD 1/14/2022 12:43:31'!
+!TriGram methodsFor: 'private' stamp: 'KenD 14/Jan/2022 12:43:31'!
 nameFromBase
 
 	^ ( bottom polarity = #whole)
 		ifTrue: [ self midNameFromWhole ] 
 		ifFalse: [ self midNameFromBroken ]! !
 
-!TriGram methodsFor: 'private' stamp: 'KenD 1/14/2022 12:43:54'!
+!TriGram methodsFor: 'private' stamp: 'KenD 14/Jan/2022 12:43:54'!
 topNameFromBrokenBroken
 
 	^ ( top polarity = #whole)
 		ifTrue: [ #mountain ] 
 		ifFalse: [ #earth ]! !
 
-!TriGram methodsFor: 'private' stamp: 'KenD 1/14/2022 12:44:03'!
+!TriGram methodsFor: 'private' stamp: 'KenD 14/Jan/2022 12:44:03'!
 topNameFromBrokenWhole
 
 	^ ( top polarity = #whole)
 		ifTrue: [ #wind ] 
 		ifFalse: [ #water ]! !
 
-!TriGram methodsFor: 'private' stamp: 'KenD 1/14/2022 12:44:11'!
+!TriGram methodsFor: 'private' stamp: 'KenD 14/Jan/2022 12:44:11'!
 topNameFromWholeBroken
 
 	^ ( top polarity = #whole)
 		ifTrue: [ #fire ] 
 		ifFalse: [ #thunder ]! !
 
-!TriGram methodsFor: 'private' stamp: 'KenD 1/14/2022 12:44:20'!
+!TriGram methodsFor: 'private' stamp: 'KenD 14/Jan/2022 12:44:20'!
 topNameFromWholeWhole
 
 	^ (top polarity = #whole)
 		ifTrue: [ #heaven ] 
 		ifFalse: [ #lake ]! !
 
-!TriGram methodsFor: 'initialization' stamp: 'KenD 1/14/2022 12:42:29'!
+!TriGram methodsFor: 'initialization' stamp: 'KenD 14/Jan/2022 12:42:29'!
 top: upperLine middle: middleLine bottom: lowerLine
 
 	top        := upperLine.
 	middle   := middleLine.
 	bottom  := lowerLine.! !
 
-!TriGram methodsFor: 'changing' stamp: 'KenD 1/14/2022 12:43:01'!
+!TriGram methodsFor: 'changing' stamp: 'KenD 14/Jan/2022 12:43:01'!
 trigramForChange
 
 	^ TriGram 
@@ -846,8 +760,94 @@ trigramForChange
 		middle:   (self middle  lineForChange)
 		bottom: (self bottom lineForChange)! !
 
-!TriGram class methodsFor: 'instance creation' stamp: 'KenD 1/14/2022 12:41:51'!
+!TriGram class methodsFor: 'instance creation' stamp: 'KenD 14/Jan/2022 12:41:51'!
 top: upperLine middle: middleLine bottom: lowerLine
 
 	^self new :: top: upperLine middle: middleLine bottom: lowerLine! !
+
+!HexagramDisplayPanel methodsFor: 'GUI building' stamp: 'KenD 25/Feb/2026 16:04:58'!
+buildMorphicWindow
+	"Column of 4 rows: hexagram; changing lines; name; changed hexagram"
+
+	| hexagram topRow midRow changeHex lowerTitle lowerRow |
+	hexagram := self model.
+	self setLabel: hexagram name.
+	self titleMorph 
+		showButtonsNamed: #(close); 
+		dontShrinkTitle.
+	layoutMorph 
+		beColumn;
+		axisEdgeWeight: #center;
+		separation: 12.
+	topRow := self newRowFormAndTrigramNames: hexagram.
+	midRow := self changedLinesText.
+	changeHex := hexagram hexagramForChange.
+	lowerTitle := LabelMorph contents: 'Changes to ', changeHex name.
+	lowerRow := self newRowFormAndTrigramNames: changeHex.
+	layoutMorph 
+		addMorph: topRow 
+			layoutSpec: (LayoutSizeSpec new :: offAxisEdgeWeight: #center);
+		addMorph: midRow
+			layoutSpec: (LayoutSizeSpec new :: offAxisEdgeWeight: #columnLeft);
+		addMorph: lowerTitle 
+			layoutSpec: (LayoutSizeSpec new ::
+						offAxisEdgeWeight: #columnLeft);
+		addMorph: lowerRow
+			layoutSpec: (LayoutSizeSpec new :: offAxisEdgeWeight: #center).
+	self morphExtent: self minimumExtent.! !
+
+!HexagramDisplayPanel methodsFor: 'GUI building' stamp: 'KenD 15/Jan/2022 17:54:53'!
+changedLinesText
+
+	"Convert string of lines into layout of labelMorphs"
+	| changes layout |
+	changes := self model changedLinesText lines.
+	layout := LayoutMorph newColumn ::
+		axisEdgeWeight: #center ; 
+		separation: 4.
+	changes do: [ :aString |
+		layout 
+			addMorph: (LabelMorph contents: aString) 
+			layoutSpec: (LayoutSpec keepMorphExtent :: offAxisEdgeWeight: #columnLeft).
+	].
+	layout morphExtent: layoutMorph minimumExtent.
+	^ layout! !
+
+!HexagramDisplayPanel methodsFor: 'GUI building' stamp: 'KenD 25/Feb/2026 16:04:31'!
+newRowFormAndTrigramNames: aHexagram
+
+	| rowLayout image colLayout |
+	rowLayout  := LayoutMorph newRow.
+	image := ImageMorph new :: image: (aHexagram form magnifyTo: 64@64).
+	rowLayout 
+		addMorph: image 
+		layoutSpec: (LayoutSpec keepMorphExtent) :: axisEdgeWeight: #rowLeft;
+		axisEdgeWeight: #center.
+	colLayout := LayoutMorph newColumn.
+	colLayout layoutSpec: 
+		(LayoutSpec proportionalWidth: 0.6 proportionalHeight: 0.8);
+		axisEdgeWeight: #center;
+		separation: 6;
+		addMorph: (LabelMorph contents: aHexagram upper name) 
+			layoutSpec: (LayoutSizeSpec new :: offAxisEdgeWeight: #columnLeft);
+		addMorph: (LabelMorph contents: aHexagram lower name) 
+			layoutSpec: (LayoutSizeSpec new :: offAxisEdgeWeight: #columnLeft).
+	^ rowLayout addMorph: colLayout;
+		yourself
+! !
+
+!HexagramDisplayPanel class methodsFor: 'new-morph participation' stamp: 'KenD 16/Jan/2022 15:35:01'!
+includeInNewMorphMenu
+	"Not to be instantiated from the menu"
+	^ true! !
+
+!HexagramDisplayPanel class methodsFor: 'new-morph participation' stamp: 'KenD 16/Jan/2022 15:32:59'!
+initializedInstance
+
+	^ (HexagramDisplayPanel forHexagram: (HexaGram cast))! !
+
+!HexagramDisplayPanel class methodsFor: 'instance creation' stamp: 'KenD 15/Jan/2022 13:58:54'!
+forHexagram: aHexagram
+
+	^ self open: aHexagram ! !
 HexaGram initialize!

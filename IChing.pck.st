@@ -1,8 +1,8 @@
-'From Cuis7.7 [latest update: #7839] on 25 February 2026 at 4:18:16 pm'!
+'From Cuis7.7 [latest update: #7839] on 26 February 2026 at 5:51:01 pm'!
 'Description Book of Changes [I Ching] exploration.
 
 Note HexaGram class comment.'!
-!provides: 'IChing' 1 23!
+!provides: 'IChing' 1 24!
 !requires: 'Cuis-Base' 77 7839 nil!
 !requires: 'UI-Panel' 1 19 nil!
 !requires: 'Graphics-Files-Additional' 1 24 nil!
@@ -536,7 +536,7 @@ imageForKingWenIndex: oneTo64
 				image: (Form extent: 35@35 :: fillColor: Color transparent) ]
 		ifFalse: [ ImageMorph new image: (PNGForms at: oneTo64) ]! !
 
-!HexaGram class methodsFor: 'images' stamp: 'KenD 12/Jan/2024 12:02:18'!
+!HexaGram class methodsFor: 'images' stamp: 'KenD 26/Feb/2026 17:46:01'!
 kingWenImage
 	"Answer simple 8x8 display , left to right
 	
@@ -544,7 +544,7 @@ HexaGram kingWenImage openInWorld.
 	"
 	| imagePlusSpace  displaySpace |
 	imagePlusSpace := 35 + 14. "35@35 is image size"
-	displaySpace := BoxedMorph new 
+	displaySpace := ColoredBoxMorph new 
 				:: color: Color orange
 				:: morphExtent: (480 @ 480).
 	1 to: 8 do: [ :col |
@@ -557,7 +557,7 @@ HexaGram kingWenImage openInWorld.
 	
 	^ displaySpace! !
 
-!HexaGram class methodsFor: 'images' stamp: 'KenD 12/Jan/2024 12:25:00'!
+!HexaGram class methodsFor: 'images' stamp: 'KenD 26/Feb/2026 17:49:58'!
 kingWenPlusSpecialsImage
 	"kingWen with marked out special pairs
 	
@@ -570,37 +570,37 @@ HexaGram kingWenPlusSpecialsImage openInWorld.
 	oppColor   :=  TranslucentColor r: 0.263 g: 0.884 b: 0.376 alpha: 0.409.
 
 	"Upper Hexagram = Lower Hexagram"
-	displaySpace addMorphFront: (BoxedMorph new 
+	displaySpace addMorphFront: (ColoredBoxMorph new 
 							:: color: sameColor
 							:: morphExtent: 104@50)
 				position: 40@40.
-	displaySpace addMorphFront: (BoxedMorph new 
+	displaySpace addMorphFront: (ColoredBoxMorph new 
 							:: color: sameColor
 							:: morphExtent: 104@50)
 				position: 233@187.
-	displaySpace addMorphFront: (BoxedMorph new 
+	displaySpace addMorphFront: (ColoredBoxMorph new 
 							:: color: sameColor
 							:: morphExtent: 104@50)
 				position: 135@335.
-	displaySpace addMorphFront: (BoxedMorph new 
+	displaySpace addMorphFront: (ColoredBoxMorph new 
 							:: color: sameColor
 							:: morphExtent: 104@50)
 				position: 40@385.				
 				
 	"Upper Hexagram is REVERSE of Lower Hexagram"
-	displaySpace addMorphFront: (BoxedMorph new 
+	displaySpace addMorphFront: (ColoredBoxMorph new 
 							:: color: oppColor
 							:: morphExtent: 104@50)
 				position: 137@90.
-	displaySpace addMorphFront: (BoxedMorph new 
+	displaySpace addMorphFront: (ColoredBoxMorph new 
 							:: color: oppColor
 							:: morphExtent: 104@50)
 				position: 334@188.
-	displaySpace addMorphFront: (BoxedMorph new 
+	displaySpace addMorphFront: (ColoredBoxMorph new 
 							:: color: oppColor
 							:: morphExtent: 104@50)
 				position: 40@234.
-	displaySpace addMorphFront: (BoxedMorph new 
+	displaySpace addMorphFront: (ColoredBoxMorph new 
 							:: color: oppColor
 							:: morphExtent: 104@50)
 				position: 333@382.

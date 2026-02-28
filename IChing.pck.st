@@ -1,8 +1,8 @@
-'From Cuis7.7 [latest update: #7839] on 26 February 2026 at 5:51:01 pm'!
+'From Cuis7.7 [latest update: #7839] on 28 February 2026 at 12:11:19 pm'!
 'Description Book of Changes [I Ching] exploration.
 
 Note HexaGram class comment.'!
-!provides: 'IChing' 1 24!
+!provides: 'IChing' 1 26!
 !requires: 'Cuis-Base' 77 7839 nil!
 !requires: 'UI-Panel' 1 19 nil!
 !requires: 'Graphics-Files-Additional' 1 24 nil!
@@ -557,7 +557,7 @@ HexaGram kingWenImage openInWorld.
 	
 	^ displaySpace! !
 
-!HexaGram class methodsFor: 'images' stamp: 'KenD 26/Feb/2026 17:49:58'!
+!HexaGram class methodsFor: 'images' stamp: 'KenD 28/Feb/2026 12:11:01'!
 kingWenPlusSpecialsImage
 	"kingWen with marked out special pairs
 	
@@ -566,7 +566,9 @@ HexaGram kingWenPlusSpecialsImage openInWorld.
 	|  displaySpace sameColor oppColor |
 	displaySpace := self kingWenImage.
 	
+	"Hexagram is two identigal trigrams"
 	sameColor := TranslucentColor r: 0.195 g: 0.197 b: 0.804 alpha: 0.543. 
+	"Hexagram inverted is opposing trigrams"
 	oppColor   :=  TranslucentColor r: 0.263 g: 0.884 b: 0.376 alpha: 0.409.
 
 	"Upper Hexagram = Lower Hexagram"
@@ -599,7 +601,7 @@ HexaGram kingWenPlusSpecialsImage openInWorld.
 	displaySpace addMorphFront: (ColoredBoxMorph new 
 							:: color: oppColor
 							:: morphExtent: 104@50)
-				position: 40@234.
+				position: 40@284.
 	displaySpace addMorphFront: (ColoredBoxMorph new 
 							:: color: oppColor
 							:: morphExtent: 104@50)

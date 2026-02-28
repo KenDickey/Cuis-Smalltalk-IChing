@@ -1,8 +1,8 @@
-'From Cuis7.7 [latest update: #7839] on 28 February 2026 at 12:11:19 pm'!
+'From Cuis7.7 [latest update: #7839] on 28 February 2026 at 2:48:40 pm'!
 'Description Book of Changes [I Ching] exploration.
 
 Note HexaGram class comment.'!
-!provides: 'IChing' 1 26!
+!provides: 'IChing' 1 29!
 !requires: 'Cuis-Base' 77 7839 nil!
 !requires: 'UI-Panel' 1 19 nil!
 !requires: 'Graphics-Files-Additional' 1 24 nil!
@@ -37,6 +37,26 @@ Object subclass: #TriGram
 	category: 'IChing'!
 !classDefinition: 'TriGram class' category: #IChing!
 TriGram class
+	instanceVariableNames: ''!
+
+!classDefinition: #GritterTransformMorph category: #IChing!
+LinearLayoutMorph subclass: #GritterTransformMorph
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	category: 'IChing'!
+!classDefinition: 'GritterTransformMorph class' category: #IChing!
+GritterTransformMorph class
+	instanceVariableNames: ''!
+
+!classDefinition: #HexagramPairMorph category: #IChing!
+ImageMorph subclass: #HexagramPairMorph
+	instanceVariableNames: 'leftKingWenIndex'
+	classVariableNames: 'DuplicatedTrigrams OpposingTrigrams'
+	poolDictionaries: ''
+	category: 'IChing'!
+!classDefinition: 'HexagramPairMorph class' category: #IChing!
+HexagramPairMorph class
 	instanceVariableNames: ''!
 
 !classDefinition: #HexagramDisplayPanel category: #IChing!
@@ -99,6 +119,17 @@ number is
 
 !TriGram commentStamp: '<historical>' prior: 0!
 The second discernment is among relations: above/same/below
+!
+
+!GritterTransformMorph commentStamp: '<historical>' prior: 0!
+Display KingWen sequence; colorize specials; reaggange into Gritter pattern; hilight meta-numbers!
+
+!HexagramPairMorph commentStamp: '<historical>' prior: 0!
+The I Ching hexagrams come in pairs.
+Some are special.
+= DuplicatedTrigrams => same trigram upper & lower
+= OpposingTrigrams => upper & lower trigrams are opposites; 2ns hexagram inverted from first
+
 !
 
 !HexagramDisplayPanel commentStamp: '<historical>' prior: 0!
@@ -197,6 +228,16 @@ hexagramForChange
 	^ HexaGram 
 		upper: (self upper trigramForChange)
 		lower:  (self lower  trigramForChange)! !
+
+!HexaGram class methodsFor: 'accessing' stamp: 'KenD 28/Feb/2026 12:32:21'!
+duplicatedTrigramColor
+
+	^TranslucentColor r: 0.195 g: 0.197 b: 0.804 alpha: 0.543.! !
+
+!HexaGram class methodsFor: 'accessing' stamp: 'KenD 28/Feb/2026 12:33:00'!
+opposingTrigramColor
+
+	^TranslucentColor r: 0.263 g: 0.884 b: 0.376 alpha: 0.409! !
 
 !HexaGram class methodsFor: 'instance creation' stamp: 'KenD 15/Jan/2022 08:15:36'!
 cast
@@ -557,7 +598,7 @@ HexaGram kingWenImage openInWorld.
 	
 	^ displaySpace! !
 
-!HexaGram class methodsFor: 'images' stamp: 'KenD 28/Feb/2026 12:11:01'!
+!HexaGram class methodsFor: 'images' stamp: 'KenD 28/Feb/2026 12:33:39'!
 kingWenPlusSpecialsImage
 	"kingWen with marked out special pairs
 	
@@ -567,9 +608,9 @@ HexaGram kingWenPlusSpecialsImage openInWorld.
 	displaySpace := self kingWenImage.
 	
 	"Hexagram is two identigal trigrams"
-	sameColor := TranslucentColor r: 0.195 g: 0.197 b: 0.804 alpha: 0.543. 
+	sameColor := self duplicatedTrigramColor.
 	"Hexagram inverted is opposing trigrams"
-	oppColor   :=  TranslucentColor r: 0.263 g: 0.884 b: 0.376 alpha: 0.409.
+	oppColor   :=  self opposingTrigramColor.
 
 	"Upper Hexagram = Lower Hexagram"
 	displaySpace addMorphFront: (ColoredBoxMorph new 
@@ -767,6 +808,130 @@ top: upperLine middle: middleLine bottom: lowerLine
 
 	^self new :: top: upperLine middle: middleLine bottom: lowerLine! !
 
+!GritterTransformMorph methodsFor: 'initialization' stamp: 'KenD 28/Feb/2026 14:31:23'!
+initializeKingWen
+
+	"King Wen Square"
+	0 to: 7 do: [ :rowIndex | | newRow |
+		newRow := LayoutMorph newRow :: color: self color.
+		1 to: 7 by: 2 do: [ :kwIndex | 
+			newRow addMorph: (HexagramPairMorph forKingWenPair: (8 * rowIndex + kwIndex))
+		].
+		self addMorph: newRow
+	]
+
+	! !
+
+!GritterTransformMorph methodsFor: 'colorize' stamp: 'KenD 28/Feb/2026 14:40:46'!
+showSpecials
+
+	self submorphsDo: [ :rowLayout |
+		rowLayout submorphsDo: [ :hexPair |
+		(HexagramPairMorph duplicatedTrigrams includes: hexPair leftKingWenIndex) 
+			ifTrue: [ hexPair color: HexaGram duplicatedTrigramColor ].
+		(HexagramPairMorph opposingTrigrams includes: hexPair leftKingWenIndex) 
+			ifTrue: [ hexPair color: HexaGram opposingTrigramColor ].
+		]
+	]
+! !
+
+!GritterTransformMorph class methodsFor: 'instance creation' stamp: 'KenD 28/Feb/2026 14:25:11'!
+fromKingWen
+
+	| newSelf |
+	newSelf := self newColumn.
+	^newSelf color: Color orange; 
+			padding: 25;
+			initializeKingWen;
+			yourself
+	! !
+
+!HexagramPairMorph methodsFor: 'colorize' stamp: 'KenD 28/Feb/2026 13:24:06'!
+color: backgroundColor
+
+	"Replace my image with same hexagrams but new backgroundColor."
+	| composer |
+	composer := LinearLayoutMorph newRow ::
+		color: backgroundColor;
+		separation: 15 ; padding: 8;
+		addMorph: ( HexaGram imageForKingWenIndex: leftKingWenIndex);
+		addMorph: ( HexaGram imageForKingWenIndex: leftKingWenIndex + 1).
+	self image: (composer imageForm: nil depth: 32); redrawNeeded ! !
+
+!HexagramPairMorph methodsFor: 'accessing' stamp: 'KenD 28/Feb/2026 13:15:32'!
+leftKingWenIndex
+
+	^leftKingWenIndex! !
+
+!HexagramPairMorph methodsFor: 'accessing' stamp: 'KenD 28/Feb/2026 13:15:56'!
+leftKingWenIndex: anIndex
+
+	leftKingWenIndex := anIndex! !
+
+!HexagramPairMorph class methodsFor: 'class initialization' stamp: 'KenD 28/Feb/2026 13:33:28'!
+initialize
+"
+	self initialize.
+"
+	"Set of 1st KingWen Index for pair"
+	DuplicatedTrigrams := `{  1.  "2"   29. "30"  51. "52"  57. "58" }`.
+	OpposingTrigrams   := `{ 11. "12"  63. "64"  31. "32"  41. "42" }`.
+	! !
+
+!HexagramPairMorph class methodsFor: 'accessing' stamp: 'KenD 28/Feb/2026 14:37:14'!
+duplicatedTrigrams
+
+	^DuplicatedTrigrams! !
+
+!HexagramPairMorph class methodsFor: 'accessing' stamp: 'KenD 28/Feb/2026 14:37:30'!
+opposingTrigrams
+
+	^OpposingTrigrams ! !
+
+!HexagramPairMorph class methodsFor: 'instance creation' stamp: 'KenD 28/Feb/2026 14:47:28'!
+emptyPair
+
+	| newSelf composer |
+	composer := ColoredBoxMorph new ::
+		morphExtent: 101@51;
+		color: Color transparent.
+	newSelf := self newWith: (composer imageForm: nil depth: 32).
+	^newSelf leftKingWenIndex: 0;
+		yourself! !
+
+!HexagramPairMorph class methodsFor: 'instance creation' stamp: 'KenD 28/Feb/2026 13:16:25'!
+forKingWenPair: firstIndex
+
+	| newSelf composer |
+	composer := LinearLayoutMorph newRow ::
+		color: Color transparent ;
+		separation: 15 ; padding: 8;
+		addMorph: ( HexaGram imageForKingWenIndex: firstIndex);
+		addMorph: ( HexaGram imageForKingWenIndex: firstIndex + 1).
+	newSelf := self newWith: (composer imageForm: nil depth: 32).
+	^newSelf leftKingWenIndex: firstIndex;
+		yourself! !
+
+!HexagramPairMorph class methodsFor: 'instance creation' stamp: 'KenD 28/Feb/2026 13:32:19'!
+forKingWenPair: firstIndex colorize: addColor
+
+	| newSelf composer color |
+	addColor ifTrue: [
+		color := Color transparent.
+		(DuplicatedTrigrams includes: firstIndex) 
+			ifTrue: [ color := HexaGram duplicatedTrigramColor ].
+		(OpposingTrigrams includes: firstIndex) 
+			ifTrue: [ color := HexaGram opposingTrigramColor ].
+	].
+	composer := LinearLayoutMorph newRow ::
+		color: color;
+		separation: 15 ; padding: 8;
+		addMorph: ( HexaGram imageForKingWenIndex: firstIndex);
+		addMorph: ( HexaGram imageForKingWenIndex: firstIndex + 1).
+	newSelf := self newWith: (composer imageForm: nil depth: 32).
+	^newSelf leftKingWenIndex: firstIndex;
+		yourself! !
+
 !HexagramDisplayPanel methodsFor: 'GUI building' stamp: 'KenD 25/Feb/2026 16:04:58'!
 buildMorphicWindow
 	"Column of 4 rows: hexagram; changing lines; name; changed hexagram"
@@ -853,3 +1018,4 @@ forHexagram: aHexagram
 
 	^ self open: aHexagram ! !
 HexaGram initialize!
+HexagramPairMorph initialize!

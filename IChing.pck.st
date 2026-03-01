@@ -1,8 +1,8 @@
-'From Cuis7.7 [latest update: #7839] on 28 February 2026 at 2:48:40 pm'!
+'From Cuis7.7 [latest update: #7839] on 1 March 2026 at 12:43:24 pm'!
 'Description Book of Changes [I Ching] exploration.
 
 Note HexaGram class comment.'!
-!provides: 'IChing' 1 29!
+!provides: 'IChing' 1 31!
 !requires: 'Cuis-Base' 77 7839 nil!
 !requires: 'UI-Panel' 1 19 nil!
 !requires: 'Graphics-Files-Additional' 1 24 nil!
@@ -41,7 +41,7 @@ TriGram class
 
 !classDefinition: #GritterTransformMorph category: #IChing!
 LinearLayoutMorph subclass: #GritterTransformMorph
-	instanceVariableNames: ''
+	instanceVariableNames: 'isGritter'
 	classVariableNames: ''
 	poolDictionaries: ''
 	category: 'IChing'!
@@ -122,7 +122,12 @@ The second discernment is among relations: above/same/below
 !
 
 !GritterTransformMorph commentStamp: '<historical>' prior: 0!
-Display KingWen sequence; colorize specials; reaggange into Gritter pattern; hilight meta-numbers!
+Display KingWen sequence; colorize specials; reaggange into Gritter pattern; hilight meta-numbers
+
+G := GritterTransformMorph fromKingWen openInWorld.
+G showSpecials.
+G transformToGritter.
+!
 
 !HexagramPairMorph commentStamp: '<historical>' prior: 0!
 The I Ching hexagrams come in pairs.
@@ -808,6 +813,12 @@ top: upperLine middle: middleLine bottom: lowerLine
 
 	^self new :: top: upperLine middle: middleLine bottom: lowerLine! !
 
+!GritterTransformMorph methodsFor: 'initialization' stamp: 'KenD 1/Mar/2026 10:09:32'!
+initialize
+
+	super initialize.
+	isGritter := false.! !
+
 !GritterTransformMorph methodsFor: 'initialization' stamp: 'KenD 28/Feb/2026 14:31:23'!
 initializeKingWen
 
@@ -822,6 +833,119 @@ initializeKingWen
 
 	! !
 
+!GritterTransformMorph methodsFor: 'geometry' stamp: 'KenD 1/Mar/2026 12:42:28'!
+transformToGritter
+
+	"Show Gritter Pattern."
+	|  nextRow hexPairCollection |
+
+	"hexPairs in King Wen Order."
+	hexPairCollection := OrderedCollection new.
+	"Note that submorph display is reverse ordered."
+	self submorphs reverseDo: [ :aRow |
+		aRow submorphs reverseDo: [ :hexPair |
+			hexPairCollection addLast: hexPair
+		]
+	].
+
+	"Transcript log: hexPairCollection size printString, ' pairs'. --> 32 pairs"
+	
+	"6 "
+	nextRow := LinearLayoutMorph newColumn :: color: Color transparent.
+	self addMorphFront: nextRow.
+	nextRow addMorphFront:  (self centerPairFrom: hexPairCollection).
+	nextRow addMorphFront:  (self quadPairsFrom: hexPairCollection).
+	nextRow addMorphFront:  (self centerPairFrom: hexPairCollection).
+	(self submorphs select: [ :s | s submorphs size = 0 ]) do: [ :emptyRow | emptyRow hide; delete ].
+	nextRow borderColor: Color green; borderWidth: 4.
+ 
+	"8"
+	nextRow := LinearLayoutMorph newColumn :: color: Color transparent.
+	self addMorphFront: nextRow.
+	nextRow addMorphFront: (self quadPairsFrom: hexPairCollection).
+	nextRow addMorphFront: (self emptyFive).
+	nextRow addMorphFront: (self quadPairsFrom: hexPairCollection).
+	(self submorphs select: [ :s | s submorphs size = 0 ]) do: [ :emptyRow | emptyRow hide; delete ].
+	nextRow borderColor: Color blue; borderWidth: 4.
+
+	"center"
+	nextRow := LinearLayoutMorph newColumn :: color: Color transparent.
+	self addMorphFront: nextRow.
+	nextRow addMorphFront:  (self centerPairFrom: hexPairCollection).
+	nextRow addMorphFront:  (self centerPairFrom: hexPairCollection).
+	(self submorphs select: [ :s | s submorphs size = 0 ]) do: [ :emptyRow | emptyRow hide; delete ].
+
+	"9"
+	nextRow := LinearLayoutMorph newColumn :: color: Color transparent.
+	self addMorphFront: nextRow.
+	nextRow addMorphFront: (self quadPairsFrom: hexPairCollection).
+	nextRow addMorphFront: (self centerPairFrom: hexPairCollection).
+ 	nextRow addMorphFront: (self quadPairsFrom: hexPairCollection).
+	(self submorphs select: [ :s | s submorphs size = 0 ]) do: [ :emptyRow | emptyRow hide; delete ].
+	nextRow borderColor: Color yellow; borderWidth: 4.
+
+	"7"
+	nextRow := LinearLayoutMorph newColumn :: color: Color transparent.
+	self addMorphFront: nextRow.
+	nextRow addMorphFront:  (self centerPairFrom: hexPairCollection).
+	nextRow addMorphFront:  (self fivePairsFrom: hexPairCollection).
+	nextRow addMorphFront:  (self centerPairFrom: hexPairCollection).
+	(self submorphs select: [ :s | s submorphs size = 0 ]) do: [ :emptyRow | emptyRow hide; delete ].
+	nextRow borderColor: Color red; borderWidth: 4.
+
+	self isGritter: true.
+	self redrawNeeded.
+	! !
+
+!GritterTransformMorph methodsFor: 'private' stamp: 'KenD 1/Mar/2026 11:54:02'!
+centerPairFrom: hexPairCollection
+
+	"Answer a row with next hexPair"
+	^LinearLayoutMorph newRow :: 
+		color: Color transparent; 
+		axisEdgeWeight: #center;
+		addMorph: hexPairCollection removeFirst! !
+
+!GritterTransformMorph methodsFor: 'private' stamp: 'KenD 1/Mar/2026 12:02:35'!
+emptyFive
+
+	"Answer an empty row"
+	^LinearLayoutMorph newRow :: 
+		color: Color transparent; 
+		axisEdgeWeight: #center;
+		addMorph:HexagramPairMorph emptyPair  "defines size"! !
+
+!GritterTransformMorph methodsFor: 'private' stamp: 'KenD 1/Mar/2026 12:03:37'!
+fivePairsFrom: hexPairCollection
+
+	"Answer a row with 4 hexPairs, empty center"
+	| newRow |
+	newRow := LinearLayoutMorph newRow :: 
+		color: Color transparent.
+	
+	newRow addMorph: hexPairCollection removeFirst.
+	newRow addMorph: hexPairCollection removeFirst.
+	newRow addMorph: hexPairCollection removeFirst.
+	newRow addMorph: hexPairCollection removeFirst.
+	newRow addMorph: hexPairCollection removeFirst.
+	
+	^newRow! !
+
+!GritterTransformMorph methodsFor: 'private' stamp: 'KenD 1/Mar/2026 12:05:37'!
+quadPairsFrom: hexPairCollection
+
+	"Answer a row with 4 hexPairs, empty center"
+	| newRow |
+	newRow := LinearLayoutMorph newRow :: 
+		color: Color transparent.
+	
+	newRow addMorph: hexPairCollection removeFirst.
+	newRow addMorph: hexPairCollection removeFirst.
+	newRow addMorph: HexagramPairMorph emptyPair.
+	newRow addMorph: hexPairCollection removeFirst.
+	newRow addMorph: hexPairCollection removeFirst.
+	^newRow! !
+
 !GritterTransformMorph methodsFor: 'colorize' stamp: 'KenD 28/Feb/2026 14:40:46'!
 showSpecials
 
@@ -834,6 +958,16 @@ showSpecials
 		]
 	]
 ! !
+
+!GritterTransformMorph methodsFor: 'testing' stamp: 'KenD 1/Mar/2026 10:10:15'!
+isGritter
+
+	^isGritter! !
+
+!GritterTransformMorph methodsFor: 'testing' stamp: 'KenD 1/Mar/2026 10:10:30'!
+isGritter: aBoolean
+
+	isGritter := aBoolean ! !
 
 !GritterTransformMorph class methodsFor: 'instance creation' stamp: 'KenD 28/Feb/2026 14:25:11'!
 fromKingWen

@@ -1,8 +1,8 @@
-'From Cuis7.7 [latest update: #7839] on 1 March 2026 at 12:43:24 pm'!
+'From Cuis7.7 [latest update: #7839] on 1 March 2026 at 2:21:44 pm'!
 'Description Book of Changes [I Ching] exploration.
 
 Note HexaGram class comment.'!
-!provides: 'IChing' 1 31!
+!provides: 'IChing' 1 32!
 !requires: 'Cuis-Base' 77 7839 nil!
 !requires: 'UI-Panel' 1 19 nil!
 !requires: 'Graphics-Files-Additional' 1 24 nil!
@@ -897,31 +897,34 @@ transformToGritter
 	self redrawNeeded.
 	! !
 
-!GritterTransformMorph methodsFor: 'private' stamp: 'KenD 1/Mar/2026 11:54:02'!
+!GritterTransformMorph methodsFor: 'private' stamp: 'KenD 1/Mar/2026 14:09:30'!
 centerPairFrom: hexPairCollection
 
 	"Answer a row with next hexPair"
 	^LinearLayoutMorph newRow :: 
 		color: Color transparent; 
 		axisEdgeWeight: #center;
+		gap: 20;
 		addMorph: hexPairCollection removeFirst! !
 
-!GritterTransformMorph methodsFor: 'private' stamp: 'KenD 1/Mar/2026 12:02:35'!
+!GritterTransformMorph methodsFor: 'private' stamp: 'KenD 1/Mar/2026 14:09:25'!
 emptyFive
 
 	"Answer an empty row"
 	^LinearLayoutMorph newRow :: 
-		color: Color transparent; 
+		color: Color transparent;
+		gap: 20; 
 		axisEdgeWeight: #center;
 		addMorph:HexagramPairMorph emptyPair  "defines size"! !
 
-!GritterTransformMorph methodsFor: 'private' stamp: 'KenD 1/Mar/2026 12:03:37'!
+!GritterTransformMorph methodsFor: 'private' stamp: 'KenD 1/Mar/2026 14:09:20'!
 fivePairsFrom: hexPairCollection
 
 	"Answer a row with 4 hexPairs, empty center"
 	| newRow |
 	newRow := LinearLayoutMorph newRow :: 
-		color: Color transparent.
+		color: Color transparent;
+		gap: 20.
 	
 	newRow addMorph: hexPairCollection removeFirst.
 	newRow addMorph: hexPairCollection removeFirst.
@@ -931,13 +934,14 @@ fivePairsFrom: hexPairCollection
 	
 	^newRow! !
 
-!GritterTransformMorph methodsFor: 'private' stamp: 'KenD 1/Mar/2026 12:05:37'!
+!GritterTransformMorph methodsFor: 'private' stamp: 'KenD 1/Mar/2026 14:09:12'!
 quadPairsFrom: hexPairCollection
 
 	"Answer a row with 4 hexPairs, empty center"
 	| newRow |
 	newRow := LinearLayoutMorph newRow :: 
-		color: Color transparent.
+		color: Color transparent;
+		gap: 20.
 	
 	newRow addMorph: hexPairCollection removeFirst.
 	newRow addMorph: hexPairCollection removeFirst.

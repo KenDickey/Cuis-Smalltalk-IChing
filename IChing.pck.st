@@ -1,8 +1,8 @@
-'From Cuis7.7 [latest update: #7839] on 3 March 2026 at 2:16:11 pm'!
+'From Cuis7.7 [latest update: #7839] on 3 March 2026 at 2:54:42 pm'!
 'Description Book of Changes [I Ching] exploration.
 
 Note HexaGram class comment.'!
-!provides: 'IChing' 1 33!
+!provides: 'IChing' 1 34!
 !requires: 'Cuis-Base' 77 7839 nil!
 !requires: 'UI-Panel' 1 19 nil!
 !requires: 'Graphics-Files-Additional' 1 24 nil!
@@ -52,7 +52,7 @@ GritterTransformMorph class
 !classDefinition: #HexagramPairMorph category: #IChing!
 ImageMorph subclass: #HexagramPairMorph
 	instanceVariableNames: 'leftKingWenIndex'
-	classVariableNames: 'DuplicatedTrigrams OpposingTrigrams'
+	classVariableNames: 'DuplicatedTrigrams OpposingTrigrams SymmetricTrigrams'
 	poolDictionaries: ''
 	category: 'IChing'!
 !classDefinition: 'HexagramPairMorph class' category: #IChing!
@@ -133,7 +133,8 @@ G transformToGritter.
 The I Ching hexagrams come in pairs.
 Some are special.
 = DuplicatedTrigrams => same trigram upper & lower
-= OpposingTrigrams => upper & lower trigrams are opposites; 2ns hexagram inverted from first
+= OpposingTrigrams => upper & lower trigrams are (xor) opposites; 2nd hexagram inverted from first
+= SymmetricTrigrams => upper inverse = lower; linked with opposite hexagram
 
 !
 
@@ -243,6 +244,11 @@ duplicatedTrigramColor
 opposingTrigramColor
 
 	^ `TranslucentColor r: 0.661 g: 0.641 b: 0.158 alpha: 0.640`! !
+
+!HexaGram class methodsFor: 'accessing' stamp: 'KenD 3/Mar/2026 14:39:16'!
+symmetricTrigramColor
+
+	^ `TranslucentColor r: 0.000 g: 0.692 b: 0.824 alpha: 0.150`! !
 
 !HexaGram class methodsFor: 'instance creation' stamp: 'KenD 15/Jan/2022 08:15:36'!
 cast
@@ -950,7 +956,7 @@ quadPairsFrom: hexPairCollection
 	newRow addMorph: hexPairCollection removeFirst.
 	^newRow! !
 
-!GritterTransformMorph methodsFor: 'colorize' stamp: 'KenD 28/Feb/2026 14:40:46'!
+!GritterTransformMorph methodsFor: 'colorize' stamp: 'KenD 3/Mar/2026 14:47:14'!
 showSpecials
 
 	self submorphsDo: [ :rowLayout |
@@ -959,6 +965,21 @@ showSpecials
 			ifTrue: [ hexPair color: HexaGram duplicatedTrigramColor ].
 		(HexagramPairMorph opposingTrigrams includes: hexPair leftKingWenIndex) 
 			ifTrue: [ hexPair color: HexaGram opposingTrigramColor ].
+		]
+	]
+! !
+
+!GritterTransformMorph methodsFor: 'colorize' stamp: 'KenD 3/Mar/2026 14:47:04'!
+showSpecialsWIthSymmetrics
+
+	self submorphsDo: [ :rowLayout |
+		rowLayout submorphsDo: [ :hexPair |
+		(HexagramPairMorph duplicatedTrigrams includes: hexPair leftKingWenIndex) 
+			ifTrue: [ hexPair color: HexaGram duplicatedTrigramColor ].
+		(HexagramPairMorph opposingTrigrams includes: hexPair leftKingWenIndex) 
+			ifTrue: [ hexPair color: HexaGram opposingTrigramColor ].
+		(HexagramPairMorph symmetricTrigrams includes: hexPair leftKingWenIndex) 
+			ifTrue: [ hexPair color: HexaGram symmetricTrigramColor ].
 		]
 	]
 ! !
@@ -1006,7 +1027,7 @@ leftKingWenIndex: anIndex
 
 	leftKingWenIndex := anIndex! !
 
-!HexagramPairMorph class methodsFor: 'class initialization' stamp: 'KenD 28/Feb/2026 13:33:28'!
+!HexagramPairMorph class methodsFor: 'class initialization' stamp: 'KenD 3/Mar/2026 14:48:17'!
 initialize
 "
 	self initialize.
@@ -1014,17 +1035,26 @@ initialize
 	"Set of 1st KingWen Index for pair"
 	DuplicatedTrigrams := `{  1.  "2"   29. "30"  51. "52"  57. "58" }`.
 	OpposingTrigrams   := `{ 11. "12"  63. "64"  31. "32"  41. "42" }`.
+	SymmetricTrigrams := `{ "also 1 & 2 " 27. "28" 61. "62" }`.
 	! !
 
-!HexagramPairMorph class methodsFor: 'accessing' stamp: 'KenD 28/Feb/2026 14:37:14'!
+!HexagramPairMorph class methodsFor: 'accessing' stamp: 'KenD 3/Mar/2026 14:44:43'!
 duplicatedTrigrams
 
+	"Top trigram is same as bottom trigram"
 	^DuplicatedTrigrams! !
 
-!HexagramPairMorph class methodsFor: 'accessing' stamp: 'KenD 28/Feb/2026 14:37:30'!
+!HexagramPairMorph class methodsFor: 'accessing' stamp: 'KenD 3/Mar/2026 14:44:57'!
 opposingTrigrams
 
+	"Top trigram is (xor) opposite of bottom trigram"
 	^OpposingTrigrams ! !
+
+!HexagramPairMorph class methodsFor: 'accessing' stamp: 'KenD 3/Mar/2026 14:43:25'!
+symmetricTrigrams
+
+	"Hexagrams inverted are same as original"
+	^SymmetricTrigrams ! !
 
 !HexagramPairMorph class methodsFor: 'instance creation' stamp: 'KenD 28/Feb/2026 14:47:28'!
 emptyPair

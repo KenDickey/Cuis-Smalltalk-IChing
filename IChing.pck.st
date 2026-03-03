@@ -1,8 +1,8 @@
-'From Cuis7.7 [latest update: #7839] on 1 March 2026 at 2:21:44 pm'!
+'From Cuis7.7 [latest update: #7839] on 3 March 2026 at 2:16:11 pm'!
 'Description Book of Changes [I Ching] exploration.
 
 Note HexaGram class comment.'!
-!provides: 'IChing' 1 32!
+!provides: 'IChing' 1 33!
 !requires: 'Cuis-Base' 77 7839 nil!
 !requires: 'UI-Panel' 1 19 nil!
 !requires: 'Graphics-Files-Additional' 1 24 nil!
@@ -234,15 +234,15 @@ hexagramForChange
 		upper: (self upper trigramForChange)
 		lower:  (self lower  trigramForChange)! !
 
-!HexaGram class methodsFor: 'accessing' stamp: 'KenD 28/Feb/2026 12:32:21'!
+!HexaGram class methodsFor: 'accessing' stamp: 'KenD 3/Mar/2026 14:10:17'!
 duplicatedTrigramColor
 
-	^TranslucentColor r: 0.195 g: 0.197 b: 0.804 alpha: 0.543.! !
+	^`TranslucentColor r: 0.875 g: 0.408 b: 0.854 alpha: 0.640`.! !
 
-!HexaGram class methodsFor: 'accessing' stamp: 'KenD 28/Feb/2026 12:33:00'!
+!HexaGram class methodsFor: 'accessing' stamp: 'KenD 3/Mar/2026 14:11:32'!
 opposingTrigramColor
 
-	^TranslucentColor r: 0.263 g: 0.884 b: 0.376 alpha: 0.409! !
+	^ `TranslucentColor r: 0.661 g: 0.641 b: 0.158 alpha: 0.640`! !
 
 !HexaGram class methodsFor: 'instance creation' stamp: 'KenD 15/Jan/2022 08:15:36'!
 cast

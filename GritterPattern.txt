@@ -1,0 +1,29 @@
+Gritter Pattern
+
+No mathematic explination has been found for the King Wen order of hexagrams.
+
+Patterns here are "irrational" and accord to visual/symbolic structures.
+
+Gert Gritter noticed a remarkable pattern in the hexagram pairs in 2014.
+
+   https://www.yijing.nl/structures/Gritter.html
+
+By rearranging the King Wen sequence around a central pillar consisting of the hexagram
+pairs which are doubled or opposite trigrams, a visual, structural ordering of the pairs appears.
+
+  6 - Old      Yin     [changing line]
+  8 - Young Yin
+  9 - Old      Yang  [changing line]
+  7 - Young Yang
+
+Note that one can combine figures 6+9 == 8+7 = 15
+which is sum of "magic square" slice:
+      4 9 2
+      3 5 7
+      8 1 6
+
+A Jungian interpretation of the above would be a mandala of the Self meta-architype.
+
+G := GritterTransformMorph fromKingWen openInWorld.
+G showSpecials.
+G transformToGritter.

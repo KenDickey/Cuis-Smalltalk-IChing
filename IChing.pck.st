@@ -1,8 +1,8 @@
-'From Cuis7.7 [latest update: #7839] on 3 March 2026 at 2:54:42 pm'!
+'From Cuis7.7 [latest update: #7839] on 4 March 2026 at 4:04:10 pm'!
 'Description Book of Changes [I Ching] exploration.
 
 Note HexaGram class comment.'!
-!provides: 'IChing' 1 34!
+!provides: 'IChing' 1 35!
 !requires: 'Cuis-Base' 77 7839 nil!
 !requires: 'UI-Panel' 1 19 nil!
 !requires: 'Graphics-Files-Additional' 1 24 nil!
@@ -126,6 +126,7 @@ Display KingWen sequence; colorize specials; reaggange into Gritter pattern; hil
 
 G := GritterTransformMorph fromKingWen openInWorld.
 G showSpecials.
+"G showSpecialsWIthSymmetrics."
 G transformToGritter.
 !
 
@@ -839,7 +840,37 @@ initializeKingWen
 
 	! !
 
-!GritterTransformMorph methodsFor: 'geometry' stamp: 'KenD 1/Mar/2026 12:42:28'!
+!GritterTransformMorph methodsFor: 'geometry' stamp: 'KenD 4/Mar/2026 15:24:31'!
+animateToGritter
+
+	"Show Gritter Pattern."
+	|  hexPairCollection |
+	self isGritter ifTrue: [ ^self ]. "Done"
+
+	"hexPairs in King Wen Order."
+	hexPairCollection := OrderedCollection new.
+	"Note that submorph display is reverse ordered."
+	self submorphs reverseDo: [ :aRow |
+		aRow submorphs reverseDo: [ :hexPair |
+			hexPairCollection addLast: hexPair
+		]
+	].
+
+	"Continuation Passing Style"
+
+	self animate6from: hexPairCollection next: 
+		[ self animate8from: hexPairCollection next:
+			[ self animate2from: hexPairCollection next:
+				[ self animate9from: hexPairCollection next:
+					[ self animate7from: hexPairCollection next: 
+						[ self isGritter: true;  redrawNeeded ]
+					]
+				]
+			]
+		]
+! !
+
+!GritterTransformMorph methodsFor: 'geometry' stamp: 'KenD 4/Mar/2026 15:08:46'!
 transformToGritter
 
 	"Show Gritter Pattern."
@@ -862,7 +893,7 @@ transformToGritter
 	nextRow addMorphFront:  (self centerPairFrom: hexPairCollection).
 	nextRow addMorphFront:  (self quadPairsFrom: hexPairCollection).
 	nextRow addMorphFront:  (self centerPairFrom: hexPairCollection).
-	(self submorphs select: [ :s | s submorphs size = 0 ]) do: [ :emptyRow | emptyRow hide; delete ].
+	self removeEmptyRows.
 	nextRow borderColor: Color green; borderWidth: 4.
  
 	"8"
@@ -871,7 +902,7 @@ transformToGritter
 	nextRow addMorphFront: (self quadPairsFrom: hexPairCollection).
 	nextRow addMorphFront: (self emptyFive).
 	nextRow addMorphFront: (self quadPairsFrom: hexPairCollection).
-	(self submorphs select: [ :s | s submorphs size = 0 ]) do: [ :emptyRow | emptyRow hide; delete ].
+	self removeEmptyRows.
 	nextRow borderColor: Color blue; borderWidth: 4.
 
 	"center"
@@ -879,7 +910,7 @@ transformToGritter
 	self addMorphFront: nextRow.
 	nextRow addMorphFront:  (self centerPairFrom: hexPairCollection).
 	nextRow addMorphFront:  (self centerPairFrom: hexPairCollection).
-	(self submorphs select: [ :s | s submorphs size = 0 ]) do: [ :emptyRow | emptyRow hide; delete ].
+	self removeEmptyRows.
 
 	"9"
 	nextRow := LinearLayoutMorph newColumn :: color: Color transparent.
@@ -887,7 +918,7 @@ transformToGritter
 	nextRow addMorphFront: (self quadPairsFrom: hexPairCollection).
 	nextRow addMorphFront: (self centerPairFrom: hexPairCollection).
  	nextRow addMorphFront: (self quadPairsFrom: hexPairCollection).
-	(self submorphs select: [ :s | s submorphs size = 0 ]) do: [ :emptyRow | emptyRow hide; delete ].
+	self removeEmptyRows.
 	nextRow borderColor: Color yellow; borderWidth: 4.
 
 	"7"
@@ -896,11 +927,187 @@ transformToGritter
 	nextRow addMorphFront:  (self centerPairFrom: hexPairCollection).
 	nextRow addMorphFront:  (self fivePairsFrom: hexPairCollection).
 	nextRow addMorphFront:  (self centerPairFrom: hexPairCollection).
-	(self submorphs select: [ :s | s submorphs size = 0 ]) do: [ :emptyRow | emptyRow hide; delete ].
+	self removeEmptyRows.
 	nextRow borderColor: Color red; borderWidth: 4.
 
 	self isGritter: true.
 	self redrawNeeded.
+	! !
+
+!GritterTransformMorph methodsFor: 'private-animation' stamp: 'KenD 4/Mar/2026 16:01:20'!
+animate2from: hexPairCollection next:  nextAction
+
+	"Center 2 hexPairs"
+	| outerRow |
+	outerRow := LinearLayoutMorph newColumn ::
+		color: Color transparent;
+		morphExtent: 593@102.
+		
+	self addMorph: outerRow behind: hexPairCollection first owner; layoutSubmorphs.
+	
+	self centerPairAnimateFrom: hexPairCollection to: outerRow next: 
+		[  self centerPairAnimateFrom: hexPairCollection to: outerRow next: 
+			[  self removeEmptyRows.
+			    nextAction value.
+			]
+		]
+
+	
+! !
+
+!GritterTransformMorph methodsFor: 'private-animation' stamp: 'KenD 4/Mar/2026 16:01:15'!
+animate6from: hexPairCollection next:  nextAction
+
+	"6 "
+	| outerRow |
+	outerRow := LinearLayoutMorph newColumn :: 
+		color: Color transparent;
+		morphExtent: 593@161;
+		borderColor: Color green; 
+		borderWidth: 4.
+		
+	self addMorph: outerRow behind: hexPairCollection first owner; layoutSubmorphs.
+	
+	self centerPairAnimateFrom: hexPairCollection to: outerRow next: 
+		[ self quadPairsAnimateFrom: hexPairCollection to: outerRow next: 
+			[ self centerPairAnimateFrom: hexPairCollection to: outerRow next: 
+				[ self removeEmptyRows.
+				    nextAction value.
+				]
+			]
+		]
+
+	
+! !
+
+!GritterTransformMorph methodsFor: 'private-animation' stamp: 'KenD 4/Mar/2026 16:01:08'!
+animate7from: hexPairCollection next:  nextAction
+
+	"7 "
+	| outerRow |
+	outerRow := LinearLayoutMorph newColumn :: 
+		color: Color transparent;
+		borderColor: Color green;
+		borderWidth: 4.
+
+	self addMorph: outerRow behind: hexPairCollection first owner; layoutSubmorphs.
+	
+	self centerPairAnimateFrom: hexPairCollection to: outerRow next: 
+		[ self fivePairsAnimateFrom: hexPairCollection to: outerRow next: 
+			[ self centerPairAnimateFrom: hexPairCollection to: outerRow next: 
+				[ self removeEmptyRows.
+				    nextAction value.
+				]
+			]
+		]
+
+	
+! !
+
+!GritterTransformMorph methodsFor: 'private-animation' stamp: 'KenD 4/Mar/2026 16:00:56'!
+animate8from: hexPairCollection next:  nextAction
+
+	"8 "
+	| outerRow |
+	outerRow := LinearLayoutMorph newColumn :: 
+		color: Color transparent;
+		morphExtent: 593@161;
+		borderColor: Color blue; 
+		borderWidth: 4.
+
+	self addMorph: outerRow behind: hexPairCollection first owner; layoutSubmorphs.
+	
+	self quadPairsAnimateFrom: hexPairCollection to: outerRow next: 
+		[  outerRow addMorphFront: (self emptyFive).
+		    self quadPairsAnimateFrom: hexPairCollection to: outerRow next: 
+			[ self removeEmptyRows.
+			  nextAction value.
+			]
+		]
+
+	
+! !
+
+!GritterTransformMorph methodsFor: 'private-animation' stamp: 'KenD 4/Mar/2026 16:01:02'!
+animate9from: hexPairCollection next:  nextAction
+
+	"9 "
+	| outerRow |
+	outerRow := LinearLayoutMorph newColumn :: 
+		color: Color transparent;
+		morphExtent: 593@161;
+		borderColor: Color yellow;
+		borderWidth: 4.
+
+	self addMorph: outerRow behind: hexPairCollection first owner; layoutSubmorphs.
+	
+	self quadPairsAnimateFrom: hexPairCollection to: outerRow next: 
+		[  self centerPairAnimateFrom: hexPairCollection to: outerRow next:
+		    [ self quadPairsAnimateFrom: hexPairCollection to: outerRow next: 
+			[ self removeEmptyRows.
+			  nextAction value.
+			]
+		   ]
+		]
+	
+! !
+
+!GritterTransformMorph methodsFor: 'private-animation' stamp: 'KenD 4/Mar/2026 16:02:58'!
+centerPairAnimateFrom: hexPairCollection to: outerRow next: nextAction
+
+	"Add a row with next hexPair"
+	| innerRow |
+	innerRow := LinearLayoutMorph newRow :: 
+		color: Color transparent; 
+		axisEdgeWeight: #center;
+		gap: 20;
+		morphExtent: 585@51.
+	outerRow addMorphFront: innerRow; layoutSubmorphs.
+	
+	hexPairCollection removeFirst 
+		animateMoveTo: innerRow next: nextAction
+
+	! !
+
+!GritterTransformMorph methodsFor: 'private-animation' stamp: 'KenD 4/Mar/2026 16:03:10'!
+fivePairsAnimateFrom: hexPairCollection to: outerRow next: nextAction
+
+	"Add a row with next 5 hexPairs"
+	| innerRow |
+	innerRow := LinearLayoutMorph newRow :: 
+		color: Color transparent; 
+		gap: 20;
+		morphExtent: 585@51.
+	outerRow addMorphFront: innerRow; layoutSubmorphs.
+	
+	hexPairCollection removeFirst  animateMoveTo: innerRow next: 
+		[ hexPairCollection removeFirst  animateMoveTo: innerRow next: 
+			[ hexPairCollection removeFirst  animateMoveTo: innerRow next: 
+				[ hexPairCollection removeFirst  animateMoveTo: innerRow next: 
+					[ hexPairCollection removeFirst  animateMoveTo: innerRow next:  nextAction ]
+				]
+			]
+		]
+	! !
+
+!GritterTransformMorph methodsFor: 'private-animation' stamp: 'KenD 4/Mar/2026 16:03:16'!
+quadPairsAnimateFrom: hexPairCollection to: outerRow next: nextAction
+
+	"Add a row with next 4 hexPairs"
+	| innerRow |
+	innerRow := LinearLayoutMorph newRow :: 
+		color: Color transparent; 
+		gap: 20;
+		morphExtent: 585@51.
+	outerRow addMorphFront: innerRow; layoutSubmorphs.
+	
+	hexPairCollection removeFirst  animateMoveTo: innerRow next: 
+		[ hexPairCollection removeFirst  animateMoveTo: innerRow next: 
+			[ innerRow addMorph: HexagramPairMorph emptyPair.
+			  hexPairCollection removeFirst  animateMoveTo: innerRow next: 
+				[ hexPairCollection removeFirst  animateMoveTo: innerRow next:  nextAction ]
+			]
+		]
 	! !
 
 !GritterTransformMorph methodsFor: 'private' stamp: 'KenD 1/Mar/2026 14:09:30'!
@@ -940,7 +1147,7 @@ fivePairsFrom: hexPairCollection
 	
 	^newRow! !
 
-!GritterTransformMorph methodsFor: 'private' stamp: 'KenD 1/Mar/2026 14:09:12'!
+!GritterTransformMorph methodsFor: 'private' stamp: 'KenD 4/Mar/2026 14:45:24'!
 quadPairsFrom: hexPairCollection
 
 	"Answer a row with 4 hexPairs, empty center"
@@ -955,6 +1162,12 @@ quadPairsFrom: hexPairCollection
 	newRow addMorph: hexPairCollection removeFirst.
 	newRow addMorph: hexPairCollection removeFirst.
 	^newRow! !
+
+!GritterTransformMorph methodsFor: 'private' stamp: 'KenD 4/Mar/2026 15:06:40'!
+removeEmptyRows
+
+	(self submorphs select: [ :s | s submorphs size = 0 ]) do: 
+						[ :emptyRow | emptyRow hide; delete ]! !
 
 !GritterTransformMorph methodsFor: 'colorize' stamp: 'KenD 3/Mar/2026 14:47:14'!
 showSpecials
@@ -1005,6 +1218,70 @@ fromKingWen
 			yourself
 	! !
 
+!HexagramPairMorph methodsFor: 'animation' stamp: 'KenD 4/Mar/2026 15:38:14'!
+animateMoveTo: newContainer next: nextAction
+	"Animate move of the top Card in aPile into aContainer."
+
+	| worldPos oldContainer |
+	oldContainer := self owner.
+	self setProperty: #moveStart toValue: oldContainer .
+	worldPos := self positionInWorld.
+	
+	"Transfer card to World"
+	oldContainer world addMorph: self.
+	self morphPosition: worldPos.
+	
+	"Animate the image move -- in World coordinates"
+	self slideTo: newContainer positionInWorld + (newContainer morphExtent // 2)
+		  nSteps: self numberOfMoveSteps 
+		  delay: self moveDelay
+		  next: [
+				"Give the card to otherContainer."
+				self world removeMorph: self.
+				newContainer addMorphFront: self.
+				nextAction value
+		  ].
+
+! !
+
+!HexagramPairMorph methodsFor: 'animation' stamp: 'KenD 4/Mar/2026 15:27:50'!
+moveDelay
+
+	^40
+	! !
+
+!HexagramPairMorph methodsFor: 'animation' stamp: 'KenD 4/Mar/2026 15:18:18'!
+numberOfMoveSteps
+
+	^20
+	! !
+
+!HexagramPairMorph methodsFor: 'animation' stamp: 'KenD 4/Mar/2026 14:32:27'!
+slideTo: endPoint nSteps: numSteps delay: milliSecondsDelay next: nextAction
+	"Slide self from current to new position -- in owner's coordinates"
+	"Nota Bene: Asynchronous.  When complete,  nextAction value"
+
+	| startPoint delta stepCount |
+	startPoint := self morphPosition.
+	delta := (endPoint - startPoint) / numSteps.
+	stepCount := 0.
+	self when: #morphicStep 
+		evaluate: [ :ignoredArgument |
+			stepCount := stepCount + 1.
+			(stepCount < numSteps)
+			ifTrue: [ 
+				self morphPosition: (startPoint + (stepCount  * delta)) rounded; 
+				redrawNeeded 
+			]
+			ifFalse: [ "done"
+				self stopStepping.
+				self morphPosition: endPoint.
+				self removeActionsForEvent: #morphicStep.
+				nextAction value
+			]
+	].
+	self startSteppingStepTime: milliSecondsDelay! !
+
 !HexagramPairMorph methodsFor: 'colorize' stamp: 'KenD 28/Feb/2026 13:24:06'!
 color: backgroundColor
 
@@ -1027,7 +1304,7 @@ leftKingWenIndex: anIndex
 
 	leftKingWenIndex := anIndex! !
 
-!HexagramPairMorph class methodsFor: 'class initialization' stamp: 'KenD 3/Mar/2026 14:48:17'!
+!HexagramPairMorph class methodsFor: 'class initialization' stamp: 'KenD 3/Mar/2026 14:57:51'!
 initialize
 "
 	self initialize.
@@ -1035,7 +1312,7 @@ initialize
 	"Set of 1st KingWen Index for pair"
 	DuplicatedTrigrams := `{  1.  "2"   29. "30"  51. "52"  57. "58" }`.
 	OpposingTrigrams   := `{ 11. "12"  63. "64"  31. "32"  41. "42" }`.
-	SymmetricTrigrams := `{ "also 1 & 2 " 27. "28" 61. "62" }`.
+	SymmetricTrigrams := `{ "also 1 & 2 " 27. "28" 61. "62" }`. "same when inverted"
 	! !
 
 !HexagramPairMorph class methodsFor: 'accessing' stamp: 'KenD 3/Mar/2026 14:44:43'!

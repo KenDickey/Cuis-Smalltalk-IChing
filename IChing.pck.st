@@ -1,8 +1,8 @@
-'From Cuis7.7 [latest update: #7839] on 5 March 2026 at 11:39:47 am'!
+'From Cuis7.7 [latest update: #7839] on 5 March 2026 at 1:42:27 pm'!
 'Description Book of Changes [I Ching] exploration.
 
 Note HexaGram class comment.'!
-!provides: 'IChing' 1 37!
+!provides: 'IChing' 1 38!
 !requires: 'Cuis-Base' 77 7839 nil!
 !requires: 'UI-Panel' 1 19 nil!
 !requires: 'Graphics-Files-Additional' 1 24 nil!
@@ -125,10 +125,8 @@ The second discernment is among relations: above/same/below
 Display KingWen sequence; colorize specials; reaggange into Gritter pattern; hilight meta-numbers
 
 G := GritterTransformMorph fromKingWen openInWorld.
-G showSpecials.
-"G showSpecialsWIthSymmetrics."
-"G animateToGritter."
-G transformToGritter.
+G showSpecialsWIthSymmetrics.
+G animateToGritter.
 !
 
 !HexagramPairMorph commentStamp: '<historical>' prior: 0!
@@ -935,7 +933,7 @@ transformToGritter
 	self redrawNeeded.
 	! !
 
-!GritterTransformMorph methodsFor: 'private-animation' stamp: 'KenD 4/Mar/2026 16:52:52'!
+!GritterTransformMorph methodsFor: 'private-animation' stamp: 'KenD 5/Mar/2026 13:36:15'!
 animate2from: hexPairCollection next:  nextAction
 
 	"Center 2 hexPairs"
@@ -949,7 +947,7 @@ animate2from: hexPairCollection next:  nextAction
 	self centerPairAnimateFrom: hexPairCollection to: outerRow next: 
 		[  self centerPairAnimateFrom: hexPairCollection to: outerRow next: 
 			[  self removeEmptyRows.
-			   Delay forSeconds: 2.
+			   Delay forSeconds: self rowMoveDelay.
 			    nextAction value.
 			]
 		]
@@ -957,7 +955,7 @@ animate2from: hexPairCollection next:  nextAction
 	
 ! !
 
-!GritterTransformMorph methodsFor: 'private-animation' stamp: 'KenD 4/Mar/2026 16:53:13'!
+!GritterTransformMorph methodsFor: 'private-animation' stamp: 'KenD 5/Mar/2026 13:36:26'!
 animate6from: hexPairCollection next:  nextAction
 
 	"6 "
@@ -974,7 +972,7 @@ animate6from: hexPairCollection next:  nextAction
 		[ self quadPairsAnimateFrom: hexPairCollection to: outerRow next: 
 			[ self centerPairAnimateFrom: hexPairCollection to: outerRow next: 
 				[ self removeEmptyRows.
-				   Delay forSeconds: 2.
+				   Delay forSeconds: self rowMoveDelay.
 				    nextAction value.
 				]
 			]
@@ -983,7 +981,7 @@ animate6from: hexPairCollection next:  nextAction
 	
 ! !
 
-!GritterTransformMorph methodsFor: 'private-animation' stamp: 'KenD 4/Mar/2026 16:53:25'!
+!GritterTransformMorph methodsFor: 'private-animation' stamp: 'KenD 5/Mar/2026 13:36:32'!
 animate7from: hexPairCollection next:  nextAction
 
 	"7 "
@@ -999,7 +997,7 @@ animate7from: hexPairCollection next:  nextAction
 		[ self fivePairsAnimateFrom: hexPairCollection to: outerRow next: 
 			[ self centerPairAnimateFrom: hexPairCollection to: outerRow next: 
 				[ self removeEmptyRows.
-				   Delay forSeconds: 2.
+				   Delay forSeconds: self rowMoveDelay.
 				    nextAction value.
 				]
 			]
@@ -1008,7 +1006,7 @@ animate7from: hexPairCollection next:  nextAction
 	
 ! !
 
-!GritterTransformMorph methodsFor: 'private-animation' stamp: 'KenD 4/Mar/2026 16:53:35'!
+!GritterTransformMorph methodsFor: 'private-animation' stamp: 'KenD 5/Mar/2026 13:36:39'!
 animate8from: hexPairCollection next:  nextAction
 
 	"8 "
@@ -1025,7 +1023,7 @@ animate8from: hexPairCollection next:  nextAction
 		[  outerRow addMorphFront: (self emptyFive).
 		    self quadPairsAnimateFrom: hexPairCollection to: outerRow next: 
 			[ self removeEmptyRows.
-			  Delay forSeconds: 2.
+			  Delay forSeconds: self rowMoveDelay.
 			  nextAction value.
 			]
 		]
@@ -1033,7 +1031,7 @@ animate8from: hexPairCollection next:  nextAction
 	
 ! !
 
-!GritterTransformMorph methodsFor: 'private-animation' stamp: 'KenD 4/Mar/2026 16:53:48'!
+!GritterTransformMorph methodsFor: 'private-animation' stamp: 'KenD 5/Mar/2026 13:36:46'!
 animate9from: hexPairCollection next:  nextAction
 
 	"9 "
@@ -1050,7 +1048,7 @@ animate9from: hexPairCollection next:  nextAction
 		[  self centerPairAnimateFrom: hexPairCollection to: outerRow next:
 		    [ self quadPairsAnimateFrom: hexPairCollection to: outerRow next: 
 			[ self removeEmptyRows.
-			  Delay forSeconds: 2.
+			  Delay forSeconds: self rowMoveDelay.
 			  nextAction value.
 			]
 		   ]
@@ -1115,6 +1113,11 @@ quadPairsAnimateFrom: hexPairCollection to: outerRow next: nextAction
 			]
 		]
 	! !
+
+!GritterTransformMorph methodsFor: 'private-animation' stamp: 'KenD 5/Mar/2026 13:36:03'!
+rowMoveDelay
+
+	^3 "seconds between row moves"! !
 
 !GritterTransformMorph methodsFor: 'private' stamp: 'KenD 1/Mar/2026 14:09:30'!
 centerPairFrom: hexPairCollection

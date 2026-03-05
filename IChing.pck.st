@@ -1,8 +1,8 @@
-'From Cuis7.7 [latest update: #7839] on 4 March 2026 at 4:59:14 pm'!
+'From Cuis7.7 [latest update: #7839] on 5 March 2026 at 11:39:47 am'!
 'Description Book of Changes [I Ching] exploration.
 
 Note HexaGram class comment.'!
-!provides: 'IChing' 1 36!
+!provides: 'IChing' 1 37!
 !requires: 'Cuis-Base' 77 7839 nil!
 !requires: 'UI-Panel' 1 19 nil!
 !requires: 'Graphics-Files-Additional' 1 24 nil!
@@ -935,103 +935,6 @@ transformToGritter
 	self redrawNeeded.
 	! !
 
-!GritterTransformMorph methodsFor: 'private' stamp: 'KenD 1/Mar/2026 14:09:30'!
-centerPairFrom: hexPairCollection
-
-	"Answer a row with next hexPair"
-	^LinearLayoutMorph newRow :: 
-		color: Color transparent; 
-		axisEdgeWeight: #center;
-		gap: 20;
-		addMorph: hexPairCollection removeFirst! !
-
-!GritterTransformMorph methodsFor: 'private' stamp: 'KenD 1/Mar/2026 14:09:25'!
-emptyFive
-
-	"Answer an empty row"
-	^LinearLayoutMorph newRow :: 
-		color: Color transparent;
-		gap: 20; 
-		axisEdgeWeight: #center;
-		addMorph:HexagramPairMorph emptyPair  "defines size"! !
-
-!GritterTransformMorph methodsFor: 'private' stamp: 'KenD 1/Mar/2026 14:09:20'!
-fivePairsFrom: hexPairCollection
-
-	"Answer a row with 4 hexPairs, empty center"
-	| newRow |
-	newRow := LinearLayoutMorph newRow :: 
-		color: Color transparent;
-		gap: 20.
-	
-	newRow addMorph: hexPairCollection removeFirst.
-	newRow addMorph: hexPairCollection removeFirst.
-	newRow addMorph: hexPairCollection removeFirst.
-	newRow addMorph: hexPairCollection removeFirst.
-	newRow addMorph: hexPairCollection removeFirst.
-	
-	^newRow! !
-
-!GritterTransformMorph methodsFor: 'private' stamp: 'KenD 4/Mar/2026 14:45:24'!
-quadPairsFrom: hexPairCollection
-
-	"Answer a row with 4 hexPairs, empty center"
-	| newRow |
-	newRow := LinearLayoutMorph newRow :: 
-		color: Color transparent;
-		gap: 20.
-	
-	newRow addMorph: hexPairCollection removeFirst.
-	newRow addMorph: hexPairCollection removeFirst.
-	newRow addMorph: HexagramPairMorph emptyPair.
-	newRow addMorph: hexPairCollection removeFirst.
-	newRow addMorph: hexPairCollection removeFirst.
-	^newRow! !
-
-!GritterTransformMorph methodsFor: 'private' stamp: 'KenD 4/Mar/2026 15:06:40'!
-removeEmptyRows
-
-	(self submorphs select: [ :s | s submorphs size = 0 ]) do: 
-						[ :emptyRow | emptyRow hide; delete ]! !
-
-!GritterTransformMorph methodsFor: 'colorize' stamp: 'KenD 3/Mar/2026 14:47:14'!
-showSpecials
-
-	self submorphsDo: [ :rowLayout |
-		rowLayout submorphsDo: [ :hexPair |
-		(HexagramPairMorph duplicatedTrigrams includes: hexPair leftKingWenIndex) 
-			ifTrue: [ hexPair color: HexaGram duplicatedTrigramColor ].
-		(HexagramPairMorph opposingTrigrams includes: hexPair leftKingWenIndex) 
-			ifTrue: [ hexPair color: HexaGram opposingTrigramColor ].
-		]
-	]
-! !
-
-!GritterTransformMorph methodsFor: 'colorize' stamp: 'KenD 3/Mar/2026 14:47:04'!
-showSpecialsWIthSymmetrics
-
-	self submorphsDo: [ :rowLayout |
-		rowLayout submorphsDo: [ :hexPair |
-		(HexagramPairMorph duplicatedTrigrams includes: hexPair leftKingWenIndex) 
-			ifTrue: [ hexPair color: HexaGram duplicatedTrigramColor ].
-		(HexagramPairMorph opposingTrigrams includes: hexPair leftKingWenIndex) 
-			ifTrue: [ hexPair color: HexaGram opposingTrigramColor ].
-		(HexagramPairMorph symmetricTrigrams includes: hexPair leftKingWenIndex) 
-			ifTrue: [ hexPair color: HexaGram symmetricTrigramColor ].
-		]
-	]
-! !
-
-!GritterTransformMorph methodsFor: 'testing' stamp: 'KenD 1/Mar/2026 10:10:15'!
-isGritter
-
-	^isGritter! !
-
-!GritterTransformMorph methodsFor: 'testing' stamp: 'KenD 1/Mar/2026 10:10:30'!
-isGritter: aBoolean
-
-	isGritter := aBoolean ! !
-
 !GritterTransformMorph methodsFor: 'private-animation' stamp: 'KenD 4/Mar/2026 16:52:52'!
 animate2from: hexPairCollection next:  nextAction
 
@@ -1213,6 +1116,103 @@ quadPairsAnimateFrom: hexPairCollection to: outerRow next: nextAction
 		]
 	! !
 
+!GritterTransformMorph methodsFor: 'private' stamp: 'KenD 1/Mar/2026 14:09:30'!
+centerPairFrom: hexPairCollection
+
+	"Answer a row with next hexPair"
+	^LinearLayoutMorph newRow :: 
+		color: Color transparent; 
+		axisEdgeWeight: #center;
+		gap: 20;
+		addMorph: hexPairCollection removeFirst! !
+
+!GritterTransformMorph methodsFor: 'private' stamp: 'KenD 1/Mar/2026 14:09:25'!
+emptyFive
+
+	"Answer an empty row"
+	^LinearLayoutMorph newRow :: 
+		color: Color transparent;
+		gap: 20; 
+		axisEdgeWeight: #center;
+		addMorph:HexagramPairMorph emptyPair  "defines size"! !
+
+!GritterTransformMorph methodsFor: 'private' stamp: 'KenD 1/Mar/2026 14:09:20'!
+fivePairsFrom: hexPairCollection
+
+	"Answer a row with 4 hexPairs, empty center"
+	| newRow |
+	newRow := LinearLayoutMorph newRow :: 
+		color: Color transparent;
+		gap: 20.
+	
+	newRow addMorph: hexPairCollection removeFirst.
+	newRow addMorph: hexPairCollection removeFirst.
+	newRow addMorph: hexPairCollection removeFirst.
+	newRow addMorph: hexPairCollection removeFirst.
+	newRow addMorph: hexPairCollection removeFirst.
+	
+	^newRow! !
+
+!GritterTransformMorph methodsFor: 'private' stamp: 'KenD 4/Mar/2026 14:45:24'!
+quadPairsFrom: hexPairCollection
+
+	"Answer a row with 4 hexPairs, empty center"
+	| newRow |
+	newRow := LinearLayoutMorph newRow :: 
+		color: Color transparent;
+		gap: 20.
+	
+	newRow addMorph: hexPairCollection removeFirst.
+	newRow addMorph: hexPairCollection removeFirst.
+	newRow addMorph: HexagramPairMorph emptyPair.
+	newRow addMorph: hexPairCollection removeFirst.
+	newRow addMorph: hexPairCollection removeFirst.
+	^newRow! !
+
+!GritterTransformMorph methodsFor: 'private' stamp: 'KenD 4/Mar/2026 15:06:40'!
+removeEmptyRows
+
+	(self submorphs select: [ :s | s submorphs size = 0 ]) do: 
+						[ :emptyRow | emptyRow hide; delete ]! !
+
+!GritterTransformMorph methodsFor: 'colorize' stamp: 'KenD 3/Mar/2026 14:47:14'!
+showSpecials
+
+	self submorphsDo: [ :rowLayout |
+		rowLayout submorphsDo: [ :hexPair |
+		(HexagramPairMorph duplicatedTrigrams includes: hexPair leftKingWenIndex) 
+			ifTrue: [ hexPair color: HexaGram duplicatedTrigramColor ].
+		(HexagramPairMorph opposingTrigrams includes: hexPair leftKingWenIndex) 
+			ifTrue: [ hexPair color: HexaGram opposingTrigramColor ].
+		]
+	]
+! !
+
+!GritterTransformMorph methodsFor: 'colorize' stamp: 'KenD 3/Mar/2026 14:47:04'!
+showSpecialsWIthSymmetrics
+
+	self submorphsDo: [ :rowLayout |
+		rowLayout submorphsDo: [ :hexPair |
+		(HexagramPairMorph duplicatedTrigrams includes: hexPair leftKingWenIndex) 
+			ifTrue: [ hexPair color: HexaGram duplicatedTrigramColor ].
+		(HexagramPairMorph opposingTrigrams includes: hexPair leftKingWenIndex) 
+			ifTrue: [ hexPair color: HexaGram opposingTrigramColor ].
+		(HexagramPairMorph symmetricTrigrams includes: hexPair leftKingWenIndex) 
+			ifTrue: [ hexPair color: HexaGram symmetricTrigramColor ].
+		]
+	]
+! !
+
+!GritterTransformMorph methodsFor: 'testing' stamp: 'KenD 1/Mar/2026 10:10:15'!
+isGritter
+
+	^isGritter! !
+
+!GritterTransformMorph methodsFor: 'testing' stamp: 'KenD 1/Mar/2026 10:10:30'!
+isGritter: aBoolean
+
+	isGritter := aBoolean ! !
+
 !GritterTransformMorph class methodsFor: 'instance creation' stamp: 'KenD 28/Feb/2026 14:25:11'!
 fromKingWen
 
@@ -1224,35 +1224,12 @@ fromKingWen
 			yourself
 	! !
 
-!HexagramPairMorph methodsFor: 'colorize' stamp: 'KenD 28/Feb/2026 13:24:06'!
-color: backgroundColor
-
-	"Replace my image with same hexagrams but new backgroundColor."
-	| composer |
-	composer := LinearLayoutMorph newRow ::
-		color: backgroundColor;
-		separation: 15 ; padding: 8;
-		addMorph: ( HexaGram imageForKingWenIndex: leftKingWenIndex);
-		addMorph: ( HexaGram imageForKingWenIndex: leftKingWenIndex + 1).
-	self image: (composer imageForm: nil depth: 32); redrawNeeded ! !
-
-!HexagramPairMorph methodsFor: 'accessing' stamp: 'KenD 28/Feb/2026 13:15:32'!
-leftKingWenIndex
-
-	^leftKingWenIndex! !
-
-!HexagramPairMorph methodsFor: 'accessing' stamp: 'KenD 28/Feb/2026 13:15:56'!
-leftKingWenIndex: anIndex
-
-	leftKingWenIndex := anIndex! !
-
-!HexagramPairMorph methodsFor: 'animation' stamp: 'KenD 4/Mar/2026 15:38:14'!
+!HexagramPairMorph methodsFor: 'animation' stamp: 'KenD 5/Mar/2026 11:36:58'!
 animateMoveTo: newContainer next: nextAction
 	"Animate move of the top Card in aPile into aContainer."
 
 	| worldPos oldContainer |
 	oldContainer := self owner.
-	self setProperty: #moveStart toValue: oldContainer .
 	worldPos := self positionInWorld.
 	
 	"Transfer card to World"
@@ -1309,6 +1286,28 @@ slideTo: endPoint nSteps: numSteps delay: milliSecondsDelay next: nextAction
 			]
 	].
 	self startSteppingStepTime: milliSecondsDelay! !
+
+!HexagramPairMorph methodsFor: 'colorize' stamp: 'KenD 28/Feb/2026 13:24:06'!
+color: backgroundColor
+
+	"Replace my image with same hexagrams but new backgroundColor."
+	| composer |
+	composer := LinearLayoutMorph newRow ::
+		color: backgroundColor;
+		separation: 15 ; padding: 8;
+		addMorph: ( HexaGram imageForKingWenIndex: leftKingWenIndex);
+		addMorph: ( HexaGram imageForKingWenIndex: leftKingWenIndex + 1).
+	self image: (composer imageForm: nil depth: 32); redrawNeeded ! !
+
+!HexagramPairMorph methodsFor: 'accessing' stamp: 'KenD 28/Feb/2026 13:15:32'!
+leftKingWenIndex
+
+	^leftKingWenIndex! !
+
+!HexagramPairMorph methodsFor: 'accessing' stamp: 'KenD 28/Feb/2026 13:15:56'!
+leftKingWenIndex: anIndex
+
+	leftKingWenIndex := anIndex! !
 
 !HexagramPairMorph class methodsFor: 'class initialization' stamp: 'KenD 3/Mar/2026 14:57:51'!
 initialize

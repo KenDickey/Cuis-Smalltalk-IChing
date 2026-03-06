@@ -15,7 +15,7 @@ The basic idea is that one has a significant question or problem, asks the quest
 
 Where am I?  What can I do about it?
 
-Many views of this.  Just a bit of (serious) fun.
+Many views of this.  See "TheoryOfOperation.txt" in this repo.
 
 One usually starts being agitated/concerned about something.
 - Posing a terse question requires some focus.
@@ -24,7 +24,7 @@ One usually starts being agitated/concerned about something.
 
 So you really don't have to have a specific set of beliefs about doing this to derive the benefit: more flexible thinking and calming effect similar to Japanese tea ceremony.
 
-There is no interpretation here.
+There is no interpretation given here.
 
 
 The "Virtual Yarrow Stalks" web page (below) is probably more practical,

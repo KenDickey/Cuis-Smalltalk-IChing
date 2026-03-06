@@ -4,12 +4,14 @@ Theory of Operation
 Operation of the I Ching Oracle is the opposite of modern physics.  
 In physics one tries to eliminate change and use the
 "Law of Large Numbers" to get a probability, not an exact prediction  
-for a specific event.  Interestingly, in both physics and divination 
-it is desired to eliminate consciousness (bias) from the experimental 
-observation.
+for a specific event.  
 
 In the I Ching, one places chance at the center to get one specific 
 number in a unique time to interpret a specific context.
+
+Interestingly, in both physics and divination it is desired 
+to eliminate consciousness (bias) from the experimental 
+observation.
 
 The fundamental idea is that there is one world [Unis  Mundis*]. 
 The psychic and physical are unified.
@@ -24,15 +26,15 @@ The analogy is an electrical network where physical energy is applied
 to light a bulb/LED in the circuit. Which bulb lights up indicates 
 something of the, yes, current situation.
 
-The psyche produces images with associated feeling intensity juat as
-we measure Voltasge in an electric circuit. 
+The psyche produces images with associated feeling intensity just as
+we measure Voltage in an electric circuit. 
 
 The connection between psyche and matter is Number, which  has aspects
 both of quantity (physical measurement) and quality (psychological 
 interpretation of numbers/hexagrams as living symbols).
 
 See:
-  _On Divintion and Synchronicity_ 
+  _On Divination and Synchronicity_ 
   _Number and Time_ [*Explication of the Unis Mundis]
   _Alchemical Active Imagination_ [*Explication of the Unis Mundis]
 

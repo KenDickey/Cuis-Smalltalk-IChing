@@ -1,8 +1,8 @@
-'From Cuis7.7 [latest update: #7839] on 5 March 2026 at 1:42:27 pm'!
+'From Cuis7.7 [latest update: #7839] on 6 March 2026 at 2:31:48 pm'!
 'Description Book of Changes [I Ching] exploration.
 
 Note HexaGram class comment.'!
-!provides: 'IChing' 1 38!
+!provides: 'IChing' 1 39!
 !requires: 'Cuis-Base' 77 7839 nil!
 !requires: 'UI-Panel' 1 19 nil!
 !requires: 'Graphics-Files-Additional' 1 24 nil!
@@ -39,6 +39,16 @@ Object subclass: #TriGram
 TriGram class
 	instanceVariableNames: ''!
 
+!classDefinition: #HexagramsMorph category: #IChing!
+ColoredBoxMorph subclass: #HexagramsMorph
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	category: 'IChing'!
+!classDefinition: 'HexagramsMorph class' category: #IChing!
+HexagramsMorph class
+	instanceVariableNames: ''!
+
 !classDefinition: #GritterTransformMorph category: #IChing!
 LinearLayoutMorph subclass: #GritterTransformMorph
 	instanceVariableNames: 'isGritter'
@@ -59,14 +69,14 @@ ImageMorph subclass: #HexagramPairMorph
 HexagramPairMorph class
 	instanceVariableNames: ''!
 
-!classDefinition: #HexagramDisplayPanel category: #IChing!
-Panel subclass: #HexagramDisplayPanel
+!classDefinition: #IChingResponsePanel category: #IChing!
+Panel subclass: #IChingResponsePanel
 	instanceVariableNames: ''
 	classVariableNames: ''
 	poolDictionaries: ''
 	category: 'IChing'!
-!classDefinition: 'HexagramDisplayPanel class' category: #IChing!
-HexagramDisplayPanel class
+!classDefinition: 'IChingResponsePanel class' category: #IChing!
+IChingResponsePanel class
 	instanceVariableNames: ''!
 
 
@@ -121,12 +131,19 @@ number is
 The second discernment is among relations: above/same/below
 !
 
+!HexagramsMorph commentStamp: '<historical>' prior: 0!
+Just display the King Wen order of Hexagrams!
+
 !GritterTransformMorph commentStamp: '<historical>' prior: 0!
 Display KingWen sequence; colorize specials; reaggange into Gritter pattern; hilight meta-numbers
 
 G := GritterTransformMorph fromKingWen openInWorld.
 G showSpecialsWIthSymmetrics.
 G animateToGritter.
+
+or just
+
+GritterTransformMorph initializedInstance openInWorld.  "For final pattern"
 !
 
 !HexagramPairMorph commentStamp: '<historical>' prior: 0!
@@ -138,7 +155,7 @@ Some are special.
 
 !
 
-!HexagramDisplayPanel commentStamp: '<historical>' prior: 0!
+!IChingResponsePanel commentStamp: '<historical>' prior: 0!
 I display a hexagram, including its changes.
 
 (HexagramDisplayPanel forHexagram: (HexaGram cast)) openInWorld.!
@@ -286,6 +303,13 @@ fromArray: sixNumberArray
 			middle:   (Rudiment fromNumber: (sixNumberArray at: 2))
 			bottom: (Rudiment fromNumber: (sixNumberArray at: 1))
 			)! !
+
+!HexaGram class methodsFor: 'instance creation' stamp: 'KenD 6/Mar/2026 13:53:22'!
+initializedInstance
+"
+	self initializedInstance openInWorld.
+"
+	^ HexaGram kingWenImage! !
 
 !HexaGram class methodsFor: 'instance creation' stamp: 'KenD 14/Jan/2022 12:45:09'!
 upper: topHexagram lower: bottomHexagram
@@ -588,26 +612,10 @@ imageForKingWenIndex: oneTo64
 				image: (Form extent: 35@35 :: fillColor: Color transparent) ]
 		ifFalse: [ ImageMorph new image: (PNGForms at: oneTo64) ]! !
 
-!HexaGram class methodsFor: 'images' stamp: 'KenD 26/Feb/2026 17:46:01'!
+!HexaGram class methodsFor: 'images' stamp: 'KenD 6/Mar/2026 14:10:51'!
 kingWenImage
-	"Answer simple 8x8 display , left to right
-	
-HexaGram kingWenImage openInWorld.
-	"
-	| imagePlusSpace  displaySpace |
-	imagePlusSpace := 35 + 14. "35@35 is image size"
-	displaySpace := ColoredBoxMorph new 
-				:: color: Color orange
-				:: morphExtent: (480 @ 480).
-	1 to: 8 do: [ :col |
-		1 to: 8 do: [ :row | | hexImage |
-			hexImage := self imageForKingWenIndex: row - 1 * 8 + col.
-			displaySpace addMorph: hexImage.
-			hexImage morphPosition: (col @ row) * imagePlusSpace
-		]
-	].
-	
-	^ displaySpace! !
+
+	^HexagramsMorph kingWenImage! !
 
 !HexaGram class methodsFor: 'images' stamp: 'KenD 28/Feb/2026 12:33:39'!
 kingWenPlusSpecialsImage
@@ -819,6 +827,41 @@ top: upperLine middle: middleLine bottom: lowerLine
 
 	^self new :: top: upperLine middle: middleLine bottom: lowerLine! !
 
+!HexagramsMorph class methodsFor: 'instance creation' stamp: 'KenD 6/Mar/2026 14:11:22'!
+kingWenImage
+	"Answer simple 8x8 display , left to right
+	
+HexagramsMorph kingWenImage openInWorld.
+	"
+	| imagePlusSpace  displaySpace |
+	imagePlusSpace := 35 + 14. "35@35 is image size"
+	displaySpace := self new 
+				:: color: Color orange
+				:: morphExtent: (480 @ 480).
+	1 to: 8 do: [ :col |
+		1 to: 8 do: [ :row | | hexImage |
+			hexImage := HexaGram imageForKingWenIndex: row - 1 * 8 + col.
+			displaySpace addMorph: hexImage.
+			hexImage morphPosition: (col @ row) * imagePlusSpace
+		]
+	].
+	
+	^ displaySpace! !
+
+!HexagramsMorph class methodsFor: 'new-morph participation' stamp: 'KenD 6/Mar/2026 14:09:05'!
+includeInNewMorphMenu
+	"Return true for all classes that can be instantiated from the menu"
+	
+	^ true! !
+
+!HexagramsMorph class methodsFor: 'new-morph participation' stamp: 'KenD 6/Mar/2026 14:16:02'!
+initializedInstance
+"
+	self initializedInstance openInWorld.
+"
+
+	^self kingWenImage ! !
+
 !GritterTransformMorph methodsFor: 'initialization' stamp: 'KenD 1/Mar/2026 10:09:32'!
 initialize
 
@@ -981,14 +1024,14 @@ animate6from: hexPairCollection next:  nextAction
 	
 ! !
 
-!GritterTransformMorph methodsFor: 'private-animation' stamp: 'KenD 5/Mar/2026 13:36:32'!
+!GritterTransformMorph methodsFor: 'private-animation' stamp: 'KenD 6/Mar/2026 14:30:10'!
 animate7from: hexPairCollection next:  nextAction
 
 	"7 "
 	| outerRow |
 	outerRow := LinearLayoutMorph newColumn :: 
 		color: Color transparent;
-		borderColor: Color green;
+		borderColor: Color red;
 		borderWidth: 4.
 
 	self addMorph: outerRow behind: hexPairCollection first owner; layoutSubmorphs.
@@ -1227,6 +1270,13 @@ fromKingWen
 			yourself
 	! !
 
+!GritterTransformMorph class methodsFor: 'instance creation' stamp: 'KenD 6/Mar/2026 14:18:56'!
+initializedInstance
+"
+	self initializedInstance openInWorld.
+"
+	^self fromKingWen :: showSpecials; transformToGritter! !
+
 !HexagramPairMorph methodsFor: 'animation' stamp: 'KenD 5/Mar/2026 11:36:58'!
 animateMoveTo: newContainer next: nextAction
 	"Animate move of the top Card in aPile into aContainer."
@@ -1385,7 +1435,12 @@ forKingWenPair: firstIndex colorize: addColor
 	^newSelf leftKingWenIndex: firstIndex;
 		yourself! !
 
-!HexagramDisplayPanel methodsFor: 'GUI building' stamp: 'KenD 25/Feb/2026 16:04:58'!
+!HexagramPairMorph class methodsFor: 'new-morph participation' stamp: 'KenD 6/Mar/2026 13:43:45'!
+includeInNewMorphMenu
+	"Return true for all classes that can be instantiated from the menu"
+	^ false! !
+
+!IChingResponsePanel methodsFor: 'GUI building' stamp: 'KenD 25/Feb/2026 16:04:58'!
 buildMorphicWindow
 	"Column of 4 rows: hexagram; changing lines; name; changed hexagram"
 
@@ -1416,7 +1471,7 @@ buildMorphicWindow
 			layoutSpec: (LayoutSizeSpec new :: offAxisEdgeWeight: #center).
 	self morphExtent: self minimumExtent.! !
 
-!HexagramDisplayPanel methodsFor: 'GUI building' stamp: 'KenD 15/Jan/2022 17:54:53'!
+!IChingResponsePanel methodsFor: 'GUI building' stamp: 'KenD 15/Jan/2022 17:54:53'!
 changedLinesText
 
 	"Convert string of lines into layout of labelMorphs"
@@ -1433,7 +1488,7 @@ changedLinesText
 	layout morphExtent: layoutMorph minimumExtent.
 	^ layout! !
 
-!HexagramDisplayPanel methodsFor: 'GUI building' stamp: 'KenD 25/Feb/2026 16:04:31'!
+!IChingResponsePanel methodsFor: 'GUI building' stamp: 'KenD 25/Feb/2026 16:04:31'!
 newRowFormAndTrigramNames: aHexagram
 
 	| rowLayout image colLayout |
@@ -1456,17 +1511,17 @@ newRowFormAndTrigramNames: aHexagram
 		yourself
 ! !
 
-!HexagramDisplayPanel class methodsFor: 'new-morph participation' stamp: 'KenD 16/Jan/2022 15:35:01'!
+!IChingResponsePanel class methodsFor: 'new-morph participation' stamp: 'KenD 16/Jan/2022 15:35:01'!
 includeInNewMorphMenu
 	"Not to be instantiated from the menu"
 	^ true! !
 
-!HexagramDisplayPanel class methodsFor: 'new-morph participation' stamp: 'KenD 16/Jan/2022 15:32:59'!
+!IChingResponsePanel class methodsFor: 'new-morph participation' stamp: 'KenD 6/Mar/2026 14:21:11'!
 initializedInstance
 
-	^ (HexagramDisplayPanel forHexagram: (HexaGram cast))! !
+	^ (IChingResponsePanel forHexagram: (HexaGram cast))! !
 
-!HexagramDisplayPanel class methodsFor: 'instance creation' stamp: 'KenD 15/Jan/2022 13:58:54'!
+!IChingResponsePanel class methodsFor: 'instance creation' stamp: 'KenD 15/Jan/2022 13:58:54'!
 forHexagram: aHexagram
 
 	^ self open: aHexagram ! !

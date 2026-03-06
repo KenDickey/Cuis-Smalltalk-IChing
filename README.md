@@ -3,8 +3,8 @@ Operational Mechanics for the Book of Changes
 
 ````smalltalk
   Feature require: 'IChing'.
-  (HexagramDisplayPanel forHexagram: (HexaGram cast)) openInWorld.
-  "OR WorldMenu -> New Morph.. --> --> HexagramDisplayPanel"
+  (IChingResponsePanel forHexagram: (HexaGram cast)) openInWorld.
+  "OR WorldMenu -> New Morph.. --> --> IChingResponsePanel"
 ````
 
 The Book of Changes (I Ching or Chou I) is an ancient Chinese oracle.
@@ -32,7 +32,7 @@ but I could not resist doing a bit of Cuis code.
 And as long as I did this, why not share it?
 
 The Wilhelm Baynes translation is probably the best known:
-  http://www.akirarabelais.com/i/i.html
+  https://akirarabelais.com/o/thelibraryofbabel/i.html
 hardcover:
 https://www.amazon.com/exec/obidos/ASIN/069109750X/qid%3D996565491/sr%3D2-1/102-1791842-4862542
 
@@ -54,6 +54,11 @@ change font (cmd-k) to KiwiMaru Light.
 
 A very interesting observation of hexagram structure is at
   https://www.yijing.nl/structures/Gritter.html   
-
+See GritterTransformMorph class:
+````smalltalk
+  G := GritterTransformMorph fromKingWen openInWorld.
+  G showSpecialsWIthSymmetrics.
+  G animateToGritter.
+````
 Enjoy!
 

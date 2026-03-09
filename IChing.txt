@@ -1948,7 +1948,7 @@ Greatly auspicious.
 Nothing that does not further.
 
 
-Hexagram 51 - 震 - Thunder [shock, quaking]
+Hexagram 51 - 震 - Thunder [shock, quaking, earthquake]
 
 震   亨。震來虩虩。笑言啞啞。震驚百里。不喪匕鬯。
 Shock has success.
@@ -1988,7 +1988,7 @@ Without misfortune.
 [It is his] marriage match [which is] causing [the neighbors] talk.
 
 
-Hexagram 52 - 艮 - Unyielding
+Hexagram 52 - 艮 - Unyielding [turn away from; oppose]
 
 艮   其背。不獲其身。行其庭。不見其人。无咎。
 Unyielding his back.
@@ -2235,7 +2235,7 @@ Determination ominous.
 
 
 
-Hexagram 58 - 兌 - Open a passage [through]
+Hexagram 58 - 兌 - Open a passage [through; mediate]
     [馬王堆 帛書 substitutes 奪 = a narrow passage]
 
 兌   亨。利貞。

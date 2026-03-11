@@ -32,9 +32,9 @@ but I could not resist doing a bit of Cuis code.
 And as long as I did this, why not share it?
 
 The Wilhelm Baynes translation is probably the best known:
-  https://akirarabelais.com/o/thelibraryofbabel/i.html
+  https://clovemedia.github.io/i_ching/I_Ching_Wilhem_Baynes_Translation.html
 hardcover:
-https://www.amazon.com/exec/obidos/ASIN/069109750X/qid%3D996565491/sr%3D2-1/102-1791842-4862542
+  https://www.amazon.com/exec/obidos/ASIN/069109750X/qid%3D996565491/sr%3D2-1/102-1791842-4862542
 
 There are many useful references on the Web:
   https://www.biroco.com/yijing/links.htm

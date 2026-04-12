@@ -3,11 +3,11 @@ Theory of Operation
 
 Operation of the I Ching Oracle is the opposite of modern physics.  
 In physics one tries to eliminate change and use the
-"Law of Large Numbers" to get a probability, not an exact prediction  
+"Law of Large Numbers" to get a probability, not an exact prediction,  
 for a specific event.  
 
 In the I Ching, one places chance at the center to get one specific 
-number in a unique time to interpret a specific context.
+number/pattern in a unique time to interpret a specific context.
 
 Interestingly, in both physics and divination it is desired 
 to eliminate consciousness (bias) from the experimental 
@@ -49,12 +49,23 @@ So likewise, casting a hexagram and noting the changing lines is sampling
 the current world situation.  Learning to "read" the "Language of the Lines"
 takes some time to become fluent, but yields helpful image and direction.
 
+Another way to think of this is similar to an excercise in
+_Drawing on the Right Side of the Brain_ [by Betty Edwards].
+One draws the complex lines in one's palm so the the Left Brain Lobe
+(Language, One Thing at a Time) gets bored and gives up, allowing
+the Right Lobe (Images, Gestalt/Wholes) to take over so that one can
+draw properly.
+
+Likewise, consulting the I Ching has a complexity which challanges our
+Rational Left and supplies Images which our Intuitive Right comprehends
+and informs our wholeness.  The casting ritual has a calming inflence,
+the oracle stimulates lateral thinking, and the effect is good for brain
+health.
 
 See:
   _On Divination and Synchronicity_ 
   _Number and Time_ [*Explication of the Unis Mundis]
   _Alchemical Active Imagination_ [*Explication of the Unis Mundis]
-
 all by Marie-Louise von Franz.
 
 https://www.biroco.com/yijing/Language_of_the_Lines.pdf

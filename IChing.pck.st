@@ -1,8 +1,8 @@
-'From Cuis7.7 [latest update: #7872] on 14 April 2026 at 6:08:22 pm'!
+'From Cuis7.7 [latest update: #7872] on 14 April 2026 at 6:27:51 pm'!
 'Description Book of Changes [I Ching] exploration.
 
 Note HexaGram class comment.'!
-!provides: 'IChing' 1 42!
+!provides: 'IChing' 1 43!
 !requires: 'Cuis-Base' 77 7872 nil!
 !requires: 'UI-Panel' 1 19 nil!
 !requires: 'Graphics-Files-Additional' 1 24 nil!
@@ -145,6 +145,14 @@ Line number is
 
 !Trigram commentStamp: '<historical>' prior: 0!
 The second discernment is among relations: above/same/below
+!
+
+!WilhelmBaynesText commentStamp: '<historical>' prior: 0!
+Text from web display abstracted from:
+Richard Wilhelm's and Cary F. Baynes translation "I Ching: Or, Book of Changes"
+[3rd. ed., Bollingen Series XIX, (Princeton NJ: Princeton University Press, 1967, 1st ed. 1950)]
+
+I recommend getting the book if the I Ching interestes you.
 !
 
 !HexagramsMorph commentStamp: '<historical>' prior: 0!

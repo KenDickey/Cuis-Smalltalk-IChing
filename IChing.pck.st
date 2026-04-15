@@ -1,14 +1,37 @@
-'From Cuis7.7 [latest update: #7872] on 15 April 2026 at 12:04:55 pm'!
+'From Cuis7.7 [latest update: #7872] on 15 April 2026 at 1:00:45 pm'!
 'Description Book of Changes [I Ching] exploration.
 
 Note HexaGram class comment.'!
-!provides: 'IChing' 1 44!
+!provides: 'IChing' 1 45!
 !requires: 'Cuis-Base' 77 7872 nil!
 !requires: 'UI-Panel' 1 19 nil!
 !requires: 'Graphics-Files-Additional' 1 24 nil!
 SystemOrganization addCategory: #IChing!
 
 
+!classDefinition: #IChingPackage category: #IChing!
+CodePackage subclass: #IChingPackage
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	category: 'IChing'!
+!classDefinition: 'IChingPackage class' category: #IChing!
+IChingPackage class
+	instanceVariableNames: ''!
+
+
+!IChingPackage commentStamp: '<historical>' prior: 0!
+See self class >> prePackageInstall!
+
+!IChingPackage class methodsFor: 'installing' stamp: 'KenD 15/Apr/2026 13:00:15'!
+prePackageInstall
+
+	"Load Chinese Unicode Font which can display all I Ching characters"
+	| fontFileEntry |
+	fontFileEntry := (self package fullFileName asFileEntry parent  // 'pingfang-sc-regular.ttf').
+	TrueTypeFontFamily readTrueTypeFontEntry: fontFileEntry.
+	! !
+IChingPackage prePackageInstall!
 !classDefinition: #Hexagram category: #IChing!
 Object subclass: #Hexagram
 	instanceVariableNames: 'upper lower'
@@ -87,6 +110,16 @@ Panel subclass: #IChingResponsePanel
 	category: 'IChing'!
 !classDefinition: 'IChingResponsePanel class' category: #IChing!
 IChingResponsePanel class
+	instanceVariableNames: ''!
+
+!classDefinition: #IChingPackage category: #IChing!
+CodePackage subclass: #IChingPackage
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	category: 'IChing'!
+!classDefinition: 'IChingPackage class' category: #IChing!
+IChingPackage class
 	instanceVariableNames: ''!
 
 
@@ -183,6 +216,9 @@ Some are special.
 I display a hexagram, including its changes.
 
 (HexagramDisplayPanel forHexagram: (HexaGram cast)) openInWorld.!
+
+!IChingPackage commentStamp: '<historical>' prior: 0!
+See self class >> prePackageInstall!
 
 !Hexagram methodsFor: 'accessing' stamp: 'KenD 15/Jan/2022 13:54:33'!
 changedLinesText
@@ -10407,6 +10443,16 @@ initializedInstance
 forHexagram: aHexagram
 
 	^ self open: aHexagram ! !
+
+!IChingPackage class methodsFor: 'installing' stamp: 'KenD 15/Apr/2026 13:00:15'!
+prePackageInstall
+
+	"Load Chinese Unicode Font which can display all I Ching characters"
+	| fontFileEntry |
+	fontFileEntry := (self package fullFileName asFileEntry parent  // 'pingfang-sc-regular.ttf').
+	TrueTypeFontFamily readTrueTypeFontEntry: fontFileEntry.
+	! !
 Hexagram initialize!
 WilhelmBaynesText initialize!
 HexagramPairMorph initialize!
+IChingPackage postPackageInstall!

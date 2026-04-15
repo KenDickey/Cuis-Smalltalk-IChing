@@ -1,8 +1,8 @@
-'From Cuis7.7 [latest update: #7872] on 14 April 2026 at 6:27:51 pm'!
+'From Cuis7.7 [latest update: #7872] on 15 April 2026 at 12:04:55 pm'!
 'Description Book of Changes [I Ching] exploration.
 
 Note HexaGram class comment.'!
-!provides: 'IChing' 1 43!
+!provides: 'IChing' 1 44!
 !requires: 'Cuis-Base' 77 7872 nil!
 !requires: 'UI-Panel' 1 19 nil!
 !requires: 'Graphics-Files-Additional' 1 24 nil!
@@ -1455,15 +1455,14 @@ top: upperLine middle: middleLine bottom: lowerLine
 
 	^self new :: top: upperLine middle: middleLine bottom: lowerLine! !
 
-!WilhelmBaynesText class methodsFor: 'class initialization' stamp: 'KenD 14/Apr/2026 17:54:25'!
+!WilhelmBaynesText class methodsFor: 'class initialization' stamp: 'KenD 15/Apr/2026 11:59:55'!
 initialize
 "
 	WilhelmBaynesText initialize.
 "
 	CommentaryAndLines := #(
-#(
           
-"1"  #( '1. Ch''ien / The Creative
+#( '1. Ch''ien / The Creative
 
                 above  CH''IEN  THE CREATIVE, HEAVEN
                 below  CH''IEN  THE CREATIVE, HEAVEN
@@ -1563,7 +1562,7 @@ by consciously casting out all that is inferior and degrading. Thus he attains
 that tirelessness which depends upon consciously limiting the fields of his 
 activity.
 
-')  #('Nine at the beginning means:
+'  'Nine at the beginning means:
         Hidden dragon. Do not act.
 
 In China the dragon has a meaning altogether different from that given it in 
@@ -1582,7 +1581,7 @@ will fulfill itself.  One need not fear lest strong will should not prevail; the
 main thing is not to expend one''s powers prematurely in an attempt to obtain 
 by force something for which the time is not yet ripe.
 
-        ') #('Nine in the second place means:
+  '   'Nine in the second place means:
         Dragon appearing in the field.
         It furthers one to see the great man.
 
@@ -1595,7 +1594,7 @@ on his environment with out conscious effort. Such a man is destined to
 gain great influence and to set the world in order. Therefore it is favorable to 
 see him.
 
-        ') #('Nine in the third place means:
+'   'Nine in the third place means:
         All day long the superior man is creatively active.
         At nightfall his mind is still beset with cares.
         Danger. No blame.
@@ -1611,7 +1610,7 @@ impaired by temptations. He who remains in touch with the time that is
 dawning, and with its demands is prudent enough to avoid all pitfalls, and 
 remains blameless.
 
-        ') #('Nine in the fourth place means:
+'   'Nine in the fourth place means:
         Wavering flight over the depths.
         No blame.
 
@@ -1623,7 +1622,7 @@ who seeks seclusion. There is no general law of his being. If the individual
 acts consistently and is true to himself, he will find the way that is appropriate 
 for him. This way is right for him and without blame.
 
-        ') #('Nine in the fifth place means:
+'  'Nine in the fifth place means:
         Flying dragon in the heavens.
         It furthers one to see the great man.
 
@@ -1639,7 +1638,7 @@ of earth) follows the tiger. Thus the sage arises, and all creatures follow him
 with their eyes. What is born of heaven feels related to what is above. What 
 is born of earth feels related to what is below. Each follows its kind.
 
-        ') #('Nine at the top means:
+'  'Nine at the top means:
         Arrogant dragon will have cause to repent.
 
 When a man seeks to climb so high that he loses touch with the rest of 
@@ -1647,7 +1646,7 @@ mankind, he becomes isolated, and this necessarily leads to failure. This line
 warns against titanic aspirations that exceed one''s power. A precipitous fall 
 would follow. 
 
-        ') #('When all the lines are nines, it means:
+'  'When all the lines are nines, it means:
 		There appears a flight of dragons without heads. 
         Good fortune.
 
@@ -1657,12 +1656,10 @@ devotion. The strength of the Creative and the mildness of the Receptive
 unite. Strength is indicated by the flight of dragons, mildness by the fact that 
 their heads are hidden. This means that mildness in action joined to strength 
 of decision brings good fortune.
-' )
+'
 )
 
-
-"2" #(
-  #( '2. K''un / The Receptive
+#( '2. K''un / The Receptive
 
                 above  K''UN  THE RECEPTIVE, EARTH
                 below  K''UN  THE RECEPTIVE, EARTH
@@ -1754,7 +1751,7 @@ and evil,, without exception. In the same way the superior man gives to his
 character breadth, purity, and sustaining power, so that he is able both to 
 support and to bear with people and things.
 
-')  #('Six at the beginning means:
+'  'Six at the beginning means:
         When there is hoarfrost underfoot,
         Solid ice is not far off.
 
@@ -1769,7 +1766,7 @@ precautions can be taken by heeding the first signs of decay and checking them
 in time.
 
 
-        ') #('Six in the second place means:
+'  'Six in the second place means:
         Straight, square, great.
         Without purpose,
         Yet nothing remains unfurthered.
@@ -1791,7 +1788,7 @@ tolerates all creatures equally: this is its greatness. Therefore it attains wha
 right for all without artifice or special intentions. Man achieves the height of 
 wisdom when all that he does is as self-evident as what nature does.
 
-        ') #('Six in the third place means:
+'  'Six in the third place means:
         Hidden lines.
         One is able to remain persevering.
         If by chance you are in the service of a king,
@@ -1805,7 +1802,7 @@ to himself things that stand accomplished, but hopes to release active forces;
 that is, he completes his works in such a manner that they may bear fruit for 
 the future.
 
-        ') #('Six in the fourth place means:
+'  'Six in the fourth place means:
         A tied-up sack. No blame, no praise.
 
 The dark element opens when it moves and closes when at rest. The strictest 
@@ -1816,7 +1813,7 @@ Therefore a man ought to maintain reserve, be it in solitude or in the turmoil
 of the world, for there too he can hide himself so well that no one knows 
 him.
 
-        ') #('Six in the fifth place means:
+'  'Six in the fifth place means:
         A yellow lower garment brings supreme good fortune.
 
 Yellow is the color of the earth and of the middle; it is the symbol of that 
@@ -1827,7 +1824,7 @@ the utmost discretion. A man''s genuineness and refinement should not
 reveal themselves directly; they should express themselves only indirectly as 
 an effect from within.
 
-        ') #('Six at the top means:
+'  'Six at the top means:
         Dragons fight in the meadow.
         Their blood is black and yellow.
 
@@ -1840,7 +1837,7 @@ earth principle. Midnight blue is the color of heaven; yellow is the color of
 earth. Therefore, when black and yellow blood flow, it is a sign that in this 
 unnatural contest both primal powers suffer injury.
         
-        ') #('When all the lines are sixes, it means:
+'  'When all the lines are sixes, it means:
         Lasting perseverance furthers.
 
 When nothing but sixes appears, the hexagram of THE RECEPTIVE changes 
@@ -1848,9 +1845,8 @@ into the hexagram of THE CREATIVE. By holding fast to what is right, it
 gains the power of enduring. There is indeed no advance, but neither is there 
 retrogression.
 ' )
-)
 
-"3"  #( #( '3. Chun / Difficulty at the Beginning
+#( '3. Chun / Difficulty at the Beginning
 
                 above  K''AN  THE ABYSMAL, WATER
                 below  CHêN  THE AROUSING, THUNDER
@@ -1900,7 +1896,7 @@ such times of beginning, just as one sorts out silk threads from a knotted
 tangle and binds them into skeins. In order to find one''s place in the infinity 
 of being, one must be able both to separate and to unite.
 
-')  #( 'Nine at the beginning means:
+'   'Nine at the beginning means:
         Hesitation and hindrance.
         It furthers one to remain persevering.
         It furthers one to appoint helpers.
@@ -1913,7 +1909,7 @@ them only if he avoids arrogance and associated with his fellows in a spirit of
 humility. Only then will he attract those with whose help he can combat the 
 difficulties.
 
-        ') #('Six in the second place means:
+'  'Six in the second place means:
         Difficulties pile up.
         Horse and wagon part.
         He is not a robber;
@@ -1939,7 +1935,7 @@ ourselves any obligations entailed by such help; otherwise our freedom of
 decision is impaired. If we bide our time, things will quiet down again, and 
 we shall attain what we have hoped for.
 
-        ') #('Six in the third place means:
+'  'Six in the third place means:
         Whoever hunts deer without the forester
         Only loses his way in the forest.
         The superior man understands the signs of the time
@@ -1954,7 +1950,7 @@ superior man, discerning the seeds of coming events, prefers to renounce a
 wish rather than to provoke failure and humiliation by trying to force its 
 fulfillment.
                 
-        ') #('Six in the fourth place means:
+'  'Six in the fourth place means:
         Horse and wagon part.
         Strive for union.
         To go brings good fortune.
@@ -1967,7 +1963,7 @@ to take the first step, even when it involves a certain degree of self-
 abnegation, is a sign of inner clarity. To accept help in a difficult situation is 
 not a disgrace. If the right helper is found, all goes well.
 
-         ') #('Nine in the fifth place means:
+'  'Nine in the fifth place means:
         Difficulties in blessing.
         A little perseverance brings good fortune.
         Great perseverance brings misfortune.
@@ -1981,7 +1977,7 @@ prevails. It is only through faithful and conscientious work, unobtrusively
 carried on, that the situation gradually clears up and the hindrance 
 disappears.
 
-        ') #('Six at the top means:
+'  'Six at the top means:
         Horse and wagon part.
         Bloody tears flow.
 
@@ -1990,9 +1986,8 @@ stuck and never find their way out; they fold their hands and give up the
 struggle. Such resignation is the saddest of all things. Therefore Confucius 
 says of this line: "Bloody tears flow: one should not persist in this."
 ' )
-)
 
-"4"  #(  #( '4. Mêng / Youthful Folly
+#( '4. Mêng / Youthful Folly
 
                 above  KêN  KEEPING STILL, MOUNTAIN 
                 below  K''AN  THE ABYSMAL, WATER
@@ -2049,7 +2044,7 @@ hollow places in its path. In the same way character is developed by
 thoroughness that skips nothing but, like water, gradually and steadily fills up 
 all gaps and so flows onward.
 
-')  #('Six at the beginning means:
+'  'Six at the beginning means:
         To make a fool develop
         It furthers one to apply discipline.
         The fetters should be removed.
@@ -2062,7 +2057,7 @@ discipline, is a good thing. He who plays with life never amounts to
 anything. However, discipline should not degenerate into drill. Continuous 
 drill has a humiliating effect and cripples a man''s powers.
 
-         ') #('Nine in the second place means:
+'  'Nine in the second place means:
         To bear with fools in kindliness brings good fortune.
         To know how to take women
         Brings good fortune.
@@ -2077,7 +2072,7 @@ consideration. Only this combination of inner strength with outer reserve
 enables one to take on the responsibility of directing a larger social body with 
 real success.
 
-        ') #('Six in the third place means:
+'  'Six in the third place means:
         Take not a maiden who. When she sees a man of bronze,
         Loses possession of herself.
         Nothing furthers.
@@ -2090,7 +2085,7 @@ the youth and the teacher. A girl owes it to her dignity to wait until she is
 wooed. In both cases it is undignified to offer oneself, and no good comes of 
 accepting such an offer.
 
-        ') #('Six in the fourth place means:
+'  'Six in the fourth place means:
         Entangled folly bring humiliation.
         
 For youthful folly it is the most hopeless thing to entangle itself in empty 
@@ -2100,14 +2095,14 @@ certainly will humiliation overtake it.
 course but to leave the fool to himself for a time, not sparing him the 
 humiliation that results. This is frequently the only means of rescue.
 
-         ') #('Six in the fifth place means:
+'  'Six in the fifth place means:
         Childlike folly brings good fortune. 
 
 An inexperienced person who seeks instruction in a childlike and 
 unassuming way is on the right path, for the man devoid of arrogance who 
 subordinated himself to his teacher will certainly be helped.
 
-        ') #('Nine at the top means:
+'  'Nine at the top means:
         In punishing folly
         It does not further one
         To commit transgressions.
@@ -2124,9 +2119,8 @@ measures taken by a government against a populace guilty of transgressions.
 Governmental interference should always be merely preventive and should 
 have as its sole aim the establishment of public security and peace. 
 ' )
-)
 
-"5"  #(  #(  '5. Hsü / Waiting (Nourishment)
+#( '5. Hsü / Waiting (Nourishment)
 
                 above  K''AN  THE ABYSMAL, WATER
                 below  CH''IEN  THE CREATIVE, HEAVEN
@@ -2178,7 +2172,7 @@ things before the time is ripe. We should quietly fortify the body with food
 and drink and the mind with gladness and good cheer. Fate comes when it 
 will, and thus we are ready.
 
-')  #( 'Nine at the beginning means:
+'   'Nine at the beginning means:
         Waiting in the meadow.
         IT furthers one to abide in what endures.
         No blame.
@@ -2189,7 +2183,7 @@ One must continue to lead a regular life as long as possible. Only in this way
 does one guard against a premature waste of strength, keep free of blame and 
 error that would become a source of weakness later on.
 
-        ') #('Nine in the second place means:
+'  'Nine in the second place means:
         Waiting on the sand.
         There is some gossip.
         The end brings good fortune.
@@ -2200,7 +2194,7 @@ develop in such times, and we lay the blame on one another. He who stays
 calm will succeed in making things go well in the end. Slander will be 
 silenced if we do not gratify it with injured retorts.
 
-        ') #('Nine in the third place means:
+'  'Nine in the third place means:
         Waiting in the mud
         Brings about the arrival of the enemy.
 
@@ -2211,7 +2205,7 @@ bank. Such an unfavorable position invites enemies from without, who
 naturally take advantage of it. Caution and a sense of the seriousness of the 
 situation are all that can keep one from injury.
 
-        ') #('Six in the fourth place means:
+'  'Six in the fourth place means:
         Waiting in blood.
         Get out of the pit.
 
@@ -2222,7 +2216,7 @@ fate take its course. This composure, which keeps us from aggravating the
 trouble by anything we might do, is the only way of getting out of the 
 dangerous pit.
 
-         ') #('Nine in the fifth place means:
+'  'Nine in the fifth place means:
         Waiting at meat and drink.
         Perseverance brings good fortune.
 
@@ -2238,7 +2232,7 @@ secret of the whole hexagram. It differs from Chin OBSTRUCTION, in
 the fact that in this instance, while waiting, we are sure of our cause and 
 therefore do not lose the serenity born of inner cheerfulness.
 
-        ') #('Six at the top means:
+'  'Six at the top means:
         One falls into the pit.
         Three uninvited guests arrive.
         Honor them, and in the end there will be good fortune.
@@ -2253,9 +2247,8 @@ sulky gesture of refusal, but must greet the new turn with respect. Thus he
 ultimately escapes the danger, and all goes well. Even happy turns of fortune 
 often come in a form that at first seems strange to us.
 ' )
-)
 
-"6"  #(  #(  '6. Sung / Conflict
+#( '6. Sung / Conflict
 
                 above  CH''IEN  THE CREATIVE, HEAVEN
                 below  K''AN  THE ABYSMAL, WATER
@@ -2307,7 +2300,7 @@ carefully into consideration in the very beginning. If rights and duties are
 exactly defined, or if, in a group, the spiritual trends of the individuals 
 harmonize, the cause of conflict is removed in advance.
 
-')  #('Six at the beginning means:
+'  'Six at the beginning means:
         If one does not perpetuate the affair,
         There is a little gossip.
         In the end, good fortune comes.
@@ -2317,7 +2310,7 @@ issue. Especially when the adversary is stronger, it is not advisable to risk
 pushing the conflict to a decision. It may come to a slight dispute, but in the 
 end all goes well.
 
-        ') #('Nine in the second place means:
+'  'Nine in the second place means:
         One cannot engage in conflict;
         One returns home, gives way.
         The people of his town,
@@ -2331,7 +2324,7 @@ would be drawing down disaster upon himself. In such a case a wise and
 conciliatory attitude benefits the whole community, which will then not be 
 drawn into the conflict.
         
-        ') #('Six in the third place means:
+'  'Six in the third place means:
         To nourish oneself on ancient virtue induces perseverance.
         Danger. In the end, good fortune comes.
         If by chance you are in the service of a king,
@@ -2346,7 +2339,7 @@ service of a superior, one can avoid conflict only by not seeking works for the
 sake of prestige. It is enough if the work is done: let the honor go to the 
 other.
 
-        ') #('Nine in the fourth place means:
+'  'Nine in the fourth place means:
         One cannot engage in conflict.
         One turns back and submits to fate,
         Changes one''s attitude, 
@@ -2362,7 +2355,7 @@ his conscience. Therefore he turns back and accepts his fate. He changes his
 mind and finds lasting peace in being at one with eternal law. This brings 
 good fortune.
 
-         ') #('Nine in the fifth place means:
+'  'Nine in the fifth place means:
         To contend before him
         Brings supreme good fortune.
 
@@ -2370,7 +2363,7 @@ This refers to an arbiter in a conflict who is powerful and just, and strong
 enough to lend weight to the right side. A dispute can be turned over to him 
 with confidence. If one is in the right, one attains great good fortune.
         
-        ') #('Nine at the top means:
+'  'Nine at the top means:
         Even if by chance a leather belt is bestowed on one,
         By the end of a morning
         It will have been snatched away three times.
@@ -2379,9 +2372,9 @@ Here we have someone who has carried a conflict to the bitter end and has
 triumphed. He is granted a decoration, but his happiness does not last.  He is 
 attacked again and again, and the result is conflict without end.
 ' )
-)
 
-"7"  #(  #(  '7. Shih / The Army
+
+#( '7. Shih / The Army
 
                 above  K''UN  THE RECEPTIVE, EARTH
                 below  K''AN  THE ABYSMAL, WATER
@@ -2435,7 +2428,7 @@ government and people, so that the people are sheltered by their
 government as ground water is sheltered by the earth, is it possible to wage a 
 victorious war.
 
-')  #('Six at the beginning means:
+'  'Six at the beginning means:
         An army must set forth in proper order.
         If the order is not good, misfortune threatens.
 
@@ -2443,7 +2436,7 @@ At the beginning of a military enterprise, order is imperative. A just and
 valid cause must exist, and the obedience and coordination of the troops must 
 be well organized, otherwise the result is inevitably failure.
 
-         ') #('Nine in the second place means:
+'  'Nine in the second place means:
         In the midst of the army.
         Good fortune. No blame.
         The king bestows a triple decoration.
@@ -2455,7 +2448,7 @@ decorations he receives are justified, because there is no question of personal
 preferment here: the whole army, whose center he is, is honored in his 
 person. 
 
-        ') #('Six in the third place means:
+'  'Six in the third place means:
         Perchance the army carries corpses in the wagon.
         Misfortune.
 
@@ -2474,7 +2467,7 @@ have been misread as shih, which means "corpse." Allowing for this error,
 the meaning would be that if the multitude assumes leadership of the army 
 (rides in the wagon), misfortune will ensue.
 
-        ') #('Six in the fourth place means:
+'  'Six in the fourth place means:
         The army retreats. No blame.
 
 In the face of a superior enemy, with whom it would be hopeless to engage in 
@@ -2483,7 +2476,7 @@ army from defeat and disintegration. It is by no means a sign of courage or
 strength to insist upon engaging in a hopeless struggle regardless of 
 circumstances.
 
-         ') #('Six in the fifth place means:
+'  'Six in the fifth place means:
         There is game in the field.
         It furthers one to catch it.
         Without blame.
@@ -2501,7 +2494,7 @@ permitting the mob to slaughter all who fall into their hands; if they do,
 defeat will be the result, and despite all perseverance there is danger of 
 misfortune.
 
-        ') #('Six at the top means:
+'  'Six at the top means:
         The great prince issues commands,
         Founds states, vests families with fiefs.
         Inferior people should not be employed.
@@ -2512,9 +2505,8 @@ should not come into power. If they have helped, let them be paid off with
 money, but they should not be awarded lands or the privileges of rulers, lest 
 power be abused.
 ' )
-)
 
-"8"  #(  #(  '8. Pi / Holding Together [union]
+#( '8. Pi / Holding Together [union]
 
                 above  K''AN  THE ABYSMAL, WATER
                 below  K''UN  THE RECEPTIVE, EARTH
@@ -2579,7 +2571,7 @@ must see to it that every member finds that his true interest lies in holding
 together with it, as was the case in the paternal relationship between king and 
 vassals in ancient China.
 
-')  #('Six at the beginning means:
+'  'Six at the beginning means:
         Hold to him in truth and loyalty;
         This is without blame.
         Truth, like a full earthen bowl
@@ -2592,7 +2584,7 @@ everything and the empty form nothing, shows itself not in clever words but
 through the strength of what lies within the speaker. This strength is so great 
 that it has power to attract good fortune to itself from without.
 
-        ') #('Six in the second place means:
+'  'Six in the second place means:
         Hold to him inwardly.
         Perseverance brings good fortune.
         
@@ -2602,7 +2594,7 @@ he does not lose himself. But if a man seeks association with others as if he
 were an obsequious office hunter, he throws himself away. He does not 
 follow the path of the superior man, who never loses his dignity.
 
-        ') #('Six in the third place means:
+'  'Six in the third place means:
         You hold together with the wrong people.
 
 We are often among people who do not belong to our own sphere. In that 
@@ -2612,7 +2604,7 @@ sociability without intimacy is the only right attitude toward people, because
 otherwise we should not be free to enter into relationship with people of our 
 own kind later on.
 
-        ') #('Six in the fourth place means:
+'  'Six in the fourth place means:
         Hold to him outwardly also.
         Perseverance brings good fortune.
 
@@ -2620,7 +2612,7 @@ Here the relations with a man who is the center of union are well established.
 Then we may, and indeed we should, show our attachment openly. But we 
 must remain constant and not allow ourselves to be led astray.
 
-         ') #('Nine in the fifth place means:
+'  'Nine in the fifth place means:
         Manifestation of holding together.
         In the hunt the king uses beaters on three sides only
         And forgoes game that runs off in front.
@@ -2647,7 +2639,7 @@ from people. If a man cultivates within himself the purity and the strength
 that are necessary for one who is the center of a fellowship, those who are 
 meant for him come of their own accord.
         
-        ') #('Six at the top means:
+'  'Six at the top means:
         He finds no head for holding together.
         Misfortune.
         
@@ -2656,9 +2648,8 @@ right ending. If we have missed the right moment for union and go on
 hesitating to give complete and full devotion, we shall regret the error when 
 it is too late.
 ' )
-)
 
-"9"  #(  #(  '9. Hsiao Ch''u / The Taming Power of the Small
+#( '9. Hsiao Ch''u / The Taming Power of the Small
 
                 above  SUN  THE GENTLE, WIND
                 below  CH''IEN  THE CREATIVE, HEAVEN
@@ -2707,7 +2698,7 @@ an individual, in times when he can produce no great effect in the outer
 world, can do nothing except refine the expression of his nature in small 
 ways.
 
-')  #('Nine at the beginning means:
+'  'Nine at the beginning means:
         Return to the way.
         How could there be blame in this?
         Good fortune.
@@ -2718,7 +2709,7 @@ situation, where he is free to advance or to retreat. In the nature of things
 this will bring good fortune, for it is wise and reasonable not to try to obtain 
 anything by force.
 
-        ') #('Nine in the second place means:
+'  'Nine in the second place means:
         He allows himself to be drawn into returning.
         Good fortune.
 
@@ -2729,7 +2720,7 @@ resolute man will not expose himself to a personal rebuff, but will retreat
 with others of like mind. This brings good fortune, because he does not 
 needlessly jeopardize himself.
 
-        ') #('Nine in the third place means:
+'  'Nine in the third place means:
         The spokes burst out of the wagon wheels.
         Man and wife roll their eyes.
         
@@ -2745,7 +2736,7 @@ result. In consequence even the strong man cannot so use his power as to
 exert the right influence on those around him. He experiences a rebuff where 
 he expected an easy victory, and he thus compromises his dignity.
 
-        ') #('Six in the fourth place means:
+'  'Six in the fourth place means:
         If you are sincere, blood vanishes and fear gives way.
         No blame.
         
@@ -2755,7 +2746,7 @@ may arise. Nonetheless, the power of disinterested truth is greater than all
 theses obstacles. It carries such weight that the end is achieved, and all danger 
 of bloodshed and all fear disappear.
 
-        ') #('Nine in the fifth place means:
+'  'Nine in the fifth place means:
         If you are sincere and loyally attached, 
         You are rich in your neighbor.
 
@@ -2765,7 +2756,7 @@ consists in trustworthiness. This relation of mutual reinforcement leads to a
 true wealth that is all the more apparent because it is not selfishly hoarded 
 but is shared with friends. Pleasure shared is pleasure doubled.
         
-        ') #('Nine at the top means:
+'  'Nine at the top means:
         The rain comes, there is rest.
         This is due to the lasting effect of character.
         Perseverance brings the woman into danger.
@@ -2785,9 +2776,8 @@ inevitable. Under such circumstances one must be content with what has
 been achieved. To advance any further, before the appropriate time has 
 come, would lead to misfortune.
 ' )
-)
 
-"10"  #(  #(  '10. Lü / Treading [conduct]
+#( '10. Lü / Treading [conduct]
 
                 above  CH''IEN  THE CREATIVE, HEAVEN
                 below  TUI  THE JOYOUS, LAKE
@@ -2835,7 +2825,7 @@ inevitable consequences. If, on the other hand, external differences in rank
 correspond with differences in inner worth, and if inner worth forms the 
 criterion of external rank, people acquiesce and order reigns in society.
 
-')  #( 'Nine at the beginning means:
+'   'Nine at the beginning means:
         Simple conduct. Progress without blame.
 
 The situation is one in which we are still not bound by any obligations of 
@@ -2855,7 +2845,7 @@ work is content to behave simply. He wishes to make progress in order to
 accomplish something. When he attains his goal, he does something worth 
 while, an all is well.
 
-        ') #('Nine in the second place means:
+'  'Nine in the second place means:
         Treading a smooth, level course.
         The perseverance of a dark man
         Brings good fortune.
@@ -2865,7 +2855,7 @@ the bustle of life, seeks nothing, asks nothing of anyone, and travels through
 life unassailed, on a level road. Since he is content and does not challenge 
 fate, he remains free of entanglements.
 
-        ') #('Six in the third place means:
+'  'Six in the third place means:
         A one-eyed man is able to see,
         A lame man is able to tread.
         He treads on the tail of the tiger.
@@ -2881,7 +2871,7 @@ strength. This reckless way of plunging ahead, regardless of the adequacy of
 one''s powers, can be justified only in the case of a warrior battling for his 
 prince.
 
-        ') #('Nine in the fourth place means:
+'  'Nine in the fourth place means:
         He treads on the tail of the tiger.
         Caution and circumspection
         Lead ultimately to good fortune.
@@ -2893,7 +2883,7 @@ within but outwardly presses forward. Here one is sure of ultimate success,
 which consists in achieving one''s purpose, that is, in overcoming danger by 
 going forward.
 
-         ') #('Nine in the fifth place means:
+'  'Nine in the fifth place means:
         Resolute conduct.
         Perseverance with awareness of danger.
 
@@ -2902,7 +2892,7 @@ be resolute in conduct. But at the same time one must remain conscious of
 the danger connected with such resoluteness, especially if it is to be 
 persevered in. Only awareness of the danger makes success possible.
 
-        ') #('Nine at the top means:
+'  'Nine at the top means:
         Look to your conduct and weigh the favorable signs.
         When everything is fulfilled, supreme good fortune comes.
 
@@ -2912,9 +2902,8 @@ then good fortune is certain. No one knows himself. It is only by the
 consequences of his actions, by the fruit of his labors, that a man can judge 
 what he is to expect.
 ' )
-)
 
-"11"  #(  #(  '11. T''ai / Peace
+#( '11. T''ai / Peace
 
                 above  K''UN  THE RECEPTIVE, EARTH
                 below  CH''IEN  THE CREATIVE, HEAVEN
@@ -2970,7 +2959,7 @@ and the right place, which increases the natural yield.  This controlling and
 furthering activity of man in his relation to nature is the work on nature that 
 rewards him.
 
-')  #(  'Nine at the beginning means:
+'   'Nine at the beginning means:
         When ribbon grass is pulled up, the sod comes with it.
         Each according to his kind.
         Undertakings bring good fortune.
@@ -2981,7 +2970,7 @@ a bunch of it, because the stalks are connected by their roots. In such times,
 when it is possible to extend influence widely, the mind of an able man is set 
 upon going out into life and accomplishing something.
 
-         ') #('Nine in the second place means:
+'  'Nine in the second place means:
         Bearing with the uncultured in gentleness,
         Fording the river with resolution,
         Not neglecting what is distant,
@@ -3002,7 +2991,7 @@ should do is duty. Theses are four ways in which one can overcome
 the hidden danger of a gradual slackening that always lurks in any time 
 of peace. And that is how one finds the middle way for action.
 
-        ') #('Nine in the third place means:
+'  'Nine in the third place means:
         No plain not followed by a slope.
         No going not followed by a return.
 		He who remains persevering in danger
@@ -3020,7 +3009,7 @@ inner nature remains stronger and richer than anything offered by external
 fortune, as long as he remains inwardly superior to fate, fortune will not 
 desert him.
 
-        ') #('Six in the fourth place means:
+'  'Six in the fourth place means:
         He flutters down, not boasting of his wealth,
         Together with his neighbor,
         Guileless and sincere.
@@ -3031,7 +3020,7 @@ to the force of circumstances but corresponds with their inmost sentiment.
 The approach is made quite spontaneously, because it is based on inner 
 conviction.
 
-         ') #('Six in the fifth place means:
+'  'Six in the fifth place means:
         The sovereign I
         Gives his daughter in marriage.
         And supreme good fortune.
@@ -3041,7 +3030,7 @@ although higher in rank than their husbands, had to obey them like all other
 wives. Here too we are shown a truly modest union of high and low that 
 brings happiness and blessings.
 
-        ') #('Six at the top means:
+'  'Six at the top means:
         The wall falls back into the moat.
         Use no army now.
         Make your commands known within your own town.
@@ -3055,9 +3044,8 @@ recourse left us is to hold our own within our intimate circle. Should we
 persevere in trying to resist the evil in the usual way, our collapse would 
 only be more complete, and humiliation would be the result.
 ' )
-)
 
-"12"  #(  #(  '12. P''i / Standstill [Stagnation]
+#( '12. P''i / Standstill [Stagnation]
 
                 above  CH''IEN  THE CREATIVE, HEAVEN
                 below  K''UN  THE RECEPTIVE, EARTH
@@ -3101,7 +3089,7 @@ to take part in public activities. This would only expose him to danger,
 since he cannot assent to the meanness of the others. He therefore hides 
 his worth and withdraws into seclusion.
 
-')  #('Six at the beginning means:
+'  'Six at the beginning means:
         When ribbon grass is pulled up, the sod comes with it.
         Each according to his kind.
         Perseverance brings good fortune and success.
@@ -3115,7 +3103,7 @@ If it becomes impossible to make our influence count, it is only by retirement
 that we spare ourselves humiliation. Success in a higher sense can be ours, 
 because we know how to safeguard the value of our personalities.
 
-        ') #('Six in the second place means:
+'  'Six in the second place means:
         They bear and endure;
         This means good fortune for inferior people.
         The standstill serves to help the great man to attain success.
@@ -3127,7 +3115,7 @@ the consequences of the standstill. He does not mingle with the crowd
 of the inferior; that is not his place. By his willingness to suffer 
 personally he insures the success of his fundamental principles.
                 
-        ') #('Six in the third place means:
+'  'Six in the third place means:
         They bear shame.
 
 Inferior people who have risen to power illegitimately do not feel equal 
@@ -3135,7 +3123,7 @@ to the responsibility they have taken upon themselves. In their hearts
 they begin to be ashamed, although at first they do not show it outwardly. 
 This marks a turn for the better. 
         
-        ') #('Nine in the fourth place means:
+'  'Nine in the fourth place means:
         He who acts at the command of the highest 
         Remains without blame.
         Those of like mind partake of the blessing.
@@ -3147,7 +3135,7 @@ creating order according to his own judgment could make mistakes and end
 in failure. But the man who is truly called to the task is favored by the 
 conditions of the time, and all those of like mind will share in his blessing. 
 
-         ') #('Nine in the fifth place means:
+'  'Nine in the fifth place means:
         Standstill is giving way.
         Good fortune for the great man.
         "What if it should fail, what if it should fail?"
@@ -3168,7 +3156,7 @@ danger in his security, not ruin when he is well established, nor confusion
 when his affairs are in order. In this way he gains personal safety and is 
 able to protect the empire.
 
-        ') #('Nine at the top means:
+'  'Nine at the top means:
         The standstill comes to an end.
         First standstill, then good fortune.
 
@@ -3180,9 +3168,8 @@ of disintegration, however, does not change back automatically to a condition
 of peace and prosperity; effort must be put forth in order to end it. This shows 
 the creative attitude that man must take if the world is to be put in order.
 ' )
-)
 
-"13"  #(  #(  '13. T''ung Jên / Fellowship with Men
+#( '13. T''ung Jên / Fellowship with Men
 
                 above  CH''IEN  THE CREATIVE, HEAVEN
                 below  LI  THE CLINGING, FLAME
@@ -3192,9 +3179,9 @@ The image of the upper trigram Ch''ien is heaven, and that of the lower, Li, is 
 It is the nature of fire to flame up to the heaven. This gives the idea of fellowship. 
 IT is the second line that, by virtue of its central character, unites the five strong 
 lines around it. This hexagram forms a complement to Shih, THE ARMY. 
-In the latter, danger is within and obedience without the character of a warlike army, 
+In the latter, danger is within and obedience without the character of a warlike army, 
 which, in order to hold together, needs one strong man among the many who are weak. Here, 
-clarity is within and strength without the character of a peaceful union of men, 
+clarity is within and strength without the character of a peaceful union of men, 
 which, in order to hold together, needs one yielding nature among many firm persons.
 
         THE JUDGMENT
@@ -3227,7 +3214,7 @@ together must be organically arranged. Fellowship should not be a mere
 mingling of individuals or of things that would be chaos, not fellowship. 
 If fellowship is to lead to order, there must be organization within diversity.
 
-')  #( 'Nine at the beginning means:
+'   'Nine at the beginning means:
         Fellowship with men at the gate.
         No blame.
 
@@ -3236,7 +3223,7 @@ All are equally close to one another. No divergent aims have yet arisen,
 and one makes not mistakes. The basic principles of any kind of union must 
 be equally accessible to all concerned. Secret agreements bring misfortune.
 
-         ') #('Six in the second place means:
+'  'Six in the second place means:
         Fellowship with men in the clan.
         Humiliation.
 
@@ -3247,7 +3234,7 @@ others, originate from low motives and therefore lead in the course of time
 to humiliation.
 
 
-        ') #('Nine in the third place means:
+'  'Nine in the third place means:
         He hides weapons in the thicket;
         He climbs the high hill in front of it.
         For three years he does not rise up.
@@ -3262,7 +3249,7 @@ his opponent and trying to ferret them out. The result is that one departs
 further and further from true fellowship. The longer this goes on, the more 
 alienated one becomes.
 
-        ') #('Nine in the fourth place means:
+'  'Nine in the fourth place means:
         He climbs up on his wall; he cannot attack.
         Good fortune.
 
@@ -3271,7 +3258,7 @@ are still dividing walls on which we stand confronting one another. But the
 difficulties are too great. We get into straits, and this brings us to our senses. 
 We cannot fight, and therein lies our good fortune.
         
-         ') #('Nine in the fifth place means:
+'  'Nine in the fifth place means:
         Men bound in fellowship first weep and lament,
         But afterward they laugh.
         After great struggles they succeed in meeting.
@@ -3292,7 +3279,7 @@ They shatter even the strength of iron or of bronze.
 And when two people understand each other in their inmost hearts,
 Their words are sweet and strong, like the fragrance of orchids.
 
-        ') #('Nine at the top means:
+'  'Nine at the top means:
         Fellowship with men in the meadow.
         No remorse.
 
@@ -3304,9 +3291,8 @@ entrance to the town. At this stage, the ultimate goal of the union of
 mankind has not yet been attained, but we need not reproach ourselves. 
 We join the community without separate aims of our own. 
 ' )
-)
 
-"14"  #(  #(  '14. Ta Yu / Possession in Great Measure
+#( '14. Ta Yu / Possession in Great Measure
 
                 above  LI  THE CLINGING, FLAME
                 below  CH''IEN  THE CREATIVE, HEAVEN
@@ -3343,7 +3329,7 @@ day. Man must combat and curb the evil, and must favor and promote the
 good. Only in this way does he fulfill the benevolent will of God, 
 who desires only good and not evil.
 
-')  #( 'Nine at the beginning means:
+'   'Nine at the beginning means:
         No relationship with what is harmful;
         There is no blame in this.
         If one remains conscious of difficulty,
@@ -3356,7 +3342,7 @@ remaining conscious of theses difficulties that one can keep inwardly free of
 possible arrogance and wastefulness, and thus in principle overcome all cause 
 for blame.
 
-        ') #('Nine in the second place means:
+'  'Nine in the second place means:
         A big wagon for loading.
         One may undertake something.
         No blame.
@@ -3369,7 +3355,7 @@ farm means that there are at hand able helpers who give their support and
 are equal to their task. One can load great responsibility upon such persons, 
 and this is necessary in important undertakings.
 
-        ') #('Nine in the third place means:
+'  'Nine in the third place means:
         A prince offers it to the Son of Heaven.
         A petty man cannot do this.
 
@@ -3380,7 +3366,7 @@ his possession, which as private property can never endure. A petty man is
 incapable of this. He is harmed by great possessions, because instead of 
 sacrificing them, he would keep them for himself.
 
-        ') #('Nine in the fourth place means:
+'  'Nine in the fourth place means:
         He makes a difference
         Between himself and his neighbor.
         No blame.
@@ -3390,7 +3376,7 @@ neighbors. It is a dangerous position. He must look neither to the right nor
 to the left, and must shun envy and the temptation to vie with others. In this 
 way he remains free of mistakes.
 
-        ') #('Six in the fifth place means:
+'  'Six in the fifth place means:
         He whose truth is accessible, yet dignified,
         Has good fortune.
 
@@ -3400,7 +3386,7 @@ However, benevolence alone is not sufficient at the time of POSSESSION IN
 GREAT MEASURE. For insolence might begin to spread. Insolence must be 
 kept in bounds by dignity; then good fortune is assured.
 
-        ') #('Nine at the top means:
+'  'Nine at the top means:
         He is blessed by heaven.
         Good fortune.
         Nothing that does not further.
@@ -3415,9 +3401,8 @@ man who is true. He who walks in truth and is devoted in his thinking, and
 furthermore reveres the worthy, is blessed by heaven. He has good fortune, 
 and there is nothing that would not further.
 ' )
-)
 
-"15"  #(  #(  '15. Ch''ien / Modesty
+#( '15. Ch''ien / Modesty
 
                 above  K''UN  THE RECEPTIVE, EARTH
                 below  KEN  KEEPING STILL, MOUNTAIN
@@ -3473,7 +3458,7 @@ equalizes the extremes that are the source of social discontent and thereby
 creates just and equable conditions.
 
 
-')  #('Six at the beginning means:
+'  'Six at the beginning means:
         A superior man modest about his modesty
         May cross the great water.
         Good fortune.
@@ -3486,7 +3471,7 @@ fits a man to accomplish even difficult undertakings: he imposes no
 demands or stipulations but settles matters easily and quickly. Where no 
 claims are put forward, no resistances arise.
 
-        ') #('Six in the second place means:
+'  'Six in the second place means:
         Modesty that comes to expression. Perseverance brings good fortune.
 
 "Out of the fullness of the heart the mouth speaketh." When a man''s 
@@ -3494,7 +3479,7 @@ attitude of mind is so modest that this expresses itself in his outward
 behavior, it is a source of good fortune to him. For the possibility of 
 exerting a lasting influence arises of itself and no one can interfere.
 
-        ') #('Nine in the third place means:
+'  'Nine in the third place means:
         A superior man of modesty and merit
         Carries things to conclusion.
         Good fortune.
@@ -3506,7 +3491,7 @@ will arise. If, on the contrary, he remains modest despite his merit,
 he makes himself beloved and wins the support necessary for carrying 
 his work through to the end.
 
-        ') #('Six in the fourth place means:
+'  'Six in the fourth place means:
         Nothing that would not further modesty
         In movement.
 
@@ -3520,7 +3505,7 @@ responsibility, accept pay without giving its equivalent in work, and bear
 empty titles. This is the opposite of what is meant here by modesty. In such 
 a position, modesty is shown by interest in one''s work.
 
-        ') #('Six in the fifth place means:
+'  'Six in the fifth place means:
         No boasting of wealth before one''s neighbor. 
         It is favorable to attack with force.
         Nothing that would not further.
@@ -3532,7 +3517,7 @@ impression by boasting of his superiority but must make certain of the people
 around him. The measures taken should be purely objective and in no way 
 personally offensive. Thus modesty manifests itself even in severity.
 
-        ') #('Six at the top means:
+'  'Six at the top means:
         Modesty that comes to expression.
         It is favorable to set armies marching
         To chastise one''s own city and one''s country.
@@ -3546,9 +3531,8 @@ inspires one to begin by disciplining one''s own ego and one''s immediate
 circle. Only through having the courage to marshal one''s armies against 
 oneself, will something forceful really be achieved.
 ' )
-)
 
-"16"  #(  #(  '16. Yü / Enthusiasm
+#( '16. Yü / Enthusiasm
 
                 above  CHêN  THE AROUSING, THUNDER
                 below  K''UN  THE RECEPTIVE, EARTH
@@ -3624,7 +3608,7 @@ has said of the great sacrifice at which these rites were performed:
 "He who could wholly comprehend this sacrifice could rule the world 
 as though it were spinning on his hand."
 
-')  #('Six at the beginning means:
+'  'Six at the beginning means:
         Enthusiasm that expresses itself
         Brings misfortune.
 
@@ -3633,7 +3617,7 @@ he boasts enthusiastically. This arrogance inevitably invites misfortune.
 Enthusiasm should never be an egotistic emotion; it is justified only 
 when it is a general feeling that unites one with others.
 
-        ') #('Six in the second place means:
+'  'Six in the second place means:
         Firm as a rock. Not a whole day.
         Perseverance brings good fortune.
 
@@ -3660,7 +3644,7 @@ Perseverance brings good fortune."
         He knows weakness, he knows strength as well.
         Hence the myriads look up to him.
 
-        ') #('Six in the third place means:
+'  'Six in the third place means:
         Enthusiasm that looks upward creates remorse.
         Hesitation brings remorse.
 
@@ -3669,7 +3653,7 @@ self-reliance, while here there is enthusiastic looking up to a leader.
 If a man hesitates too long, this also will bring remorse. The right 
 moment for approach must be seized: only then will he do the right thing.
 
-        ') #('Nine in the fourth place means:
+'  'Nine in the fourth place means:
         The source of enthusiasm.
         He achieves great things.
         Doubt not.
@@ -3682,15 +3666,15 @@ doubts and is wholly sincere. Owing to his confidence in them he wins their
 enthusiastic co-operation and attains success. Just as a clasp draws the hair 
 together and hold it, so he draws man together by the support he gives them.
 
-        ') #('Six in the fifth place means:
+'  'Six in the fifth place means:
         Persistently ill, and still does not die.
 
 Here enthusiasm is obstructed. A man is under constant pressure, 
 which prevents him from breathing freely. However, this pressure has 
-its advantage it prevents him from consuming his powers in empty 
+its advantage it prevents him from consuming his powers in empty 
 enthusiasm. Thus constant pressure can actually serve to keep one alive.
 
-        ') #('Six at the top means:   
+'  'Six at the top means:   
         Deluded enthusiasm.
         But if after completion one changes, 
         There is no blame.
@@ -3700,9 +3684,8 @@ delusion has run its course, and he is still capable of changing, then he is
 freed of error. A sober awakening from false enthusiasm is quite possible and 
 very favorable.
 ' )
-)
 
-"17"  #(  #(  '17. Sui / Following
+#( '17. Sui / Following
 
                 above  TUI  THE JOYOUS, LAKE
                 below  CHêN  THE AROUSING, THUNDER
@@ -3741,7 +3724,7 @@ so favorable.
         Goes indoors for rest and recuperation.
 
 In the autumn electricity withdraws into the earth again and rests. Here it is 
-the thunder in the middle of the lake that serves as the image thunder in its 
+the thunder in the middle of the lake that serves as the image thunder in its 
 winter rest, not thunder in motion. The idea of following in the sense of 
 adaptation to the demands of the time grows out of this image. Thunder in 
 the middle of the lake indicates times of darkness and rest. Similarly, a 
@@ -3749,7 +3732,7 @@ superior man, after being tirelessly active all day, allows himself rest and
 recuperation at night. No situation can become favorable until one is able to 
 adapt to it and does not wear himself out with mistaken resistance.
 
-')  #( 'Nine at the beginning means:
+'   'Nine at the beginning means:
         The standard is changing.
         Perseverance brings good fortune.
         To go out of the door in company
@@ -3765,7 +3748,7 @@ must not associate exclusively with people who share our views or with
 members of our own party; instead, we must go out and mingle freely with 
 all sorts of people, friends or foes. That is the only way to achieve something.
 
-        ') #('Six in the second place means:
+'  'Six in the second place means:
         If one clings to the little boy,
         One loses the strong man.
 
@@ -3775,7 +3758,7 @@ cannot have both at once. If he throws himself away on unworthy friends he
 loses connection with people of intellectual power who could further him in 
 the good.
 
-        ') #('Six in the third place means:
+'  'Six in the third place means:
         If one clings to the strong man,
         One loses the little boy.
         Through following one finds what one seeks.
@@ -3788,7 +3771,7 @@ needs for the development of his personality. The important thing is to
 remain firm. He must know what he wants and not be led astray by 
 momentary inclinations.
 
-        ') #('Nine in the fourth place means:
+'  'Nine in the fourth place means:
         Following creates success.
         Perseverance brings misfortune.
         To go one''s way with sincerity brings clarity.
@@ -3804,14 +3787,14 @@ completely free from his ego, and intent, by conviction, upon what is right
 and essential, does he acquire the clarity that enables him to see through such 
 people, and become free of blame.
 
-        ') #('Nine in the fifth place means:
+'  'Nine in the fifth place means:
         Sincere in the good. Good fortune.
 
-Every man must have something he follows something that serves him as a 
+Every man must have something he follows something that serves him as a 
 lodestar. He who follows with conviction the beautiful and the good may feel 
 himself strengthened by this saying.
 
-        ') #('Six at the top means:
+'  'Six at the top means:
         He meets with firm allegiance
         And is still further bound.
         The king introduces him
@@ -3826,9 +3809,8 @@ this dynasty honored men who had served them well by awarding them a
 place in the royal family''s temple of ancestors on the Western Mountain. In 
 this way they were regarded as sharing in the destiny of the ruling family. 
 ' )
-)
 
-"18"  #(  #(  '18. Ku / Work on what has been spoiled [ Decay ]
+#( '18. Ku / Work on what has been spoiled [ Decay ]
 
                 above  Kên  KEEPING STILL, MOUNTAIN
                 below  Sun  THE GENTLE, WIND
@@ -3880,7 +3862,7 @@ stagnation by stirring up public opinion, as the wind stirs up everything, and
 must strengthen and tranquilize the character of the people, as the mountain 
 gives tranquillity and nourishment to all that grows in its vicinity. 
 
-')  #('Six in the beginning means:
+'  'Six in the beginning means:
         Setting right what has been spoiled by the father.
         If there is a son, 
         No blame rests upon the departed father. 
@@ -3893,7 +3875,7 @@ attaches to the father. However, one must not overlook the danger or take
 the matter too lightly. Only if one is conscious of the danger connected with 
 every reform will everything go well in the end. 
 
-        ') #('Nine in the second place means:
+'  'Nine in the second place means:
         Setting right what has been spoiled by the mother.
         One must not be too persevering.
         
@@ -3902,7 +3884,7 @@ hence the symbol, "what has been spoiled by the mother. " In setting things
 right in such a case, a certain gentle consideration is called for. In order not to 
 wound, one should not attempt to proceed too drastically. 
         
-        ') #('Nine in the third place means:
+'  'Nine in the third place means:
         Setting right what has been spoiled by the father.
         There will be a little remorse. No great blame.
 
@@ -3912,7 +3894,7 @@ annoyances will surely develop. But too much energy is better than too little.
 Therefore, although he may at times have slight cause for regret, he remains 
 free of any serious blame. 
 
-        ') #('Six in the fourth place means:
+'  'Six in the fourth place means:
         Tolerating what has been spoiled by the father.
         In continuing one sees humiliation.
         
@@ -3920,7 +3902,7 @@ This shows the situation of someone too weak to take measures against decay
 that has its roots in the past and is just beginning to manifest itself. It is 
 allowed to run its course. If this continues, humiliation will result. 
 
-         ') #('Six in the fifth place means:
+'  'Six in the fifth place means:
         Setting right what has been spoiled by the father.
         One meets with praise.
 
@@ -3929,7 +3911,7 @@ former times. He lacks the power to ward it off alone, but with able helpers
 he can at least bring about a thorough reform, if he cannot create a new 
 beginning, and this also is praiseworthy.
 
-        ') #('Nine at the top means:
+'  'Nine at the top means:
         He does not serve kings and princes,
         Sets himself higher goals.
         
@@ -3942,9 +3924,8 @@ in ourselves the higher aims of mankind. For although the sage remains
 distant from the turmoil of daily life, he creates incomparable human values 
 for the future. 
 ' )
-)
 
-"19"  #(  #(  '19. Lin / Approach
+#( '19. Lin / Approach
 
                 above  K''UN  THE RECEPTIVE, EARTH
                 below  TUI  THE JOYOUS, LAKE
@@ -3994,7 +3975,7 @@ readiness to teach mankind, and just as the earth is boundlessly wide,
 sustaining and caring for all creatures on it, so the sage sustains and cares for 
 all people and excludes no part of humanity.
 
-')  #(  'Nine at the beginning means:
+'   'Nine at the beginning means:
         Joint approach.
         Perseverance brings good fortune.
 
@@ -4003,7 +3984,7 @@ turn is an incentive to men of ability. IT is well to join this upward trend, bu
 we must not let ourselves be carried away by the current of the time; we must 
 adhere perseveringly to what is right. This bring good fortune.
 
-         ') #('Nine in the second place means:
+'  'Nine in the second place means:
         Joint approach.
         Good fortune.
         Everything furthers.
@@ -4016,7 +3997,7 @@ rise, but need not be confused by this universal law of fate. Everything serves
 to further. Therefore he will travel the paths of life swiftly, honestly, and 
 valiantly.
 
-        ') #('Six in the third place means:
+'  'Six in the third place means:
         Comfortable approach.
         Nothing that would further.
         If one is induced to grieve over it,
@@ -4029,7 +4010,7 @@ This would inevitably be harmful. But there is possibility of a change of
 mood. If he regrets his mistaken attitude and feels the responsibility of an 
 influential position, he frees himself of faults.
 
-        ') #('Six in the fourth place means:
+'  'Six in the fourth place means:
         Complete approach.
         No blame.
         
@@ -4039,7 +4020,7 @@ lower rank for whom they procure influence. Here is shown the open-
 minded approach of a person of high rank to a man of ability whom he draws 
 in to his own circle, regardless of class prejudice. This is very favorable.     
 
-        ') #('Six in the fifth place means:
+'  'Six in the fifth place means:
         Wise approach.
         This is right for a great prince.
         Good fortune.
@@ -4050,7 +4031,7 @@ consists both in selecting the right people and in allowing those chosen to
 have a free hand without interference from him.  For only through such self-
 restraint will he find the experts needed to satisfy all of his requirements.
 
-        ') #('Six at the top means:
+'  'Six at the top means:
         Great hearted approach.
         Good-hearted approach.
         Good fortune. No blame.
@@ -4061,9 +4042,8 @@ more to the here and now and to approach other men. This means great
 good fortune for the men whom he teaches and helps. And for him this great 
 hearted humbling of himself is blameless.
 ' )
-)
 
-"20"  #(  #(  '20. Kuan / Contemplation (View)
+#( '20. Kuan / Contemplation (View)
 
                 above  SUN  THE GENTLE, WIND
                 below  K''UN  THE RECEPTIVE, EARTH
@@ -4130,7 +4110,7 @@ mass of humanity and therefore cannot be deceived; on the other, he will
 impress the people so profoundly, by his mere existence and by the impact of 
 his personality, that they will be swayed by him as the grass by the wind.
 
-')   #('Six at the beginning means:
+'   'Six at the beginning means:
         Boy like contemplation.
         For an inferior man, no blame.
         For a superior man, humiliation.
@@ -4143,7 +4123,7 @@ superior man it is a disgrace. He must not content himself with a shallow,
 thoughtless view of prevailing forces; he must contemplate them as a 
 connected whole and try to understand them.
 
-        ') #('Six in the second place means:
+'  'Six in the second place means:
         Contemplation through the crack of the door.
         Furthering for the perseverance of a woman.
 
@@ -4155,7 +4135,7 @@ necessary for her to be conversant with the affairs of the world. But for a man
 who must take active part in public life, such a narrow, egotistic way of 
 contemplating things is of course harmful.
 
-        ') #('Six in the third place means:
+'  'Six in the third place means:
         Contemplation of my life 
         Decides the choice
         Between advance and retreat.
@@ -4169,7 +4149,7 @@ this way acquires objectivity. However, self-knowledge does not mean
 preoccupation with one''s own thoughts; rather, it means concern about the 
 effects one creates. It is only the effects our lives produce that give us the 
 right to judge whether what we have done means progress or regression.
-        ') #('Six in the fourth place means:
+'  'Six in the fourth place means:
         Contemplation of the light of the kingdom.
         It furthers one to exert influence as the guest of a king.
 
@@ -4178,7 +4158,7 @@ made to flourish. Such a man must be given an authoritative position, in
 which he can exert influence. He should be, so to speak, a guest-that is, he 
 should be honored and act independently, and should not be used as a tool.
 
-         ') #('Nine at the top means:
+'  'Nine at the top means:
         Contemplation of his life.
         The superior man is without blame.
 
@@ -4188,9 +4168,8 @@ The picture is that of a sage who stands outside the affairs of the world.
 Liberated from his ego, he contemplates the laws of life and so realizes that 
 knowing how to become free of blame is the highest good.
 ' )
-)
 
-"21"  #(  #(  '21.  Shih Ho / Biting Through
+#( '21.  Shih Ho / Biting Through
 
                 above  LI  THE CLINGING, FIRE
                 below  CHêN  THE AROUSING, THUNDER
@@ -4245,7 +4224,7 @@ lack of clarity in the penal codes and slackness in executing them.
 The only to strengthen the law is to make it clear and make penalties
 certain and swift.
 
-')  #( 'Nine at the beginning means:
+'   'Nine at the beginning means:
         His feet are fastened in the stocks,
         So that his toes disappear.
         No blame.
@@ -4281,7 +4260,7 @@ poisonous hatred against himself, and n this way is put in a somewhat
 humiliating position.  But since punishment was required by the time, he 
 remains free of blame.
         
-        ') #('Nine in the fourth place means:
+'  'Nine in the fourth place means:
         Bites on dried gristly meat.
         Receives metal arrows.
         It furthers one to be mindful of difficulties
@@ -4294,7 +4273,7 @@ be hard as metal and straight as an arrow to surmount the difficulties. If one
 knows these difficulties and remains persevering, he attains good fortune. 
 The difficult task is achieved in the end.
 
-         ') #('Six in the fifth place means:
+'  'Six in the fifth place means:
         Bites on dried lean meat.
         Receives yellow gold.
         Perseveringly aware of danger.
@@ -4306,7 +4285,7 @@ gold-that is, as true as gold and as impartial as yellow, the color of the middl
 [the mean]. It is only by remaining conscious of the dangers growing out of 
 the responsibility we have assumed that we can avoid making mistakes.
 
-        ') #('Nine at the top means:
+'  'Nine at the top means:
         His neck is fastened in the wooden cangue,
         So that his ears disappear.
         Misfortune.
@@ -4315,9 +4294,8 @@ In contrast to the first line, this line refers to a man who is incorrigible. Hi
 punishment is the wooden cangue, and his ears disappear under it-that is to 
 say, he is deaf to warnings. This obstinacy leads to misfortune.
 ' )
-)
 
-"22"  #(  #(  '22. Pi / Grace
+#( '22. Pi / Grace
 
                 above  KêN  KEEPING STILL, MOUNTAIN
                 below  LI  THE CLINGING, FIRE
@@ -4361,7 +4339,7 @@ not shine far; in the same way, beautiful form suffices to brighten and to
 throw light upon matters of lesser moment, but important questions cannot 
 be decided in this way. They require greater earnestness.
         
-')  #( 'Nine at the beginning means:
+'   'Nine at the beginning means:
         He lends grace to his toes, leaves the carriage, and walks.
 
 A beginner in subordinate place must take upon himself the labor of 
@@ -4370,7 +4348,7 @@ symbolized by the carriage-but a self-contained man scorns help gained in a
 dubious fashion. He thinks it more graceful to go on foot than to drive in a 
 carriage under false pretenses.
 
-         ') #('Six in the second place means:
+'  'Six in the second place means:
         Lends grace to the beard on his chin.
 
 The beard is not an independent thing; it moves only with the chin. The 
@@ -4379,7 +4357,7 @@ attribute of content. The beard is a superfluous ornament. To devote care to it
 for its own sake, without regard for the inner content of which it is an 
 ornament, would bespeak a certain vanity.
 
-        ') #('Nine in the third place means:
+'  'Nine in the third place means:
         Graceful and moist.
         Constant perseverance brings good fortune.
 
@@ -4388,7 +4366,7 @@ and the mellow mood induced by wine. This grace can adorn, but it can also
 swamp us. Hence the warning not to sink into convivial indolence but to 
 remain constant in perseverance. Good fortune depends on this.
 
-        ') #('Six in the fourth place means:
+'  'Six in the fourth place means:
         Grace or simplicity?
         A white horse comes as if on wings.
         He is not a robber,
@@ -4403,7 +4381,7 @@ one finds peace of mind in a true relationship with the friend who courts
 him. The winged horse is the symbol of the thoughts that transcend all limits 
 of space and time.
 
-        ') #('Six in the fifth place means:
+'  'Six in the fifth place means:
         Grace in the hills and gardens.
         The roll of silk is meager and small.
         Humiliation, but in the end good fortune.
@@ -4415,7 +4393,7 @@ But the gifts he has to offer are poor and few, so that he feels ashamed.
 However, it is not the material gifts that count, but sincerity of feeling, and so 
 all goes well in the end.
 
-         ') #('Nine at the top means:
+'  'Nine at the top means:
         Simple grace. No blame.
 
 Here at the highest stage of development all ornament is discarded. Form no 
@@ -4423,9 +4401,8 @@ longer conceals content but brings out its value to the full. Perfect grace
 consists not in exterior ornamentation of the substance, but in the simple 
 fitness of its form.
 ' )
-)
 
-"23"  #(  #(  '23. Po / Splitting Apart
+#( '23. Po / Splitting Apart
 
                 above  KêN  KEEPING STILL, MOUNTAIN
                 below  LI  THE CLINGING, FIRE
@@ -4474,7 +4451,7 @@ rest on the broad foundation of the people. They too should be generous and
 benevolent, like the earth that carries all. Then they will make their position 
 as secure as a mountain is in its tranquillity. 
 
-')   #('Six at the beginning means:
+'   'Six at the beginning means:
         The leg of the bed is split.
         Those who persevere are destroyed.
         Misfortune.
@@ -4485,7 +4462,7 @@ man rests. Those followers of the ruler who remain loyal are destroyed by
 slander and intrigue. The situation bodes disaster, yet there is nothing to do 
 but wait.
 
-        ') #('Six in the second place means:
+'  'Six in the second place means:
         The bed is split at the edge.
         Those who persevere are destroyed.
         Misfortune.
@@ -4497,7 +4474,7 @@ above or below. Extreme caution is necessary in this isolation. One must
 adjust to the time and promptly avoid the danger. Stubborn perseverance in 
 maintaining one''s standpoint would lead to downfall.
 
-        ') #('Six in the third place means:
+'  'Six in the third place means:
         He splits with them. No blame.
 
 An individual finds himself in an evil environment to which he is 
@@ -4506,7 +4483,7 @@ man, and through this he attains the stability to free himself from the way of
 the inferior people around him. This brings him into opposition to them of 
 course, but that is not wrong.
 
-        ') #('Six in the fourth place means:
+'  'Six in the fourth place means:
         The bed is split up to the skin.
         Misfortune.
 
@@ -4514,7 +4491,7 @@ Here the disaster affects not only the resting place but even the occupant. No
 warning or other comment is added. Misfortune has reached its peak: it can 
 no longer be warded off.
 
-        ') #('Six in the fifth place means:
+'  'Six in the fifth place means:
         A shoal of fishes. Favor comes through the court ladies.
         Everything acts to further.
 
@@ -4527,7 +4504,7 @@ thus gains his favor. Inasmuch as the lower element thus voluntarily places
 itself under the higher, it attains happiness and the higher also receives its 
 due. Therefore all goes well.
 
-         ') #('Nine at the top means:
+'  'Nine at the top means:
         There is a large fruit still uneaten.
         The superior man receives a carriage.
         The house of the inferior man is split apart.
@@ -4543,9 +4520,8 @@ which lives solely by negation, cannot continue to exist on its own strength
 alone. The inferior man himself fares best when held under control by a 
 superior man. 
 ' )
-)
 
-"24"  #(  #(  '24. Fu / Return (The Turning Point)
+#( '24. Fu / Return (The Turning Point)
 
                 above  K''UN  THE RECEPTIVE, EARTH
                 below  CHêN  THE AROUSING, THUNDER
@@ -4596,7 +4572,7 @@ increased by one. In this way the state of rest gives place to movement.
         Did not travel through the provinces.
 
 The winter solstice has always been celebrated in China as the resting time of 
-the year a custom that survives in the time of rest observed at the new year. 
+the year a custom that survives in the time of rest observed at the new year. 
 In winter the life energy, symbolized by thunder, the Arousing, is still 
 underground. Movement is just at its beginning; therefore it must be 
 strengthened by rest so that it will not be dissipated by being used 
@@ -4606,7 +4582,7 @@ after illness, the return of understanding after an estrangement: everything
 must be treated tenderly and with care at the beginning, so that the return 
 may lead to a flowering.
 
-')  #(   'Nine at the beginning means:
+'   'Nine at the beginning means:
         Return from a short distance.
         No need for remorse.
         Great good fortune.
@@ -4617,14 +4593,14 @@ of character; every faintly evil thought must be put aside immediately, before
 it goes too far and takes root in the mind. Then there is no cause for remorse, 
 and all goes well.
 
-        ') #('Six in the second place means:
+'  'Six in the second place means:
         Quiet return. Good fortune.
 
 Return always calls for a decision and is an act of self-mastery. It is made 
 easier if a man is in good company. If he can bring himself to put aside pride 
 and follow the example of good men, good fortune results.
 
-        ') #('Six in the third place means:
+'  'Six in the third place means:
         Repeated return. Danger. No blame.
 
 There are people of a certain inner instability who feel a constant urge to 
@@ -4633,7 +4609,7 @@ because of uncontrolled desires, then turning back to it again because of a
 better resolution. However, since this does not lead to habituation in evil, a 
 general inclination to overcome the defect is not wholly excluded/
 
-        ') #('Six in the fourth place means:
+'  'Six in the fourth place means:
         Walking in the midst of others,
         One returns alone.
 
@@ -4642,7 +4618,7 @@ with a strong and good friend, and this makes him turn back alone.
 Although nothing is said of reward and punishment, this return is certainly 
 favorable, for such a resolve to choose the good brings its own reward.         
         
-        ') #('Six in the fifth place means:
+'  'Six in the fifth place means:
         Noblehearted return. No remorse.
 
 When the time for return has come, a man should not take shelter in trivial 
@@ -4650,7 +4626,7 @@ excuses, but should look within and examine himself. And if he has done
 something wrong he should make a noblehearted resolve to confess his fault. 
 No one will regret having taken this road.
 
-        ') #('Six at the top means:
+'  'Six at the top means:
         Missing the return. Misfortune.
         Misfortune from within and without.
         If armies are set marching in this way,
@@ -4665,9 +4641,8 @@ misfortune coming upon him for without results from this wrong attitude.
 What is pictured here is blind obstinacy and the judgment that is visited 
 upon it.
 ' )
-)
 
-"25"  #(  #(  '25. Wu Wang / Innocence (The Unexpected)
+#( '25. Wu Wang / Innocence (The Unexpected)
 
                 above  CH''IEN  THE CREATIVE, HEAVEN
                 below  CHêN  THE AROUSING, THUNDER
@@ -4719,13 +4694,13 @@ the good rulers of mankind: drawing on the spiritual wealth at their
 command, they take care of all forms of life and all forms of culture and do 
 everything to further them, and at the proper time.
 
-')  #(   'Nine at the beginning means:
+'   'Nine at the beginning means:
         Innocent behavior brings good fortune.
 
 The original impulses of the heart are always good, so that we may follow 
 them confidently, assured of good fortune and achievement of our aims.
 
-        ') #('Six in the second place means:
+'  'Six in the second place means:
         If one does not count on the harvest while plowing,
         Nor on the use of the ground while clearing it,
         It furthers one to undertake something.
@@ -4734,7 +4709,7 @@ We should do every task for its own sake as time and place demand and not
 with an eye to the result. Then each task turns out well, and anything we 
 undertake succeeds.
 
-        ') #('Six in the third place means:
+'  'Six in the third place means:
         Undeserved misfortune.
         The cow that was tethered by someone
         Is the wanderer''s gain, the citizen''s loss.
@@ -4745,7 +4720,7 @@ him. His gain is the owner''s loss. In all transactions, no matter how
 innocent, we must accommodate ourselves to the demands of the time, 
 otherwise unexpected misfortune overtakes us.
 
-        ') #('Nine in the fourth place means:
+'  'Nine in the fourth place means:
         He who can be persevering 
         Remains without blame.
         
@@ -4753,7 +4728,7 @@ We cannot lose what really belongs to us, even if we throw it away.
 Therefore we need have no anxiety. All that need concern us is that we 
 should remain true to our own natures and not listen to others.
 
-         ') #('Nine in the fifth place means:
+'  'Nine in the fifth place means:
         Use no medicine in an illness
         Incurred through no fault of your own.
         It will pass of itself.
@@ -4763,7 +4738,7 @@ originate in one''s own nature or have a foothold there, one should not resort
 to external means to eradicate it, but should quietly let nature take its course. 
 Then improvement will come of itself.
 
-        ') #('Nine at the top means:
+'  'Nine at the top means:
         Innocent action brings misfortune.
         Nothing furthers.
 
@@ -4772,9 +4747,8 @@ thing to do is to wait quietly, without ulterior designs. If one acts
 thoughtlessly and tries to push ahead in opposition to fate, success will not be 
 achieved.
 ' )
-)
 
-"26"  #(  #(  '26. Ta Ch''u / The Taming Power of the Great
+#( '26. Ta Ch''u / The Taming Power of the Great
 
                 above  KêN  KEEPING STILL, MOUNTAIN
                 below  CH''IEN  THE CREATIVE, HEAVEN
@@ -4829,7 +4803,7 @@ and elevate their own characters. The way to study the past is not to confine
 oneself to mere knowledge of history but, through application of this 
 knowledge, to give actuality to the past.
 
-')  #( 'Nine at the beginning means:
+'   'Nine at the beginning means:
         Danger is at hand. It furthers one to desist.
 
 A man wishes to make vigorous advance, but circumstances present an 
@@ -4838,7 +4812,7 @@ advance, it would lead him into misfortune. Therefore it is better for him to
 compose himself and to wait until an outlet is offered for release of his 
 stored-up energies.
 
-        ') #('Nine in the second place means:
+'  'Nine in the second place means:
         The axletrees are taken from the wagon.
 
 Here advance is checked just as in the third line of THE TAMING POWER OF 
@@ -4850,7 +4824,7 @@ submits and removes the axletrees from the wagon -in other words, contents
 himself with waiting. In this way energy accumulates for a vigorous advance 
 later on.
 
-        Nine in the third place means.
+ '   ' Nine in the third place means:
         A good horse that follows others.
         Awareness of danger,
         With perseverance, furthers.
@@ -4865,7 +4839,7 @@ acquire skill on the one hand in what will take him forward, and on the other
 in what will protect him against unforeseen attacks. It is good in such a pass 
 to have a goal toward which to strive.
 
-        ') #('Six in the fourth place means:
+'  'Six in the fourth place means:
         The headboard of a young bull.
         Great good fortune.
 
@@ -4875,7 +4849,7 @@ forehead, so that later when the horns appear they cannot do harm. A good
 way to restrain wild force is to forestall it. By so doing one achieves an easy 
 and great success.
 
-         ') #('Six in the fifth place means:
+'  'Six in the fifth place means:
         The tusk of a gelded boar.
         Good fortune.
 
@@ -4884,7 +4858,7 @@ indirect way. A boar''s tusk is in itself dangerous, but if the boar''s nature i
 altered, the tusk is no longer a menace. Thus also where men are concerned, 
 wild force should not be combated directly; instead, its roots should be eradicated.
 
-         ') #('Nine at the top means:
+'  'Nine at the top means:
         One attains the way of heaven.
         Success.
 
@@ -4892,9 +4866,8 @@ The time of obstruction is past. The energy long dammed up by inhibition
 forces its way out and achieves great success. This refers to a man who is 
 honored by the ruler and whose principles now prevail and shape the world. 
 ' )
-)
 
-"27"  #(  #(  '27. I / Corners of the Mouth (Providing Nourishment)
+#( '27. I / Corners of the Mouth (Providing Nourishment)
 
                 above  KêN  KEEPING STILL, MOUNTAIN
                 below  CHêN  THE AROUSING, THUNDER
@@ -4950,7 +4923,7 @@ For tranquillity keeps the words that come out of the mouth from exceeding
 proper measure, and keeps the food that goes into the mouth from exceeding 
 its proper measure. Thus character is cultivated.
 
-')  #( 'Nine at the beginning means:
+'   'Nine at the beginning means:
         You let your magic tortoise go,
         And look at me with the corners of your mouth drooping.
         Misfortune.
@@ -4962,7 +4935,7 @@ self-reliance and instead looks with envy and discontent at others who are
 outwardly in better circumstances. But such base envy only arouses derision 
 and contempt in those others. This has bad results.
 
-        ') #('Six in the second place means:
+'  'Six in the second place means:
         Turning to the summit for nourishment,
         Deviating from the path
         To seek nourishment from the hill.
@@ -4976,7 +4949,7 @@ obtaining a living, he accepts support as a favor from those in higher place.
 This is unworthy, for he is deviating from his true nature. Kept up 
 indefinitely, this course leads to misfortune.
 
-        ') #('Six in the third place means:
+'  'Six in the third place means:
         Turning away from nourishment.
         Perseverance brings misfortune.
         Do not act thus for ten years.
@@ -4988,7 +4961,7 @@ satisfaction of the senses never brings one to the goal. One should never (ten
 years is a complete cycle of time) follow this path, for nothing good can come 
 of it.
 
-        ') #('Six in the fourth place means:
+'  'Six in the fourth place means:
         Turning to the summit
         For provision of nourishment
         Brings good fortune.
@@ -5003,7 +4976,7 @@ because he cannot attain his lofty aim alone. With the greed of a hungry tiger
 he is on the lookout for the right people. Since he is not working for himself 
 but for the good of all, there is no wrong in such zeal.
 
-         ') #('Six in the fifth place means:
+'  'Six in the fifth place means:
         Turning away from the path.
         To remain persevering brings good fortune.
         One should not cross the great water.
@@ -5016,7 +4989,7 @@ he maintains this attitude of mind perseveringly, success and good fortune
 are his. But he must remain aware of his dependence. He must not put his 
 own person forward nor attempt great labors, such as crossing the great water.
 
-         ') #('Nine at the top means:
+'  'Nine at the top means:
         The source of nourishment.
         Awareness of danger brings good fortune.
         It furthers one to cross the great water.
@@ -5028,9 +5001,8 @@ may confidently undertake even great and difficult labors, such as crossing
 the great water. These undertakings bring general happiness for him and for 
 all others.
 ' )
-)
 
-"28"  #(  #(  '28. Ta Kuo / Preponderance of the Great
+#( '28. Ta Kuo / Preponderance of the Great
 
                 above  TUI  THE JOYOUS, LAKE
                 below  SUN  THE GENTLE, WIND, WOOD
@@ -5080,7 +5052,7 @@ the trigram Sun is the tree, which stands firm even though it stands alone,
 and the attribute of Tui is joyousness, which remains undaunted even if it 
 must renounce the world.
 
-')  #('Six at the beginning means:
+'  'Six at the beginning means:
         To spread white rushes underneath.
         No blame.
 
@@ -5091,7 +5063,7 @@ This caution, though it may seem exaggerated, is not a mistake. Exceptional
 enterprises cannot succeed unless utmost caution is observed in their 
 beginnings and in the laying of their foundations.
 
-         ') #('Nine in the second place means:
+'  'Nine in the second place means:
         A dry poplar sprouts at the root.
         An older man takes a young wife.
         Everything furthers.
@@ -5103,7 +5075,7 @@ well.
   From the point of view of politics, the meaning is that in exceptional times 
 one does well to join with the lowly, for this affords a possibility of renewal.
         
-        ') #('Nine in the third place means:
+'  'Nine in the third place means:
         The ridgepole sags to the breaking point.
         Misfortune.
         
@@ -5113,7 +5085,7 @@ they in turn are not willing to lend him support. Because of this the burden
 grows, until the structure of things bends or breaks. Plunging willfully ahead 
 in times of danger only hastens the catastrophe.
 
-         ') #('Nine in the fourth place means:
+'  'Nine in the fourth place means:
         The ridgepole is braced. Good fortune.
         If there are ulterior motives, it is humiliating.
 
@@ -5122,7 +5094,7 @@ succeeds in becoming master of the situation. But if, instead of working for
 the rescue of the whole, he were to misuse his connections to obtain personal 
 power and success, it would lead to humiliation.
 
-        ') #('Nine in the fifth place means:
+'  'Nine in the fifth place means:
         A withered poplar puts forth flowers.
         An older woman takes a husband. 
         No blame. No praise.
@@ -5135,7 +5107,7 @@ net result is only the anomaly of the situation.
 give up alliance with those below us and keep up only the relationships we 
 have with people of higher rank, an unstable situation is created.
 
-        ') #('Six at the top means:
+'  'Six at the top means:
         One must go through the water.
         It goes over one''s head.
         Misfortune. No blame.
@@ -5147,9 +5119,8 @@ misfortune. But one incurs no blame in giving up one''s life that the good
 and the right may prevail. There are things that are more important than 
 life. 
 ' )
-)
 
-"29"  #(  #(  '29. K''an / The Abysmal (Water)
+#( '29. K''an / The Abysmal (Water)
 
                 above  K''AN  THE ABYSMAL, WATER
                 below  K''AN  THE ABYSMAL, WATER
@@ -5163,7 +5134,7 @@ develops. As an image it represents water, the water that comes from above
 and is in motion on earth in streams and rivers, giving rise to all life on 
 earth. 
   In man''s world K''an represents the heart, the soul locked up within the 
-body, the principle of light inclosed in the dark that is, reason. The name of 
+body, the principle of light inclosed in the dark that is, reason. The name of 
 the hexagram, because the trigram is doubled, has the additional meaning, 
 "repetition of danger." Thus the hexagram is intended to designate an 
 objective situation to which one must become accustomed, not a subjective 
@@ -5187,7 +5158,7 @@ likewise, if one is sincere when confronted with difficulties, the heart can
 penetrate the meaning of the situation. And once we have gained inner 
 mastery of a problem, it will come about naturally that the action we take will 
 succeed. In danger all that counts is really carrying out all that has to be done-
--thoroughness and going forward, in order not to perish through tarrying in 
+-thoroughness and going forward, in order not to perish through tarrying in 
 the danger.
   Properly used, danger can have an important meaning as a protective 
 measure. Thus heaven has its perilous height protecting it against every 
@@ -5209,7 +5180,7 @@ accidental and isolated occurrence. So likewise in teaching others everything
 depends on consistency, for it is only through repetition that the pupil makes 
 the material his own.
 
-')  #('Six at the beginning means:
+'  'Six at the beginning means:
         Repetition of the Abysmal.
         In the abyss one falls into a pit.
         Misfortune.
@@ -5218,7 +5189,7 @@ By growing used to what is dangerous, a man can easily allow it to become
 part of him. He is familiar with it and grows used to evil. With this he has 
 lost the right way, and misfortune is the natural result.
 
-         ') #('Nine in the second place means:
+'  'Nine in the second place means:
         The abyss is dangerous.
         One should strive to attain small things only.
 
@@ -5229,7 +5200,7 @@ satisfied with small gains, because for the time being a great success cannot be
 attained. A spring flows only sparingly at first, and tarries for some time 
 before it makes its way in to the open.
 
-        ') #('Six in the third place means:
+'  'Six in the third place means:
         Forward and backward, abyss on abyss.
         In danger like this, pause at first and wait,
         Otherwise you will fall into a pit in the abyss.
@@ -5240,7 +5211,7 @@ question. Therefore we must not be misled into action, as a result of which
 we should only bog down deeper in the danger; disagreeable as it may be to 
 remain in such a situation, we must wait until a way out shows itself.
 
-        ') #('Six in the fourth place means:
+'  'Six in the fourth place means:
         A jug of wine, a bowl of rice with it;
         Earthen vessels
         Simply handed in through the Window.
@@ -5257,7 +5228,7 @@ enters the room. If in difficult times we want to enlighten someone, we must
 begin with that which is in itself lucid and proceed quite simply from that 
 point on.
 
-         ') #('Nine in the fifth place means:
+'  'Nine in the fifth place means:
         The abyss is not filled to overflowing,
         It is filled only to the rim.
         No blame.
@@ -5268,7 +5239,7 @@ man when in danger has only to proceed along the line of least resistance;
 thus he reaches the goal. Great labors cannot be accomplished in such times; it 
 is enough to get out of the danger.
 
-        ') #('Six at the top means:
+'  'Six at the top means:
         Bound with cords and ropes,
         Shut in between thorn-hedged prison walls:
         For three years one does not find the way.
@@ -5278,16 +5249,15 @@ A man who in the extremity of danger has lost the right way and is
 irremediably entangled in his sins has no prospect of escape. He is like a 
 criminal who sits shackled behind thorn hedged prison walls.
 ' )
-)
 
-"30"  #(  #(  '30. Li / The Clinging, Fire
+#( '30. Li / The Clinging, Fire
 
                 above  LI  THE CLINGING, FIRE
                 below  LI  THE CLINGING, FIRE
 
 This hexagram is another double sign. The trigram Li means "to cling to 
 something," and also "brightness." A dark line clings to two light lines, one 
-above and one below the image of an empty space between two strong lines, 
+above and one below the image of an empty space between two strong lines, 
 whereby the two strong lines are made bright. The trigram represents the 
 middle daughter. The Creative has incorporated the central line of the 
 Receptive, and thus Li develops. As an image, it is fire. Fire has no definite 
@@ -5328,7 +5298,7 @@ with respect to time. The great man continues the work of nature in the
 human world. Through the clarity of his nature he causes the light to spread 
 farther and farther and to penetrate the nature of man ever more deeply. 
                 
-')  #(  'Nine at the beginning means:
+'   'Nine at the beginning means:
         The footprints run crisscross.
         If one is seriously intent, no blame.
 
@@ -5341,14 +5311,14 @@ of mind needed for coming to terms with the innumerable impressions that
 pour in. It is precisely at the beginning that serious concentration is 
 important, because the beginning holds the seed of all that is to follow.
 
-         ') #('Six in the second place means:
+'  'Six in the second place means:
         Yellow light. Supreme good fortune.
 
 Midday has come; the sun shines with a yellow light. Yellow is the color of 
 measure and mean. Yellow light is therefore a symbol of the highest culture 
 and art, whose consummate harmony consists in holding to the mean.
 
-        ') #('Nine in the third place means:
+'  'Nine in the third place means:
         In the light of the setting sun,
         Men either beat the pot and sing
         Or loudly bewail the approach of old age.
@@ -5363,7 +5333,7 @@ by lamenting the approach of old age. Both attitudes are wrong. To the
 superior man it makes no difference whether death comes early or late. He 
 cultivates himself, awaits his allotted time, and in this way secures his fate.
 
-        ') #('Nine in the fourth place means:
+'  'Nine in the fourth place means:
         Its coming is sudden;
         It flames up, dies down, is thrown away.
 
@@ -5375,7 +5345,7 @@ restless may rise quickly to prominence but produces no lasting effects. Thus
 matters end badly when a man spends himself too rapidly and consumes 
 himself like a meteor.
 
-         ') #('Six in the fifth place means:
+'  'Six in the fifth place means:
         Tears in floods, sighing and lamenting.
         Good fortune. 
 
@@ -5386,7 +5356,7 @@ one is intent on retaining his clarity of mind, good fortune will come from
 this grief. For here we are dealing not with a passing mood, as in the nine in 
 the third place, but with a real change of heart.       
 
-        ') #('Nine at the top means:
+'  'Nine at the top means:
         The king used him to march forth and chastise.
         Then it is best to kill the leaders
         And take captive the followers. No blame.
@@ -5398,9 +5368,8 @@ oneself it is best to root out bad habits and tolerate those that are harmless.
 For asceticism that is too strict, like sentences of undue severity, fails in its 
 purpose.
 ' )
-)
 
-"31"  #(  #(  '31. Hsien / Influence (Wooing)
+#( '31. Hsien / Influence (Wooing)
 
                 above  TUI  THE JOYOUS, LAKE
                 below  KêN  KEEPING STILL, MOUNTAIN
@@ -5453,7 +5422,7 @@ free, so that it may remain receptive to good advice. People soon give up
 counseling a man who thinks that he knows everything better than anyone 
 else.
 
-')  #('Six at the beginning means:
+'  'Six at the beginning means:
         The influence shows itself in the big toe.
 
 A movement, before it is actually carried out, shows itself first in the toes. 
@@ -5461,7 +5430,7 @@ The idea of an influence is already present, but is not immediately apparent to
 others. As long as the intention has no visible effect, it is of no importance to 
 the outside world and leads neither to good nor to evil.
 
-        ') #('Six in the second place means:
+'  'Six in the second place means:
         The influence shows itself in the calves of the legs.
         Misfortune.
         Tarrying brings good fortune.
@@ -5471,7 +5440,7 @@ forward nor stand still. Since the movement is not self-governed, it bodes ill.
 One should wait quietly until one is impelled to action by a real influence. 
 Then one remains uninjured.
 
-        ') #('Nine in the third place means:
+'  'Nine in the third place means:
         The influence shows itself in the thighs.
         Holds to that which follows it.
         To continue is humiliating.
@@ -5487,7 +5456,7 @@ whim of those in whose service he stands. Finally, where the moods of his
 own heart are concerned, he should never ignore the possibility of inhibition, 
 for this is the basis of human freedom.
 
-         ') #('Nine in the fourth place means:
+'  'Nine in the fourth place means:
         Perseverance brings good fortune.
         Remorse disappears.
         If a man is agitated in mind,
@@ -5508,7 +5477,7 @@ conscious incitement, one becomes wrought up and is exhausted by the
 eternal stress and strain. Moreover, the effects produced are then limited to 
 those on whom one''s thoughts are consciously fixed.
 
-         ') #('Nine in the fifth place means:
+'  'Nine in the fifth place means:
         The influence shows itself in the back of the neck.
         No remorse.
 
@@ -5519,7 +5488,7 @@ takes place in the depths of one''s being, in the unconscious mind. It is true
 that if we cannot be influenced ourselves, we cannot influence the outside 
 world.
 
-        ') #('Six at the top means:
+'  'Six at the top means:
         The influence shows itself in the jaws, cheeks, and tongue.
 
 The most superficial way of trying to influence others is through talk that has 
@@ -5527,9 +5496,8 @@ nothing real behind it. The influence produced by such mere tongue wagging
 must necessarily remain insignificant. Hence no indication is added 
 regarding good or bad fortune.
 ' )
-)
 
-"32"  #(  #(  '32. Hêng / Duration
+#( '32. Hêng / Duration
 
                 above  CHEN  THE AROUSING, THUNDER
                 below  SUN  THE GENTLE, WIND
@@ -5583,7 +5551,7 @@ immobility of character. He always keeps abreast of the time and changes
 with it. What endures is the unswerving directive, the inner law of his 
 being, which determines all his actions.
 
-')  #('Six at the beginning means:
+'  'Six at the beginning means:
         Seeking duration too hastily brings misfortune persistently.
         Nothing that would further.
 
@@ -5593,7 +5561,7 @@ something, we must first let it fully expand." He who demands too much at
 once is acting precipitately, and because he attempts too much, he ends by 
 succeeding in nothing.
 
-         ') #('Nine in the second place means:
+'  'Nine in the second place means:
         Remorse disappears.
          
 The situation is abnormal. A man''s force of character is greater than the 
@@ -5602,7 +5570,7 @@ attempt something beyond his strength. However, since it is the time of
 DURATION, it is possible for him to control his inner strength and so to 
 avoid excess. Cause for remorse then disappears.
 
-        ') #('Nine in the third place means:
+'  'Nine in the third place means:
         He who does not give duration to his character
         Meets with disgrace.
         Persistent humiliation.
@@ -5614,7 +5582,7 @@ from an unforeseen quarter. Such experiences are not merely effects
 produced by the external world, but logical consequences evoked by his own 
 nature.
 
-        ') #('Nine in the fourth place means:
+'  'Nine in the fourth place means:
         No game in the field.
 
 If we are in pursuit of game and want to get a shot at a quarry, we must set 
@@ -5622,7 +5590,7 @@ about it in the right way. A man who persists in stalking game in a place
 where there is none may wait forever without finding any. Persistence in 
 search is not enough. What is not sought in the right way is not found.
 
-        ') #('Six in the fifth place means:
+'  'Six in the fifth place means:
         Giving duration to one''s character through perseverance.
         This is good fortune for a woman, misfortune for a man.
 
@@ -5633,16 +5601,15 @@ is altogether right for a woman to hold conservatively to tradition, but a  man
 must always be flexible and adaptable and allow himself to be guided solely by 
 what his duty requires of him at the moment.
 
-        ') #('Six at the top means:
+'  'Six at the top means:
         Restlessness as an enduring condition brings misfortune.
 
 There are people who live in a state of perpetual hurry without ever attaining
 inner composure. Restlessness not only prevents all thoroughness but actually
 becomes a danger if it is dominant in places of authority.
 ' )
-)
 
-"33"  #(  #(  '33. TUN / Retreat
+#( '33. TUN / Retreat
 
                 above  CH''IEN  THE CREATIVE, HEAVEN
                 below  KêN  KEEPING STILL, MOUNTAIN
@@ -5687,7 +5654,7 @@ of subjective involvement by which we are bound to the hated object. The
 superior man shows strength (heaven) in that he brings the inferior man to a 
 standstill (mountain) by his dignified reserve.
 
-')  #('Six at the beginning means:
+'  'Six at the beginning means:
         At the tail in retreat. This is dangerous.
         One must not wish to undertake anything.
 
@@ -5698,7 +5665,7 @@ with the pursuing enemy. This is dangerous, and under such circumstances
 it is not advisable to undertake anything. Keeping still is the easiest way of 
 escaping from the threatening danger.
 
-        ') #('Six in the second place means:
+'  'Six in the second place means:
         he holds him fast with yellow oxhide.
         No one can tear him loose.
 
@@ -5711,7 +5678,7 @@ is right an so strong in purpose, he reaches his goal. Thus the line confirms
 what is said in the Judgment: "In what is small" here equivalent to "in the 
 inferior man perseverance furthers."
 
-        ') #('Nine in the third place means:
+'  'Nine in the third place means:
         A halted retreat 
         Is nerve-wracking and dangerous.
         To retain people as men- and maidservants
@@ -5722,9 +5689,9 @@ because then one no longer has freedom of action. In such a case the only
 expedient is to take into one''s service, so to speak, those who refuse to let one 
 go, so that one may at least keep one''s initiative and not fall helplessly under 
 their domination. But even with this expedient the situation is far from 
-satisfactory for what can one hope to accomplish with such servants?
+satisfactory for what can one hope to accomplish with such servants?
 
-        ') #('Nine in the fourth place means:
+'  'Nine in the fourth place means:
         Voluntary retreat brings good fortune to the superior man
         And downfall to the inferior man.
 
@@ -5734,7 +5701,7 @@ he does not have to do violence to his convictions. The only one who suffers
 is the inferior man from whom he retreats, who will degenerate when 
 deprived of the guidance of the superior man.
 
-         ') #('Nine in the fifth place means:
+'  'Nine in the fifth place means:
         Friendly retreat. Perseverance brings good fortune.
 
 It is the business of the superior man to recognize in time that the moment 
@@ -5744,7 +5711,7 @@ disagreeable discussions. Yet, for all the observance of amenities, absolute
 firmness of decision is necessary if one is not to be led astray by irrelevant 
 considerations.
 
-        ') #('Nine at the top means:
+'  'Nine at the top means:
         Cheerful retreat. Everything serves to further.
 
 The situation is unequivocal. Inner detachment has become an established 
@@ -5753,9 +5720,8 @@ clearly, free of all doubt, a cheerful mood sets in, and one chooses what is
 right without further thought. Such a clear path ahead always leads to the 
 good.
 ' )
-)
 
-"34"  #(  #(  '34. Ta Chuang / The Power of the Great
+#( '34. Ta Chuang / The Power of the Great
         
                 above  CHêN  THE AROUSING, THUNDER
                 above  CH''IEN  THE CREATIVE, HEAVEN
@@ -5779,7 +5745,7 @@ movement, we may not wait for the right time. Therefore the added
 statement that perseverance furthers. For that is truly great power which does 
 not degenerate into mere force but remains inwardly united with the 
 fundamental principles of right and of justice. When we understand this 
-point namely, that greatness and justice must be indissolubly united we 
+point namely, that greatness and justice must be indissolubly united we 
 understand the true meaning of all that happens in heaven and on earth.
 
         THE IMAGE
@@ -5789,14 +5755,14 @@ understand the true meaning of all that happens in heaven and on earth.
         Thus the superior man does not tread upon paths
         That do not accord with established order.
 
-Thunder electrical energy mounts upward in the spring. The direction of 
+Thunder electrical energy mounts upward in the spring. The direction of 
 this movement is in harmony with that of the movement of heaven. It is 
 therefore a movement in accord with heaven, producing great power. 
 However, true greatness depends on being in harmony with what is right. 
 Therefore in times of great power the superior man avoids doing anything 
 that is not in harmony with the established order.
 
-')  #( 'Nine at the beginning means:
+'   'Nine at the beginning means:
         Power in the toes.
         Continuing brings misfortune.
         This is certainly true.
@@ -5806,7 +5772,7 @@ power in lowly station is inclined to effect advance by force. This, if carried
 further, would certainly lead to misfortune, and therefore by way of advice a 
 warning is added.
 
-        ') #('Nine in the second place means:
+'  'Nine in the second place means:
         Perseverance brings good fortune.
 
 The premise here is that the gates to success are beginning to open. 
@@ -5815,7 +5781,7 @@ easily, we become the prey of exuberant self-confidence. This is why the
 oracle says that perseverance (i.e., perseverance in inner equilibrium, without 
 excessive use of power) brings good fortune.
 
-        ') #('Nine in the third place means:
+'  'Nine in the third place means:
         The inferior man works through power.
         The superior man does not act thus.
         To continue is dangerous.
@@ -5829,7 +5795,7 @@ this mistake. He is conscious at all times of the danger of pushing ahead
 regardless of circumstances, and therefore renounces in good time the empty 
 display of force.
 
-         ') #('Nine in the fourth place means:
+'  'Nine in the fourth place means:
         Perseverance brings good fortune.
         Remorse disappears.
         The hedge opens; there is no entanglement.
@@ -5843,7 +5809,7 @@ Such a man''s power does not show externally, yet it can move heavy loads,
 like a big cart whose real strength lies in its axle. The less that power is 
 applied outwardly, the greater its effect.
 
-        ') #('Six in the fifth place means:
+'  'Six in the fifth place means:
         Loses the goat with ease.
         No remorse.
 
@@ -5851,7 +5817,7 @@ The goat is noted for hardness outwardly and weakness within. Now the
 situation is such that everything is easy; there is no more resistance. One can 
 give up a belligerent, stubborn way of acting and will not have to regret it.
 
-        ') #('Six at the top means:
+'  'Six at the top means:
         A goat butts against a hedge.
         It cannot go backward, it cannot go forward.
         Nothing serves to further.
@@ -5863,9 +5829,8 @@ obstinacy leads to insuperable difficulties. But if, realizing the situation, we
 compose ourselves and decide not to continue, everything will right itself in 
 time.
 ' )
-)
 
-"35"  #(  #(  '35. Chin / Progress
+#( '35. Chin / Progress
 
                 above  LI  THE CLINGING, FIRE
                 below  K''UN  THE RECEPTIVE, EARTH
@@ -5890,7 +5855,7 @@ their equal and are therefore willing to follow. This leader has enough clarity
 of vision not to abuse his great influence but to use it rather for the benefit of 
 his ruler. His ruler in turn is free of all jealousy, showers presents on the 
 great man, and invites him continually to his court. An enlightened ruler 
-and an obedient servant this is the condition on which great progress 
+and an obedient servant this is the condition on which great progress 
 depends.
 
         THE IMAGE
@@ -5906,7 +5871,7 @@ of its rays over an ever widening area. The real nature of man is likewise
 originally good, but it becomes clouded by contact with earthly things and 
 therefore needs purification before it can shine forth in its native clarity.
 
-')  #('Six at the beginning means:
+'  'Six at the beginning means:
         Progressing, but turned back.
         Perseverance brings good fortune.
         If one meets with no confidence, one should remain calm.
@@ -5920,7 +5885,7 @@ to try to win confidence regardless of the situation, but should remain calm
 and cheerful and refuse to be roused to anger. Thus we remain free of 
 mistakes.
 
-        ') #('Six in the second place means:
+'  'Six in the second place means:
         Progressing, but in sorrow.
         Perseverance brings good fortune.
         Then one obtains great happiness from one''s ancestress.
@@ -5932,14 +5897,14 @@ the man in question will bestow great happiness upon him. This happiness
 comes to him-and is well deserved-because in this case mutual attraction does 
 not rest on selfish or partisan motives but on firm and correct principles.
 
-        ') #('Six in the third place means:
+'  'Six in the third place means:
         All are in accord. Remorse disappears.
 
 A man strives onward, in association with others whose backing encourages 
 him. This dispels any cause for regret over the fact that he does not have 
 enough independence to triumph unaided over every hostile turn of fate.
 
-        ') #('Nine in the fourth place means:
+'  'Nine in the fourth place means:
         Progress like a hamster.
         Perseverance brings danger.
 
@@ -5948,7 +5913,7 @@ great possessions. But such conduct shuns the light. And since times of
 progress are inevitably brought to the light, perseverance in such action 
 always leads to danger.
 
-         ') #('Six in the fifth place means:
+'  'Six in the fifth place means:
         Remorse disappears.
         Take not gain and loss to heart.
         Undertakings bring good fortune.
@@ -5963,7 +5928,7 @@ minor considerations. What matters much more is the fact that in this way
 he has assured himself of opportunities for successful and beneficent 
 influence. 
         
-        ') #('Nine at the top means:
+'  'Nine at the top means:
         Making progress with the horns is permissible
         Only for the purpose of punishing one''s own city.
         To be conscious of danger brings good fortune.
@@ -5979,9 +5944,8 @@ On the other hand, perseverance in such over energetic behavior, especially
 toward persons with whom there is no close connection, will lead to 
 humiliation.
 ' )
-)
 
-"36"  #(  #(  '36. Ming I / Darkening of the light
+#( '36. Ming I / Darkening of the light
                 
                 above  K''UN  THE RECEPTIVE, EARTH
                 below  LI  THE CLINGING, FIRE
@@ -6024,7 +5988,7 @@ should one drag them censoriously into the light.  In social intercourse one
 should not try to be all-knowing. One should let many things pass, without 
 being duped.
 
-')  #( 'Nine at the beginning means:
+'   'Nine at the beginning means:
         Darkening of the light during flight.
         He lowers his wings.
         The superior man does not eat for three days
@@ -6040,7 +6004,7 @@ on remaining true to his principles, he suffers deprivation. Never the less he
 has a fixed goal to strive for even though the people with whom he lives do 
 not understand him and speak ill of him.
 
-         ') #('Six in the second place means:
+'  'Six in the second place means:
         Darkening of the light injures him in the left thigh.
         He gives aid with the strength of a horse.
         Good fortune.
@@ -6052,7 +6016,7 @@ saving the others who are also in danger. Therefore he tries with all his
 strength to save all that can be saved. There is good fortune in thus acting 
 according to duty.
 
-        ') #('Nine in the third place means:
+'  'Nine in the third place means:
         Darkening of the light during the hunt in the south.
         Their great leader is captured.
         One must not expect perseverance too soon.
@@ -6063,7 +6027,7 @@ disorder, as if by accident, and seizes him. Thus victory is achieved. But in
 abolishing abuses one must not be too hasty.  This would turn out badly 
 because the abuses have been in existence so long.
 
-        ') #('Six in the fourth place means:
+'  'Six in the fourth place means:
         He penetrates the left side of the belly.
         One gets at the very heart of the darkening of the light.
 
@@ -6072,7 +6036,7 @@ mot secret thoughts. In this way we realize that there is no longer any hope of
 improvement, and thus we are enabled to leave the scene of disaster before 
 the storm breaks.
 
-         ') #('Six in the fifth place means:
+'  'Six in the fifth place means:
         Darkening of the light as with Prince Chi.
         Perseverance furthers.
 
@@ -6086,7 +6050,7 @@ misery to deflect him from his convictions.
 darkness. In order to escape danger, they need invincible perseverance of 
 spirit and redoubled caution in their dealings with the world.
 
-        ') #('Six at the top means:
+'  'Six at the top means:
         Not light but darkness.
         First he climbed up to heaven,
         Then plunged into the depths of the earth.
@@ -6097,9 +6061,8 @@ light. But in the end it perishes of its own darkness, for evil must itself fall
 the very moment when it has wholly overcome the good, and thus 
 consumed the energy to which it owed its duration. 
 ' )
-)
 
-"37"  #(  #(  '37. Chia Jên / The Family [The Clan]
+#( '37. Chia Jên / The Family [The Clan]
 
                 above  SUN  THE GENTLE, WIND
                 below  LI  THE CLINGING, FIRE
@@ -6168,7 +6131,7 @@ one''s entire conduct, just as the wind is made effective by am impression on
 others that they can adapt and conform to it. If words and conduct are not in 
 accord and consistent, they will have no effect.
 
-')  #( 'Nine at the beginning means:
+'   'Nine at the beginning means:
         Firm seclusion within the family.
         Remorse disappears.
 
@@ -6183,7 +6146,7 @@ but the remorse always disappears again, and everything rights itself. For
 there is nothing easily avoided and more difficult to carry through than 
 "breaking a child''s will."
 
-         ') #('Six in the second place means:
+'  'Six in the second place means:
         She should not follow her whims.
         She must attend within to the food.
         Perseverance brings good fortune.
@@ -6197,7 +6160,7 @@ position brings good fortune to the whole house.
   In relation to general conditions, the counsel here is to seek nothing by 
 means of force, but quietly to confine oneself to the duties at hand.
 
-        ') #('Nine in the third place means:
+'  'Nine in the third place means:
         When tempers flare up in the family,
         Too great severity brings remorse.
         Good fortune nonetheless.
@@ -6212,7 +6175,7 @@ too great severity, despite occasional mistakes, is preferable, because it
 preserves discipline in the family, whereas too great weakness leads to 
 disgrace.
 
-        ') #('Six in the fourth place means:
+'  'Six in the fourth place means:
         She is the treasure of the house.
         Great good fortune.
 
@@ -6221,7 +6184,7 @@ Well-being prevails when expenditures and income are soundly balanced.
 This leads to great good fortune. In the sphere of public life, this line refers to 
 the faithful steward whose measures further the general welfare.
 
-         ') #('Nine in the fifth place means:
+'  'Nine in the fifth place means:
         As a king he approaches his family.
         Fear not.
         Good fortune.
@@ -6231,7 +6194,7 @@ does nothing to make himself feared; on the contrary, the whole family can
 trust him, because love governs their intercourse. His character of itself 
 exercises the right influence.
 
-        ') #('Nine at the top means:
+'  'Nine at the top means:
         His work commands respect.
         In the end good fortune comes.
 
@@ -6240,9 +6203,8 @@ master of the house. If he cultivates his personality so that it works
 impressively through the force of inner truth, all goes well with the family. 
 In a ruling position one must of his own accord assume responsibility.
 ' )
-)
 
-"38"  #(  #(  '38. K''uei / Opposition
+#( '38. K''uei / Opposition
 
                 above  LI  THE CLINGING, FLAME
                 below  TUI  THE JOYOUS, LAKE
@@ -6285,7 +6247,7 @@ vulgarity through intercourse or community of interests with persons of
 another sort; regardless of all commingling, he will always preserve his 
 individuality.
 
-')  #('Nine at the beginning means:
+'  'Nine at the beginning means:
         Remorse disappears.
         If you lose your horse, do not run after it;
         It will come back of its own accord.
@@ -6306,7 +6268,7 @@ not try to shake off these evil men by force; this would give rise to real
 hostility. We must simply endure them. They will eventually withdraw of 
 their own accord.
 
-         ') #('Nine in the second place means:
+'  'Nine in the second place means:
         One meets his lord in a narrow street.
         No blame.
 
@@ -6315,7 +6277,7 @@ nature belong together to meet in the correct way. This being so, an accidental
 meeting under informal circumstances may serve the purpose, provided 
 there is an inner affinity between them.
 
-        ') #('Six in the third place means:
+'  'Six in the third place means:
         One sees the wagon dragged back,
         The oxen halted,
         A man''s hair and nose cut off.
@@ -6327,7 +6289,7 @@ dishonored. However, he must not let himself be misled; despite this
 opposition, he must cleave to the man with whom he knows he belongs. 
 Thus, notwithstanding the bad beginning, the matter will end well.
 
-        ') #('Nine in the fourth place means:
+'  'Nine in the fourth place means:
         Isolated through opposition,
         One meets a like-minded man
         With whom one can associate in good faith.
@@ -6339,7 +6301,7 @@ meets someone who fundamentally by the very law of his being, is kin to
 him, and whom he can trust completely, he overcomes all the dangers of 
 isolation. His will achieves its aim, and he becomes free of faults.
 
-         ') #('Six in the fifth place means:
+'  'Six in the fifth place means:
         Remorse disappears.
         The companion bits his way through the wrappings.
         If one goes to him,
@@ -6350,7 +6312,7 @@ general estrangement. However, he bites his way through the wrappings that
 are causing the separation. When such a companion thus reveals himself in 
 his true character, it is one''s duty to go to meet him and to work with him.
 
-        ') #('Nine at the top means:
+'  'Nine at the top means:
         Isolated through opposition,
         One sees one''s companion as a pig covered with dirt,
         As a wagon full of devils.
@@ -6369,9 +6331,8 @@ tension is relieved. The union resolves the tension, just as falling rain
 relieves the sultriness preceding a thunderstorm. All goes well, for just when 
 opposition reaches its climax it changes over to its antithesis.
 ' )
-)
 
-"39"  #(  #(  '39. Chien / Obstruction
+#( '39. Chien / Obstruction
 
                 above  K''AN  THE ABYSMAL, WATER
                 below  KêN  KEEPING STILL, MOUNTAIN
@@ -6416,7 +6377,7 @@ superior man seeks the error within himself, and through this introspection
 the external obstacle becomes for him an occasion for inner enrichment and 
 education.
 
-')  #('Six at the beginning means:
+'  'Six at the beginning means:
         Going leads to obstructions,
         Coming meets with praise.
 
@@ -6426,7 +6387,7 @@ blindly to go ahead, for this only leads to complications. The correct thing is,
 on the contrary, to retreat for the time being, not in order to give up the 
 struggle but to await the right moment for action.
 
-        ') #('Six in the second place means:
+'  'Six in the second place means:
         The King''s servant is beset by obstruction upon obstruction,
         But it is not his own fault.
 
@@ -6438,7 +6399,7 @@ own volition but is duty bound to go and seek out danger in the service of a
 higher cause. Then he may do it without compunction, because it is not 
 through any fault of his that he is putting himself in this difficult situation.
 
-        ') #('Nine in the third place means:
+'  'Nine in the third place means:
         Going leads to obstructions;
         Hence he comes back.
 
@@ -6449,7 +6410,7 @@ useless act, because those entrusted to his care cannot get along by themselves.
 But if he withdraws and turns back to his own, they welcome him with great 
 joy.
 
-        ') #('Six in the fourth place means:
+'  'Six in the fourth place means:
         Going leads to obstructions,
         Coming leads to union.
 
@@ -6462,7 +6423,7 @@ would prove to be inadequate. In this case it is better, therefore, to hold back
 for the time being and to gather together trustworthy companions who can be 
 counted upon for help in overcoming the obstructions.
 
-         ') #('Nine in the fifth place means:
+'  'Nine in the fifth place means:
         In the midst of the greatest obstructions,
         Friends come.
 
@@ -6472,7 +6433,7 @@ him. But because he is really called to the task, the power of his spirit is str
 enough to attract helpers whom he can effectively organize, so that through 
 the well-directed co-operation of all participants the obstruction is overcome.
 
-        ') #('Six at the top means:
+'  'Six at the top means:
         Going leads to obstructions,
         Coming leads to great good fortune.
         It furthers one to see the great man.
@@ -6487,9 +6448,8 @@ freedom, he is able to create something both great and complete that brings
 good fortune. And it is favorable to see the great man in alliance with whom 
 one can achieve the work of rescue.
 ' )
-)
 
-"40"  #(  #(  '40. Hsieh / Deliverance
+#( '40. Hsieh / Deliverance
 
                 above  CHêN  THE AROUSING, THUNDER
                 below  K''AN  THE ABYSMAL, WATER
@@ -6533,14 +6493,14 @@ mistakes, the unintentional transgressions, just as thunder dies away. He
 forgives misdeeds, the intentional transgressions, just as water washes 
 everything clean.
 
-')  #('Six at the beginning means:
+'  'Six at the beginning means:
         Without blame.
 
 In keeping with the situation, few words are needed. The hindrance is past, 
 deliverance has come. One recuperates in peace and keeps still. This is the 
 right thing to do in times when difficulties have been overcome.
 
-         ') #('Nine in the second place means:
+'  'Nine in the second place means:
         One kills three foxes in the field
         And receives a yellow arrow.
         Perseverance brings good fortune.
@@ -6555,7 +6515,7 @@ If one devotes himself wholeheartedly to the task of deliverance, he develops
 so much inner strength from his rectitude that it acts as a weapon against all 
 that is false and low.
 
-        ') #('Six in the third place means:
+'  'Six in the third place means:
         If a man carries a burden on his back
         And nonetheless rides in a carriage,
         He thereby encourages robbers to draw near.
@@ -6574,7 +6534,7 @@ toward those above him and hard toward those below him, robbers plot to attack
 him. Carelessness in guarding things tempts thieves to steal. Sumptuous 
 ornaments worn by a maiden are an enticement to rob her of her virtue.
 
-        ') #('Nine in the fourth place means:
+'  'Nine in the fourth place means:
         Deliver yourself from your great toe.
         Then the companion comes,
         And him you can trust.
@@ -6588,7 +6548,7 @@ acquaintances with whom he has no inner connection. For otherwise the
 friends who share his views, on whom he could really rely and together 
 with whom he could accomplish something, mistrust him and stay away.
 
-         ') #('Six in the fifth place means:
+'  'Six in the fifth place means:
         If only the superior man can deliver himself,
         It brings good fortune.
         Thus he proves to inferior men that he is in earnest.
@@ -6598,7 +6558,7 @@ driven off by prohibitions or any external means. If one desires to be
 rid of them, he must first break completely with them in his own mind; 
 they will see for themselves that he is in earnest and will withdraw.
 
-        ') #('Six at the top means:
+'  'Six at the top means:
         The prince shoots at a hawk on a high wall.
         He kills it. Everything serves to further.
 
@@ -6614,9 +6574,8 @@ and then acts. Why then should not everything go well? He acts and is free.
 Therefore all he has to do is to go forth, and he takes his quarry. This 
 is how a man fares who acts after he has made ready the means.
 ' )
-)
 
-"41"  #(  #(  '41. Sun / Decrease
+#( '41. Sun / Decrease
 
                 above  KêN  KEEPING STILL, MOUNTAIN
                 below  TUI  THE JOYOUS, LAKE
@@ -6671,7 +6630,7 @@ necessary; anger must be decreased by keeping still, the instincts must be
 curbed by restriction. By this decrease of the lower powers of the psyche, 
 the higher aspects of the soul are enriched/
 
-')  #( 'Nine at the beginning means:
+'   'Nine at the beginning means:
         Going quickly when one''s tasks are finished
         Is without blame.
         But one must reflect on how much one may decrease others.
@@ -6684,7 +6643,7 @@ without doing the helpful servant or friend real harm. Only where such
 delicacy of feeling exists can one give oneself unconditionally and without 
 hesitation.
 
-        ') #('Nine in the second place means:
+'  'Nine in the second place means:
         Perseverance furthers.
         To undertake something brings misfortune.
         Without decreasing oneself,
@@ -6697,7 +6656,7 @@ position without thereby giving lasting benefit to the other. This is wrong.
 To render true service of lasting value to another, one must serve him 
 without relinquishing oneself.
 
-        ') #('Six in the third place means:
+'  'Six in the third place means:
         When three people journey together,
         Their number increases by one.
         When one man journeys alone,
@@ -6707,7 +6666,7 @@ When there are three people together, jealousy arises. One of them will have
 to go. Avery close bond is possible only between two people. But when one 
 man is lonely, he is certain to find a companion who complements him.
 
-        ') #('Six in the fourth place means:
+'  'Six in the fourth place means:
         If a man deceases his faults,
         It makes the other hasten to come and rejoice.
         No blame.
@@ -6718,7 +6677,7 @@ lives. But if in humility he can bring himself to the point of giving them up,
 he frees his well-disposed friends from an inner pressure and causes them to 
 approach the more quickly, and there is mutual joy.
 
-         ') #('Six in the fifth place means:
+'  'Six in the fifth place means:
         Someone does indeed increase him.
         Ten pairs of tortoises cannot oppose it.
         Supreme good fortune.
@@ -6728,7 +6687,7 @@ oracles-as for instance those that are read from the shells of tortoises-are
 bound to concur in giving him favorable signs. He need fear nothing, 
 because his luck is ordained from on high.
 
-        ') #('Nine at the top means:
+'  'Nine at the top means:
         If one is increased without depriving other,
         There is no blame.
         Perseverance brings good fortune.
@@ -6743,9 +6702,8 @@ man wins success and finds helpers as they are needed. But what he
 accomplishes is not a limited private advantage; it is a public good and 
 available to everyone.
 ' )
-)
 
-"42"  #(  #(  '42. I / Increase
+#( '42. I / Increase
 
                 above  SUN  THE GENTLE, WIND
                 below CHêN  THE AROUSING, THUNDER
@@ -6789,7 +6747,7 @@ earth his own. If he perceives something bad in himself, let him rid himself
 of it. In this way he becomes free of evil. This ethical change represents the 
 most important increase of personality.
 
-')  #( 'Nine at the beginning means:
+'   'Nine at the beginning means:
         It furthers one to accomplish great deeds.
         Supreme good fortune. No blame.
 
@@ -6799,7 +6757,7 @@ found energy, or readiness to take responsibility. Great good fortune is
 produced by selflessness, and in bringing about great good fortune, he 
 remains free of reproach.
 
-         ') #('Six in the second place means:
+'  'Six in the second place means:
         Someone does indeed increase him; 
         Ten pairs of tortoises cannot oppose it.
         Constant perseverance brings good fortune.
@@ -6816,7 +6774,7 @@ own through inner strength an steadfastness. Then he acquires meaning
 before God and man, and can accomplish something for the good of the 
 world.
 
-        ') #('Six in the third place means:
+'  'Six in the third place means:
         One is enriched through unfortunate events.
         No blame, if you are sincere
         And walk in the middle,
@@ -6828,7 +6786,7 @@ them. These persons become free of error, and by acting in harmony with
 truth they gain such inner authority that they exert influence as if sanctioned 
 by the letter and seal.
 
-        ') #('Six in the fourth place means:
+'  'Six in the fourth place means:
         If you walk in the middle 
         And report the prince,
         He will follow.
@@ -6844,7 +6802,7 @@ influence on the leader, is especially important in times when it is a matter of
 great undertakings, decisive for the future and requiring the inner assent of 
 all concerned.
 
-         ') #('Nine in the fifth place means:
+'  'Nine in the fifth place means:
         If in truth you have a kind heart, ask not.
         Supreme good fortune.
         Truly, kindness will be recognized as your virtue. 
@@ -6853,7 +6811,7 @@ True kindness does not count upon nor ask about merit and gratitude but acts
 from inner necessity. And such a truly kind heart finds itself rewarded in 
 being recognized, and thus the beneficent influence will spread unhindered.
 
-        ') #('Nine at the top means:
+'  'Nine at the top means:
         He brings increase to no one.
         Indeed, someone even strikes him.
         He does not keep his heart constantly steady.
@@ -6874,9 +6832,8 @@ cooperate. If he is agitated in his word, they awaken no echo in others. If he
 asks for something without having fist established relations, it will not be 
 given to him. If no one is with him, those who would harm him draw near.
 ' )
-)
 
-"43"  #(  #(  '43. Kuai / Break-through (Resoluteness)
+#( '43. Kuai / Break-through (Resoluteness)
 
                 above  TUI  THE JOYOUS, LAKE
                 below  CH''IEN  THE CREATIVE, HEAVEN
@@ -6936,7 +6893,7 @@ the same way, in developing his character he takes care not to become
 hardened in obstinacy but to remain receptive to impressions by help of strict 
 and continuous self-examination.
 
-')  #( 'Nine at the beginning means:
+'   'Nine at the beginning means:
         Mighty in the forward-striding toes.
         When one goes and is not equal to the task,
         One makes a mistake.
@@ -6947,7 +6904,7 @@ gauge our own strength and venture only so far as we can go with certainty of
 success. To plunge blindly ahead is wrong, because it is precisely at the 
 beginning that an unexpected setback can have the most disastrous results.
 
-        ') #('Nine in the second place means:
+'  'Nine in the second place means:
         A cry of alarm. Arms at evening and at night.
         Fear nothing.
 
@@ -6962,7 +6919,7 @@ him of their own accord. If reason triumphs, the passions withdraw of
 themselves. To be circumspect and not to forget one''s armor is the right way 
 to security.
 
-        ') #('Nine in the third place means:
+'  'Nine in the third place means:
         To be powerful in the cheekbones 
         Brings misfortune.
         The superior man is firmly resolved.
@@ -6985,7 +6942,7 @@ relations with the inferior man will sully him in the eyes of the multitude,
 and they will turn against him, grumbling. But he can endure this lack of 
 appreciation and makes no mistake, because he remains true to himself.
 
-        ') #('Nine in the fourth place means:
+'  'Nine in the fourth place means:
         There is no skin on his thighs,
         And walking comes hard.
         If a man were to let himself be led like a sheep,
@@ -7001,7 +6958,7 @@ from this obstinacy, everything would go well. But this advice, like so much
 other good counsel, will be ignored. For obstinacy makes a man unable to 
 hear, for all that he has ears.
 
-         ') #('Nine in the fifth place means:
+'  'Nine in the fifth place means:
         In dealing with weeds,
         Firm resolution is necessary.
         Walking in the middle
@@ -7014,7 +6971,7 @@ up the struggle as hopeless. But this must not be. One must go on resolutely
 and not allow himself to be deflected from him course. Only in this way does 
 one remain free of blame.
 
-        ') #('Six at the top means:
+'  'Six at the top means:
         No cry.
         In the end misfortune comes.
 
@@ -7027,9 +6984,8 @@ easily. So too in dealing with the evil in own''s own character, one must go to
 work with thoroughness. If out of carelessness anything were to be 
 overlooked, new evil would arise from it.
 ' )
-)
 
-"44"  #(  #(  '44. Kou / Coming to Meet
+#( '44. Kou / Coming to Meet
 
                 above  CH''IEN  THE CREATIVE, HEAVEN
                 below  SUN  THE GENTLE, WIND
@@ -7081,7 +7037,7 @@ through his commands. Heaven is far from the things of earth, but it sets
 them in motion by means of the wind. The ruler is far form his people, but 
 he sets them in motion by means of his commands and decrees.
 
-')  #('Six at the beginning means:
+'  'Six at the beginning means:
         It must be checked with a brake of bronze.
         Perseverance brings good fortune.
         If one lets it take its course, one experiences misfortune.
@@ -7094,7 +7050,7 @@ which creeps in should not be a temptation to underrate it. A pig that is still
 young and lean cannot rage around much, but after it has eaten its fill and 
 become strong, its true nature comes out if it has not previously been curbed.
 
-         ') #('Nine in the second place means:
+'  'Nine in the second place means:
         There is a fish in the tank. No blame.
         Does not further guests.
 
@@ -7103,7 +7059,7 @@ control. Then nothing evil is to be feared. But care must be taken not to let it
 come in contact with those further away, because once free it would unfold its 
 evil aspects unchecked.
 
-        ') #('Nine in the third place means: 
+'  'Nine in the third place means: 
         There is no skin on his thighs,
         And walking comes hard.
         If one is mindful of the danger,
@@ -7115,7 +7071,7 @@ to do it, but cannot. This leads to painful indecision in behavior. But if we
 gain clear insight into the danger of the situation, we shall at least avoid more 
 serious mistakes.
 
-        ') #('Nine in the fourth place means:
+'  'Nine in the fourth place means:
         No fish in the tank.
         This leads to misfortune.
 
@@ -7124,7 +7080,7 @@ Then we can make use of them if we should need them. If we become
 alienated from them and do not meet them halfway, they turn their backs on 
 us and are not at our disposal when we need them. But this is our own fault.
 
-         ') #('Nine in the fifth place means:
+'  'Nine in the fifth place means:
         A melon covered with willow leaves.
         Hidden lines.
         Then it drops down to one from heave.
@@ -7139,7 +7095,7 @@ quite free, putting his trust in the transforming power of a strong and upright
 personality. And behold!! Fate is favorable. His inferiors respond to his 
 influence and fall to his disposition like ripe fruit.
 
-        ') #('Nine at the top means:
+'  'Nine at the top means:
         He comes to meet with his horns.
         Humiliation. No blame.
 
@@ -7151,9 +7107,8 @@ distant, but since active duties no longer hold them to the world, this does
 not greatly matter. They know how to bear the dislike of the masses with 
 composure.
 ' )
-)
 
-"45"  #(  #(  '45.  Ts''ui / Gathering Together [Massing]
+#( '45.  Ts''ui / Gathering Together [Massing]
 
                 above  TUI  THE JOYOUS, LAKE
                 below  K''UN  THE RECEPTIVE, EARTH
@@ -7206,7 +7161,7 @@ GATHERING TOGETHER we must arm promptly to ward off the unexpected.
 Human woes usually come as a result of unexpected events against which we 
 are not forearmed. If we are prepared, they can be prevented.
 
-')  #('Six at the beginning means:
+'  'Six at the beginning means:
         If you are sincere, but not to the end,
         There will sometimes be confusion, sometimes gathering together.
         If you call out, 
@@ -7221,7 +7176,7 @@ call for help, one grasp of the hand from the leader is enough to turn away all
 distress. Therefore they must not allow themselves to be led astray. It is 
 undoubtedly right that they should attach themselves to this leader.
 
-        ') #('Six in the second place means:
+'  'Six in the second place means:
         Letting oneself be drawn
         Brings good fortune and remains blameless.
         If one is sincere,
@@ -7234,7 +7189,7 @@ Where inner relationships exist, no great preparations and formalities are
 necessary. People understand one another forthwith, just as the Divinity 
 graciously accepts a small offering if it comes from the heart.
 
-        ') #('Six in the third place means:
+'  'Six in the third place means:
         Gathering together amid sighs.
         Nothing that would further.
         Going is without blame.
@@ -7248,7 +7203,7 @@ to the center of the group, and can help him to gain admission to the closed
 circle. This is not a mistake, even though at first his position as an outsider is 
 somewhat humiliating.
 
-         ') #('Nine in the fourth place means:
+'  'Nine in the fourth place means:
         Great good fortune. No blame.
 
 This describes a man who gathers people around him in the name of his 
@@ -7256,7 +7211,7 @@ ruler. Since he is not striving for any special advantages for himself but is
 working unselfishly to bring about general unity, his work is crowned with 
 success, and everything becomes as it should be.
 
-         ') #('Nine in the fifth place means:
+'  'Nine in the fifth place means:
         If in gathering together one has position,
         This brings no blame.
         If there are some who are not yet sincerely in the work,
@@ -7272,7 +7227,7 @@ confidence through steadfastness an intensified, unswerving devotion to
 duty. In this way secret mistrust will gradually be overcome, and there will be 
 no occasion for regret.
 
-        ') #('Six at the top means:
+'  'Six at the top means:
         Lamenting and sighing, floods of tears.
         No blame.
 
@@ -7282,9 +7237,8 @@ But this is the right course. For it may cause the other person to come to his
 senses, so that the alliance that has been sought and so painfully missed is 
 after all achieved.
 ' )
-)
 
-"46"  #(  #(  '46.  Shêng / Pushing Upward
+#( '46.  Shêng / Pushing Upward
 
                 above K''UN  THE RECEPTIVE, EARTH
                 below SUN  THE GENTLE, WIND, WOOD
@@ -7326,7 +7280,7 @@ Adapting itself to obstacles and bending around them, wood in the earth
 grows upward without haste and without rest. Thus too the superior man is 
 devoted in character and never pauses in his progress.
 
-')  #('Six at the beginning means:
+'  'Six at the beginning means:
         Pushing upward that meets with confidence
         Brings great good fortune.
 
@@ -7336,7 +7290,7 @@ power to rise comes from this low and obscure station. But there is a spiritual
 affinity with the rulers above, and this solidarity creates the confidence 
 needed to accomplish something.
 
-        ') #('Nine in the second place means:
+'  'Nine in the second place means:
         If one is sincere,
         It furthers one to bring even a small offering.
         No blame.
@@ -7348,7 +7302,7 @@ of outward form does no harm. Here uprightness is the outcome of sound
 qualities of character, whereas in the corresponding line of the preceding 
 hexagram it is the result of innate humility.
 
-        ') #('Nine in the third place means:
+'  'Nine in the third place means:
         One pushes upward into an empty city.
         
 All obstructions that generally block progress fall away here. Things proceed 
@@ -7359,7 +7313,7 @@ long such unobstructed success can last. But it is wise not to yield to such
 misgivings, because they only inhibit one''s power. Instead, the point is to 
 profit by the propitiousness of time.
 
-        ') #('Six in the fourth place means:
+'  'Six in the fourth place means:
         The king offers him Mount Ch''i.
         Good fortune. No blame.
 
@@ -7373,7 +7327,7 @@ upward attains its goal. One acquires fame in the sight of gods and men, is
 received into the circle of those who foster the spiritual life of the nation, and 
 thereby attains a significance that endures beyond time.
 
-         ') #('Six in the fifth place means:
+'  'Six in the fifth place means:
         Perseverance brings good fortune.
         One pushes upward by steps.
 
@@ -7383,7 +7337,7 @@ is necessary to remain sober and not to try to skip any stages; he must go on
 slowly, step by step, as though hesitant. Only such calm, steady progress, 
 overleaping nothing, leads to the goal.
 
-        ') #('Six at the top means:
+'  'Six at the top means:
         Pushing upward in darkness.
         It furthers one
         To be unremittingly persevering.
@@ -7394,9 +7348,8 @@ constantly mindful that one must be conscientious and consistent and must
 remain so. Only thus does one become free of blind impulse, which is always 
 harmful.
 ' )
-)
 
-"47"  #(  #(  '47. K''un / Oppression (Exhaustion)
+#( '47. K''un / Oppression (Exhaustion)
 
                 above  TUI  THE JOYOUS, LAKE
                 below  K''AN  THE ABYSMAL, WATER
@@ -7441,7 +7394,7 @@ such times there is nothing a man can do but acquiesce in his fate and remain
 true to himself. This concerns the deepest stratum of his being, for this alone 
 is superior to all external fate.
 
-')  #('Six at the beginning means:
+'  'Six at the beginning means:
         One sits oppressed under a bare tree
         And strays into a gloomy valley.
         For three years one sees nothing.
@@ -7453,7 +7406,7 @@ a bare tree and falls ever more deeply into gloom and melancholy. This
 makes the situation only more and more hopeless. Such an attitude comes 
 from an inner delusion that he must by all means overcome.
 
-         ') #('Nine in the second place means:
+'  'Nine in the second place means:
         One is oppressed while at meat and drink.
         The man with the scarlet knee bands is just coming.
         It furthers one to offer sacrifice.
@@ -7469,7 +7422,7 @@ meet these obstructions in the visible realm by offerings and prayer. To set
 forth without being prepared would be disastrous, though not morally wrong. 
 Here a disagreeable situation must be overcome by patience of spirit.
 
-        ') #('Six in the third place means:
+'  'Six in the third place means:
         A man permits himself to be oppressed by stone,
         And leans on thorns and thistles.
         He enters the house and does not see his wife.
@@ -7491,7 +7444,7 @@ in disgrace and danger, the hour of death draws near; how can he then still
 see his wife?
 
 
-        ') #('Nine in the fourth place means:
+'  'Nine in the fourth place means:
         He comes very quietly, oppressed in a golden carriage.
         Humiliation, but the end is reached.
 
@@ -7504,7 +7457,7 @@ himself in great embarrassment. But the trouble is transitory. The original
 strength of his nature offsets the mistake he has made, and the goal is 
 reached.
 
-         ') #('Nine in the fifth place means:
+'  'Nine in the fifth place means:
         His nose and feet are cut off.
         Oppression at the hands of the man with the purple knee bands.
         Joy comes softly.
@@ -7517,7 +7470,7 @@ rescue (ministers wore purple knee bands). But little by little, things take a
 turn for the better. Until that time, he should turn to God, firm in his inner 
 composure, and pray and offer sacrifice for the general well-being.
 
-        ') #('Six at the top means:
+'  'Six at the top means:
         He is oppressed by creeping vines.
         He moves uncertainly and says, "Movement brings remorse."
         If one feels remorse over this and makes a start,
@@ -7529,9 +7482,8 @@ previous condition and fears that he may have cause for regret if he makes a
 move. But as soon as he grasps the situation, changes this mental attitude, 
 and makes a firm decision, he masters the oppression.
 ' )
-)
 
-"48"  #(  #(  '48. Ching / The Well
+#( '48. Ching / The Well
 
                 above K''AN  THE ABYSMAL, WATER
                 below SUN  THE GENTLE, WIND, WOOD
@@ -7593,7 +7545,7 @@ of the well, which benefits all parts of the plant, the superior man organizes
 human society, so that, as in a plant organism, its parts co-operate for the 
 benefit of the whole.
 
-')  #('Six at the beginning means:
+'  'Six at the beginning means:
         One does not drink the mud of the well.
         No animals come to an old well.
 
@@ -7602,7 +7554,7 @@ Such a man loses all significance for mankind. He who throws himself away
 is no longer sought out by others. In the end no one troubles about him any 
 more.
 
-        ') #('Nine in the second place means:
+'  'Nine in the second place means:
         At the well hole one shoots fishes.
         The jug is broken and leaks.
 
@@ -7614,7 +7566,7 @@ neglects them. No one bothers about him. As a result he deteriorates in
 mind. He associates with inferior men and can no longer accomplish 
 anything worth while.
 
-        ') #('Nine in the third place means:
+'  'Nine in the third place means:
         The well is cleaned, but no one drinks from it.
         This is my heart''s sorrow,
         For one might draw from it.
@@ -7626,7 +7578,7 @@ But no use is made of him. This is the sorrow of those who know him. One
 wishes that the prince might learn about it; this would be good fortune for all 
 concerned.
 
-        ') #('Six in the fourth place means:
+'  'Six in the fourth place means:
         The well is being lined. No blame.
 
 True, if a well is being lined with sone, it cannot be used while the work is 
@@ -7636,7 +7588,7 @@ such a time he can do nothing for others, but his work is nonetheless
 valuable, because by enhancing his powers and abilities through inner 
 development, he can accomplish all the more later on.
 
-         ') #('Nine in the fifth place means:
+'  'Nine in the fifth place means:
         In the well there is a clear, cold spring
         From which one can drink.
 
@@ -7648,7 +7600,7 @@ best water is only a potentiality for refreshment as long as it is not brought u
 So too with leaders of mankind: it is all-important that one should drink 
 from the spring of their words and translate them into life.
 
-        ') #('Six at the top means:
+'  'Six at the top means:
         One draws from the well
         Without hindrance.
         It is dependable.
@@ -7661,9 +7613,8 @@ land. The same is true of the really great man, whose inner wealth is
 inexhaustible; the more that people draw from him, the greater his wealth 
 becomes.
 ' )
-)
 
-"49"  #(  #(  '49. Ko / Revolution (Molting)
+#( '49. Ko / Revolution (Molting)
 
                 above  TUI  THE JOYOUS, LAKE
                 below  LI  THE CLINGING, FIRE
@@ -7712,7 +7663,7 @@ course of the year a combat takes place between the forces of light and the
 forces of darkness, eventuating in the revolution of the seasons, and man is 
 able to adjust himself in advance to the demands of the different times.
 
-')  #( 'Nine at the beginning means:
+'   'Nine at the beginning means:
         Wrapped in the hide of a yellow cow.
 
 Changes ought to be undertaken only when there is nothing else to be done. 
@@ -7721,7 +7672,7 @@ one''s mind, control oneself-yellow is the color of the means, and the cow is
 the symbol of docility-and refrain from doing anything for the time being, 
 because any premature offensive will bring evil results.
 
-        ') #('Six in the second place means:
+'  'Six in the second place means:
         When one''s own day comes, one may create revolution.
         Starting brings good fortune. No blame.
 
@@ -7734,7 +7685,7 @@ to be considered is our inner attitude toward the new condition that will
 inevitably come. We have to go out to meet it, as it were. Only in this way 
 can it be prepared for.
 
-        ') #('Nine in the third place means:
+'  'Nine in the third place means:
         Starting brings misfortune.
         Perseverance brings danger.
         When talk of revolution has gone the rounds three times,
@@ -7750,7 +7701,7 @@ When talk of change has come to one''s ears three times, and has been
 pondered well, he may believe and acquiesce in it. Then he will meet with 
 belief and will accomplish something.
 
-        ') #('Nine in the fourth place means:
+'  'Nine in the fourth place means:
         Remorse disappears. Men believe him.
         Changing the form of government brings good fortune.
 
@@ -7761,7 +7712,7 @@ good fortune. If a revolution is not founded on such inner truth, the results
 are bad, and it has no success. For in the end men will support only those 
 undertakings which they feel instinctively to be just.
 
-         ') #('Nine in the fifth place means:
+'  'Nine in the fifth place means:
         The great man changes like a tiger.
         Even before he questions the oracle
         He is believed.
@@ -7772,7 +7723,7 @@ great man: large, clear guiding lines become visible, understandable to
 everyone. Therefore he need not first consult the oracle, for he wins the 
 spontaneous support of the people.
 
-        ') #('Six at the top means:
+'  'Six at the top means:
         The superior man changes like a panther.
         The inferior man molts in the face.
         Starting brings misfortune.
@@ -7789,9 +7740,8 @@ would lead to unrest and misfortune. For the object of a great revolution is
 the attainment of clarified, secure conditions ensuring a general stabilization 
 on the basis of what is possible at the moment.
 ' )
-)
 
-"50"  #(  #(  '50. Ting / The CAULDRON
+#( '50. Ting / The CAULDRON
 
                 above  LI  THE CLINGING, FIRE
                 below  SUN  THE GENTLE, WIND, WOOD
@@ -7848,7 +7798,7 @@ and to fate, thus bringing the two into harmony, he puts his fate on a firm
 footing. These words contain hints about fostering of life as handed on by 
 oral tradition in the secret teachings of Chinese yoga.
 
-')  #('Six at the beginning means:
+'  'Six at the beginning means:
         A ting with legs upturned.
         Furthers removal of stagnating stuff.
         One takes a concubine for the sake of her son.
@@ -7864,7 +7814,7 @@ provided he is ready to purify himself, he is accepted. He attains a station in
 which he can prove himself fruitful in accomplishment, and as a result he 
 gains recognition.
 
-        ') #('Nine in the second place means:
+'  'Nine in the second place means:
         There is food in the ting.
         My comrades are envious,
         But they cannot harm me.
@@ -7876,7 +7826,7 @@ undertakings, he may indeed experience envy and disfavor, but that is not
 dangerous. The more he limits himself to his actual achievements, the less 
 harm the envious inflict on him.
 
-        ') #('Nine in the third place means:
+'  'Nine in the third place means:
         The handle of the ting is altered.
         One is impeded in his way of life.
         The fat of the pheasant is not eaten.
@@ -7894,7 +7844,7 @@ spiritual, the time is bound to come, sooner or later, when the difficulties wil
 be resolved and all will go well. The fall of rain symbolizes here, as in other 
 instances, release of tension.
 
-        ') #('Nine in the fourth place means:
+'  'Nine in the fourth place means:
         The legs of the ting are broken.
         The prince''s meal is spilled
         And his person is soiled.
@@ -7908,7 +7858,7 @@ way he also incurs personal opprobrium.
 place, meager knowledge with large plans, limited powers with heavy 
 responsibility, will seldom escape disaster."
 
-         ') #('Six in the fifth place means:
+'  'Six in the fifth place means:
         The ting has yellow handles, golden carrying rings.
         Perseverance furthers.
 
@@ -7918,7 +7868,7 @@ helpers who complement and aid him in his work. Having achieved this
 attitude, which requires constant self-abnegation, it is important for him to 
 hold to it and not to let himself be led astray.
 
-         ') #('Nine at the top means:
+'  'Nine at the top means:
         The ting has rings of jade.
         Great good fortune.
         Nothing that would not act to further.
@@ -7932,9 +7882,8 @@ precious jade. Thus the work finds favor in the eyes of the Deity, who
 dispenses great good fortune, and becomes pleasing to men, wherefore all 
 goes well. 
 ' )
-)
 
-"51"  #(  #(  '51. Chên / The Arousing (Shock, Thunder)
+#( '51. Chên / The Arousing (Shock, Thunder)
 
                 above  CHêN  THE AROUSING, THUNDER
                 below  CHêN  THE AROUSING, THUNDER
@@ -7975,7 +7924,7 @@ man is always filled with reverence at the manifestation of God; he sets his
 life in order and searches his heart, lest it harbor any secret opposition to the 
 will of God. Thus reverence is the foundation of true culture.
 
-')  #(     'Nine at the beginning means:
+'   'Nine at the beginning means:
         Shock comes-oh, oh!!
         Then follow laughing words-ha, ha!!
         Good fortune.
@@ -7986,7 +7935,7 @@ this is only transitory. When the ordeal is over, he experiences relief, and
 thus the very terror he had to endure at the outset brings good fortune in the 
 long run.
 
-        ') #('Six in the second place means:
+'  'Six in the second place means:
         Shock comes bringing danger.
         A hundred thousand times
         You lose your treasures
@@ -8002,7 +7951,7 @@ property without worrying too much about it. When the time of shock and
 upheaval that has robbed him of his possessions has passed, he will get them 
 back again without going in pursuit of them.
 
-        ') #('Six in the third place means:
+'  'Six in the third place means:
         Shock comes and makes one distraught.
         If shock spurs to action
         One remains free of misfortune.
@@ -8015,7 +7964,7 @@ action and mutely lets fate take its course. But if he allows the shocks of fate
 to induce movement within his mind, he will overcome these external blows 
 with little effort.
 
-        ') #('Nine in the fourth place means:
+'  'Nine in the fourth place means:
         Shock is mired.
 
 Movement within the mind depends for its success partly on circumstances. 
@@ -8023,7 +7972,7 @@ If there is neither a resistance that might be vigorously combated, nor yet a
 yielding that permits of victory-if, instead, everything is tough and inert like 
 mire-movement is crippled.
 
-        ') #('Six in the fifth place means:
+'  'Six in the fifth place means:
         Shock goes hither and thither.
         Danger.
         However, nothing at all is lost.
@@ -8034,7 +7983,7 @@ space between. Nonetheless, the shock causes no loss, because one takes care
 to stay in the center of movement and in this way to be spared the fate of 
 being helplessly tossed hither and thither.
 
-        ') #('Six at the top means:
+'  'Six at the top means:
         Shock brings ruin and terrified gazing around.
         Going ahead brings misfortune.
         If it has not yet touched one''s own body
@@ -8052,9 +8001,8 @@ mistakes and injury. But his comrades, who no longer heed any warning,
 will in their excitement certainly be displeased with him. However, he must 
 not take this into account.
 ' )
-)
 
-"52"  #(  #(  '52. Kên / Keeping Still, Mountain
+#( '52. Kên / Keeping Still, Mountain
 
                 above  KêN  KEEPING STILL, MOUNTAIN
                 below  KêN  KEEPING STILL, MOUNTAIN
@@ -8105,7 +8053,7 @@ the heart-that is, a man''s thoughts-should restrict themselves to the
 immediate situation. All thinking that goes beyond this only makes the heart 
 sore.
 
-')  #('Six at the beginning means:
+'  'Six at the beginning means:
         Keeping his toes still.
         No blame.
         Continued perseverance furthers.
@@ -8131,7 +8079,7 @@ wrongdoing, he can no longer check the other in his powerful movement.
 Where the master presses forward, the servant, no matter how good his 
 intentions, cannot save him.
 
-        ') #('Nine in the third place means:
+'  'Nine in the third place means:
         Keeping his hips still.
         Making his sacrum stiff.
         Dangerous. The heart suffocates.
@@ -8144,7 +8092,7 @@ try to force results. Rather, calmness must develop naturally out of a state of
 inner composure. If one tries to induce calmness by means of artificial 
 rigidity, meditation will lead to very unwholesome results.
 
-        ') #('Six in the fourth place means:
+'  'Six in the fourth place means:
         Keeping his trunk still.
         No blame.
 
@@ -8158,7 +8106,7 @@ egotistic drives. Even though at this point one does not yet remain free from
 all the dangers of doubt and unrest, this frame of mind is not a mistake, as it 
 leads ultimately to that other, higher level.
 
-        ') #('Six in the fifth place means:
+'  'Six in the fifth place means:
         Keeping his jaws still.
         The words have order.
         Remorse disappears.
@@ -8169,7 +8117,7 @@ speech easily leads to situations that subsequently give much cause for regret.
 However, if a man is reserved in speech, his words take ever more definite 
 form, and every occasion for regret vanishes.
 
-         ') #('Nine at the top means:
+'  'Nine at the top means:
         Noblehearted keeping still.
         Good fortune.
 
@@ -8178,9 +8126,8 @@ rest, not merely in a small, circumscribed way in regard to matters of detail,
 but one has also a general resignation in regard to life as a whole, and this 
 confers peace and good fortune in relation to every individual matter.
 ' )
-)
 
-"53"  #(  #(  '53. Chien / Development (Gradual Progress)
+#( '53. Chien / Development (Gradual Progress)
 
                 above  SUN  THE GENTLE, WIND, WOOD
                 below  KêN  KEEPING STILL, MOUNTAIN
@@ -8233,7 +8180,7 @@ progress in public opinion and in the mores of the people, it is necessary for
 the personality to acquire influence and weight. This comes about through 
 careful and constant work on one''s own moral development.
 
-')  #('Six at the beginning means:
+'  'Six at the beginning means:
         The wild goose gradually draws near the shore. 
         The young son is in danger.
         There is talk. No blame.
@@ -8248,7 +8195,7 @@ one comes to help him, his first steps are slow and hesitant, and he is
 surrounded by danger. Naturally he is subjected to much criticism. But these 
 very difficulties keep him from being too hasty, and his progress is successful.
 
-         ') #('Six in the second place means:
+'  'Six in the second place means:
         The wild goose gradually draws near the cliff.
         Eating and drinking in peace and concord.
         Good fortune.
@@ -8263,7 +8210,7 @@ food; this is the symbol of peace and concord in good fortune. A man does
 not want to keep his good luck for himself only, but is ready to share it with 
 others.
 
-        ') #('Nine in the third place means:
+'  'Nine in the third place means:
         The wild goose gradually draws near the plateau.
         The man goes forth and does not return.
         The woman carries a child but does not bring it forth.
@@ -8280,7 +8227,7 @@ development. If one does not willfully provoke a conflict, but confines
 himself to vigorously maintaining his own position and to warding off 
 unjustified attacks, all goes well.
 
-        ') #('Six in the fourth place means:
+'  'Six in the fourth place means:
         The wild goose goes gradually draws near the tree.
         Perhaps it will find a flat branch. No blame.
 
@@ -8291,7 +8238,7 @@ finds it difficult to hold his own without danger. Then it is important to be
 sensible and yielding. This enables him to discover a safe place in which life 
 can go on, although he may be surrounded by danger.
 
-         ') #('Nine in the fifth place means:
+'  'Nine in the fifth place means:
         The wild goose gradually draws near the summit.
         For three years the woman has no child.
         In the end nothing can hinder her.
@@ -8305,7 +8252,7 @@ remain sterile, and nothing is accomplished. But in the course of further
 development, such misunderstandings are cleared away, and reconciliation is 
 achieved after all.
 
-        ') #('Nine at the top means:
+'  'Nine at the top means:
         The wild goose gradually draws near the clouds heights.
         Its feathers can be used for the sacred dance.
         Good fortune.
@@ -8318,9 +8265,8 @@ sacred dance pantomimes performed in the temples. Thus the life of a man
 who has perfected himself is a bright light for the people of earth, who look 
 up to him as an example.
 ' )
-)
 
-"54"  #(  #(  '54. Kuei Mei / The Marrying Maiden
+#( '54. Kuei Mei / The Marrying Maiden
 
                 above  CHêN  THE AROUSING, THUNDER
                 below  TUI  THE JOYOUS, LAKE
@@ -8371,7 +8317,7 @@ day may determine. If on the other hand a man fixes his mind on an end that
 endures, he will succeed in avoiding the reefs that confront the closer 
 relationships of people.
 
-')  #( 'Nine at the beginning means:
+'   'Nine at the beginning means:
         The marrying maiden as a concubine.
         A lame man who is able to tread.
         Undertakings bring good fortune.
@@ -8392,7 +8338,7 @@ behind the official ministers of state, but, although he is hampered by this
 status, as if he were lame, he can nevertheless accomplish something through 
 the kindliness of his nature.
 
-        ') #('Nine in the second place means:
+'  'Nine in the second place means:
         A one-eyed man who is able to see.
         The perseverance of a solitary man furthers.
 
@@ -8402,7 +8348,7 @@ left behind in loneliness; the man of her choice either has become unfaithful
 or has died. But she does not lost the inner light of loyalty. Thought the 
 other eye is gone, she maintains her loyalty even in loneliness.
 
-        ') #('Six in the third place means:
+'  'Six in the third place means:
         The marrying maiden as a slave.
         She marries as a concubine.
 
@@ -8414,7 +8360,7 @@ altogether compatible with self-esteem. Neither judgment nor warning is
 added to this line; it merely lays bare the actual situation, so that everyone 
 may draw a lesson from it.
 
-        ') #('Nine in the fourth place means:
+'  'Nine in the fourth place means:
         The marrying maiden draws out the allotted time.
         A late marriage comes in due course.
 
@@ -8424,7 +8370,7 @@ she is rewarded for her purity and, even though belatedly, finds the husband
 intended for her.       
 
 
-         ') #('Six in the fifth place means:
+'  'Six in the fifth place means:
         The sovereign I gave his daughter in marriage.
         The embroidered garments of the princess
         Were not as gorgeous
@@ -8444,7 +8390,7 @@ situation. She is free of all vanity of outer adornment, and forgetting her rank
 in her marriage, takes a place below that of her husband, just as the moon, 
 before it is quite full, does not directly face the sun.
 
-        ') #('Six at the top means:
+'  'Six at the top means:
         The woman holds the basket, but there are no fruits in it.
         The man stabs the sheep, but no blood flows.
         Nothing that acts to further.
@@ -8456,9 +8402,8 @@ empty basket and the man stabs a sheep slaughtered beforehand-solely to
 preserve the forms. This impious, irreverent attitude bodes no good for a 
 marriage.
 ' )
-)
 
-"55"  #(  #(  '55. Fêng / Abundance [Fullness]
+#( '55. Fêng / Abundance [Fullness]
 
                 above  CHêN  THE AROUSING, THUNDER
                 below  LI  THE CLINGING, FIRE
@@ -8498,7 +8443,7 @@ applied and enforced. Clarity [Li] within makes it possible to investigate the
 facts exactly, and shock [Chên] without ensures a strict and precise carrying 
 out of punishments.
 
-')  #( 'Nine at the beginning means:
+'   'Nine at the beginning means:
         When a man meets his destined ruler,
         They can be together ten days,
         And it is not a mistake.
@@ -8511,7 +8456,7 @@ during the period of abundance, it will not be too long, nor is it a mistake.
 Therefore one may go forth, in order to make one''s influence felt; it will meet 
 with recognition.
 
-        ') #('Six in the second place means:
+'  'Six in the second place means:
         The curtain is of such fullness
         That the polestars can be seen at noon.
         Through going one meets with mistrust and hate.
@@ -8528,7 +8473,7 @@ envy, which would prohibit all movement. The essential thing then is to
 hold inwardly to the power of truth, which in the end is so strong that it 
 exerts an invisible influence on the ruler, so that all goes well.
 
-        ') #('Nine in the third place means:
+'  'Nine in the third place means:
         The underbrush is of such abundance
         That the small stars can be seen at noon.
         He breaks his right arm . No blame.
@@ -8541,7 +8486,7 @@ the foreground. This makes it impossible for an able man, though he might
 be the right hand of the ruler, to undertake anything. It is as though his arm 
 were broken, but he is not to blame for being thus hindered in action.
 
-        ') #('Nine in the fourth place means:
+'  'Nine in the fourth place means:
         The curtain is of such fullness
         That the polestars can be seen at noon.
         He meets his ruler, who is of like kind.
@@ -8554,7 +8499,7 @@ complementary factor postulated here is the reverse of the one in the first
 line. In the latter, wisdom is to be complemented by energy, while here 
 energy is complemented by wisdom.
 
-         ') #('Six in the fifth place means:
+'  'Six in the fifth place means:
         Lines are coming,
         Blessing and fame draw near.
         Good fortune.
@@ -8563,7 +8508,7 @@ The ruler is modest and therefore open to the counsel of able men. Thus he
 is surrounded by men who suggest to him the lines of action. This brings 
 blessing, fame, and good fortune to him and all the people.
 
-        ') #('Six at the top means:
+'  'Six at the top means:
         His house is in a state of abundance.
         He screens off his family.
         He peers through the gate
@@ -8576,9 +8521,8 @@ opposite of what he strives for. He seeks abundance and splendor for his
 dwelling. He wishes at all odds to be master in his house, which so alienates 
 his family that in the end he finds himself completely isolated.
 ' )
-)
 
-"56"  #(  #(  '56. Lü / The Wanderer
+#( '56. Lü / The Wanderer
 
                 above  LI  THE CLINGING, FIRE
                 below  KêN  KEEPING STILL, MOUNTAIN
@@ -8611,7 +8555,7 @@ should be a quickly passing matter, and must not be dragged out indefinitely.
 Prisons ought to be places where people are lodged only temporarily, as guests 
 are. They must not become dwelling places.
 
-')  #('Six at the beginning means:
+'  'Six at the beginning means:
         If the wanderer busies himself with trivial things, 
         He draws down misfortune upon himself.
 
@@ -8622,7 +8566,7 @@ stranger is mistaken if he hopes to find a friendly reception through lending
 himself to jokes and buffoonery. The result will be only contempt and 
 insulting treatment.
 
-        ') #('Six in the second place means:
+'  'Six in the second place means:
         The wanderer comes to an inn.
         He has his property with him.
         He wins the steadfastness of a young servant.
@@ -8633,7 +8577,7 @@ does not lose the liking of other people, hence all persons further him, so that
 he can acquire property. Moreover, he wins the allegiance of a faithful and 
 trustworthy servant-a thing of inestimable value to a wanderer.
 
-        ') #('Nine in the third place means:
+'  'Nine in the third place means:
         The wanderer''s inn burns down.
         He loses the steadfastness of his young servant.
         Danger.
@@ -8644,7 +8588,7 @@ place. He treats his servant with aloofness and arrogance; thus he loses the
 man''s loyalty. When a stranger in a strange land has no one left on whom he 
 can rely, the situation becomes very dangerous.
 
-        ') #('Nine in the fourth place means:
+'  'Nine in the fourth place means:
         The wanderer rests in a shelter.
         He obtains his property and an ax.
         My heart is not glad.
@@ -8656,7 +8600,7 @@ even with this he is not secure. He must be always on guard, ready to defend
 himself with arms. Hence he is not at ease. He is persistently conscious of 
 being a stranger in a strange land.
 
-         ') #('Six in the fifth place means:
+'  'Six in the fifth place means:
         He shoots a pheasant.
         It drops with the first arrow.
         In the end this brings both praise and office.
@@ -8670,7 +8614,7 @@ knows how to meet the situation and how to introduce himself in the right
 way, he may find a circle of friends and a sphere of activity even in a strange 
 country.
 
-        ') #('Nine at the top means:
+'  'Nine at the top means:
         The bird''s nest burns up.
         The wanderer laughs at first,
         Then must needs lament and weep.
@@ -8684,9 +8628,8 @@ laughing and jesting, and forgets that he is a wanderer, he will later have
 cause to weep and lament. For if through carelessness a man loses his cow-
 i.e., his modesty and adaptability-evil will result.
 ' )
-)
 
-"57"  #(  #(  '57. Sun / The Gentle (The Penetrating, Wind)
+#( '57. Sun / The Gentle (The Penetrating, Wind)
 
                 above  SUN  THE GENTLE, WIND, WOOD
                 below  SUN  THE GENTLE, WIND, WOOD
@@ -8733,7 +8676,7 @@ the command has been assimilated by the people is action in accordance with
 it possible. Action without preparation of the ground only frightens and 
 repels.
 
-')  #('Six at the beginning means:
+'  'Six at the beginning means:
         In advancing and in retreating,
         The perseverance of a warrior furthers.
 
@@ -8744,7 +8687,7 @@ such a situation, a military decisiveness is the proper thing, so that one
 resolutely does what order demands. Resolute discipline is far better than 
 irresolute license.
 
-        ') #('Nine in the second place means:
+'  'Nine in the second place means:
         Penetration under the bed.
         Priests and magicians are used in great number.
         Good fortune. No blame.
@@ -8759,7 +8702,7 @@ vigorous and indefatigable effort, but this is well worth while. For when such
 elusive influences are brought into the light and branded, they lose their 
 power over people.
 
-        ') #('Nine in the third place means:
+'  'Nine in the third place means:
         Repeated penetration. Humiliation.
 
 Penetrating reflection must not be pushed too far, lest it cripple the power of 
@@ -8767,7 +8710,7 @@ decision. After a matter has been thoroughly pondered, it is essential to form
 a decision and to act. Repeated deliberation brings fresh doubts and scruples, 
 and thereby humiliation, because one shows oneself unable to act.
 
-        ') #('Six in the fourth place means:
+'  'Six in the fourth place means:
         Remorse vanishes.
         During the hunt
         Three kinds of game are caught.
@@ -8778,7 +8721,7 @@ three kinds of animals referred to served for offerings to the gods, for feastin
 guests, and for everyday consumption. When the catch answered all three 
 purposes, the hunt was considered especially successful.
 
-         ') #('Nine in the fifth place means:
+'  'Nine in the fifth place means:
         Perseverance brings good fortune.
         Remorse vanishes.
         Nothing that does not further.
@@ -8799,7 +8742,7 @@ again and again. After the change is made, it is necessary to note carefully for
 some time after how the improvements bear the test of actuality. Such 
 careful work is accompanied by good fortune.
 
-        ') #('Nine at the top means:
+'  'Nine at the top means:
         Penetration under the bed.
         He loses his property and his ax.
         Perseverance brings misfortune.
@@ -8809,9 +8752,8 @@ influences into the most secret corners. But he no longer has the strength to
 combat them decisively. In this case any attempt to penetrate into the 
 personal domain of darkness would only bring harm.
 ' )
-)
 
-"58"  #(  #(  '58. Tui / The Joyous, Lake
+#( '58. Tui / The Joyous, Lake
 
                 above TUI  THE JOYOUS, LAKE
                 below TUI  THE JOYOUS, LAKE
@@ -8857,7 +8799,7 @@ of the truths of life. In this way learning becomes many-sided and takes on a
 cheerful lightness, whereas there is always something ponderous and one-
 sided about the learning of the self-taught.
 
-')  #( 'Nine at the beginning means:
+'   'Nine at the beginning means:
         Contented joyousness. Good fortune.
 
 A quiet, wordless, self-contained joy, desiring nothing from without and 
@@ -8865,7 +8807,7 @@ resting content with everything, remains free of all egotistic likes and dislike
 In this freedom lies good fortune, because it harbors the quiet security of a 
 heart fortified within itself.
 
-         ') #('Nine in the second place means:
+'  'Nine in the second place means:
         Sincere joyousness. Good fortune.
         Remorse disappears.
 
@@ -8878,7 +8820,7 @@ agreeable, not even dubious companions will venture to proffer any base
 pleasures, because he would not enjoy them. Thus every cause for regret is 
 removed.
 
-        ') #('Six in the third place means:
+'  'Six in the third place means:
         Coming joyousness. Misfortune.
 
 True joy must spring from within. But if one is empty within and wholly 
@@ -8888,7 +8830,7 @@ stability and therefore need amusement, will always find opportunity of
 indulgence. They attract external pleasures by the emptiness of their natures. 
 Thus they lose themselves more and more, which of course has bad results.
 
-        ') #('Nine in the fourth place means:
+'  'Nine in the fourth place means:
         Joyousness that is weighed is not at peace.
         After ridding himself of mistakes a man has joy.
 
@@ -8899,7 +8841,7 @@ that passion brings suffering, can he make up his mind to turn away from the
 lower pleasures and to strive for the higher. Once this decision is sealed, he 
 finds true joy and peace, and inner conflict is overcome.
 
-         ') #('Nine in the fifth place means:
+'  'Nine in the fifth place means:
         Sincerity toward disintegrating influences is dangerous.
 
 Dangerous elements approach even the far best of men. If a man permits 
@@ -8908,7 +8850,7 @@ slowly but surely, and inevitable brings dangers in its train. But if he
 recognizes the situation and can comprehend the danger, he knows how to 
 protect himself and remains unharmed.
 
-        ') #('Six at the top means:
+'  'Six at the top means:
         Seductive joyousness.
 
 A vain nature invites diverting pleasures and must suffer accordingly (cf. the 
@@ -8918,9 +8860,8 @@ them. Here it is no longer a question of danger, of good fortune or
 misfortune. He has given up direction of his own life, and what becomes of 
 him depends upon chance and external influences.
 ' )
-)
 
-"59"  #(  #(  '59. Huan / Dispersion [Dissolution]
+#( '59. Huan / Dispersion [Dissolution]
 
                 above SUN  THE GENTLE, WIND
                 below K''AN  THE ABYSMAL, WATER
@@ -8975,7 +8916,7 @@ be shaken by a religious awe in face of eternity-stirred with an intuition of th
 One Creator of all living beings, and united through the strong feeling of 
 fellowship experienced in the ritual of divine worship.
 
-')  #('Six at the beginning means:
+'  'Six at the beginning means:
         He brings help with the strength of a horse.
         Good fortune.
 
@@ -8986,7 +8927,7 @@ make themselves felt and lead to mutual misunderstandings we must take
 quick and vigorous action to dissolve the misunderstandings and mutual 
 distrust.
 
-        ') #('Nine in the second place means:
+'  'Nine in the second place means:
         At the dissolution
         He hurries to that which supports him.
         Remorse disappears.
@@ -8999,7 +8940,7 @@ moderate and just judgment of men, linked with good will. If he regains this
 unobstructed outlook on humanity, while at the same time all saturnine ill 
 humor is dissolved, all occasion for remorse disappears.
 
-        ') #('Six in the third place means:
+'  'Six in the third place means:
         He dissolves his self. No remorse.
 
 Under certain circumstances, a man''s work may become so difficult that he 
@@ -9009,7 +8950,7 @@ Only on the basis of great renunciation can he obtain the strength for great
 achievements. By setting his goal in a great task outside himself, he can 
 attain this standpoint.
 
-        ') #('Six in the fourth place means:
+'  'Six in the fourth place means:
         He dissolves his bond with his group.
         Supreme good fortune.
         Dispersion leads in turn to accumulation.
@@ -9022,7 +8963,7 @@ is near wins what is afar. But in order to comprehend this standpoint, one
 must have a wide view of the interrelationships of life, such as only unusual 
 men attain.
 
-         ') #('Nine in the fifth place means:
+'  'Nine in the fifth place means:
         His loud cries are as dissolving as sweat.
         Dissolution!! A king abides without blame.
 
@@ -9032,7 +8973,7 @@ dissolving sweat, so a great stimulating idea is a true salvation in times of
 general deadlock. It gives the people a rallying point-a man in a ruling 
 position who can dispel misunderstandings.
         
-        ') #('Nine at the top means:
+'  'Nine at the top means:
         He dissolves his blood.
         Departing, keeping at a distance, going out,
         Is without blame.
@@ -9044,9 +8985,8 @@ rather that he rescues his kin-helps them to get away before danger comes, or
 to keep at a distance from an existing danger, or to find a way out of a danger 
 that is already upon them. In this way he does what is right.
 ' )
-)
 
-"60"  #(  #(  '60. Chieh / Limitation
+#( '60. Chieh / Limitation
 
                 above K''AN  THE ABYSMAL, WATER
                 below TUI  THE JOYOUS, LAKE
@@ -9095,7 +9035,7 @@ the limitations ordained by duty and voluntarily accepted. The individual
 attains significance as a free spirit only by surrounding himself with these 
 limitations and by determining for himself what his duty is.
 
-')  #( 'Nine at the beginning means:
+'   'Nine at the beginning means:
         Not going out of the door and the courtyard
         Is without blame.
 
@@ -9112,7 +9052,7 @@ germinating things are not handled with discretion, the perfecting of them is
 impeded. Therefore the superior man is careful to maintain silence and does 
 not go forth.
 
-        ') #('Nine in the second place means:
+'  'Nine in the second place means:
         Not going out of the gate and the courtyard
         Brings misfortune.
 
@@ -9123,7 +9063,7 @@ hesitate so long as the time for action has not come, but no longer. Once the
 obstacles to action have been removed, anxious hesitation is a mistake that is 
 bound to bring disaster, because one misses one''s opportunity.
 
-        ') #('Six in the third place means:
+'  'Six in the third place means:
         He who knows limitation
         Will have cause to lament.
         No blame.
@@ -9135,7 +9075,7 @@ regret. He must not seek to lay the blame on others. Only when we realize
 that our mistakes are of our own making will such disagreeable experiences 
 free us of errors.
 
-        ') #('Six in the fourth place means:
+'  'Six in the fourth place means:
         Contented limitation. Success.
 
 Every limitation has its value, but a limitation that requires persistent effort 
@@ -9145,7 +9085,7 @@ necessarily leads to success, for then it means a saving of energy. The energy
 that otherwise would be consumed in a vain struggle with the object, is 
 applied wholly to the benefit of the matter in hand, and success is assured.
 
-         ') #('Nine in the fifth place means:
+'  'Nine in the fifth place means:
         Sweet limitation brings good fortune.
         Going brings esteem.
         
@@ -9158,7 +9098,7 @@ manages to achieve something, good fortune is the result. Where such an
 example occurs, it meets with emulation, so that whatever is undertaken 
 must succeed.
 
-        ') #('Six at the top means:
+'  'Six at the top means:
         Galling limitation.
         Perseverance brings misfortune.
         Remorse disappears.
@@ -9172,9 +9112,8 @@ the only means of safeguarding against guilt and remorse. In such situations
 ruthlessness toward oneself is the only means of saving one''s soul, which 
 otherwise would succumb to irresolution and temptation.
 ' )
-)
 
-"61"  #(  #(  '61. Chung Fu / Inner Truth
+#( '61. Chung Fu / Inner Truth
 
                 above SUN  THE GENTLE, WIND
                 below TUI  THE JOYOUS, LAKE
@@ -9237,7 +9176,7 @@ form of justice. This system was not without success, for its aim was to make
 so strong a moral impression that there was no reason to fear abuse of such 
 mildness. For it sprang not from weakness but from a superior clarity.
 
-')  #( 'Nine at the beginning means:
+'   'Nine at the beginning means:
         Being prepared brings good fortune.
         If there are secret designs, it is disquieting.
 
@@ -9249,7 +9188,7 @@ on the support of others, the more uneasy and anxious he will become as to
 whether these secret ties are really tenable. In this way inner peace and the 
 force of inner truth are lost.
 
-        ') #('Nine in the second place means:
+'  'Nine in the second place means:
         A crane calling in the shade.
         Its young answers it.
         I have a good goblet.
@@ -9281,7 +9220,7 @@ bowspring of the superior man. As hinge and bowspring move, they bring
 honor or disgrace. Through words and deeds the superior man moves 
 heaven and earth . Must one not, then, be cautious?
 
-        ') #('Six in the third place means:
+'  'Six in the third place means:
         He finds a comrade.
         Now he beats the drum, now he stops.
         Now he sobs, now he sings.
@@ -9295,7 +9234,7 @@ have only the statement of the law that this is so. Whether this condition is
 felt to be an affliction of the supreme happiness of love, is left to the 
 subjective verdict of the person concerned.
 
-        ') #('Six in the fourth place means:
+'  'Six in the fourth place means:
         The moon nearly at the full.
         The team horse goes astray.
         No blame.
@@ -9311,7 +9250,7 @@ among men. Only be pursuing one''s course like a horse that goes straight
 ahead without looking sidewise at its mate, can one retain the inner freedom 
 that helps one onward.
 
-         ') #('Nine in the fifth place means:
+'  'Nine in the fifth place means:
         He possesses truth, which links together.
         No blame.
 
@@ -9322,7 +9261,7 @@ suggestion must emanate from the ruler. It will firmly knit together and
 unite all his adherents. Without this central force, all external unity is only 
 deception and breaks down at the decisive moment.
 
-        ') #('Nine at the top means:
+'  'Nine at the top means:
         Cockcrow penetrating to heaven.
         Perseverance brings misfortune.
 
@@ -9330,9 +9269,8 @@ The cock is dependable. It crows at dawn. But it cannot itself fly to heaven. It
 just crows. A man may count on mere words to awaken faith. This may 
 succeed now and then, but if persisted in, it will have bad consequences.
 ' )
-)
 
-"62"  #(  #(  '62. Hsiao Kuo / Preponderance of the Small
+#( '62. Hsiao Kuo / Preponderance of the Small
 
                 above CHêN  THE AROUSING, THUNDER
                 below KêN  KEEPING STILL, MOUNTAIN
@@ -9399,7 +9337,7 @@ masses, all this makes him stand out as exceptional. But the essential
 significance of his attitude lies in the fact that in external matters he is on the 
 side of the lowly.
 
-')  #('Six at the beginning means:
+'  'Six at the beginning means:
         The bird meets with misfortune through flying.
 
 A bird ought to remain in the nest until it is fledged. If it tries to fly before 
@@ -9408,7 +9346,7 @@ when all else fails. At first we ought to put up with traditional ways as long
 as possible; otherwise we exhaust ourselves and our energy and still achieve 
 nothing.
 
-         ') #('Six in the second place means:
+'  'Six in the second place means:
         She passes by her ancestor
         And meets her ancestress.
         He does not reach his prince
@@ -9431,7 +9369,7 @@ likewise not a mistake in exceptional times. (The rule is that every official
 should first have an audience with the prince by whom he is appointed. Here 
 the appointment is made by the minister.)
 
-        ') #('Nine in the third place means:
+'  'Nine in the third place means:
         If one is not extremely careful,
         Somebody may come up from behind and strike him.
         Misfortune.
@@ -9445,7 +9383,7 @@ are unprepared. Yet such danger is not unavoidable; one can escape it if he
 understands that the time demands that he pay especial attention to small 
 and insignificant thing.
 
-        ') #('Nine in the fourth place means:
+'  'Nine in the fourth place means:
         No blame. He meets him without passing by.
         Going brings danger. One must be on guard.
         Do not act. Be constantly persevering.
@@ -9456,7 +9394,7 @@ attempt of one''s own initiative to reach the desired end. And if one were to
 go on, endeavoring one must be on guard and not act but continue inwardly 
 to persevere.
 
-         ') #('Six in the fifth place means:
+'  'Six in the fifth place means:
         Dense clouds,
         No rain from our western territory.
         The prince shoots and hits him who is in the cave.
@@ -9472,7 +9410,7 @@ they have withdrawn. It is not in the fame nor their great names but their
 genuine achievements that are important. Through such modesty the right 
 man is found, and the exceptional task is carried out in spite of all difficulties.
 
-        ') #('Six at the top means:
+'  'Six at the top means:
         He passes him by, not meeting him.
         The flying bird leaves him.
         Misfortune.
@@ -9484,9 +9422,8 @@ in times of extraordinary salience of small things does not know how to call a
 halt, but restlessly seeks to press on and on, draws upon himself misfortune 
 at the hands of gods and men, because he deviates from the order of nature.
 ' )
-)
 
-"63"  #(  #(  '63. Chi Chi / After Completion
+#( '63. Chi Chi / After Completion
 
                 above  K''AN  THE ABYSMAL, WATER
                 below  LI THE  CLINGING, FIRE
@@ -9540,7 +9477,7 @@ work in harmony, so that everything seems to be in the best of order. In such
 times only the sage recognizes the moments that bode danger and knows how 
 to banish it by means of timely precautions.
 
-')  #( 'Nine at the beginning means:
+'   'Nine at the beginning means:
         He breaks his wheels.
         He gets his tail in the water.
         No blame.
@@ -9555,7 +9492,7 @@ of the general pressure, but he is hit only from behind like a fox that, having
 crossed the water, at the last minute gets its tail wet. He will not suffer any 
 real harm, because his behavior has been correct.
 
-        ') #('Six in the second place means:
+'  'Six in the second place means:
         The woman loses the curtain of her carriage.
         Do not run after it;
         On the seventh day you will get it.
@@ -9577,7 +9514,7 @@ change. When the six stages of the hexagram have passed, the new era
 dawns. That which is a man''s own cannot be permanently lost. It comes to 
 him of its own accord. He need only be able to wait.
 
-        ') #('Nine in the third place means:
+'  'Nine in the third place means:
         The Illustrious Ancestor
         Disciplines the Devil''s Country.
         After three years he conquers it.
@@ -9600,7 +9537,7 @@ is not only rising states that carry on a colonial policy; the urge to expand,
 with its accompanying dangers, is part and parcel of every ambitious 
 undertaking.
 
-        ') #('Six in the fourth place means:
+'  'Six in the fourth place means:
         The finest clothes turn to rags.
         Be careful all day long.
 
@@ -9612,7 +9549,7 @@ peace apparently reigns complacently once more. However, to the thoughtful
 man, such occurrences are grave omens that he does not neglect. This is the 
 only way of averting evil consequences.
 
-        ') #('Nine in the fifth place means:
+'  'Nine in the fifth place means:
         The neighbor in the east who slaughters an ox
         Does not attain as much real happiness
         As the neighbor in the west
@@ -9627,7 +9564,7 @@ However, while man sees what is before his eyes, God looks into the heart.
 Therefore a simple sacrifice offered with real piety holds a greater blessing 
 than an impressive service without warmth.
 
-        ') #('Six at the top means:
+'  'Six at the top means:
         He gets his head in the water. Danger.
 
 Here in conclusion another warning is added. After crossing a stream, a 
@@ -9638,9 +9575,8 @@ overcome. However, such vain self-admiration brings misfortune. It leads
 only to danger, and unless one finally resolves to go forward without 
 pausing, one falls a victim to this danger.
 ' )
-)
 
-"64" #( #( '64. Wei Chi / Before Completion
+#( '64. Wei Chi / Before Completion
 
                 above LI  THE CLINGING, FLAME
                 below K''AN  THE ABYSMAL, WATER
@@ -9690,7 +9626,7 @@ and completion will be achieved. But in order to handle external forces
 properly, we must above all arrive at the correct standpoint ourselves, for 
 only from this vantage can we work correctly.
 
-')  #('Six at the beginning means:
+'  'Six at the beginning means:
         He gets his tail in the water.
         Humiliating.
 
@@ -9700,7 +9636,7 @@ leads only to failure and humiliation if the time for achievement has not yet
 arrived. In such time it is wise to spare ourselves the opprobrium of failure 
 by holding back.
 
-        ') #('Nine in the second place means:
+'  'Nine in the second place means:
         He brakes his wheels.
         Perseverance brings good fortune.
 
@@ -9713,7 +9649,7 @@ the brakes. Patience in the highest sense means putting brakes on strength.
 Therefore he must not fall asleep and lose sight of the goal. If he remains 
 strong and steadfast in his resolve, all goes well in the end.
 
-        ') #('Six in the third place means:
+'  'Six in the third place means:
         Before completion, attack brings misfortune.
         It furthers one to cross the great water.
 
@@ -9724,7 +9660,7 @@ must be created; one must engage the energies of able helpers and in this
 fellowship take the decisive step-cross the great water. Then completion will 
 become possible.
 
-        ') #('Nine in the fourth place means:
+'  'Nine in the fourth place means:
         Perseverance brings good fortune.
         Remorse disappears.
         Shock, thus to discipline the Devil''s Country.
@@ -9737,7 +9673,7 @@ It is a question of a fierce battle to break and to discipline the Devil''s
 Country, the forces of decadence. But the struggle also has its reward. Now is 
 the time to lay the foundations of power and mastery for the future.
 
-        ') #('Six in the fifth place means:
+'  'Six in the fifth place means:
         Perseverance brings good fortune.
         No remorse.
         The light of the superior man is true.
@@ -9752,7 +9688,7 @@ shines forth in redoubled beauty after rain, or as a forest grows more freshly
 green from charred ruins after a fire, so the new era appears all the more 
 glorious by contrast with the misery of the old.
 
-        ') #('Nine at the top means:
+'  'Nine at the top means:
         There is drinking of wine
         In genuine confidence. No blame.
         But if one wets his head,
@@ -9765,7 +9701,6 @@ must be careful in all this to keep within proper bounds. If in his exuberance
 a man gets drunk, he forfeits the favorableness of the situation through his 
 intemperance.
 ')
-)
 )
 ! !
 

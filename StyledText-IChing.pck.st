@@ -1,6 +1,6 @@
-'From Cuis7.7 [latest update: #7872] on 17 April 2026 at 4:44:14 pm'!
-'Description '!
-!provides: 'StyledText-IChing' 1 3!
+'From Cuis7.7 [latest update: #7879] on 18 April 2026 at 3:03:41 pm'!
+'Description Ken''s I Ching translation'!
+!provides: 'StyledText-IChing' 1 5!
 !requires: 'StyledText' 1 77 nil!
 !requires: 'IChing' 1 45 nil!
 SystemOrganization addCategory: #'StyledText-IChing'!
@@ -29,12 +29,6 @@ open: nameString
 	^SystemWindow editFancierStyledText: model label: nameString
 	! !
 
-!IChingText methodsFor: 'user interface support' stamp: 'KenD 17/Apr/2026 16:05:25'!
-save: name
-	| model |
-	model := self styledTextModelNamed: name.
-	model saveAs: (IChingPackage package fullFileName asFileEntry parent  // name) pathName! !
-
 !IChingText class methodsFor: 'instance creation' stamp: 'KenD 17/Apr/2026 16:02:10'!
 openStyledTextIChing
 "
@@ -44,33 +38,25 @@ openStyledTextIChing
 	STETheme beCurrent.
 	^self new open: 'Kens I Ching'! !
 
-!StyleSet methodsFor: '*StyledText-IChing' stamp: 'KenD 17/Apr/2026 16:42:58'!
+!StyleSet methodsFor: '*StyledText-IChing' stamp: 'KenD 18/Apr/2026 08:05:56'!
 createIChingCharacterStyleSet
 	"Build one of the many possible sets of Styles. Maybe other methods like this will be added."
-	| title hexagramName featureType nullStyle completedText fontFamily familyName |
+	| title name nullStyle  fontFamily familyName |
 
 	familyName := 'PingFang SC'. 
 	fontFamily := FontFamily familyNamed:  familyName.  "Loaded by IChingPackage> prePackageInstall".
 	
 	title := self characterStyleNamedOrNew: 'Title'.
-	title privateFamilyName: familyName pointSize: 32 emphasis: AbstractFont boldCode color: Color black.
+	title privateFamilyName: familyName pointSize: 40 emphasis: AbstractFont boldCode color: Color black.
 
-	hexagramName := self characterStyleNamedOrNew: 'Hexagram Name'.
-	hexagramName privateFamilyName: familyName pointSize: 21 emphasis: AbstractFont boldCode color: Color black.
-
-	featureType := self characterStyleNamedOrNew: 'Feature Type'.
-	featureType privateFamilyName: familyName pointSize: 10 emphasis: AbstractFont boldCode color: Color red.
-
-	completedText := self characterStyleNamedOrNew: 'Completed Text'.
-	completedText privateFamilyName: familyName pointSize: 12 emphasis: 0 color: Color green.
+	name := self characterStyleNamedOrNew: 'Hexagram Name'.
+	name privateFamilyName: familyName pointSize: 32 emphasis: AbstractFont boldCode color: Color black.
 
 	nullStyle := CharacterStyle nullStyle.
 
 	characterStyles := {
-		{$t. title}.
-		{$h. hexagramName}.
-		{$y. featureType}.
-		{$p. completedText}.
+		{$T. title}.
+		{$Y. name}. "Yi Jing Hexagram Name"
 		{$n. nullStyle}
 	}.
 	

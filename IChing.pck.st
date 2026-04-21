@@ -1,8 +1,8 @@
-'From Cuis7.7 [latest update: #7879] on 21 April 2026 at 8:56:27 am'!
+'From Cuis7.7 [latest update: #7879] on 21 April 2026 at 11:35:12 am'!
 'Description Book of Changes [I Ching] exploration.
 
 Note HexaGram class comment.'!
-!provides: 'IChing' 1 50!
+!provides: 'IChing' 1 51!
 !requires: 'Cuis-Base' 77 7872 nil!
 !requires: 'UI-Panel' 1 19 nil!
 !requires: 'Graphics-Files-Additional' 1 24 nil!
@@ -10168,7 +10168,7 @@ includeInNewMorphMenu
 	"Return true for all classes that can be instantiated from the menu"
 	^ false! !
 
-!IChingResponsePanel methodsFor: 'GUI building' stamp: 'KenD 21/Apr/2026 08:20:42'!
+!IChingResponsePanel methodsFor: 'GUI building' stamp: 'KenD 21/Apr/2026 11:33:15'!
 buildMorphicWindow
 	"Row of 3 columns: hexagram lines change"
 
@@ -10207,6 +10207,7 @@ buildMorphicWindow
 						#columnLeft);
 		addMorph: hexText.
 
+	layoutMorph addMorph: leftCol.
 
 	(hexagram changedLinesPositions size > 0) ifTrue: [ "have changing lines"
 		midCol :=  self changedLinesText.
@@ -10237,9 +10238,10 @@ buildMorphicWindow
 						proportionalWidth: 0.01 proportionalHeight: 0.01 :: 
 						offAxisEdgeWeight: #columnLeft);
 		addMorph: changeText.
+	
+		layoutMorph addMorph: midCol; addMorph: rightCol.
 	].
 
-	layoutMorph addMorph: leftCol; addMorph: midCol; addMorph: rightCol.
 	self morphExtent: self minimumExtent.! !
 
 !IChingResponsePanel methodsFor: 'GUI building' stamp: 'KenD 20/Apr/2026 13:09:59'!

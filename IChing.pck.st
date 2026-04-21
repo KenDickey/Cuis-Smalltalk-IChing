@@ -1,8 +1,8 @@
-'From Cuis7.7 [latest update: #7872] on 15 April 2026 at 1:00:45 pm'!
+'From Cuis7.7 [latest update: #7879] on 20 April 2026 at 7:23:22 pm'!
 'Description Book of Changes [I Ching] exploration.
 
 Note HexaGram class comment.'!
-!provides: 'IChing' 1 45!
+!provides: 'IChing' 1 47!
 !requires: 'Cuis-Base' 77 7872 nil!
 !requires: 'UI-Panel' 1 19 nil!
 !requires: 'Graphics-Files-Additional' 1 24 nil!
@@ -103,23 +103,13 @@ HexagramPairMorph class
 	instanceVariableNames: ''!
 
 !classDefinition: #IChingResponsePanel category: #IChing!
-Panel subclass: #IChingResponsePanel
-	instanceVariableNames: ''
-	classVariableNames: ''
+SystemWindow subclass: #IChingResponsePanel
+	instanceVariableNames: 'chineseText wbText'
+	classVariableNames: 'ChineseFont'
 	poolDictionaries: ''
 	category: 'IChing'!
 !classDefinition: 'IChingResponsePanel class' category: #IChing!
 IChingResponsePanel class
-	instanceVariableNames: ''!
-
-!classDefinition: #IChingPackage category: #IChing!
-CodePackage subclass: #IChingPackage
-	instanceVariableNames: ''
-	classVariableNames: ''
-	poolDictionaries: ''
-	category: 'IChing'!
-!classDefinition: 'IChingPackage class' category: #IChing!
-IChingPackage class
 	instanceVariableNames: ''!
 
 
@@ -217,19 +207,28 @@ I display a hexagram, including its changes.
 
 (HexagramDisplayPanel forHexagram: (HexaGram cast)) openInWorld.!
 
-!IChingPackage commentStamp: '<historical>' prior: 0!
-See self class >> prePackageInstall!
-
-!Hexagram methodsFor: 'accessing' stamp: 'KenD 15/Jan/2022 13:54:33'!
-changedLinesText
+!Hexagram methodsFor: 'accessing' stamp: 'KenD 20/Apr/2026 13:09:08'!
+changedLinesDescription
 
 	"Answer string with changed line text"
 	| stringResult upperLines lowerLines |
 	stringResult := ''.
 	upperLines :=  upper lines.
 	lowerLines  :=  lower lines.
-	3 to: 1 by: -1 do: [ :idx | | upperLine |
-		upperLine := upperLines at: idx. "6 5 4"
+	1 to: 3 do: [ :place | | lowerLine |
+	lowerLine := lowerLines at: place.
+		(lowerLine willChange) ifTrue: [ 
+			stringResult := 
+				stringResult,
+				lowerLine number asString,
+				' in the ',
+				(#( '1st' '2nd' '3rd' '4th' '5th' '6th' ) at: place),
+				' place', 
+				String newLineString
+		].
+	].
+	1 to: 3 do: [ :idx | | upperLine |
+		upperLine := upperLines at: idx. "4 5 6"
 		(upperLine willChange)
 		ifTrue: [ | position |
 			position := idx + 3.
@@ -241,19 +240,33 @@ changedLinesText
 				' place', 
 				String newLineString]
 	].
-	3 to: 1 by: -1 do: [ :place | | lowerLine |
-		lowerLine := lowerLines at: place. "3 2 1"
-		(lowerLine willChange) ifTrue: [ 
-			stringResult := 
-				stringResult,
-				lowerLine number asString,
-				' in the ',
-				(#( '1st' '2nd' '3rd' '4th' '5th' '6th' ) at: place),
-				' place', 
-				String newLineString
-		]
-	].
+
 	^ stringResult! !
+
+!Hexagram methodsFor: 'accessing' stamp: 'KenD 20/Apr/2026 13:07:44'!
+changedLinesPositions
+
+	"Answer array with changed line indexes (1..6)"
+	| answer upperLines lowerLines |
+	answer  := OrderedCollection new.
+	upperLines :=  upper lines.
+	lowerLines  :=  lower lines.
+	1 to: 3 do: [ :place | | lowerLine |
+	lowerLine := lowerLines at: place.
+		(lowerLine willChange) ifTrue: [ 
+			answer addLast: place.
+		].
+	].
+	1 to: 3 do: [ :idx | | upperLine |
+		upperLine := upperLines at: idx. "4 5 6"
+		(upperLine willChange)
+		ifTrue: [ | position |
+			position := idx + 3.
+			answer addLast: position.
+		].
+	].
+
+	^ answer! !
 
 !Hexagram methodsFor: 'accessing' stamp: 'KenD 12/Apr/2026 15:58:20'!
 chineseText
@@ -10358,43 +10371,83 @@ includeInNewMorphMenu
 	"Return true for all classes that can be instantiated from the menu"
 	^ false! !
 
-!IChingResponsePanel methodsFor: 'GUI building' stamp: 'KenD 25/Feb/2026 16:04:58'!
+!IChingResponsePanel methodsFor: 'GUI building' stamp: 'KenD 20/Apr/2026 19:20:37'!
 buildMorphicWindow
-	"Column of 4 rows: hexagram; changing lines; name; changed hexagram"
+	"Row of 3 columns: hexagram lines change"
 
-	| hexagram topRow midRow changeHex lowerTitle lowerRow |
+	| hexagram changeHex leftCol midCol rightCol hexText changeText |
+	self setLabel: model name.
+	chineseText := model chineseText. "Array of description lineText.."
+	wbText := WilhelmBaynesText at: model kingWenIndex.
+
 	hexagram := self model.
 	self setLabel: hexagram name.
-	self titleMorph 
-		showButtonsNamed: #(close); 
-		dontShrinkTitle.
+	hexText := (TextModelMorph 
+					withText: ((WilhelmBaynesText 
+								at: (hexagram kingWenIndex)) at: 1)).
+	hexText layoutSpec: (LayoutSizeSpec 
+						proportionalWidth: 1.0 proportionalHeight: 1.0 ::
+						offAxisEdgeWeight: #rowTop).
 	layoutMorph 
-		beColumn;
-		axisEdgeWeight: #center;
+		beRow;
+		axisEdgeWeight: #rowLeft;
 		separation: 12.
-	topRow := self newRowFormAndTrigramNames: hexagram.
-	midRow := self changedLinesText.
+		
+	leftCol := LinearLayoutMorph newColumn ::
+		axisEdgeWeight: #columnTop;
+		addMorph: (LabelMorph contents: hexagram name)
+			layoutSpec: (LayoutSizeSpec fixedWidth: 530 proportionalHeight:0.01 :: 						offAxisEdgeWeight: #columnLeft);
+		addMorph: ((LabelMorph 
+							contents: (chineseText at: 1)
+							font: ChineseFont) 
+						layoutSpec: (LayoutSpec keepMorphExtent 
+							:: offAxisEdgeWeight: #columnLeft;
+							proportionalHeight: 0.01; fixedWidth: 530));
+		addMorph: (self newRowFormAndTrigramNames: hexagram)
+					layoutSpec: (LayoutSizeSpec 
+						proportionalWidth: 0.01 proportionalHeight: 0.01 :: offAxisEdgeWeight: 
+						#columnLeft);
+		addMorph: hexText.
+
+	
+	midCol :=  self changedLinesText.
+	" LinearLayoutMorph newColumn ::
+		axisEdgeWeight: #columnTop;
+			addMorph: self changedLinesText 
+		layoutSpec: (LayoutSizeSpec useAll :: 
+			offAxisEdgeWeight: #columnLeft;
+			fixedWidth: 530)."
+				
 	changeHex := hexagram hexagramForChange.
-	lowerTitle := LabelMorph contents: 'Changes to ', changeHex name.
-	lowerRow := self newRowFormAndTrigramNames: changeHex.
-	layoutMorph 
-		addMorph: topRow 
-			layoutSpec: (LayoutSizeSpec new :: offAxisEdgeWeight: #center);
-		addMorph: midRow
-			layoutSpec: (LayoutSizeSpec new :: offAxisEdgeWeight: #columnLeft);
-		addMorph: lowerTitle 
-			layoutSpec: (LayoutSizeSpec new ::
+	changeText := (TextModelMorph 
+		withText: ((WilhelmBaynesText at: (changeHex kingWenIndex)) at: 1)).
+	changeText layoutSpec: (LayoutSizeSpec 
+						proportionalWidth: 1.0 proportionalHeight: 1.0 :: 						offAxisEdgeWeight: #columnLeft).
+	
+	rightCol := LinearLayoutMorph newColumn ::
+		axisEdgeWeight: #columnTop;
+		addMorph: (LabelMorph contents: 'Changes to ', changeHex name)
+			layoutSpec: (LayoutSizeSpec fixedWidth: 530 proportionalHeight:0.01 :: 						offAxisEdgeWeight: #columnLeft);
+		addMorph:  (LabelMorph 
+					contents: (changeHex chineseText at: 1) font: ChineseFont)
+			layoutSpec: (LayoutSpec keepMorphExtent 
+							:: offAxisEdgeWeight: #columnLeft;
+							proportionalHeight: 0.01; fixedWidth: 530);
+		addMorph: (self newRowFormAndTrigramNames: changeHex)
+			layoutSpec: (LayoutSizeSpec 
+						proportionalWidth: 0.01 proportionalHeight: 0.01 :: 
 						offAxisEdgeWeight: #columnLeft);
-		addMorph: lowerRow
-			layoutSpec: (LayoutSizeSpec new :: offAxisEdgeWeight: #center).
+		addMorph: changeText.
+
+	layoutMorph addMorph: leftCol; addMorph: midCol; addMorph: rightCol.
 	self morphExtent: self minimumExtent.! !
 
-!IChingResponsePanel methodsFor: 'GUI building' stamp: 'KenD 15/Jan/2022 17:54:53'!
-changedLinesText
+!IChingResponsePanel methodsFor: 'GUI building' stamp: 'KenD 20/Apr/2026 13:09:59'!
+changedLinesDescription
 
 	"Convert string of lines into layout of labelMorphs"
 	| changes layout |
-	changes := self model changedLinesText lines.
+	changes := self model changedLinesDescription lines.
 	layout := LayoutMorph newColumn ::
 		axisEdgeWeight: #center ; 
 		separation: 4.
@@ -10406,7 +10459,31 @@ changedLinesText
 	layout morphExtent: layoutMorph minimumExtent.
 	^ layout! !
 
-!IChingResponsePanel methodsFor: 'GUI building' stamp: 'KenD 25/Feb/2026 16:04:31'!
+!IChingResponsePanel methodsFor: 'GUI building' stamp: 'KenD 20/Apr/2026 19:16:23'!
+changedLinesText
+	"Convert string of lines into layout of labelMorphs"
+	| hexagram   changes layout |
+	hexagram := self model.
+	changes := hexagram changedLinesPositions.
+	layout := LinearLayoutMorph newColumn ::
+		axisEdgeWeight: #center ; 
+		separation: 4.
+	changes do: [ :indexLess1 |
+		layout 
+			addMorph: ((LabelMorph 
+							contents: (chineseText at: 1 + indexLess1)
+							font: ChineseFont) 
+						layoutSpec: (LayoutSpec keepMorphExtent 
+							:: offAxisEdgeWeight: #columnLeft));
+			addMorph: (TextModelMorph withText: (wbText at: 1 + indexLess1))
+				layoutSpec: (LayoutSizeSpec 
+						proportionalWidth: 1.0 proportionalHeight: 1.0 ::
+						offAxisEdgeWeight: #rowTop).
+	].
+	"layout morphExtent: layoutMorph minimumExtent."
+	^ layout! !
+
+!IChingResponsePanel methodsFor: 'GUI building' stamp: 'KenD 20/Apr/2026 18:34:38'!
 newRowFormAndTrigramNames: aHexagram
 
 	| rowLayout image colLayout |
@@ -10414,19 +10491,22 @@ newRowFormAndTrigramNames: aHexagram
 	image := ImageMorph new :: image: (aHexagram form magnifyTo: 64@64).
 	rowLayout 
 		addMorph: image 
-		layoutSpec: (LayoutSpec keepMorphExtent) :: axisEdgeWeight: #rowLeft;
-		axisEdgeWeight: #center.
+		layoutSpec: (LayoutSizeSpec proportionalWidth: 1.0 proportionalHeight: 0.01) ::
+		 axisEdgeWeight: #rowLeft.
 	colLayout := LayoutMorph newColumn.
 	colLayout layoutSpec: 
-		(LayoutSpec proportionalWidth: 0.6 proportionalHeight: 0.8);
+		(LayoutSizeSpec proportionalWidth: 0.8 proportionalHeight: 0.1);
 		axisEdgeWeight: #center;
 		separation: 6;
 		addMorph: (LabelMorph contents: aHexagram upper name) 
-			layoutSpec: (LayoutSizeSpec new :: offAxisEdgeWeight: #columnLeft);
+			layoutSpec: (LayoutSizeSpec proportionalWidth: 0.01 proportionalHeight: 0.01 :: offAxisEdgeWeight: #columnLeft);
 		addMorph: (LabelMorph contents: aHexagram lower name) 
-			layoutSpec: (LayoutSizeSpec new :: offAxisEdgeWeight: #columnLeft).
-	^ rowLayout addMorph: colLayout;
-		yourself
+			layoutSpec: (LayoutSizeSpec proportionalWidth: 0.01 proportionalHeight: 0.01 :: offAxisEdgeWeight: #columnLeft).
+			
+	rowLayout addMorph: colLayout
+				layoutSpec: (LayoutSizeSpec proportionalWidth: 0.01 proportionalHeight: 0.01 :: offAxisEdgeWeight: #columnLeft).
+	rowLayout morphExtent: rowLayout minimumExtent.
+	^rowLayout
 ! !
 
 !IChingResponsePanel class methodsFor: 'new-morph participation' stamp: 'KenD 16/Jan/2022 15:35:01'!
@@ -10444,15 +10524,14 @@ forHexagram: aHexagram
 
 	^ self open: aHexagram ! !
 
-!IChingPackage class methodsFor: 'installing' stamp: 'KenD 15/Apr/2026 13:00:15'!
-prePackageInstall
-
-	"Load Chinese Unicode Font which can display all I Ching characters"
-	| fontFileEntry |
-	fontFileEntry := (self package fullFileName asFileEntry parent  // 'pingfang-sc-regular.ttf').
-	TrueTypeFontFamily readTrueTypeFontEntry: fontFileEntry.
-	! !
+!IChingResponsePanel class methodsFor: 'class initialization' stamp: 'KenD 20/Apr/2026 13:42:48'!
+initialize
+"
+	IChingResponsePanel initialize.
+"
+	ChineseFont := FontFamily familyName: 'PingFang SC' pointSize: 12.! !
 Hexagram initialize!
 WilhelmBaynesText initialize!
 HexagramPairMorph initialize!
+IChingResponsePanel initialize!
 IChingPackage postPackageInstall!

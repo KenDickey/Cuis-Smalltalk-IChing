@@ -1,8 +1,8 @@
-'From Cuis7.7 [latest update: #7879] on 20 April 2026 at 7:23:22 pm'!
+'From Cuis7.7 [latest update: #7879] on 20 April 2026 at 8:54:30 pm'!
 'Description Book of Changes [I Ching] exploration.
 
 Note HexaGram class comment.'!
-!provides: 'IChing' 1 47!
+!provides: 'IChing' 1 48!
 !requires: 'Cuis-Base' 77 7872 nil!
 !requires: 'UI-Panel' 1 19 nil!
 !requires: 'Graphics-Files-Additional' 1 24 nil!
@@ -345,6 +345,11 @@ duplicatedTrigramColor
 opposingTrigramColor
 
 	^ `TranslucentColor r: 0.661 g: 0.641 b: 0.158 alpha: 0.640`! !
+
+!Hexagram class methodsFor: 'accessing' stamp: 'KenD 20/Apr/2026 20:20:58'!
+receivedText
+
+	^ClassicText ! !
 
 !Hexagram class methodsFor: 'accessing' stamp: 'KenD 3/Mar/2026 14:39:16'!
 symmetricTrigramColor
@@ -10371,7 +10376,7 @@ includeInNewMorphMenu
 	"Return true for all classes that can be instantiated from the menu"
 	^ false! !
 
-!IChingResponsePanel methodsFor: 'GUI building' stamp: 'KenD 20/Apr/2026 19:20:37'!
+!IChingResponsePanel methodsFor: 'GUI building' stamp: 'KenD 20/Apr/2026 20:53:07'!
 buildMorphicWindow
 	"Row of 3 columns: hexagram lines change"
 
@@ -10386,7 +10391,8 @@ buildMorphicWindow
 					withText: ((WilhelmBaynesText 
 								at: (hexagram kingWenIndex)) at: 1)).
 	hexText layoutSpec: (LayoutSizeSpec 
-						proportionalWidth: 1.0 proportionalHeight: 1.0 ::
+						proportionalHeight: 1.0 ::
+						proportionalWidth: 1.0 minimum: self minTextWidth;
 						offAxisEdgeWeight: #rowTop).
 	layoutMorph 
 		beRow;
@@ -10397,10 +10403,10 @@ buildMorphicWindow
 		axisEdgeWeight: #columnTop;
 		addMorph: (LabelMorph contents: hexagram name)
 			layoutSpec: (LayoutSizeSpec fixedWidth: 530 proportionalHeight:0.01 :: 						offAxisEdgeWeight: #columnLeft);
-		addMorph: ((LabelMorph 
+		addMorph: (((LabelMorph 
 							contents: (chineseText at: 1)
-							font: ChineseFont) 
-						layoutSpec: (LayoutSpec keepMorphExtent 
+							font: ChineseFont) color: Color blue darker darker)
+					layoutSpec: (LayoutSpec keepMorphExtent 
 							:: offAxisEdgeWeight: #columnLeft;
 							proportionalHeight: 0.01; fixedWidth: 530));
 		addMorph: (self newRowFormAndTrigramNames: hexagram)
@@ -10409,27 +10415,28 @@ buildMorphicWindow
 						#columnLeft);
 		addMorph: hexText.
 
-	
-	midCol :=  self changedLinesText.
-	" LinearLayoutMorph newColumn ::
-		axisEdgeWeight: #columnTop;
-			addMorph: self changedLinesText 
-		layoutSpec: (LayoutSizeSpec useAll :: 
-			offAxisEdgeWeight: #columnLeft;
-			fixedWidth: 530)."
+
+	(hexagram changedLinesPositions size > 0) ifTrue: [ "have changing lines"
+		midCol :=  self changedLinesText.
 				
-	changeHex := hexagram hexagramForChange.
-	changeText := (TextModelMorph 
-		withText: ((WilhelmBaynesText at: (changeHex kingWenIndex)) at: 1)).
-	changeText layoutSpec: (LayoutSizeSpec 
-						proportionalWidth: 1.0 proportionalHeight: 1.0 :: 						offAxisEdgeWeight: #columnLeft).
+		changeHex := hexagram hexagramForChange.
+		changeText := TextModelMorph 
+			withText: ((WilhelmBaynesText 
+					at: (changeHex kingWenIndex)) at: 1).
+		changeText layoutSpec: (LayoutSizeSpec 
+						proportionalHeight: 1.0 ::
+						proportionalWidth: 1.0 minimum: self minTextWidth;
+						offAxisEdgeWeight: #rowTop).
 	
-	rightCol := LinearLayoutMorph newColumn ::
-		axisEdgeWeight: #columnTop;
+		rightCol := LinearLayoutMorph newColumn ::
+						axisEdgeWeight: #columnTop;
 		addMorph: (LabelMorph contents: 'Changes to ', changeHex name)
-			layoutSpec: (LayoutSizeSpec fixedWidth: 530 proportionalHeight:0.01 :: 						offAxisEdgeWeight: #columnLeft);
-		addMorph:  (LabelMorph 
-					contents: (changeHex chineseText at: 1) font: ChineseFont)
+			layoutSpec: (LayoutSizeSpec 
+							fixedWidth: 530 
+							proportionalHeight:0.01 :: 						offAxisEdgeWeight: #columnLeft);
+		addMorph:  ((LabelMorph 
+					contents: (changeHex chineseText at: 1) font: ChineseFont)  
+							color: Color blue darker darker)
 			layoutSpec: (LayoutSpec keepMorphExtent 
 							:: offAxisEdgeWeight: #columnLeft;
 							proportionalHeight: 0.01; fixedWidth: 530);
@@ -10438,6 +10445,7 @@ buildMorphicWindow
 						proportionalWidth: 0.01 proportionalHeight: 0.01 :: 
 						offAxisEdgeWeight: #columnLeft);
 		addMorph: changeText.
+	].
 
 	layoutMorph addMorph: leftCol; addMorph: midCol; addMorph: rightCol.
 	self morphExtent: self minimumExtent.! !
@@ -10459,7 +10467,7 @@ changedLinesDescription
 	layout morphExtent: layoutMorph minimumExtent.
 	^ layout! !
 
-!IChingResponsePanel methodsFor: 'GUI building' stamp: 'KenD 20/Apr/2026 19:16:23'!
+!IChingResponsePanel methodsFor: 'GUI building' stamp: 'KenD 20/Apr/2026 20:53:21'!
 changedLinesText
 	"Convert string of lines into layout of labelMorphs"
 	| hexagram   changes layout |
@@ -10470,9 +10478,9 @@ changedLinesText
 		separation: 4.
 	changes do: [ :indexLess1 |
 		layout 
-			addMorph: ((LabelMorph 
+			addMorph: (((LabelMorph 
 							contents: (chineseText at: 1 + indexLess1)
-							font: ChineseFont) 
+							font: ChineseFont)  color: Color blue darker darker)
 						layoutSpec: (LayoutSpec keepMorphExtent 
 							:: offAxisEdgeWeight: #columnLeft));
 			addMorph: (TextModelMorph withText: (wbText at: 1 + indexLess1))
@@ -10509,6 +10517,19 @@ newRowFormAndTrigramNames: aHexagram
 	^rowLayout
 ! !
 
+!IChingResponsePanel methodsFor: 'change reporting' stamp: 'KenD 20/Apr/2026 20:03:26'!
+fontPreferenceChanged
+
+	self class fontPrefereneChanged 
+	! !
+
+!IChingResponsePanel methodsFor: 'change reporting' stamp: 'KenD 20/Apr/2026 20:48:04'!
+minTextWidth
+
+	"36 characters at current font"
+	^(ChineseFont widthOf: $乾) * 36
+! !
+
 !IChingResponsePanel class methodsFor: 'new-morph participation' stamp: 'KenD 16/Jan/2022 15:35:01'!
 includeInNewMorphMenu
 	"Not to be instantiated from the menu"
@@ -10524,12 +10545,23 @@ forHexagram: aHexagram
 
 	^ self open: aHexagram ! !
 
-!IChingResponsePanel class methodsFor: 'class initialization' stamp: 'KenD 20/Apr/2026 13:42:48'!
+!IChingResponsePanel class methodsFor: 'class initialization' stamp: 'KenD 20/Apr/2026 20:03:01'!
+fontPrefereneChanged
+"
+	IChingResponsePanel fontPreferenceChanged.
+"
+	ChineseFont := FontFamily 
+						familyName: 'PingFang SC' 
+						pointSize: (Preferences at: #defaultFontSize).! !
+
+!IChingResponsePanel class methodsFor: 'class initialization' stamp: 'KenD 20/Apr/2026 19:53:41'!
 initialize
 "
 	IChingResponsePanel initialize.
 "
-	ChineseFont := FontFamily familyName: 'PingFang SC' pointSize: 12.! !
+	ChineseFont := FontFamily 
+						familyName: 'PingFang SC' 
+						pointSize: (Preferences at: #defaultFontSize).! !
 Hexagram initialize!
 WilhelmBaynesText initialize!
 HexagramPairMorph initialize!

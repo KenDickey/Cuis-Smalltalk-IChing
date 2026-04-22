@@ -1,8 +1,8 @@
-'From Cuis7.7 [latest update: #7879] on 21 April 2026 at 3:15:01 pm'!
+'From Cuis7.7 [latest update: #7879] on 22 April 2026 at 2:13:09 pm'!
 'Description Book of Changes [I Ching] exploration.
 
 Note HexaGram class comment.'!
-!provides: 'IChing' 1 52!
+!provides: 'IChing' 1 53!
 !requires: 'Cuis-Base' 77 7872 nil!
 !requires: 'UI-Panel' 1 19 nil!
 !requires: 'Graphics-Files-Additional' 1 24 nil!
@@ -105,7 +105,7 @@ HexagramPairMorph class
 !classDefinition: #IChingResponsePanel category: #IChing!
 SystemWindow subclass: #IChingResponsePanel
 	instanceVariableNames: 'chineseText wbText'
-	classVariableNames: 'ChineseFont'
+	classVariableNames: 'ChineseFont LargeChineseFont'
 	poolDictionaries: ''
 	category: 'IChing'!
 !classDefinition: 'IChingResponsePanel class' category: #IChing!
@@ -267,6 +267,18 @@ changedLinesPositions
 	].
 
 	^ answer! !
+
+!Hexagram methodsFor: 'accessing' stamp: 'KenD 22/Apr/2026 13:52:40'!
+chineseName
+	"#( description first second third fourth fifth top )"
+	"Unicode srtings probably need font, e.g PingFang SC, to view'."
+	| description index numCharsInName |
+	index := self kingWenIndex.
+	description := (ClassicText at: index) at: 1.
+	numCharsInName := 
+		(#( 9 13 14 21 25 26 28 34 36 37 54 61 62 63 64) includes: index ) ifTrue: [2] ifFalse: [1]. 
+	^ description copyFrom: 1 to: numCharsInName 
+	! !
 
 !Hexagram methodsFor: 'accessing' stamp: 'KenD 12/Apr/2026 15:58:20'!
 chineseText
@@ -1417,6 +1429,21 @@ whole
 bottom
 
 	^ bottom ! !
+
+!Trigram methodsFor: 'accessing' stamp: 'KenD 22/Apr/2026 13:38:14'!
+description
+
+	^ self name caseOf:
+	{    [#heaven] 	-> ['乾 Ch''ien: Creative, heaven'].
+	      [#earth] 	-> ['坤 K''un: Receptive, earth'].
+		[#water] 	-> ['水 K''an: Abyssal, water'].
+		[#fire]  		-> ['火 Li: Clinging, fire'].
+		[#thunder] 	-> ['雷 Chên: Arousing, thunder'].
+		[#mountain] -> ['山 Kên: Stillness, mountain'].
+		[#wind] 	-> ['風 Sun: Gentle, wind'].
+		[#lake] 		-> ['澤 Tui: Joyous, lake'].
+	 }
+	! !
 
 !Trigram methodsFor: 'accessing' stamp: 'KenD 15/Jan/2022 13:33:18'!
 lines
@@ -10544,7 +10571,7 @@ includeInNewMorphMenu
 	"Return true for all classes that can be instantiated from the menu"
 	^ false! !
 
-!IChingResponsePanel methodsFor: 'GUI building' stamp: 'KenD 21/Apr/2026 11:50:59'!
+!IChingResponsePanel methodsFor: 'GUI building' stamp: 'KenD 22/Apr/2026 14:08:13'!
 buildMorphicWindow
 	"Row of 3 columns: hexagram lines change"
 
@@ -10571,16 +10598,23 @@ buildMorphicWindow
 		axisEdgeWeight: #columnTop;
 		addMorph: (LabelMorph contents: 'Context: ', hexagram name)
 			layoutSpec: (LayoutSizeSpec fixedWidth: 530 proportionalHeight:0.01 :: 						offAxisEdgeWeight: #columnLeft);
+		addMorph: (self newRowFormAndTrigramNames: hexagram)
+					layoutSpec: (LayoutSizeSpec 
+						proportionalWidth: 0.01 proportionalHeight: 0.01 :: offAxisEdgeWeight: 
+						#columnLeft);
+		addMorph: (((LabelMorph 
+						contents: hexagram chineseName 
+						font: LargeChineseFont )
+						 color: Color red darker darker)
+					layoutSpec: (LayoutSpec keepMorphExtent 
+							:: offAxisEdgeWeight: #columnLeft;
+							proportionalHeight: 0.01; fixedWidth: 530));
 		addMorph: (((LabelMorph 
 							contents: (chineseText at: 1)
 							font: ChineseFont) color: Color blue darker darker)
 					layoutSpec: (LayoutSpec keepMorphExtent 
 							:: offAxisEdgeWeight: #columnLeft;
 							proportionalHeight: 0.01; fixedWidth: 530));
-		addMorph: (self newRowFormAndTrigramNames: hexagram)
-					layoutSpec: (LayoutSizeSpec 
-						proportionalWidth: 0.01 proportionalHeight: 0.01 :: offAxisEdgeWeight: 
-						#columnLeft);
 		addMorph: hexText.
 
 	layoutMorph addMorph: leftCol.
@@ -10604,16 +10638,22 @@ buildMorphicWindow
 							fixedWidth: 530 
 							proportionalHeight:0.01 :: 
 							offAxisEdgeWeight: #columnLeft);
+		addMorph: (self newRowFormAndTrigramNames: changeHex)
+			layoutSpec: (LayoutSizeSpec 
+						proportionalWidth: 0.01 proportionalHeight: 0.01 :: 
+						offAxisEdgeWeight: #columnLeft);
+		addMorph: (((LabelMorph 
+							contents: changeHex chineseName 
+							font: LargeChineseFont) color: Color red darker darker)
+					layoutSpec: (LayoutSpec keepMorphExtent 
+							:: offAxisEdgeWeight: #columnLeft;
+							proportionalHeight: 0.01; fixedWidth: 530));
 		addMorph:  ((LabelMorph 
 					contents: (changeHex chineseText at: 1) font: ChineseFont)  
 							color: Color blue darker darker)
 			layoutSpec: (LayoutSpec keepMorphExtent 
 							:: offAxisEdgeWeight: #columnLeft;
 							proportionalHeight: 0.01; fixedWidth: 530);
-		addMorph: (self newRowFormAndTrigramNames: changeHex)
-			layoutSpec: (LayoutSizeSpec 
-						proportionalWidth: 0.01 proportionalHeight: 0.01 :: 
-						offAxisEdgeWeight: #columnLeft);
 		addMorph: changeText.
 	
 		layoutMorph addMorph: midCol; addMorph: rightCol.
@@ -10666,7 +10706,7 @@ changedLinesText
 	"layout morphExtent: layoutMorph minimumExtent."
 	^ layout! !
 
-!IChingResponsePanel methodsFor: 'GUI building' stamp: 'KenD 20/Apr/2026 18:34:38'!
+!IChingResponsePanel methodsFor: 'GUI building' stamp: 'KenD 22/Apr/2026 13:24:03'!
 newRowFormAndTrigramNames: aHexagram
 
 	| rowLayout image colLayout |
@@ -10681,9 +10721,9 @@ newRowFormAndTrigramNames: aHexagram
 		(LayoutSizeSpec proportionalWidth: 0.8 proportionalHeight: 0.1);
 		axisEdgeWeight: #center;
 		separation: 6;
-		addMorph: (LabelMorph contents: aHexagram upper name) 
+		addMorph: (LabelMorph contents: aHexagram upper description font: ChineseFont ) 
 			layoutSpec: (LayoutSizeSpec proportionalWidth: 0.01 proportionalHeight: 0.01 :: offAxisEdgeWeight: #columnLeft);
-		addMorph: (LabelMorph contents: aHexagram lower name) 
+		addMorph: (LabelMorph contents: aHexagram lower description font: ChineseFont ) 
 			layoutSpec: (LayoutSizeSpec proportionalWidth: 0.01 proportionalHeight: 0.01 :: offAxisEdgeWeight: #columnLeft).
 			
 	rowLayout addMorph: colLayout
@@ -10729,14 +10769,17 @@ fontPrefereneChanged
 						familyName: 'PingFang SC' 
 						pointSize: (Preferences at: #defaultFontSize).! !
 
-!IChingResponsePanel class methodsFor: 'class initialization' stamp: 'KenD 20/Apr/2026 19:53:41'!
+!IChingResponsePanel class methodsFor: 'class initialization' stamp: 'KenD 22/Apr/2026 14:06:49'!
 initialize
 "
 	IChingResponsePanel initialize.
 "
 	ChineseFont := FontFamily 
 						familyName: 'PingFang SC' 
-						pointSize: (Preferences at: #defaultFontSize).! !
+						pointSize: (Preferences at: #defaultFontSize).
+	LargeChineseFont :=  FontFamily 
+						familyName: 'PingFang SC' 
+						pointSize: 4 * (Preferences at: #defaultFontSize).! !
 Hexagram initialize!
 WilhelmBaynesText initialize!
 HexagramPairMorph initialize!

@@ -1,8 +1,8 @@
-'From Cuis7.7 [latest update: #7879] on 22 April 2026 at 2:13:09 pm'!
+'From Cuis7.7 [latest update: #7879] on 22 April 2026 at 2:46:11 pm'!
 'Description Book of Changes [I Ching] exploration.
 
 Note HexaGram class comment.'!
-!provides: 'IChing' 1 53!
+!provides: 'IChing' 1 54!
 !requires: 'Cuis-Base' 77 7872 nil!
 !requires: 'UI-Panel' 1 19 nil!
 !requires: 'Graphics-Files-Additional' 1 24 nil!
@@ -10571,92 +10571,25 @@ includeInNewMorphMenu
 	"Return true for all classes that can be instantiated from the menu"
 	^ false! !
 
-!IChingResponsePanel methodsFor: 'GUI building' stamp: 'KenD 22/Apr/2026 14:08:13'!
+!IChingResponsePanel methodsFor: 'GUI building' stamp: 'KenD 22/Apr/2026 14:31:34'!
 buildMorphicWindow
 	"Row of 3 columns: hexagram lines change"
 
-	| hexagram changeHex leftCol midCol rightCol hexText changeText |
-	self setLabel: model name.
-	chineseText := model chineseText. "Array of description lineText.."
-	wbText := WilhelmBaynesText at: model kingWenIndex.
-
+	| hexagram changeHex |
 	hexagram := self model.
-	self setLabel: hexagram name.
-	hexText := (TextModelMorph 
-					withText: ((WilhelmBaynesText 
-								at: (hexagram kingWenIndex)) at: 1)).
-	hexText layoutSpec: (LayoutSizeSpec 
-						proportionalHeight: 1.0 ::
-						proportionalWidth: 1.0 minimum: self minTextWidth;
-						offAxisEdgeWeight: #rowTop).
+	
 	layoutMorph 
 		beRow;
 		axisEdgeWeight: #rowLeft;
 		separation: 12.
-		
-	leftCol := LinearLayoutMorph newColumn ::
-		axisEdgeWeight: #columnTop;
-		addMorph: (LabelMorph contents: 'Context: ', hexagram name)
-			layoutSpec: (LayoutSizeSpec fixedWidth: 530 proportionalHeight:0.01 :: 						offAxisEdgeWeight: #columnLeft);
-		addMorph: (self newRowFormAndTrigramNames: hexagram)
-					layoutSpec: (LayoutSizeSpec 
-						proportionalWidth: 0.01 proportionalHeight: 0.01 :: offAxisEdgeWeight: 
-						#columnLeft);
-		addMorph: (((LabelMorph 
-						contents: hexagram chineseName 
-						font: LargeChineseFont )
-						 color: Color red darker darker)
-					layoutSpec: (LayoutSpec keepMorphExtent 
-							:: offAxisEdgeWeight: #columnLeft;
-							proportionalHeight: 0.01; fixedWidth: 530));
-		addMorph: (((LabelMorph 
-							contents: (chineseText at: 1)
-							font: ChineseFont) color: Color blue darker darker)
-					layoutSpec: (LayoutSpec keepMorphExtent 
-							:: offAxisEdgeWeight: #columnLeft;
-							proportionalHeight: 0.01; fixedWidth: 530));
-		addMorph: hexText.
 
-	layoutMorph addMorph: leftCol.
+	layoutMorph addMorph: (self displayHexagram: hexagram banner: 'Context: ', hexagram name).
 
 	(hexagram changedLinesPositions size > 0) ifTrue: [ "have changing lines"
-		midCol :=  self changedLinesText.
-				
 		changeHex := hexagram hexagramForChange.
-		changeText := TextModelMorph 
-			withText: ((WilhelmBaynesText 
-					at: (changeHex kingWenIndex)) at: 1).
-		changeText layoutSpec: (LayoutSizeSpec 
-						proportionalHeight: 1.0 ::
-						proportionalWidth: 1.0 minimum: self minTextWidth;
-						offAxisEdgeWeight: #rowTop).
-	
-		rightCol := LinearLayoutMorph newColumn ::
-						axisEdgeWeight: #columnTop;
-		addMorph: (LabelMorph contents: 'Changing to: ', changeHex name)
-			layoutSpec: (LayoutSizeSpec 
-							fixedWidth: 530 
-							proportionalHeight:0.01 :: 
-							offAxisEdgeWeight: #columnLeft);
-		addMorph: (self newRowFormAndTrigramNames: changeHex)
-			layoutSpec: (LayoutSizeSpec 
-						proportionalWidth: 0.01 proportionalHeight: 0.01 :: 
-						offAxisEdgeWeight: #columnLeft);
-		addMorph: (((LabelMorph 
-							contents: changeHex chineseName 
-							font: LargeChineseFont) color: Color red darker darker)
-					layoutSpec: (LayoutSpec keepMorphExtent 
-							:: offAxisEdgeWeight: #columnLeft;
-							proportionalHeight: 0.01; fixedWidth: 530));
-		addMorph:  ((LabelMorph 
-					contents: (changeHex chineseText at: 1) font: ChineseFont)  
-							color: Color blue darker darker)
-			layoutSpec: (LayoutSpec keepMorphExtent 
-							:: offAxisEdgeWeight: #columnLeft;
-							proportionalHeight: 0.01; fixedWidth: 530);
-		addMorph: changeText.
-	
-		layoutMorph addMorph: midCol; addMorph: rightCol.
+		layoutMorph 
+			addMorph: self changedLinesText;
+			addMorph: (self displayHexagram: changeHex banner:  'Changing to: ', changeHex name).
 	].
 
 	self morphExtent: self minimumExtent.! !
@@ -10678,33 +10611,70 @@ changedLinesDescription
 	layout morphExtent: layoutMorph minimumExtent.
 	^ layout! !
 
-!IChingResponsePanel methodsFor: 'GUI building' stamp: 'KenD 21/Apr/2026 11:53:07'!
+!IChingResponsePanel methodsFor: 'GUI building' stamp: 'KenD 22/Apr/2026 14:44:17'!
 changedLinesText
 	"Convert string of lines into layout of labelMorphs"
-	| hexagram   changes layout |
+	| hexagram englishText changes layout |
 	hexagram := self model.
 	changes := hexagram changedLinesPositions.
+	englishText := WilhelmBaynesText at: (hexagram kingWenIndex).
 	layout := LinearLayoutMorph newColumn ::
 		axisEdgeWeight: #center ; 
-		separation: 4.
-	changes do: [ :indexLess1 |
-		layout 
-			addMorph: (LabelMorph contents: 'Changing Lines:')
+		separation: 4;
+		addMorph: (LabelMorph contents: 'CHANGING LINES:')
 			layoutSpec: (LayoutSizeSpec proportionalHeight:0.01 :: 
 						proportionalWidth: 1.0 minimum: self minTextWidth;
-						offAxisEdgeWeight: #columnLeft);
+						offAxisEdgeWeight: #columnLeft).
+	changes do: [ :indexLess1 |
+		layout 
 			addMorph: (((LabelMorph 
-							contents: (chineseText at: 1 + indexLess1)
+							contents: (hexagram chineseText at: 1 + indexLess1)
 							font: ChineseFont)  color: Color blue darker darker)
 						layoutSpec: (LayoutSpec keepMorphExtent 
 							:: offAxisEdgeWeight: #columnLeft));
-			addMorph: (TextModelMorph withText: (wbText at: 1 + indexLess1))
+			addMorph: (TextModelMorph withText: (englishText at: 1 + indexLess1))
 				layoutSpec: (LayoutSizeSpec 
 						proportionalWidth: 1.0 proportionalHeight: 1.0 ::
 						offAxisEdgeWeight: #rowTop).
 	].
 	"layout morphExtent: layoutMorph minimumExtent."
 	^ layout! !
+
+!IChingResponsePanel methodsFor: 'GUI building' stamp: 'KenD 22/Apr/2026 14:32:35'!
+displayHexagram: hexagram banner: aString
+
+	"Answer a populated LinearLayoutMorph"
+	| englishText |
+	englishText := TextModelMorph 
+					withText: ((WilhelmBaynesText 
+								at: (hexagram kingWenIndex)) at: 1).
+	^LinearLayoutMorph newColumn ::
+		axisEdgeWeight: #columnTop;
+		addMorph: (LabelMorph contents: aString)
+				layoutSpec: (LayoutSizeSpec fixedWidth: 530 proportionalHeight:0.01 :: 						offAxisEdgeWeight: #columnLeft);
+		addMorph: (self newRowFormAndTrigramNames: hexagram)
+				layoutSpec: (LayoutSizeSpec 
+						proportionalWidth: 0.01 proportionalHeight: 0.01 :: offAxisEdgeWeight: 
+						#columnLeft);
+		addMorph: (((LabelMorph 
+						contents: hexagram chineseName 
+						font: LargeChineseFont )
+						 	color: Color red darker darker)
+				layoutSpec: (LayoutSpec keepMorphExtent 
+							:: offAxisEdgeWeight: #columnLeft;
+							proportionalHeight: 0.01; fixedWidth: 530));
+		addMorph: (((LabelMorph 
+							contents: (hexagram chineseText at: 1)
+							font: ChineseFont) 
+								color: Color blue darker darker)
+				layoutSpec: (LayoutSpec keepMorphExtent 
+							:: offAxisEdgeWeight: #columnLeft;
+							proportionalHeight: 0.01; fixedWidth: 530));
+		addMorph: englishText
+				layoutSpec: (LayoutSizeSpec 
+						proportionalHeight: 1.0 ::
+						proportionalWidth: 1.0 minimum: self minTextWidth;
+						offAxisEdgeWeight: #rowTop)! !
 
 !IChingResponsePanel methodsFor: 'GUI building' stamp: 'KenD 22/Apr/2026 13:24:03'!
 newRowFormAndTrigramNames: aHexagram

@@ -1,8 +1,8 @@
-'From Cuis7.7 [latest update: #7879] on 22 April 2026 at 2:46:11 pm'!
+'From Cuis7.7 [latest update: #7879] on 22 April 2026 at 6:19:51 pm'!
 'Description Book of Changes [I Ching] exploration.
 
 Note HexaGram class comment.'!
-!provides: 'IChing' 1 54!
+!provides: 'IChing' 1 57!
 !requires: 'Cuis-Base' 77 7872 nil!
 !requires: 'UI-Panel' 1 19 nil!
 !requires: 'Graphics-Files-Additional' 1 24 nil!
@@ -1536,7 +1536,7 @@ top: upperLine middle: middleLine bottom: lowerLine
 
 	^self new :: top: upperLine middle: middleLine bottom: lowerLine! !
 
-!WilhelmBaynesText class methodsFor: 'class initialization' stamp: 'KenD 21/Apr/2026 08:55:30'!
+!WilhelmBaynesText class methodsFor: 'class initialization' stamp: 'KenD 22/Apr/2026 18:19:28'!
 initialize
 "
 	WilhelmBaynesText initialize.
@@ -2407,7 +2407,7 @@ focus. Conflict within weakens the power to conquer danger without.
     Carefully considers the beginning.
 
 The image indicates that the causes of conflict are latent in the
-opposing tendencies of the two trig rams. Once these opposing
+opposing tendencies of the two trigrams. Once these opposing
 tendencies appear, conflict is inevitable. To avoid it, therefore,
 everything must be taken carefully into consideration in the very
 beginning. If rights and duties are exactly defined, or if, in a
@@ -2497,7 +2497,7 @@ This hexagram is made up of the trigrams K''an, water, and K''un,
 earth, and thus it symbolizes the ground water stored up in the
 earth. In the same way military strength is stored up in the mass of
 the people, invisible in times of peace but always ready for use as a
-source of power. The attributes of the two trig rams are danger inside
+source of power. The attributes of the two trigrams are danger inside
 and obedience must prevail outside.
   Of the individual lines, the one that controls the hexagram is the
 strong nine in the second place, to which the other lines, all
@@ -4577,15 +4577,15 @@ about to crowd out the few remaining strong and superior men. Under
 these circumstances, which are due to the time, it is not favorable
 for the superior man to undertake anything.
   The right behavior in such adverse times is to be deduced from the
-images and their attributes. The lower trigram stands for the earth,
-whose attributes.  The lower trigram stands for the earth, whose
-attributes are docility and devotion. The upper trigram stands for the
-mountain, whose attribute is stillness. This suggests that one should
-submit to the bad time and remain quiet. For it is a question not of
-man''s doing but of time conditions, which, according to the laws of
-heaven, show an alternation of increase and decrease, fullness and
-emptiness. It is impossible to counteract these conditions of the
-time. Hence it is not cowardice but wisdom to submit and avoid action.
+images and their attributes. The lower trigram stands for the earth, 
+whose attributes are docility and devotion. The upper trigram stands 
+for the mountain, whose attribute is stillness. This suggests that one 
+should submit to the bad time and remain quiet. For it is a question 
+not of man''s doing but of time conditions, which, according to the 
+laws of heaven, show an alternation of increase and decrease, 
+fullness and emptiness. It is impossible to counteract these conditions 
+of the time. Hence it is not cowardice but wisdom to submit and 
+avoid action.
 
     THE IMAGE
 
@@ -5317,7 +5317,7 @@ confronted with difficulties, the heart can penetrate the meaning of
 the situation. And once we have gained inner mastery of a problem, it
 will come about naturally that the action we take will succeed. In
 danger all that counts is really carrying out all that has to be done, 
-, thoroughness and going forward, in order not to perish through
+thoroughness and going forward, in order not to perish through
 tarrying in the danger.
   Properly used, danger can have an important meaning as a protective
 measure. Thus heaven has its perilous height protecting it against
@@ -5328,7 +5328,7 @@ against turmoil within.
 
     THE IMAGE
 
-    Water flows on uninterruptedly and reaches its foal:
+    Water flows on uninterruptedly and reaches its goal:
     The image of the Abysmal repeated.
     Thus the superior man walks in lasting virtue
     And carries on the business of teaching.

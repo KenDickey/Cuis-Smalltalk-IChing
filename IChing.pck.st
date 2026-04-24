@@ -1,8 +1,8 @@
-'From Cuis7.7 [latest update: #7879] on 23 April 2026 at 12:39:26 pm'!
+'From Cuis7.7 [latest update: #7879] on 24 April 2026 at 1:36:46 pm'!
 'Description Book of Changes [I Ching] exploration.
 
 Note HexaGram class comment.'!
-!provides: 'IChing' 1 55!
+!provides: 'IChing' 1 58!
 !requires: 'Cuis-Base' 77 7872 nil!
 !requires: 'UI-Panel' 1 19 nil!
 !requires: 'Graphics-Files-Additional' 1 24 nil!
@@ -35,7 +35,7 @@ IChingPackage prePackageInstall!
 !classDefinition: #Hexagram category: #IChing!
 Object subclass: #Hexagram
 	instanceVariableNames: 'upper lower'
-	classVariableNames: 'ClassicText Names PNGForms TrigramDoubleDict2KingWenIndex'
+	classVariableNames: 'BinaryCode ClassicText Names PNGForms TrigramDoubleDict2KingWenIndex'
 	poolDictionaries: ''
 	category: 'IChing'!
 !classDefinition: 'Hexagram class' category: #IChing!
@@ -405,6 +405,27 @@ fromArray: sixNumberArray
 			bottom: (Rudiment fromNumber: (sixNumberArray at: 1))
 			)! !
 
+!Hexagram class methodsFor: 'instance creation' stamp: 'KenD 24/Apr/2026 13:31:09'!
+fromBinaryCode: aNumber
+
+     "aNumber is 0..63 and encodes lines as bits from right (low) to leaft (high).
+      Answer a hexagram without changing lines."
+	| collect |
+	collect := OrderedCollection new.
+	collect add: ((aNumber bitAnd: 2r000001) isZero ifTrue: [8] ifFalse: [7]).
+	collect add: ((aNumber bitAnd: 2r000010) isZero ifTrue: [8] ifFalse: [7]).
+	collect add: ((aNumber bitAnd: 2r000100) isZero ifTrue: [8] ifFalse: [7]).
+	collect add: ((aNumber bitAnd: 2r001000) isZero ifTrue: [8] ifFalse: [7]).
+	collect add: ((aNumber bitAnd: 2r010000) isZero ifTrue: [8] ifFalse: [7]).
+	collect add: ((aNumber bitAnd: 2r100000) isZero ifTrue: [8] ifFalse: [7]).
+	^ self fromArray: collect asArray! !
+
+!Hexagram class methodsFor: 'instance creation' stamp: 'KenD 24/Apr/2026 13:21:37'!
+fromKingWenIndex: aNumber
+
+     "aNumber is 1..64"
+	^ self fromBinaryCode: (BinaryCode at: aNumber)! !
+
 !Hexagram class methodsFor: 'instance creation' stamp: 'KenD 11/Apr/2026 13:58:40'!
 initializedInstance
 "
@@ -412,12 +433,41 @@ initializedInstance
 "
 	^ Hexagram kingWenImage! !
 
+!Hexagram class methodsFor: 'instance creation' stamp: 'KenD 24/Apr/2026 13:34:51'!
+stableFromKingWenIndex: aNumber
+
+     "aNumber is 1..64.
+	Answer a hexagram with no changing lines."
+	^ self fromBinaryCode: (BinaryCode at: aNumber)! !
+
+!Hexagram class methodsFor: 'instance creation' stamp: 'KenD 24/Apr/2026 13:36:16'!
+thresholdFromBinaryCode: aNumber
+
+     "aNumber is 0..63 and encodes lines as bits from right (low) to leaft (high).
+      Answer a hexagram with only changing lines."
+	| collect |
+	collect := OrderedCollection new.
+	collect add: ((aNumber bitAnd: 2r000001) isZero ifTrue: [6] ifFalse: [9]).
+	collect add: ((aNumber bitAnd: 2r000010) isZero ifTrue: [6] ifFalse: [9]).
+	collect add: ((aNumber bitAnd: 2r000100) isZero ifTrue: [6] ifFalse: [9]).
+	collect add: ((aNumber bitAnd: 2r001000) isZero ifTrue: [6] ifFalse: [9]).
+	collect add: ((aNumber bitAnd: 2r010000) isZero ifTrue: [6] ifFalse: [9]).
+	collect add: ((aNumber bitAnd: 2r100000) isZero ifTrue: [6] ifFalse: [9]).
+	^ self fromArray: collect asArray! !
+
+!Hexagram class methodsFor: 'instance creation' stamp: 'KenD 24/Apr/2026 13:34:26'!
+thresholdFromKingWenIndex: aNumber
+
+     "aNumber is 1..64.
+	Answer a hexagram with all changing lines"
+	^ self thresholdFromBinaryCode: (BinaryCode at: aNumber)! !
+
 !Hexagram class methodsFor: 'instance creation' stamp: 'KenD 14/Jan/2022 12:45:09'!
 upper: topHexagram lower: bottomHexagram
 
 	^ self new :: upper: topHexagram lower: bottomHexagram! !
 
-!Hexagram class methodsFor: 'class initialization' stamp: 'KenD 12/Apr/2026 15:48:49'!
+!Hexagram class methodsFor: 'class initialization' stamp: 'KenD 24/Apr/2026 13:09:10'!
 initialize
 "
 	Hexagram initialize.
@@ -426,7 +476,14 @@ initialize
 		initializeNames;
 		initializeKingWenLookup;
 		initializePNGForms;
-		initializeClassicText! !
+		initializeClassicText;
+		initializeBinaryCode! !
+
+!Hexagram class methodsFor: 'class initialization' stamp: 'KenD 24/Apr/2026 13:09:00'!
+initializeBinaryCode
+
+	BinaryCode := #(63 0 17 34 23 58 2 16 55 59 7 56 61 47 4 8 25 38 3 48 41 37 32 1 57 39 33 30 18 45 28 14 60 15 40 5 53 43 20 10 35 49 31 62 24 6 26 22 29 46 9 36 52 11 13 44 54 27 50 19 51 12 21 42)
+	! !
 
 !Hexagram class methodsFor: 'class initialization' stamp: 'KenD 12/Apr/2026 15:51:37'!
 initializeClassicText
@@ -2626,7 +2683,7 @@ inferior people should not come into power. If they have helped, let
 them be paid off with money, but they should not be awarded lands or
 the privileges of rulers, lest power be abused.  ' )
 
-#( '8. Pi / Holding Together [union]
+`#( '8. Pi / Holding Together [union]
 
 The waters on the surface of the earth flow together wherever they
 can, as for example in the ocean, where all the rivers come
@@ -2660,13 +2717,13 @@ the undertaking, for anyone attempting the task without a real calling
 for it only makes confusion worse than if no union at all had taken
 place.
   But when there is a real rallying point, those who at first are
-hesitant or uncertain gradually come in of their own
-accord. Late-comers must suffer the consequences, for in holding
-together the question of the right time is also
-important. Relationships are formed and firmly established according
-to definite inner laws. Common experiences strengthen these ties, and
-he who comes too late to share in these basic experiences must suffer
-for it if, as a straggler, he finds the door locked.
+hesitant or uncertain gradually come in of their own accord.
+Late-comers must suffer the consequences, for in holding
+together the question of the right time is also important.
+Relationships are formed and firmly established according to
+definite inner laws. Common experiences strengthen these ties, and
+he who comes too late to share in these basic experiences must
+suffer for it if, as a straggler, he finds the door locked.
   If a man has recognized the necessity for union and does not feel
 strong enough to function as the center, it is his duty to become a
 member of some other organic fellowship.
@@ -2721,10 +2778,10 @@ never loses his dignity.
 
 We are often among people who do not belong to our own sphere. In that
 case we must beware of being drawn into false intimacy through force
-of habit. Needless to say, this would have evil
-consequences. Maintaining sociability without intimacy is the only
-right attitude toward people, because otherwise we should not be free
-to enter into relationship with people of our own kind later on.
+of habit. Needless to say, this would have evil consequences.
+Maintaining sociability without intimacy is the only right attitude
+toward people, because otherwise we should not be free to enter into
+relationship with people of our own kind later on.
 
 '  'Six in the fourth place means:
     Hold to him outwardly also.
@@ -2865,7 +2922,7 @@ thus compromises his dignity.
     No blame.
 
 If one is in the difficult and responsible position of counselor to a
-powerful man, on should restrain him in such a way that the threat of
+powerful man, one should restrain him in such a way that the threat of
 actual bloodshed may arise. Nonetheless, the power of disinterested
 truth is greater than all theses obstacles. It carries such weight
 that the end is achieved, and all danger of bloodshed and all fear
@@ -2891,17 +2948,17 @@ with friends. Pleasure shared is pleasure doubled.
     Misfortune comes.
 
 Success is at hand. The wind has driven up the rain. A fixed
-standpoint has been reach. This has come about through the cumulation
-of small effects produced by reverence for a superior character. But a
-success thus secured bit by bit calls for great caution. It would be a
-dangerous illusion for anyone to think he could presume upon it. The
-female principle, the weak element that has won the victory, should
-never persist in vaunting it, that would lead to danger. The dark
-power in the moon is strongest when the moon is almost full. When it
-is full and directly opposite the sun, its waning is inevitable. Under
-such circumstances one must be content with what has been achieved. To
-advance any further, before the appropriate time has come, would lead
-to misfortune.  ' )
+standpoint has been reached. This has come about through the
+cumulation of small effects produced by reverence for a superior
+character. But a success thus secured bit by bit calls for great
+caution. It would be a dangerous illusion for anyone to think he could
+presume upon it. The female principle, the weak element that has won
+the victory, should never persist in vaunting it--that would lead to
+danger. The dark power in the moon is strongest when the moon is
+almost full. When it is full and directly opposite the sun, its waning
+is inevitable. Under such circumstances one must be content with what
+has been achieved. To advance any further, before the appropriate time
+has come, would lead to misfortune.  ' )
 
 #( '10. Lü / Treading [conduct]
 
@@ -2927,7 +2984,7 @@ in good part.
 The situation is really difficult. That which is strongest and that
 which is weakest are close together. The weak follows behind the
 strong and worries it. The strong, however, acquiesces and does not
-hurt the weak, because the contact is in goof humor and harmless.
+hurt the weak, because the contact is in good humor and harmless.
   In terms of a human situation, one is handling wild, intractable
 people. In such a case one''s purpose will be achieved if one behaves
 with decorum.  Pleasant manners succeed even with irritable people.
@@ -2954,7 +3011,7 @@ acquiesce and order reigns in society.
 
 The situation is one in which we are still not bound by any
 obligations of social intercourse. If our conduct is simple, we remain
-free of them We can quietly follow our predilections as long as we are
+free of them. We can quietly follow our predilections as long as we are
 content and make not demands on people.
   The meaning of the hexagram is not standstill but progress. A man
 finds himself in an altogether inferior position at the
@@ -2989,7 +3046,7 @@ and does not challenge fate, he remains free of entanglements.
     Thus does a warrior act on behalf of his great prince.
 
 A one-eyed man can indeed see, but not enough for clear vision. A lame
-man can indeed treat, but not enough to make progress. If in spite of
+man can indeed tread, but not enough to make progress. If in spite of
 such defects a man considers himself strong and consequently exposes
 himself to danger, he is inviting disaster, for he is undertaking
 something beyond his strength. This reckless way of plunging ahead,
@@ -10571,12 +10628,14 @@ includeInNewMorphMenu
 	"Return true for all classes that can be instantiated from the menu"
 	^ false! !
 
-!IChingResponsePanel methodsFor: 'GUI building' stamp: 'KenD 22/Apr/2026 14:31:34'!
+!IChingResponsePanel methodsFor: 'GUI building' stamp: 'KenD 24/Apr/2026 13:26:35'!
 buildMorphicWindow
 	"Row of 3 columns: hexagram lines change"
 
 	| hexagram changeHex |
 	hexagram := self model.
+	
+	self setLabel: hexagram name.
 	
 	layoutMorph 
 		beRow;

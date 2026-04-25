@@ -1,6 +1,6 @@
-'From Cuis7.7 [latest update: #7879] on 19 April 2026 at 12:37:00 pm'!
+'From Cuis7.7 [latest update: #7880] on 24 April 2026 at 6:26:35 pm'!
 'Description Ken''s I Ching translation'!
-!provides: 'StyledText-IChing' 1 6!
+!provides: 'StyledText-IChing' 1 7!
 !requires: 'StyledText' 1 77 nil!
 !requires: 'IChing' 1 45 nil!
 SystemOrganization addCategory: #'StyledText-IChing'!
@@ -38,10 +38,10 @@ openStyledTextIChing
 	STETheme beCurrent.
 	^self new open: 'Kens I Ching'! !
 
-!StyleSet methodsFor: '*StyledText-IChing' stamp: 'KenD 19/Apr/2026 08:09:51'!
+!StyleSet methodsFor: '*StyledText-IChing' stamp: 'KenD 24/Apr/2026 18:26:10'!
 createIChingCharacterStyleSet
 	"Build one of the many possible sets of Styles. Maybe other methods like this will be added."
-	| title name banner nullStyle  fontFamily familyName |
+	| title name nullStyle banner fontFamily familyName |
 
 	familyName := 'PingFang SC'. 
 	fontFamily := FontFamily familyNamed:  familyName.  "Loaded by IChingPackage> prePackageInstall".
@@ -49,11 +49,11 @@ createIChingCharacterStyleSet
 	title := self characterStyleNamedOrNew: 'Title'.
 	title privateFamilyName: familyName pointSize: 40 emphasis: AbstractFont boldCode color: Color black.
 
+	banner := self characterStyleNamedOrNew: 'Hexagram Banner'.
+	banner privateFamilyName: familyName pointSize: 32 emphasis: AbstractFont boldCode color: Color black.
+
 	name := self characterStyleNamedOrNew: 'Hexagram Name'.
-	name privateFamilyName: familyName pointSize: 32 emphasis: AbstractFont boldCode color: Color blue darker.
-	
-	banner := self characterStyleNamedOrNew: 'Banner'.
-	banner privateFamilyName: familyName pointSize: 32 emphasis: AbstractFont boldCode  color: Color black. 
+	name privateFamilyName: familyName pointSize: 40 emphasis: AbstractFont boldCode color: Color blue darker.
 
 	nullStyle := CharacterStyle nullStyle.
 

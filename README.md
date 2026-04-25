@@ -3,19 +3,32 @@ Operational Mechanics for the Book of Changes
 
 ````smalltalk
   Feature require: 'IChing'.
-  (IChingResponsePanel forHexagram: (HexaGram cast)) openInWorld.
+  IChingResponsePanel forHexagram: (HexaGram cast).
   "OR WorldMenu -> New Morph.. --> --> IChingResponsePanel"
 ````
 
-The Book of Changes (I Ching or Chou I) is an ancient Chinese oracle.
+The Book of Changes
+(I Ching 易經 =Changes Classic, or Chou I 周易 =Zhou Changes)
+is an ancient Chinese oracle.
 There were earlier precursors, but came into use in something like
-its current form circa 1000 BCE.
+its current form circa 1000 BCE.  It is still in wide use today.
 
-The basic idea is that one has a significant question or problem, asks the question, performs a casting/divination (divides bundle of yarrow stalks or casts coins by formula) and builds up from the bottom a series of 6 broken or whole lines (a hexagram) which comments on the current condition and also yields zero or more "changing lines" which give a new hexagram prognosticating tendency for the future.
+The basic idea is that one has a very important question or problem,
+asks the question, performs a casting/divination (divides bundle of
+yarrow stalks or casts coins by formula) and builds up from the bottom
+a series of 6 broken or whole lines (a hexagram) which comments on the
+current condition and also yields zero or more "changing lines" which
+give a new hexagram prognosticating tendency for the future.
 
-Where am I?  What can I do about it?
+The ancient, bronze age, text was created in what has been described
+as a pre-moral psychology which is very different than our "modern"
+viewpoints.  However the commentaries and interpretations have
+evolved, conservatively, with changing world views.  The usage
+has gone from one of asking for adanced notice to please ancestral spirits
+(just prognosticating) to asking advise on attitude and how to proceed
+(collected wisdom).  Where am I?  What can I do about it?
 
-Many views of this.  See "TheoryOfOperation.txt" in this repo.
+Many views of how this works.  See "TheoryOfOperation.txt" in this repo.
 
 One usually starts being agitated/concerned about something.
 - Posing a terse question requires some focus.
@@ -24,16 +37,9 @@ One usually starts being agitated/concerned about something.
 
 So you really don't have to have a specific set of beliefs about doing this to derive the benefit: more flexible thinking and calming effect similar to Japanese tea ceremony.
 
-There is no interpretation given here.
-
-
-The "Virtual Yarrow Stalks" web page (below) is probably more practical,
-but I could not resist doing a bit of Cuis code.
-And as long as I did this, why not share it?
-
-The Wilhelm Baynes translation is probably the best known:
+The code here yields text derived from the  Wilhelm Baynes translation:
   https://clovemedia.github.io/i_ching
-hardcover:
+hardcover (recommended!):
   https://www.amazon.com/exec/obidos/ASIN/069109750X/qid%3D996565491/sr%3D2-1/102-1791842-4862542
 
 There are many useful references on the Web:
@@ -48,9 +54,18 @@ I particularly like a recent reinterpretation:
 Four translations are available at
   http://www.russellcottrell.com/VirtualYarrowStalks/
 
-Chinese characters require Unicode to display.  To view in Cuis, 
+Chinese characters require Unicode to display.
+
+To view a translation of the bronze age text in Cuis, 
 open or load IChing.txt into tha TextEditor, select All, 
-change font (cmd-k) to KiwiMaru Light.
+change font (cmd-k).
+"pingfang-sc-regular.ttf" font shows as "PingFang SC".
+
+You can also require 'StyledIChing' and
+````smalltalk
+  IChingText openStyledTextIChing.
+````
+to view in the StyledText Editor.
 
 A very interesting observation of hexagram structure is at
   https://www.yijing.nl/structures/Gritter.html   

@@ -3,7 +3,7 @@ Operational Mechanics for the Book of Changes
 
 ````smalltalk
   Feature require: 'IChing'.
-  IChingResponsePanel forHexagram: (HexaGram cast).
+  IChingResponsePanel forHexagram: (Hexagram cast).
   "OR WorldMenu -> New Morph.. --> --> IChingResponsePanel"
 ````
 

@@ -1,6 +1,6 @@
-'From Cuis7.7 [latest update: #7880] on 25 April 2026 at 11:03:14 am'!
+'From Cuis7.7 [latest update: #7880] on 25 April 2026 at 11:14:22 am'!
 'Description Ken''s I Ching translation'!
-!provides: 'StyledText-IChing' 1 8!
+!provides: 'StyledText-IChing' 1 9!
 !requires: 'StyledText' 1 77 nil!
 !requires: 'IChing' 1 45 nil!
 SystemOrganization addCategory: #'StyledText-IChing'!
@@ -38,7 +38,7 @@ openStyledTextIChing
 	STETheme beCurrent.
 	^self new open: 'Kens I Ching'! !
 
-!StyleSet methodsFor: '*StyledText-IChing' stamp: 'KenD 25/Apr/2026 11:03:10'!
+!StyleSet methodsFor: '*StyledText-IChing' stamp: 'KenD 25/Apr/2026 11:03:40'!
 createIChingCharacterStyleSet
 	"Build one of the many possible sets of Styles. Maybe other methods like this will be added."
 	| title name nullStyle banner fontFamily familyName |
@@ -53,7 +53,10 @@ createIChingCharacterStyleSet
 	banner privateFamilyName: familyName pointSize: 32 emphasis: AbstractFont boldCode color: Color black.
 
 	name := self characterStyleNamedOrNew: 'Hexagram Name'.
-	name privateFamilyName: familyName pointSize: 40 emphasis: AbstractFont boldCode color: Color blue darker.
+	name privateFamilyName: familyName 
+			pointSize: 40 
+			emphasis: AbstractFont boldCode 
+			color: Color blue darker.
 
 	nullStyle := CharacterStyle nullStyle.
 

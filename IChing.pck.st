@@ -1,8 +1,8 @@
-'From Cuis7.7 [latest update: #7880] on 25 April 2026 at 12:41:42 pm'!
+'From Cuis7.7 [latest update: #7880] on 26 April 2026 at 1:24:48 pm'!
 'Description Book of Changes [I Ching] exploration.
 
 Note HexaGram class comment.'!
-!provides: 'IChing' 1 59!
+!provides: 'IChing' 1 60!
 !requires: 'Cuis-Base' 77 7872 nil!
 !requires: 'UI-Panel' 1 19 nil!
 !requires: 'Graphics-Files-Additional' 1 24 nil!
@@ -3938,23 +3938,25 @@ life.
     ENTHUSIASM. It furthers one to install helpers
     And to set armies marching.
 
-The time of ENTHUSIASM derives from the fact that there is at hand an
-eminent man who is in sympathy with the spirit of the people and acts
-in accord with it. Hence he finds universal and willing obedience.  To
-arouse enthusiasm it is necessary for a man to adjust himself and his
-ordinances to the character of those whom he has to lead.  The
-inviolability of natural laws rests on this principle of movement
-along the line of least resistance. Theses laws are not forces
-external to things but represent the harmony of movement immanent in
-them. That is why the celestial bodies do not deviate from their
-orbits and why all events in nature occur with fixed regularity. It is
-the same with human society: only such laws are rooted in popular
-sentiment can be enforced, while laws violating this sentiment merely
-arouse resentment.
-   Again, it is enthusiasm that enables us to install helpers for the
-completion of an undertaking without fear of secret opposition.  It is
-enthusiasm too that can unify mass movements, as in war, so that they
-achieve victory.
+The time of ENTHUSIASM derives from the fact that there is
+at hand an eminent man who is in sympathy with the spirit of
+the people and acts in accord with it. Hence he finds
+universal and willing obedience.  To arouse enthusiasm it is
+necessary for a man to adjust himself and his ordinances to
+the character of those whom he has to lead.  The
+inviolability of natural laws rests on this principle of
+movement along the line of least resistance. Theses laws are
+not forces external to things but represent the harmony of
+movement immanent in them. That is why the celestial bodies
+do not deviate from their orbits and why all events in
+nature occur with fixed regularity. It is the same with
+human society: only such laws are rooted in popular
+sentiment can be enforced, while laws violating this
+sentiment merely arouse resentment.
+   Again, it is enthusiasm that enables us to install
+helpers for the completion of an undertaking without fear of
+secret opposition.  It is enthusiasm too that can unify mass
+movements, as in war, so that they achieve victory.
 
     THE IMAGE
 
@@ -3966,82 +3968,91 @@ achieve victory.
     To the Supreme Deity,
     Inviting their ancestors to be present.
 
-When, at the beginning of summer, thunder, electrical energy, comes
-rushing forth from the earth again, and the first thunderstorm
-refreshes nature, a prolonged state of tension is resolved. Joy and
-relief make themselves felt. So too, music has power to ease tension
-within the heart and to loosen the grip of obscure emotions. The
-enthusiasm of the heart expresses itself involuntarily in a burst of
-song, in dance and rhythmic movement of the body. From immemorial
-times the inspiring effect of the invisible sound that moves all
-hearts, and draws them together, has mystified mankind.
-  Rulers have made use of this natural taste for music; they elevated
-and regulated it. Music was looked upon as something serious and holy,
-designed to purify the feelings of men. It fell to music to glorify
-the virtues of heroes and thus to construct a bridge to the world of
-the unseen. In the temple men drew near to God with music and
-pantomimes (out of this later the theater developed). Religious
-feeling for the Creator of the world was united with the most sacred
-of human feelings, that of reverence for the ancestors.  The ancestors
-were invited to these divine services as guests of the Ruler of Heaven
-and as representatives of humanity in the higher regions. This uniting
-of the human past with the Divinity in solemn moments of religious
-inspiration established the bond between God and man. The ruler who
-revered the Divinity in revering his ancestors became thereby the Son
-of Heaven, in whom the heavenly and the earthly world met in mystical
+When, at the beginning of summer, thunder, electrical
+energy, comes rushing forth from the earth again, and the
+first thunderstorm refreshes nature, a prolonged state of
+tension is resolved. Joy and relief make themselves felt. So
+too, music has power to ease tension within the heart and to
+loosen the grip of obscure emotions. The enthusiasm of the
+heart expresses itself involuntarily in a burst of song, in
+dance and rhythmic movement of the body. From immemorial
+times the inspiring effect of the invisible sound that moves
+all hearts, and draws them together, has mystified mankind.
+  Rulers have made use of this natural taste for music; they
+elevated and regulated it. Music was looked upon as
+something serious and holy, designed to purify the feelings
+of men. It fell to music to glorify the virtues of heroes
+and thus to construct a bridge to the world of the
+unseen. In the temple men drew near to God with music and
+pantomimes (out of this later the theater developed).
+Religious feeling for the Creator of the world was united
+with the most sacred of human feelings, that of reverence
+for the ancestors.  The ancestors were invited to these
+divine services as guests of the Ruler of Heaven and as
+representatives of humanity in the higher regions. This
+uniting of the human past with the Divinity in solemn
+moments of religious inspiration established the bond
+between God and man. The ruler who revered the Divinity in
+revering his ancestors became thereby the Son of Heaven, in
+whom the heavenly and the earthly world met in mystical
 contact.
-  These ideas are the final summation of Chinese culture. Confucius
-has said of the great sacrifice at which these rites were performed:
-"He who could wholly comprehend this sacrifice could rule the world 
-as though it were spinning on his hand."
+  These ideas are the final summation of Chinese
+culture. Confucius has said of the great sacrifice at which
+these rites were performed:
+
+  He who could wholly comprehend this sacrifice could rule
+  the world as though it were spinning on his hand.
 
 '  'Six at the beginning means:
     Enthusiasm that expresses itself
     Brings misfortune.
 
-A man in an inferior position has aristocratic connections about which
-he boasts enthusiastically. This arrogance inevitably invites
-misfortune.  Enthusiasm should never be an egotistic emotion; it is
-justified only when it is a general feeling that unites one with
-others.
+A man in an inferior position has aristocratic connections
+about which he boasts enthusiastically. This arrogance
+inevitably invites misfortune.  Enthusiasm should never be
+an egotistic emotion; it is justified only when it is a
+general feeling that unites one with others.
 
 '  'Six in the second place means:
     Firm as a rock. Not a whole day.
     Perseverance brings good fortune.
 
-This describes a person who does not allow himself to be misled by any
-illusions. While others are letting themselves be dazzled by
-enthusiasm, he recognizes with perfect clarity the first signs of the
-time. Thus he neither flatters those above nor neglects those beneath
-him; he is as firm as a rock. When the first sign of discord appears,
-he knows the right moment for withdrawing and does not delay even for
-a day. Perseverance in such conduct will bring good fortune. Confucius
-says about this line:
+This describes a person who does not allow himself to be
+misled by any illusions. While others are letting themselves
+be dazzled by enthusiasm, he recognizes with perfect clarity
+the first signs of the time. Thus he neither flatters those
+above nor neglects those beneath him; he is as firm as a
+rock. When the first sign of discord appears, he knows the
+right moment for withdrawing and does not delay even for a
+day. Perseverance in such conduct will bring good
+fortune. Confucius says about this line:
 
-To know the seeds, that is divine indeed. In his association with
-those above him, the superior man does not flatter. In his association
-with those beneath him, he is not arrogant. For he knows the
-seeds. The seeds are the first imperceptible beginning of movement,
-the first trace of good fortune (or misfortune) that shows itself. The
-superior man perceives the seeds and immediately takes actin. He does
-not wait even a whole day.  In the Book of Changes it is said: "Firm
-as a rock. Not a whole day.  Perseverance brings good fortune."
+  To know the seeds, that is divine indeed. In his
+  association with those above him, the superior man does
+  not flatter. In his association with those beneath him, he
+  is not arrogant. For he knows the seeds. The seeds are the
+  first imperceptible beginning of movement, the first trace
+  of good fortune (or misfortune) that shows itself. The
+  superior man perceives the seeds and immediately takes
+  actin. He does not wait even a whole day.  In the Book of
+  Changes it is said: "Firm as a rock. Not a whole day.
+  Perseverance brings good fortune."
 
-    Firm as a rock, what need of a whole day?
-    The judgment can be known.
-    The superior man knows what is hidden and what is evident.
-    He knows weakness, he knows strength as well.
-    Hence the myriads look up to him.
+  Firm as a rock, what need of a whole day?
+  The judgment can be known.
+  The superior man knows what is hidden and what is evident.
+  He knows weakness, he knows strength as well.
+  Hence the myriads look up to him.
 
 '  'Six in the third place means:
     Enthusiasm that looks upward creates remorse.
     Hesitation brings remorse.
 
-This line is the opposite of the preceding one: the latter bespeaks
-self-reliance, while here there is enthusiastic looking up to a
-leader.  If a man hesitates too long, this also will bring
-remorse. The right moment for approach must be seized: only then will
-he do the right thing.
+This line is the opposite of the preceding one: the latter
+bespeaks self-reliance, while here there is enthusiastic
+looking up to a leader.  If a man hesitates too long, this
+also will bring remorse. The right moment for approach must
+be seized: only then will he do the right thing.
 
 '  'Nine in the fourth place means:
     The source of enthusiasm.
@@ -4050,21 +4061,22 @@ he do the right thing.
     You gather friends around you
     As a hair clasp gathers the hair.
 
-This describes a man who is able to awaken enthusiasm through his own
-sureness and freedom from hesitation. He attracts people because he
-has no doubts and is wholly sincere. Owing to his confidence in them
-he wins their enthusiastic co-operation and attains success. Just as a
-clasp draws the hair together and hold it, so he draws man together by
-the support he gives them.
+This describes a man who is able to awaken enthusiasm
+through his own sureness and freedom from hesitation. He
+attracts people because he has no doubts and is wholly
+sincere. Owing to his confidence in them he wins their
+enthusiastic co-operation and attains success. Just as a
+clasp draws the hair together and hold it, so he draws man
+together by the support he gives them.
 
 '  'Six in the fifth place means:
     Persistently ill, and still does not die.
 
-Here enthusiasm is obstructed. A man is under constant pressure, which
-prevents him from breathing freely. However, this pressure has its
-advantage it prevents him from consuming his powers in empty
-enthusiasm. Thus constant pressure can actually serve to keep one
-alive.
+Here enthusiasm is obstructed. A man is under constant
+pressure, which prevents him from breathing freely. However,
+this pressure has its advantage it prevents him from
+consuming his powers in empty enthusiasm. Thus constant
+pressure can actually serve to keep one alive.
 
 '  'Six at the top means:   
     Deluded enthusiasm.
@@ -4072,37 +4084,41 @@ alive.
     There is no blame.
 
 It is a bad thing for a man to let himself be deluded by
-enthusiasm. But if this delusion has run its course, and he is still
-capable of changing, then he is freed of error. A sober awakening from
-false enthusiasm is quite possible and very favorable.  ' )
+enthusiasm. But if this delusion has run its course, and
+he is still capable of changing, then he is freed of error.
+A sober awakening from false enthusiasm is quite possible
+and very favorable.  ' )
 
 #( '17. Sui / Following
 
-The trigram Tui, the Joyous, whose attribute is gladness, is above;
-Chên, the Arousing, which has the attribute of movement, is below. Joy
-in movement induces following. The Joyous is the youngest daughter,
-while the Arousing is the eldest son. An older man defers to a young
-girl and shows her consideration. By this he moves her to follow him.
+The trigram Tui, the Joyous, whose attribute is gladness, is
+above; Chên, the Arousing, which has the attribute of
+movement, is below. Joy in movement induces following. The
+Joyous is the youngest daughter, while the Arousing is the
+eldest son. An older man defers to a young girl and shows
+her consideration. By this he moves her to follow him.
 
     THE JUDGMENT
 
     FOLLOWING has supreme success.
     Perseverance furthers. No blame.
 
-In order to obtain a following one must first know how to adapt
-oneself. If a man would rule he must first learn to serve, for only in
-this way does he secure from those below him the joyous assent that is
-necessary if they are to follow him. If he has to obtain a following
-by force or cunning, by conspiracy or by creating faction, he
-invariably arouses resistance, which obstructs willing adherence. But
-even joyous movement can lead to evil consequences, hence the added
-stipulation, "Perseverance furthers" that is, consistency in doing
-right together with "No blame." Just as we should not ask others to
-follow us unless this condition is fulfilled, so it is only under this
-condition that we can in turn follow others without coming to harm.
-  The thought of obtaining a following through adaptation to the
-demands of the time is a great and significant idea; this is why the
-appended judgment is so favorable.
+In order to obtain a following one must first know how to
+adapt oneself. If a man would rule he must first learn to
+serve, for only in this way does he secure from those below
+him the joyous assent that is necessary if they are to
+follow him. If he has to obtain a following by force or
+cunning, by conspiracy or by creating faction, he invariably
+arouses resistance, which obstructs willing adherence. But
+even joyous movement can lead to evil consequences, hence
+the added stipulation, "Perseverance furthers" that is,
+consistency in doing right together with "No blame." Just as
+we should not ask others to follow us unless this condition
+is fulfilled, so it is only under this condition that we can
+in turn follow others without coming to harm.
+  The thought of obtaining a following through adaptation to
+the demands of the time is a great and significant idea;
+this is why the appended judgment is so favorable.
 
     THE IMAGE
 
@@ -4112,14 +4128,16 @@ appended judgment is so favorable.
     Goes indoors for rest and recuperation.
 
 In the autumn electricity withdraws into the earth again and
-rests. Here it is the thunder in the middle of the lake that serves as
-the image thunder in its winter rest, not thunder in motion. The idea
-of following in the sense of adaptation to the demands of the time
-grows out of this image. Thunder in the middle of the lake indicates
-times of darkness and rest. Similarly, a superior man, after being
-tirelessly active all day, allows himself rest and recuperation at
-night. No situation can become favorable until one is able to adapt to
-it and does not wear himself out with mistaken resistance.
+rests. Here it is the thunder in the middle of the lake that
+serves as the image thunder in its winter rest, not thunder
+in motion. The idea of following in the sense of adaptation
+to the demands of the time grows out of this image. Thunder
+in the middle of the lake indicates times of darkness and
+rest. Similarly, a superior man, after being tirelessly
+active all day, allows himself rest and recuperation at
+night. No situation can become favorable until one is able
+to adapt to it and does not wear himself out with mistaken
+resistance.
 
 '   'Nine at the beginning means:
     The standard is changing.
@@ -4127,26 +4145,29 @@ it and does not wear himself out with mistaken resistance.
     To go out of the door in company
     Produces deeds.
 
-There are exceptional conditions in which the relation between leader
-and followers changes. It is implicit in the idea of following and
-adaptation that if one wants to lead others, one must remain
-accessible and responsive to the views of those under him. At the same
-time, however, he must have firm principles, so that he does not
-vacillate where there is only a question of current opinion. Once we
-are ready to listen to the opinions of others, we must not associate
-exclusively with people who share our views or with members of our own
-party; instead, we must go out and mingle freely with all sorts of
-people, friends or foes. That is the only way to achieve something.
+There are exceptional conditions in which the relation
+between leader and followers changes. It is implicit in the
+idea of following and adaptation that if one wants to lead
+others, one must remain accessible and responsive to the
+views of those under him. At the same time, however, he must
+have firm principles, so that he does not vacillate where
+there is only a question of current opinion. Once we are
+ready to listen to the opinions of others, we must not
+associate exclusively with people who share our views or
+with members of our own party; instead, we must go out and
+mingle freely with all sorts of people, friends or
+foes. That is the only way to achieve something.
 
 '  'Six in the second place means:
     If one clings to the little boy,
     One loses the strong man.
 
-In friendships and close relationships an individual must make a
-careful choice. He surrounds himself either with good or with bad
-company; he cannot have both at once. If he throws himself away on
-unworthy friends he loses connection with people of intellectual power
-who could further him in the good.
+In friendships and close relationships an individual must
+make a careful choice. He surrounds himself either with good
+or with bad company; he cannot have both at once. If he
+throws himself away on unworthy friends he loses connection
+with people of intellectual power who could further him in
+the good.
 
 '  'Six in the third place means:
     If one clings to the strong man,
@@ -4154,12 +4175,13 @@ who could further him in the good.
     Through following one finds what one seeks.
     It furthers one to remain persevering.
 
-When the right connection with distinguished people has been found, a
-certain loss naturally ensues. A man must part company with the
-inferior and superficial. But in his heart he will feel satisfied,
-because he seeks and needs for the development of his personality. The
-important thing is to remain firm. He must know what he wants and not
-be led astray by momentary inclinations.
+When the right connection with distinguished people has been
+found, a certain loss naturally ensues. A man must part
+company with the inferior and superficial. But in his heart
+he will feel satisfied, because he seeks and needs for the
+development of his personality. The important thing is to
+remain firm. He must know what he wants and not be led
+astray by momentary inclinations.
 
 '  'Nine in the fourth place means:
     Following creates success.
@@ -4167,23 +4189,25 @@ be led astray by momentary inclinations.
     To go one''s way with sincerity brings clarity.
     How could there be blame in this?
 
-It often happens, when a man exerts a certain amount of influence,
-that he obtains a following by condescension toward inferiors. But the
-people who attach themselves to him are not honest in their
-intentions. They seek personal advantage and try to make themselves
-indispensable through flattery and subservience. If one becomes
-accustomed to such satellites and cannot do without them, it brings
-misfortune. Only when a man is completely free from his ego, and
-intent, by conviction, upon what is right and essential, does he
-acquire the clarity that enables him to see through such people, and
-become free of blame.
+It often happens, when a man exerts a certain amount of
+influence, that he obtains a following by condescension
+toward inferiors. But the people who attach themselves to
+him are not honest in their intentions. They seek personal
+advantage and try to make themselves indispensable through
+flattery and subservience. If one becomes accustomed to such
+satellites and cannot do without them, it brings
+misfortune. Only when a man is completely free from his ego,
+and intent, by conviction, upon what is right and essential,
+does he acquire the clarity that enables him to see through
+such people, and become free of blame.
 
 '  'Nine in the fifth place means:
     Sincere in the good. Good fortune.
 
-Every man must have something he follows something that serves him as
-a lodestar. He who follows with conviction the beautiful and the good
-may feel himself strengthened by this saying.
+Every man must have something he follows something that
+serves him as a lodestar. He who follows with conviction the
+beautiful and the good may feel himself strengthened by this
+saying.
 
 '  'Six at the top means:
     He meets with firm allegiance
@@ -4191,26 +4215,28 @@ may feel himself strengthened by this saying.
     The king introduces him
     To the Western Mountain.
 
-This refers to a man, an exalted sage, who has already put the turmoil
-of the world behind him. But a follower appears who understands him
-and is not to be put off. So the sage comes back into the world and
-aids the other in his work. Thus there develops an eternal tie between
-the two.
-  The allegory is chosen from the annals of the Chou dynasty. The
-rulers of this dynasty honored men who had served them well by
-awarding them a place in the royal family''s temple of ancestors on
-the Western Mountain. In this way they were regarded as sharing in the
-destiny of the ruling family.  ' )
+This refers to a man, an exalted sage, who has already put
+the turmoil of the world behind him. But a follower appears
+who understands him and is not to be put off. So the sage
+comes back into the world and aids the other in his
+work. Thus there develops an eternal tie between the two.
+The allegory is chosen from the annals of the Chou
+dynasty. The rulers of this dynasty honored men who had
+served them well by awarding them a place in the royal
+family''s temple of ancestors on the Western Mountain. In
+this way they were regarded as sharing in the destiny of the
+ruling family.  ' )
 
 #( '18. Ku / Work on what has been spoiled [ Decay ]
 
-The Chinese character ku represents a bowl in whose contents worms are
-breeding. This means decay. IT is come about because the gentle
-indifference in the lower trigram has come together with the rigid
-inertia of the upper, and the result is stagnation. Since this implies
-guilt, the conditions embody a demand for removal of the cause. Hence
-the meaning of the hexagram is not simply "what has been spoiled"
-but "work on what has been spoiled".
+The Chinese character ku represents a bowl in whose contents
+worms are breeding. This means decay. IT is come about
+because the gentle indifference in the lower trigram has
+come together with the rigid inertia of the upper, and the
+result is stagnation. Since this implies guilt, the
+conditions embody a demand for removal of the cause. Hence
+the meaning of the hexagram is not simply "what has been
+spoiled" but "work on what has been spoiled".
 
     THE JUDGMENT
 
@@ -4244,15 +4270,17 @@ ending may be followed by a new beginning.
     Thus the superior man stirs up the people
     And strengthens their spirit.
 
-When the wind blow s slow on the mountain, it is thrown back and
-spoils the vegetation. This contains a challenge to improvement. It is
-the same with debasing attitudes and fashions; they corrupt human
-society. His methods likewise must be derived from the two trigrams,
-but in such a way that their effects unfold in orderly sequence. The
-superior must first remove stagnation by stirring up public opinion,
-as the wind stirs up everything, and must strengthen and tranquilize
-the character of the people, as the mountain gives tranquillity and
-nourishment to all that grows in its vicinity.
+When the wind blows low on the mountain, it is thrown back
+and spoils the vegetation. This contains a challenge to
+improvement. It is the same with debasing attitudes and
+fashions; they corrupt human society. His methods likewise
+must be derived from the two trigrams, but in such a way
+that their effects unfold in orderly sequence. The superior
+must first remove stagnation by stirring up public opinion,
+as the wind stirs up everything, and must strengthen and
+tranquilize the character of the people, as the mountain
+gives tranquillity and nourishment to all that grows in its
+vicinity.
 
 '  'Six in the beginning means:
     Setting right what has been spoiled by the father.
@@ -4260,76 +4288,85 @@ nourishment to all that grows in its vicinity.
     No blame rests upon the departed father. 
     Danger. In the end good fortune.
 
-Rigid adherence to tradition has resulted in decay. But the decay has
-not yet penetrated deeply and so can still be easily remedied. It is
-as if a son were compensated for the decay his father allowed to creep
-in. Then no blame attaches to the father. However, one must not
-overlook the danger or take the matter too lightly. Only if one is
-conscious of the danger connected with every reform will everything go
-well in the end.
+Rigid adherence to tradition has resulted in decay. But the
+decay has not yet penetrated deeply and so can still be
+easily remedied. It is as if a son were compensated for the
+decay his father allowed to creep in. Then no blame attaches
+to the father. However, one must not overlook the danger or
+take the matter too lightly. Only if one is conscious of the
+danger connected with every reform will everything go well
+in the end.
 
 '  'Nine in the second place means:
     Setting right what has been spoiled by the mother.
     One must not be too persevering.
 
-This refers to mistakes that as a result of weakness have brought
-about decay,  hence the symbol, "what has been spoiled by the mother. "
-In setting things right in such a case, a certain gentle consideration
-is called for. In order not to wound, one should not attempt to
-proceed too drastically.  '  'Nine in the third place means: Setting
-right what has been spoiled by the father.  There will be a little
-remorse. No great blame.
+This refers to mistakes that as a result of weakness have
+brought about decay, hence the symbol, "what has been
+spoiled by the mother." In setting things right in such a
+case, a certain gentle consideration is called for. In order
+not to wound, one should not attempt to proceed too
+drastically.
 
-This describes a man who proceeds a little too energetically in
-righting the mistakes of the past. Now and then, as a result, minor
-discourse and annoyances will surely develop. But too much energy is
-better than too little.  Therefore, although he may at times have
-slight cause for regret, he remains free of any serious blame.
+'  'Nine in the third place means: Setting
+right what has been spoiled by the father.  There will be a
+little remorse. No great blame.
+
+This describes a man who proceeds a little too energetically
+in righting the mistakes of the past. Now and then, as a
+result, minor discourse and annoyances will surely
+develop. But too much energy is better than too little.
+Therefore, although he may at times have slight cause for
+regret, he remains free of any serious blame.
 
 '  'Six in the fourth place means:
     Tolerating what has been spoiled by the father.
     In continuing one sees humiliation.
 
-This shows the situation of someone too weak to take measures against
-decay that has its roots in the past and is just beginning to manifest
-itself. It is allowed to run its course. If this continues,
-humiliation will result.
+This shows the situation of someone too weak to take
+measures against decay that has its roots in the past and is
+just beginning to manifest itself. It is allowed to run its
+course. If this continues, humiliation will result.
 
 '  'Six in the fifth place means:
     Setting right what has been spoiled by the father.
     One meets with praise.
 
-An individual is confronted with corruption originating from neglect
-in former times. He lacks the power to ward it off alone, but with
-able helpers he can at least bring about a thorough reform, if he
-cannot create a new beginning, and this also is praiseworthy.
+An individual is confronted with corruption originating from
+neglect in former times. He lacks the power to ward it off
+alone, but with able helpers he can at least bring about a
+thorough reform, if he cannot create a new beginning, and
+this also is praiseworthy.
 
 '  'Nine at the top means:
     He does not serve kings and princes,
     Sets himself higher goals.
 
-Not every man has an obligation to mingle in the affairs of the
-world. There are some who are developed to such a degree that they are
-justified in letting the world go its own way and refusing to enter
-public life with a view to reforming it. But this does not imply a
-right to remain idle or to sit back and merely criticize. Such
-withdrawal is justified only when we strive to realize in ourselves
-the higher aims of mankind. For although the sage remains distant from
-the turmoil of daily life, he creates incomparable human values for
-the future.  ' )
+Not every man has an obligation to mingle in the affairs of
+the world. There are some who are developed to such a degree
+that they are justified in letting the world go its own way
+and refusing to enter public life with a view to reforming
+it. But this does not imply a right to remain idle or to sit
+back and merely criticize. Such withdrawal is justified only
+when we strive to realize in ourselves the higher aims of
+mankind. For although the sage remains distant from the
+turmoil of daily life, he creates incomparable human values
+for the future.  ' )
 
 #( '19. Lin / Approach
 
-The Chinese word lin has a range of meanings that is not exhausted by
-any single word of another language. The ancient explanations in the
-Book of Changes give as its first meaning, "becoming great." What
-becomes great are the two strong lines growing into the hexagram from
-below; the light-giving power expands with them. The meaning is then
-further extended to include the concept of approach, especially the
-approach of what is lower. Finally the meaning includes the attitude
-of condescension of a man in high position toward the people, and in
-general the setting to work on affairs. This hexagram is linked with
-the twelfth month (January-February), when after the winter solstice,
+The Chinese word lin has a range of meanings that is not
+exhausted by any single word of another language. The
+ancient explanations in the Book of Changes give as its
+first meaning, "becoming great." What becomes great are the
+two strong lines growing into the hexagram from below; the
+light-giving power expands with them. The meaning is then
+further extended to include the concept of approach,
+especially the approach of what is lower. Finally the
+meaning includes the attitude of condescension of a man in
+high position toward the people, and in general the setting
+to work on affairs. This hexagram is linked with the twelfth
+month (January-February), when after the winter solstice,
 the light power begins to ascend again.  THE JUDGMENT
 
     APPROACH has supreme success.
@@ -4338,15 +4375,16 @@ the light power begins to ascend again.  THE JUDGMENT
     There will be misfortune.
 
 The hexagram as a whole points to a time of joyous, hopeful
-progress. Spring is approaching. Joy and forbearance bring high and
-low nearer together.  Success is certain. But we must work with
-determination and perseverance to make full use of the propitiousness
-of the time. And on thing more: spring does not last forever. In the
-eighth month the aspects are reversed.  Then only two strong, light
-lines are left; these do not advance but are in retreat (see next
-hexagram). We must take heed of this change in good time.  If we meet
-evil before it becomes reality, before it has even begun to stir, we can
-master it.
+progress. Spring is approaching. Joy and forbearance bring
+high and low nearer together.  Success is certain. But we
+must work with determination and perseverance to make full
+use of the propitiousness of the time. And on thing more:
+spring does not last forever. In the eighth month the
+aspects are reversed.  Then only two strong, light lines are
+left; these do not advance but are in retreat (see next
+hexagram). We must take heed of this change in good time.
+If we meet evil before it becomes reality, before it has
+even begun to stir, we can master it.
 
     THE IMAGE
 
@@ -4357,36 +4395,39 @@ master it.
     And without limits
     In his tolerance and protection of the people.
 
-The earth borders upon the lake from above. This symbolizes the
-approach and condescension of the man of higher position to those
-beneath him. The two parts of the image indicate what his attitude
-toward these people will be.  Just as the lake is inexhaustible in
-depth, so the sage is inexhaustible in his readiness to teach mankind,
-and just as the earth is boundlessly wide, sustaining and caring for
-all creatures on it, so the sage sustains and cares for all people and
+The earth borders upon the lake from above. This symbolizes
+the approach and condescension of the man of higher position
+to those beneath him. The two parts of the image indicate
+what his attitude toward these people will be.  Just as the
+lake is inexhaustible in depth, so the sage is inexhaustible
+in his readiness to teach mankind, and just as the earth is
+boundlessly wide, sustaining and caring for all creatures on
+it, so the sage sustains and cares for all people and
 excludes no part of humanity.
 
 '   'Nine at the beginning means:
     Joint approach.
     Perseverance brings good fortune.
 
-The good begins to prevail and to find response in influential
-circles. This in turn is an incentive to men of ability. IT is well to
-join this upward trend, but we must not let ourselves be carried away
-by the current of the time; we must adhere perseveringly to what is
-right. This bring good fortune.
+The good begins to prevail and to find response in
+influential circles. This in turn is an incentive to men of
+ability. It is well to join this upward trend, but we must
+not let ourselves be carried away by the current of the
+time; we must adhere perseveringly to what is right. This
+bring good fortune.
 
 '  'Nine in the second place means:
     Joint approach.
     Good fortune.
     Everything furthers.
 
-When the stimulus to approach comes from a high place, and when a man
-has the inner strength and consistency that need no admonition, good
-fortune will ensue. Nor need the future cause any concern. He is well
-aware that everything earthly is transitory, and that a descent
-follows upon every rise, but need not be confused by this universal
-law of fate. Everything serves to further. Therefore he will travel
+When the stimulus to approach comes from a high place, and
+when a man has the inner strength and consistency that need
+no admonition, good fortune will ensue. Nor need the future
+cause any concern. He is well aware that everything earthly
+is transitory, and that a descent follows upon every rise,
+but need not be confused by this universal law of
+fate. Everything serves to further. Therefore he will travel
 the paths of life swiftly, honestly, and valiantly.
 
 '  'Six in the third place means:
@@ -4395,23 +4436,25 @@ the paths of life swiftly, honestly, and valiantly.
     If one is induced to grieve over it,
     One becomes free of blame.
 
-Things are going well for a man: he achieves power and influence. But
-in this lies the danger that he may relax, and confident of his
-position, allow the easygoing, careless mood to show itself in his
-dealings with other people.  This would inevitably be harmful. But
-there is possibility of a change of mood. If he regrets his mistaken
-attitude and feels the responsibility of an influential position, he
+Things are going well for a man: he achieves power and
+influence. But in this lies the danger that he may relax,
+and confident of his position, allow the easygoing, careless
+mood to show itself in his dealings with other people.  This
+would inevitably be harmful. But there is possibility of a
+change of mood. If he regrets his mistaken attitude and
+feels the responsibility of an influential position, he
 frees himself of faults.
 
 '  'Six in the fourth place means:
     Complete approach.
     No blame.
 
-While the three lower lines indicate rise to power and influence, the
-three upper lines show the attitude of persons in higher position
-toward those of lower rank for whom they procure influence. Here is
-shown the open- minded approach of a person of high rank to a man of
-ability whom he draws in to his own circle, regardless of class
+While the three lower lines indicate rise to power and
+influence, the three upper lines show the attitude of
+persons in higher position toward those of lower rank for
+whom they procure influence. Here is shown the open-minded
+approach of a person of high rank to a man of ability whom
+he draws in to his own circle, regardless of class
 prejudice. This is very favorable.
 
 '  'Six in the fifth place means:
@@ -4419,41 +4462,45 @@ prejudice. This is very favorable.
     This is right for a great prince.
     Good fortune.
 
-A prince, or anyone in a leading position, must have the wisdom to
-attract to himself people of ability who are expert in directing
-affairs. His wisdom consists both in selecting the right people and in
-allowing those chosen to have a free hand without interference from
-him.  For only through such self- restraint will he find the experts
-needed to satisfy all of his requirements.
+A prince, or anyone in a leading position, must have the
+wisdom to attract to himself people of ability who are
+expert in directing affairs. His wisdom consists both in
+selecting the right people and in allowing those chosen to
+have a free hand without interference from him.  For only
+through such self-restraint will he find the experts needed
+to satisfy all of his requirements.
 
 '  'Six at the top means:
     Great hearted approach.
-    Good-hearted approach.
     Good fortune. No blame.
 
-A sage who has put the world behind him and who in spirit has already
-withdrawn from life may, under certain circumstances, decide to return
-once more to the here and now and to approach other men. This means
-great good fortune for the men whom he teaches and helps. And for him
-this great hearted humbling of himself is blameless.  ' )
+A sage who has put the world behind him and who in spirit
+has already withdrawn from life may, under certain
+circumstances, decide to return once more to the here and
+now and to approach other men. This means great good fortune
+for the men whom he teaches and helps. And for him this
+greathearted humbling of himself is blameless.  ' )
 
 #( '20. Kuan / Contemplation (View)
 
-A slight variation of tonal stress gives the Chinese name for this
-hexagram a double meaning.  It means both contemplating and being
-seen, in the sense of being an example. These ideas are suggested by
-the fact that the hexagram can be understood as picturing a type of
-tower characteristic of ancient China.
-  A tower of this kind commanded a wide view of the country; at the same
-time, when situated on a mountain, it became a landmark that could be
-seen for miles around. Thus the hexagram shows a ruler who
-contemplates the law of heaven above him and the ways of the people
-below, and who, by means of good government, sets a lofty example to
-the masses.
+A slight variation of tonal stress gives the Chinese name
+for this hexagram a double meaning.  It means both
+contemplating and being seen, in the sense of being an
+example. These ideas are suggested by the fact that the
+hexagram can be understood as picturing a type of tower
+characteristic of ancient China.
+  A tower of this kind commanded a wide view of the country;
+at the same time, when situated on a mountain, it became a
+landmark that could be seen for miles around. Thus the
+hexagram shows a ruler who contemplates the law of heaven
+above him and the ways of the people below, and who, by
+means of good government, sets a lofty example to the
+masses.
   This hexagram is linked with the eight month
-(September-October). The light-giving power retreats and the dark
-power is again on the increase.  However, this aspect is not material
-in the interpretation of the hexagram as a whole.
+(September-October). The light-giving power retreats and the
+dark power is again on the increase.  However, this aspect
+is not material in the interpretation of the hexagram as a
+whole.
 
     THE JUDGMENT
 
@@ -4461,23 +4508,26 @@ in the interpretation of the hexagram as a whole.
     But not yet the offering.
     Full of trust they look up to him.
 
-The sacrificial ritual in China began with an ablution and a libation
-by which the Deity was invoked, after which the sacrifice was
-offered. The moment of time between these two ceremonies is the most
-sacred of all, the moment of deepest inner concentration. If piety is
-sincere and expressive of real faith, the contemplation of it has a
-transforming awe-spiring effect on those who witness it.  Thus also in
-nature a holy seriousness is to be seen in the fact that natural
-occurrences are uniformly subject to law. Contemplation of the divine
-meaning underlying the workings of the universe gives to the man who
-is called upon to influence others the means of producing like
-effects. This requires that power of inner concentration which
-religious contemplation develops in great men strong in faith. It
-enables them to apprehend the mysterious and divine laws of life, and
-by means of profoundest inner concentration they give expression to
-these laws in their own persons. Thus a hidden spiritual power
-emanates from them, influencing and dominating others without their
-being aware of how it happens.
+The sacrificial ritual in China began with an ablution and a
+libation by which the Deity was invoked, after which the
+sacrifice was offered. The moment of time between these two
+ceremonies is the most sacred of all, the moment of deepest
+inner concentration. If piety is sincere and expressive of
+real faith, the contemplation of it has a transforming
+awe-spiring effect on those who witness it.
+  Thus also in nature a holy seriousness is to be seen in
+the fact that natural occurrences are uniformly subject to
+law. Contemplation of the divine meaning underlying the
+workings of the universe gives to the man who is called upon
+to influence others the means of producing like
+effects. This requires that power of inner concentration
+which religious contemplation develops in great men strong
+in faith. It enables them to apprehend the mysterious and
+divine laws of life, and by means of profoundest inner
+concentration they give expression to these laws in their
+own persons. Thus a hidden spiritual power emanates from
+them, influencing and dominating others without their being
+aware of how it happens.
 
     THE IMAGE
 
@@ -4487,118 +4537,146 @@ being aware of how it happens.
     Contemplated the people,
     And gave them instruction.
 
-When the wind blows over the earth it goes far and wide, and the grass
-must bend to its power. These two occurrences find confirmation in the
-hexagram.  The two images are used to symbolize a practice of the
-kings of old; in making regular journeys the ruler could, in the first
-place, survey his realm and make certain that none of the existing
-usages of the people escaped notice; in the second, he could exert
-influence through which such customs as were unsuitable could be
-changed.
+When the wind blows over the earth it goes far and wide, and
+the grass must bend to its power. These two occurrences find
+confirmation in the hexagram.  The two images are used to
+symbolize a practice of the kings of old; in making regular
+journeys the ruler could, in the first place, survey his
+realm and make certain that none of the existing usages of
+the people escaped notice; in the second, he could exert
+influence through which such customs as were unsuitable
+could be changed.
   All of this points to the power possessed by a superior
-personality. On the one hand, such a man will have a view of the real
-sentiments of the great mass of humanity and therefore cannot be
-deceived; on the other, he will impress the people so profoundly, by
-his mere existence and by the impact of his personality, that they
-will be swayed by him as the grass by the wind.
+personality. On the one hand, such a man will have a view of
+the real sentiments of the great mass of humanity and
+therefore cannot be deceived; on the other, he will impress
+the people so profoundly, by his mere existence and by the
+impact of his personality, that they will be swayed by him
+as the grass by the wind.
 
 '   'Six at the beginning means:
     Boy like contemplation.
     For an inferior man, no blame.
     For a superior man, humiliation.
 
-This means contemplation from a distance, without comprehension. A man
-of influence is at hand, abut his influence is not understood by the
-common people. This matters little in the case of the masses, for they
-benefit by the actions of the ruling sage whether they understand them
-or not. But for a superior man it is a disgrace. He must not content
-himself with a shallow, thoughtless view of prevailing forces; he must
-contemplate them as a connected whole and try to understand them.
+This means contemplation from a distance, without
+comprehension. A man of influence is at hand, abut his
+influence is not understood by the common people. This
+matters little in the case of the masses, for they benefit
+by the actions of the ruling sage whether they understand
+them or not. But for a superior man it is a disgrace. He
+must not content himself with a shallow, thoughtless view of
+prevailing forces; he must contemplate them as a connected
+whole and try to understand them.
 
 '  'Six in the second place means:
     Contemplation through the crack of the door.
     Furthering for the perseverance of a woman.
 
-Through the crack of the door one has a limited outlook; one looks
-outward from within. Contemplation is subjectively limited. One tends
-to relate everything to oneself and cannot put oneself in another''s
-place and understand his motives. This is appropriate for a good
-housewife. It is not necessary for her to be conversant with the
-affairs of the world. But for a man who must take active part in
-public life, such a narrow, egotistic way of contemplating things is
-of course harmful.
+Through the crack of the door one has a limited outlook; one
+looks outward from within. Contemplation is subjectively
+limited. One tends to relate everything to oneself and
+cannot put oneself in another''s place and understand his
+motives. This is appropriate for a good housewife. It is not
+necessary for her to be conversant with the affairs of the
+world. But for a man who must take active part in public
+life, such a narrow, egotistic way of contemplating things
+is of course harmful.
 
 '  'Six in the third place means:
     Contemplation of my life 
     Decides the choice
     Between advance and retreat.
 
-This is the place of transition. We no longer look outward to receive
-pictures that are more or less limited and confused, but direct out
-contemplation upon ourselves in order to find a guideline for our
-decisions. This self- contemplation means the overcoming of naive
-egotism in the person who sees everything solely form his own
+This is the place of transition. We no longer look outward
+to receive pictures that are more or less limited and
+confused, but direct out contemplation upon ourselves in
+order to find a guideline for our decisions. This self-
+contemplation means the overcoming of naive egotism in the
+person who sees everything solely form his own
 standpoint. He begins to reflect and in this way acquires
-objectivity. However, self-knowledge does not mean preoccupation with
-one''s own thoughts; rather, it means concern about the effects one
-creates. It is only the effects our lives produce that give us the
-right to judge whether what we have done means progress or regression.
+objectivity. However, self-knowledge does not mean
+preoccupation with one''s own thoughts; rather, it means
+concern about the effects one creates. It is only the
+effects our lives produce that give us the right to judge
+whether what we have done means progress or regression.
 
 '  'Six in the fourth place means:
     Contemplation of the light of the kingdom.
     It furthers one to exert influence as the guest of a king.
 
-This describes a man who understands the secrets by which a kingdom
-can be made to flourish. Such a man must be given an authoritative
-position, in which he can exert influence. He should be, so to speak,
-a guest, that is, he should be honored and act independently, and
-should not be used as a tool.
+This describes a man who understands the secrets by which a
+kingdom can be made to flourish. Such a man must be given an
+authoritative position, in which he can exert influence. He
+should be, so to speak, a guest, that is, he should be
+honored and act independently, and should not be used as a
+tool.
+
+'  'Nine in the fifth place means:
+    Contemplation of my life.
+    The superior man is without blame.
+
+A man in an authoritative position to whom others look up
+must always be ready for self-examination.  The right sort
+of examination, however, consists not in idle brooding over
+oneself but in examining the effects one produces.  Only
+when these effects are good, and when one''s influence on
+others is good, will the contemplation of one''s own life
+bring the satisfaction of knowing oneself to be free of
+mistakes.
+
 
 '  'Nine at the top means:
     Contemplation of his life.
     The superior man is without blame.
 
-While the preceding line represents a man who contemplates himself,
-here in the highest place everything that is personal, related to the
-ego, is excluded.  The picture is that of a sage who stands outside
-the affairs of the world.  Liberated from his ego, he contemplates the
-laws of life and so realizes that knowing how to become free of blame
-is the highest good.  ' )
+While the preceding line represents a man who contemplates
+himself, here in the highest place everything that is
+personal, related to the ego, is excluded.  The picture is
+that of a sage who stands outside the affairs of the world.
+Liberated from his ego, he contemplates the laws of life and
+so realizes that knowing how to become free of blame is the
+highest good.  ' )
 
 #( '21.  Shih Ho / Biting Through
 
-This hexagram represents an open mouth with an obstruction (in the
-fourth place) between the teeth. As a result the lips cannot meet. To
-bring them together one must bite energetically through the
-obstacle. Since the hexagram is made up of the trigrams for thunder
-and for lightning, it indicates how obstacles are forcibly removed in
-nature.  Energetic biting through overcomes the obstacle that prevents
-joining of the lips; the storm with its thunder and lightning
-overcomes the disturbing tension in nature. Recourse to law and
-penalties overcomes the disturbances of harmonious social life caused
-by criminals and slanderers. The theme of this hexagram is a criminal
-lawsuit, in contradistinction to that of Sung, CONFLICT, which refers
-to civil suits.
+This hexagram represents an open mouth with an obstruction
+(in the fourth place) between the teeth. As a result the
+lips cannot meet. To bring them together one must bite
+energetically through the obstacle. Since the hexagram is
+made up of the trigrams for thunder and for lightning, it
+indicates how obstacles are forcibly removed in nature.
+Energetic biting through overcomes the obstacle that
+prevents joining of the lips; the storm with its thunder and
+lightning overcomes the disturbing tension in
+nature. Recourse to law and penalties overcomes the
+disturbances of harmonious social life caused by criminals
+and slanderers. The theme of this hexagram is a criminal
+lawsuit, in contradistinction to that of Sung, CONFLICT,
+which refers to civil suits.
 
     THE JUDGMENT
 
     BITING THROUGH has success.
     It is favorable to let justice be administered.
 
-When an obstacle to union arises, energetic biting through brings
-success.  This is true in all situations. Whenever unity cannot be
-established, the obstruction is due to a talebearer and traitor who is
-interfering and blocking the way. To prevent permanent injury,
-vigorous measures must be taken at once. Deliberate obstruction of
-this sort does not vanish of its own accord.  Judgment and punishment
-are required to deter or obviate it.
-  However, it is important to proceed in the right way. The hexagram
-combines Li, clarity, and Chên, excitement. Li is yielding, Chên is
-hard.  Unqualified hardness and excitement would be too violent in
-meting out punishment; unqualified clarity and gentleness would be too
-weak. The two together create the just measure. It is of moment that
-the man who makes the decisions (represented by the fifth line) is
-gentle by nature, while he commands respect by his conduct in his
+When an obstacle to union arises, energetic biting through
+brings success.  This is true in all situations. Whenever
+unity cannot be established, the obstruction is due to a
+talebearer and traitor who is interfering and blocking the
+way. To prevent permanent injury, vigorous measures must be
+taken at once. Deliberate obstruction of this sort does not
+vanish of its own accord.  Judgment and punishment are
+required to deter or obviate it.
+  However, it is important to proceed in the right way. The
+hexagram combines Li, clarity, and Chên,
+excitement. Li is yielding, Chên is hard.
+Unqualified hardness and excitement would be too violent in
+meting out punishment; unqualified clarity and gentleness
+would be too weak. The two together create the just
+measure. It is of moment that the man who makes the
+decisions (represented by the fifth line) is gentle by
+nature, while he commands respect by his conduct in his
 position.
 
     THE IMAGE
@@ -4608,52 +4686,57 @@ position.
     Thus the kings of former times made firm the laws
     Through clearly defined penalties.
 
-Penalties are the individual applications of the law. The laws specify
-the penalties. Clarity prevails when mild and severe penalties are
-differentiated, according to the nature of the crimes.  This is
-symbolized by the clarity of lighting. The law is strengthened by a
-just application of penalties. This is symbolized by the terror of
-thunder. This clarity and severity have the effect of instilling
-respect; it is not that the penalties are ends in themselves.  The
-obstructions in the social life of man increase when there is a lack
-of clarity in the penal codes and slackness in executing them.  The
-only to strengthen the law is to make it clear and make penalties
-certain and swift.
+Penalties are the individual applications of the law. The
+laws specify the penalties. Clarity prevails when mild and
+severe penalties are differentiated, according to the nature
+of the crimes.  This is symbolized by the clarity of
+lighting. The law is strengthened by a just application of
+penalties. This is symbolized by the terror of thunder. This
+clarity and severity have the effect of instilling respect;
+it is not that the penalties are ends in themselves.  The
+obstructions in the social life of man increase when there
+is a lack of clarity in the penal codes and slackness in
+executing them.  The only to strengthen the law is to make
+it clear and make penalties certain and swift.
 
 '   'Nine at the beginning means:
     His feet are fastened in the stocks,
     So that his toes disappear.
     No blame.
 
-If a sentence is imposed the first time a man attempts to do wrong,
-the penalty is a mild one.  Only the toes are put in the stocks.  This
-prevents him from sinning further and thus he becomes free of blame.
-It is a warning to halt in time on the path of evil.
+If a sentence is imposed the first time a man attempts to do
+wrong, the penalty is a mild one.  Only the toes are put in
+the stocks.  This prevents him from sinning further and thus
+he becomes free of blame.  It is a warning to halt in time
+on the path of evil.
 
-    Six in the second place means:
+'    'Six in the second place means:
     Bites through tender meat,
     So that his nose disappears.
     No blame.
 
-It is easy to discriminate between right and wrong in this case; it is
-like biting through tender meat. But one encounters a hardened sinner,
-and, aroused by anger, one goes a little too far. The disappearance of
-the nose in the course of the bite signifies that indignation blots
-out finer sensibility. However, there is no great harm in this,
+It is easy to discriminate between right and wrong in this
+case; it is like biting through tender meat. But one
+encounters a hardened sinner, and, aroused by anger, one
+goes a little too far. The disappearance of the nose in the
+course of the bite signifies that indignation blots out
+finer sensibility. However, there is no great harm in this,
 because the penalty as such is just.
 
-    Six in the third place means:
+'    'Six in the third place means:
     Bites on old dried meat 
     And strikes on something poisonous.
     Slight humiliation.  No blame.
 
-Punishment is to be carried out by someone who lacks the power and
-authority to do so.  Therefore the culprits do not submit.  The matter
-at issue is an old one, as symbolized by salted game, and in dealing
-with it difficulties arise.  This old meat is spoiled: by taking up
-the problem the punisher arouses poisonous hatred against himself, and
-n this way is put in a somewhat humiliating position.  But since
-punishment was required by the time, he remains free of blame.
+Punishment is to be carried out by someone who lacks the
+power and authority to do so.  Therefore the culprits do not
+submit.  The matter at issue is an old one, as symbolized by
+salted game, and in dealing with it difficulties arise.
+This old meat is spoiled: by taking up the problem the
+punisher arouses poisonous hatred against himself, and n
+this way is put in a somewhat humiliating position.  But
+since punishment was required by the time, he remains free
+of blame.
 
 '  'Nine in the fourth place means:
     Bites on dried gristly meat.
@@ -4662,11 +4745,12 @@ punishment was required by the time, he remains free of blame.
     And to be persevering.
     Good fortune. 
 
-There are great obstacles to be overcome, powerful opponents are to be
-punished. Though this is arduous, the effort succeeds. But it is
-necessary to be hard as metal and straight as an arrow to surmount the
-difficulties. If one knows these difficulties and remains persevering,
-he attains good fortune.  The difficult task is achieved in the end.
+There are great obstacles to be overcome, powerful opponents
+are to be punished. Though this is arduous, the effort
+succeeds. But it is necessary to be hard as metal and
+straight as an arrow to surmount the difficulties. If one
+knows these difficulties and remains persevering, he attains
+good fortune.  The difficult task is achieved in the end.
 
 '  'Six in the fifth place means:
     Bites on dried lean meat.
@@ -4674,11 +4758,12 @@ he attains good fortune.  The difficult task is achieved in the end.
     Perseveringly aware of danger.
     No blame.
 
-The case to be decided is indeed not easy but perfectly clear.  Since
-we naturally incline to leniency, we must make every effort to be like
-yellow gold, that is, as true as gold and as impartial as yellow, the
-color of the middle [the mean]. It is only by remaining conscious of
-the dangers growing out of the responsibility we have assumed that we
+The case to be decided is indeed not easy but perfectly
+clear.  Since we naturally incline to leniency, we must make
+every effort to be like yellow gold, that is, as true as
+gold and as impartial as yellow, the color of the middle
+[the mean]. It is only by remaining conscious of the dangers
+growing out of the responsibility we have assumed that we
 can avoid making mistakes.
 
 '  'Nine at the top means:
@@ -4686,17 +4771,18 @@ can avoid making mistakes.
     So that his ears disappear.
     Misfortune.
 
-In contrast to the first line, this line refers to a man who is
-incorrigible. His punishment is the wooden cangue, and his ears
-disappear under it, that is to say, he is deaf to warnings. This
-obstinacy leads to misfortune.  ' )
+In contrast to the first line, this line refers to a man who
+is incorrigible. His punishment is the wooden cangue, and
+his ears disappear under it, that is to say, he is deaf to
+warnings. This obstinacy leads to misfortune.  ' )
 
 #( '22. Pi / Grace
 
-This hexagram shows a fire that breaks out of the secret depths of the
-earth and, blazing up, illuminates and beautifies the mountain, the
-heavenly heights. Grace, beauty of form, is necessary in any union if it
-is to be well ordered and pleasing rather than disordered and chaotic.
+This hexagram shows a fire that breaks out of the secret
+depths of the earth and, blazing up, illuminates and
+beautifies the mountain, the heavenly heights. Grace, beauty
+of form, is necessary in any union if it is to be well
+ordered and pleasing rather than disordered and chaotic.
 
     THE JUDGMENT
 
@@ -4704,22 +4790,25 @@ is to be well ordered and pleasing rather than disordered and chaotic.
     In small matters
     It is favorable to undertake something.
 
-Grace brings success. However, it is not the essential or fundamental
-thing; it is only the ornament and therefore be used sparingly and
-only in little things.  In the lower trigram of fire a yielding line
-comes between two strong lines and makes them beautiful, but the
-strong lines are the essential content and the weak line is the
-beautifying form. In the upper trigram of the mountain, the strong
-line takes the lead, so that here again the strong element must be
-regarded as the decisive factor. In nature we see in the sky the
-strong light of the sun; the life of the world depends on it. But this
-strong, essential thing is changed and given pleasing variety by the
-moon and the stars. In human affairs, aesthetic form comes into being
-when traditions exist that, strong and abiding like mountains, are
-made pleasing by a lucid beauty. By contemplating the forms existing
-in the heavens we come to understand time and its changing
-demands. Through contemplation of the forms existing in human society
-it becomes possible to shape the world.
+Grace brings success. However, it is not the essential or
+fundamental thing; it is only the ornament and therefore be
+used sparingly and only in little things.  In the lower
+trigram of fire a yielding line comes between two strong
+lines and makes them beautiful, but the strong lines are the
+essential content and the weak line is the beautifying
+form. In the upper trigram of the mountain, the strong line
+takes the lead, so that here again the strong element must
+be regarded as the decisive factor. In nature we see in the
+sky the strong light of the sun; the life of the world
+depends on it. But this strong, essential thing is changed
+and given pleasing variety by the moon and the stars. In
+human affairs, aesthetic form comes into being when
+traditions exist that, strong and abiding like mountains,
+are made pleasing by a lucid beauty. By contemplating the
+forms existing in the heavens we come to understand time and
+its changing demands. Through contemplation of the forms
+existing in human society it becomes possible to shape the
+world.
 
     THE IMAGE
 
@@ -4729,40 +4818,41 @@ it becomes possible to shape the world.
     When clearing up current affairs.
     But he dare not decide controversial issues in this way.
 
-The fire, whose light illuminates the mountain and makes it pleasing,
-does not shine far; in the same way, beautiful form suffices to
-brighten and to throw light upon matters of lesser moment, but
-important questions cannot be decided in this way. They require
-greater earnestness.
+The fire, whose light illuminates the mountain and makes it
+pleasing, does not shine far; in the same way, beautiful
+form suffices to brighten and to throw light upon matters of
+lesser moment, but important questions cannot be decided in
+this way. They require greater earnestness.
 
 '   'Nine at the beginning means:
     He lends grace to his toes, leaves the carriage, and walks.
 
-A beginner in subordinate place must take upon himself the labor of
-advancing. There might be an opportunity of surreptitiously easing the
-way,  symbolized by the carriage, but a self-contained man scorns help
-gained in a dubious fashion. He thinks it more graceful to go on foot
-than to drive in a carriage under false pretenses.
+A beginner in subordinate place must take upon himself the
+labor of advancing. There might be an opportunity of
+surreptitiously easing the way, symbolized by the carriage,
+but a self-contained man scorns help gained in a dubious
+fashion. He thinks it more graceful to go on foot than to
+drive in a carriage under false pretenses.
 
 '  'Six in the second place means:
     Lends grace to the beard on his chin.
 
-The beard is not an independent thing; it moves only with the
-chin. The image therefore means that form is to be considered only as
-a result and attribute of content. The beard is a superfluous
-ornament. To devote care to it for its own sake, without regard for
-the inner content of which it is an ornament, would bespeak a certain
-vanity.
+The beard is not an independent thing; it moves only with
+the chin. The image therefore means that form is to be
+considered only as a result and attribute of content. The
+beard is a superfluous ornament. To devote care to it for
+its own sake, without regard for the inner content of which
+it is an ornament, would bespeak a certain vanity.
 
 '  'Nine in the third place means:
     Graceful and moist.
     Constant perseverance brings good fortune.
 
-This represents a very charming life situation. One is under the spell
-of grace and the mellow mood induced by wine. This grace can adorn,
-but it can also swamp us. Hence the warning not to sink into convivial
-indolence but to remain constant in perseverance. Good fortune depends
-on this.
+This represents a very charming life situation. One is under
+the spell of grace and the mellow mood induced by wine. This
+grace can adorn, but it can also swamp us. Hence the warning
+not to sink into convivial indolence but to remain constant
+in perseverance. Good fortune depends on this.
 
 '  'Six in the fourth place means:
     Grace or simplicity?
@@ -4770,68 +4860,74 @@ on this.
     He is not a robber,
     He will woo at the right time.
 
-An individual is in a situation in which doubts arise as to which is
-better, to pursue the grace of external brilliance, or to return to
-simplicity. The doubt itself implies the answer. Confirmation comes
-from the outside; it comes like a white winged horse. The white color
-indicates simplicity. At first it may be disappointing to renounce the
-comforts that might have been obtained, yet one finds peace of mind in
-a true relationship with the friend who courts him. The winged horse
-is the symbol of the thoughts that transcend all limits of space and
-time.
+An individual is in a situation in which doubts arise as to
+which is better, to pursue the grace of external brilliance,
+or to return to simplicity. The doubt itself implies the
+answer. Confirmation comes from the outside; it comes like a
+white winged horse. The white color indicates simplicity. At
+first it may be disappointing to renounce the comforts that
+might have been obtained, yet one finds peace of mind in a
+true relationship with the friend who courts him. The winged
+horse is the symbol of the thoughts that transcend all
+limits of space and time.
 
 '  'Six in the fifth place means:
     Grace in the hills and gardens.
     The roll of silk is meager and small.
     Humiliation, but in the end good fortune.
 
-A man withdraws from contact with people of the lowlands, who seek
-nothing but magnificence and luxury, in to the solitude of the
-heights. There he finds an individual to look up to, whom he would
-like to have as a friend.  But the gifts he has to offer are poor and
-few, so that he feels ashamed.  However, it is not the material gifts
-that count, but sincerity of feeling, and so all goes well in the end.
+A man withdraws from contact with people of the lowlands,
+who seek nothing but magnificence and luxury, in to the
+solitude of the heights. There he finds an individual to
+look up to, whom he would like to have as a friend.  But the
+gifts he has to offer are poor and few, so that he feels
+ashamed.  However, it is not the material gifts that count,
+but sincerity of feeling, and so all goes well in the end.
 
 '  'Nine at the top means:
     Simple grace. No blame.
 
 Here at the highest stage of development all ornament is
-discarded. Form no longer conceals content but brings out its value to
-the full. Perfect grace consists not in exterior ornamentation of the
-substance, but in the simple fitness of its form.  ' )
+discarded. Form no longer conceals content but brings out
+its value to the full. Perfect grace consists not in
+exterior ornamentation of the substance, but in the simple
+fitness of its form.  ' )
 
 #( '23. Po / Splitting Apart
 
-The dark lines are about to mount upward and overthrow the last firm,
-light line by exerting a disintegrating influence on it. The inferior,
-dark forces overcome what is superior and strong, not by direct means,
-but by undermining it gradually and imperceptibly, so that it finally
-collapses.
-  The lines of the hexagram present the image of a house, the top line
-being the roof, and because the roof is being shattered the house
-collapses. The hexagram belongs to the ninth month
-(October-November). The yin power pushes up ever more powerfully and
-is about to supplant the yang power altogether.
+The dark lines are about to mount upward and overthrow the
+last firm, light line by exerting a disintegrating influence
+on it. The inferior, dark forces overcome what is superior
+and strong, not by direct means, but by undermining it
+gradually and imperceptibly, so that it finally collapses.
+  The lines of the hexagram present the image of a house,
+the top line being the roof, and because the roof is being
+shattered the house collapses. The hexagram belongs to the
+ninth month (October-November). The yin power pushes up ever
+more powerfully and is about to supplant the yang power
+altogether.
 
     THE JUDGMENT
 
     SPLITTING APART. IT does not further one 
     To go anywhere.
 
-This pictures a time when inferior people are pushing forward and are
-about to crowd out the few remaining strong and superior men. Under
-these circumstances, which are due to the time, it is not favorable
-for the superior man to undertake anything.
-  The right behavior in such adverse times is to be deduced from the
-images and their attributes. The lower trigram stands for the earth,
-whose attributes.  The lower trigram stands for the earth, whose
-attributes are docility and devotion. The upper trigram stands for the
-mountain, whose attribute is stillness. This suggests that one should
-submit to the bad time and remain quiet. For it is a question not of
-man''s doing but of time conditions, which, according to the laws of
-heaven, show an alternation of increase and decrease, fullness and
-emptiness. It is impossible to counteract these conditions of the
-time. Hence it is not cowardice but wisdom to submit and avoid action.
+This pictures a time when inferior people are pushing
+forward and are about to crowd out the few remaining strong
+and superior men. Under these circumstances, which are due
+to the time, it is not favorable for the superior man to
+undertake anything.
+  The right behavior in such adverse times is to be deduced
+from the images and their attributes. The lower trigram
+stands for the earth, whose attributes are docility and
+devotion. The upper trigram stands for the mountain, whose
+attribute is stillness. This suggests that one should submit
+to the bad time and remain quiet. For it is a question not
+of man''s doing but of time conditions, which, according to
+the laws of heaven, show an alternation of increase and
+decrease, fullness and emptiness. It is impossible to
+counteract these conditions of the time. Hence it is not
+cowardice but wisdom to submit and avoid action.
 
     THE IMAGE
 
@@ -4840,12 +4936,13 @@ time. Hence it is not cowardice but wisdom to submit and avoid action.
     Thus those above can ensure their position
     Only by giving generously to those below.
 
-The mountain rests on the earth. When it is steep and narrow, lacking
-a broad base, it must topple over. Its position is strong only when it
-rises out of the earth broad and great, not proud and steep. So
-likewise those who rule rest on the broad foundation of the
-people. They too should be generous and benevolent, like the earth
-that carries all. Then they will make their position as secure as a
+The mountain rests on the earth. When it is steep and
+narrow, lacking a broad base, it must topple over. Its
+position is strong only when it rises out of the earth broad
+and great, not proud and steep. So likewise those who rule
+rest on the broad foundation of the people. They too should
+be generous and benevolent, like the earth that carries
+all. Then they will make their position as secure as a
 mountain is in its tranquillity.
 
 '   'Six at the beginning means:
@@ -4853,81 +4950,89 @@ mountain is in its tranquillity.
     Those who persevere are destroyed.
     Misfortune.
 
-Inferior people are on the rise and stealthily begin their destructive
-burrowing from below in order to undermine the place where the
-superior man rests. Those followers of the ruler who remain loyal are
-destroyed by slander and intrigue. The situation bodes disaster, yet
-there is nothing to do but wait.
+Inferior people are on the rise and stealthily begin their
+destructive burrowing from below in order to undermine the
+place where the superior man rests. Those followers of the
+ruler who remain loyal are destroyed by slander and
+intrigue. The situation bodes disaster, yet there is nothing
+to do but wait.
 
 '  'Six in the second place means:
     The bed is split at the edge.
     Those who persevere are destroyed.
     Misfortune.
 
-The power of the inferior people is growing. The danger draws close to
-one''s person; already there are clear indication, and rest is
-disturbed. Moreover, in this dangerous situation one is as yet without
-help or friendly advances from above or below. Extreme caution is
-necessary in this isolation. One must adjust to the time and promptly
-avoid the danger. Stubborn perseverance in maintaining one''s
-standpoint would lead to downfall.
+The power of the inferior people is growing. The danger
+draws close to one''s person; already there are clear
+indication, and rest is disturbed. Moreover, in this
+dangerous situation one is as yet without help or friendly
+advances from above or below. Extreme caution is necessary
+in this isolation. One must adjust to the time and promptly
+avoid the danger. Stubborn perseverance in maintaining
+one''s standpoint would lead to downfall.
 
 '  'Six in the third place means:
     He splits with them. No blame.
 
-An individual finds himself in an evil environment to which he is
-committed by external ties. But he has an inner relationship with a
-superior man, and through this he attains the stability to free
-himself from the way of the inferior people around him. This brings
-him into opposition to them of course, but that is not wrong.
+An individual finds himself in an evil environment to which
+he is committed by external ties. But he has an inner
+relationship with a superior man, and through this he
+attains the stability to free himself from the way of the
+inferior people around him. This brings him into opposition
+to them of course, but that is not wrong.
 
 '  'Six in the fourth place means:
     The bed is split up to the skin.
     Misfortune.
 
-Here the disaster affects not only the resting place but even the
-occupant. No warning or other comment is added. Misfortune has reached
-its peak: it can no longer be warded off.
+Here the disaster affects not only the resting place but
+even the occupant. No warning or other comment is
+added. Misfortune has reached its peak: it can no longer be
+warded off.
 
 '  'Six in the fifth place means:
     A shoal of fishes. Favor comes through the court ladies.
     Everything acts to further.
 
-Here, in immediate proximity to the strong, light-giving principle at
-the top, the nature of the dark force undergoes a change. It no longer
-opposes the strong principle by means of intrigues but submits to its
-guidance. Indeed, as the head of the other weak lines, it leads all of
-these to the strong line, just as a princess leads her
-maids-in-waiting like a shoal of fishes to her husband and thus gains
-his favor. Inasmuch as the lower element thus voluntarily places
-itself under the higher, it attains happiness and the higher also
-receives its due. Therefore all goes well.
+Here, in immediate proximity to the strong, light-giving
+principle at the top, the nature of the dark force undergoes
+a change. It no longer opposes the strong principle by means
+of intrigues but submits to its guidance. Indeed, as the
+head of the other weak lines, it leads all of these to the
+strong line, just as a princess leads her maids-in-waiting
+like a shoal of fishes to her husband and thus gains his
+favor. Inasmuch as the lower element thus voluntarily places
+itself under the higher, it attains happiness and the higher
+also receives its due. Therefore all goes well.
 
 '  'Nine at the top means:
     There is a large fruit still uneaten.
     The superior man receives a carriage.
     The house of the inferior man is split apart.
 
-Here the splitting apart reaches its end. When misfortune has spent
-itself, better times return. The seed of the good remains, and it is
-just when the fruit falls to the ground that food sprouts anew from
-its seed. The superior man again attains influence and
-effectiveness. He is supported by public opinion as if in a
-carriage. But the inferior man''s wickedness is visited upon
-himself. His house is split apart. A law of nature is at work
-here. Evil is not destructive to the good alone but inevitably
-destroys itself as well. For evil, which lives solely by negation,
-cannot continue to exist on its own strength alone. The inferior man
-himself fares best when held under control by a superior man.  ' )
+Here the splitting apart reaches its end. When misfortune
+has spent itself, better times return. The seed of the good
+remains, and it is just when the fruit falls to the ground
+that food sprouts anew from its seed. The superior man again
+attains influence and effectiveness. He is supported by
+public opinion as if in a carriage. But the inferior man''s
+wickedness is visited upon himself. His house is split
+apart. A law of nature is at work here. Evil is not
+destructive to the good alone but inevitably destroys itself
+as well. For evil, which lives solely by negation, cannot
+continue to exist on its own strength alone. The inferior
+man himself fares best when held under control by a superior
+man.  ' )
 
 #( '24. Fu / Return (The Turning Point)
 
-The idea of a turning point arises from the fact that after the dark
-lines have pushed all of the light lines upward and out of the
-hexagram, another light line enters the hexagram from below. The time
-of darkness is past. The winter solstice brings the victory of
-light. This hexagram is linked with the eleventh month, the month of
-the solstice (December-January).
+The idea of a turning point arises from the fact that after
+the dark lines have pushed all of the light lines upward and
+out of the hexagram, another light line enters the hexagram
+from below. The time of darkness is past. The winter
+solstice brings the victory of light. This hexagram is
+linked with the eleventh month, the month of the solstice
+(December-January).
 
     THE JUDGMENT
 
@@ -4938,27 +5043,31 @@ the solstice (December-January).
     On the seventh day comes return.
     It furthers one to have somewhere to go.
 
-After a time of decay comes the turning point. The powerful light that
-has been banished returns. There is movement, but it is not brought
-about by force. The upper trigram K''un is characterized by devotion;
-thus the movement is natural, arising spontaneously. For this reason
-the transformation of the old becomes easy. The old is discarded and
-the new is introduced. Both measures accord with the time; therefore
-no harm results.  Societies of people sharing the same views are
-formed. But since these groups come together in full public knowledge
-and are in harmony with the time, all selfish separatist tendencies
-are excluded, and no mistake is made.
-  The idea of RETURN is based on the course of nature. The movement is
-cyclic, and the course completes itself. Therefore it is not necessary
-to hasten anything artificially. Everything comes of itself at the
-appointed time. This is the meaning of heaven and earth.
-  All movements are accomplished in six stages, and the seventh brings
-return. Thus the winter solstice, with which the decline of the year
-begins, comes in the seventh month after the summer solstice; so too
-sunrise comes in the seventh double hour after sunset. Therefore seven
-is the number of the young light, and it arises when six, the number
-of the great darkness, is increased by one. In this way the state of
-rest gives place to movement.
+After a time of decay comes the turning point. The powerful
+light that has been banished returns. There is movement, but
+it is not brought about by force. The upper trigram K''un is
+characterized by devotion; thus the movement is natural,
+arising spontaneously. For this reason the transformation of
+the old becomes easy. The old is discarded and the new is
+introduced. Both measures accord with the time; therefore no
+harm results.  Societies of people sharing the same views
+are formed. But since these groups come together in full
+public knowledge and are in harmony with the time, all
+selfish separatist tendencies are excluded, and no mistake
+is made.
+  The idea of RETURN is based on the course of nature. The
+movement is cyclic, and the course completes
+itself. Therefore it is not necessary to hasten anything
+artificially. Everything comes of itself at the appointed
+time. This is the meaning of heaven and earth.
+  All movements are accomplished in six stages, and the
+seventh brings return. Thus the winter solstice, with which
+the decline of the year begins, comes in the seventh month
+after the summer solstice; so too sunrise comes in the
+seventh double hour after sunset. Therefore seven is the
+number of the young light, and it arises when six, the
+number of the great darkness, is increased by one. In this
+way the state of rest gives place to movement.
 
     THE IMAGE
 
@@ -4970,64 +5079,69 @@ rest gives place to movement.
     And the ruler
     Did not travel through the provinces.
 
-The winter solstice has always been celebrated in China as the resting
-time of the year a custom that survives in the time of rest observed
-at the new year.  In winter the life energy, symbolized by thunder,
-the Arousing, is still underground. Movement is just at its beginning;
-therefore it must be strengthened by rest so that it will not be
-dissipated by being used prematurely. This principle, i.e., of
-allowing energy that is renewing itself to be reinforced by rest,
-applies to all similar situations. The return of health after illness,
-the return of understanding after an estrangement: everything must be
-treated tenderly and with care at the beginning, so that the return
-may lead to a flowering.
+The winter solstice has always been celebrated in China as
+the resting time of the year a custom that survives in the
+time of rest observed at the new year.  In winter the life
+energy, symbolized by thunder, the Arousing, is still
+underground. Movement is just at its beginning; therefore it
+must be strengthened by rest so that it will not be
+dissipated by being used prematurely. This principle, i.e.,
+of allowing energy that is renewing itself to be reinforced
+by rest, applies to all similar situations. The return of
+health after illness, the return of understanding after an
+estrangement: everything must be treated tenderly and with
+care at the beginning, so that the return may lead to a
+flowering.
 
 '   'Nine at the beginning means:
     Return from a short distance.
     No need for remorse.
     Great good fortune.
 
-Slight digressions from the good cannot be avoided, but one must turn
-back in time, before going too far. This is especially important in
-the development of character; every faintly evil thought must be put
-aside immediately, before it goes too far and takes root in the
-mind. Then there is no cause for remorse, and all goes well.
+Slight digressions from the good cannot be avoided, but one
+must turn back in time, before going too far. This is
+especially important in the development of character; every
+faintly evil thought must be put aside immediately, before
+it goes too far and takes root in the mind. Then there is no
+cause for remorse, and all goes well.
 
 '  'Six in the second place means:
     Quiet return. Good fortune.
 
-Return always calls for a decision and is an act of self-mastery. It
-is made easier if a man is in good company. If he can bring himself to
-put aside pride and follow the example of good men, good fortune
-results.
+Return always calls for a decision and is an act of
+self-mastery. It is made easier if a man is in good
+company. If he can bring himself to put aside pride and
+follow the example of good men, good fortune results.
 
 '  'Six in the third place means:
     Repeated return. Danger. No blame.
 
-There are people of a certain inner instability who feel a constant
-urge to reverse themselves. There is danger in continually deserting
-the good because of uncontrolled desires, then turning back to it
-again because of a better resolution. However, since this does not
-lead to habituation in evil, a general inclination to overcome the
-defect is not wholly excluded/
+There are people of a certain inner instability who feel a
+constant urge to reverse themselves. There is danger in
+continually deserting the good because of uncontrolled
+desires, then turning back to it again because of a better
+resolution. However, since this does not lead to habituation
+in evil, a general inclination to overcome the defect is not
+wholly excluded.
 
 '  'Six in the fourth place means:
     Walking in the midst of others,
     One returns alone.
 
-A man is in a society composed of inferior people, but is connected
-spiritually with a strong and good friend, and this makes him turn
-back alone.  Although nothing is said of reward and punishment, this
-return is certainly favorable, for such a resolve to choose the good
-brings its own reward.
+A man is in a society composed of inferior people, but is
+connected spiritually with a strong and good friend, and
+this makes him turn back alone.  Although nothing is said of
+reward and punishment, this return is certainly favorable,
+for such a resolve to choose the good brings its own reward.
 
 '  'Six in the fifth place means:
     Noblehearted return. No remorse.
 
-When the time for return has come, a man should not take shelter in
-trivial excuses, but should look within and examine himself. And if he
-has done something wrong he should make a noblehearted resolve to
-confess his fault.  No one will regret having taken this road.
+When the time for return has come, a man should not take
+shelter in trivial excuses, but should look within and
+examine himself. And if he has done something wrong he
+should make a noblehearted resolve to confess his fault.  No
+one will regret having taken this road.
 
 '  'Six at the top means:
     Missing the return. Misfortune.
@@ -5039,23 +5153,27 @@ confess his fault.  No one will regret having taken this road.
     It will not be possible to attack again.
 
 If a man misses the right time for return, he meets with
-misfortune. The misfortune has its inner cause in a wrong attitude
-toward the world. The misfortune coming upon him for without results
-from this wrong attitude.  What is pictured here is blind obstinacy
-and the judgment that is visited upon it.  ' )
+misfortune. The misfortune has its inner cause in a wrong
+attitude toward the world. The misfortune coming upon him
+for without results from this wrong attitude.  What is
+pictured here is blind obstinacy and the judgment that is
+visited upon it.  ' )
 
 #( '25. Wu Wang / Innocence (The Unexpected)
 
-Ch''ien, heaven is above; Chên, movement, is below. The lower trigram
-Chên is under the influence of the strong line it has received form
-above, from heaven. When, in accord with this, movement follows the
-law of heaven, man is innocent and without guile. His mind is natural
-and true, unshadowed by reflection or ulterior designs. For wherever
-conscious purpose is to be seen, there the truth and innocence of
-nature have been lost.  Nature that is not directed by the spirit is
-not true but degenerate nature.  Starting out with the idea of the
-natural, the train of thought in part goes somewhat further and thus
-the hexagram includes also the idea of the fundamental or unexpected.
+Ch''ien, heaven is above; Chên, movement, is
+below. The lower trigram Chên is under the influence
+of the strong line it has received form above, from
+heaven. When, in accord with this, movement follows the law
+of heaven, man is innocent and without guile. His mind is
+natural and true, unshadowed by reflection or ulterior
+designs. For wherever conscious purpose is to be seen, there
+the truth and innocence of nature have been lost.  Nature
+that is not directed by the spirit is not true but
+degenerate nature.  Starting out with the idea of the
+natural, the train of thought in part goes somewhat further
+and thus the hexagram includes also the idea of the
+fundamental or unexpected.
 
     THE JUDGMENT
 
@@ -5066,18 +5184,21 @@ the hexagram includes also the idea of the fundamental or unexpected.
     And it does not further him
     To undertake anything.
 
-Man has received from heaven a nature innately good, to guide him in
-all his movements. By devotion to this divine spirit within himself,
-he attains an unsullied innocence that leads him to do right with
-instinctive sureness and without any ulterior thought of reward and
-personal advantage. This instinctive certainty brings about supreme
-success and furthers through perseverance. However, not everything
-instinctive is nature in this higher sense of the word, but only that
-which is right and in accord with the will of heaven. Without this
-quality of rightness, an unreflecting, instinctive way of acting
-brings only misfortune. Confucius says about this: "He who departs
-from innocence, what does he come to? Heaven''s will and blessing do
-not go with his deeds."
+Man has received from heaven a nature innately good, to
+guide him in all his movements. By devotion to this divine
+spirit within himself, he attains an unsullied innocence
+that leads him to do right with instinctive sureness and
+without any ulterior thought of reward and personal
+advantage. This instinctive certainty brings about supreme
+success and furthers through perseverance. However, not
+everything instinctive is nature in this higher sense of the
+word, but only that which is right and in accord with the
+will of heaven. Without this quality of rightness, an
+unreflecting, instinctive way of acting brings only
+misfortune. Confucius says about this:
+
+  He who departs from innocence, what does he come to?
+  Heaven''s will and blessing do not go with his deeds.
 
     THE IMAGE
 
@@ -5087,40 +5208,42 @@ not go with his deeds."
     Rich in virtue, and in harmony with the time,
     Fostered and nourished all beings.
 
-In springtime when thunder, life energy, begins to move again under
-the heavens, everything sprouts and grows, and all beings receive for
-the creative activity of nature the childlike innocence of their
-original state. So it is with the good rulers of mankind: drawing on
-the spiritual wealth at their command, they take care of all forms of
-life and all forms of culture and do everything to further them, and
+In springtime when thunder, life energy, begins to move
+again under the heavens, everything sprouts and grows, and
+all beings receive for the creative activity of nature the
+childlike innocence of their original state. So it is with
+the good rulers of mankind: drawing on the spiritual wealth
+at their command, they take care of all forms of life and
+all forms of culture and do everything to further them, and
 at the proper time.
 
 '   'Nine at the beginning means:
     Innocent behavior brings good fortune.
 
-The original impulses of the heart are always good, so that we may
-follow them confidently, assured of good fortune and achievement of
-our aims.
+The original impulses of the heart are always good, so that
+we may follow them confidently, assured of good fortune and
+achievement of our aims.
 
 '  'Six in the second place means:
     If one does not count on the harvest while plowing,
     Nor on the use of the ground while clearing it,
     It furthers one to undertake something.
 
-We should do every task for its own sake as time and place demand and
-not with an eye to the result. Then each task turns out well, and
-anything we undertake succeeds.
+We should do every task for its own sake as time and place
+demand and not with an eye to the result. Then each task
+turns out well, and anything we undertake succeeds.
 
 '  'Six in the third place means:
     Undeserved misfortune.
     The cow that was tethered by someone
     Is the wanderer''s gain, the citizen''s loss.
 
-Sometimes undeserved misfortune befalls a man at the hands of another,
-as for instance when someone passes by and takes a tethered cow along
-with him. His gain is the owner''s loss. In all transactions, no
-matter how innocent, we must accommodate ourselves to the demands of
-the time, otherwise unexpected misfortune overtakes us.
+Sometimes undeserved misfortune befalls a man at the hands
+of another, as for instance when someone passes by and takes
+a tethered cow along with him. His gain is the owner''s
+loss. In all transactions, no matter how innocent, we must
+accommodate ourselves to the demands of the time, otherwise
+unexpected misfortune overtakes us.
 
 '  'Nine in the fourth place means:
     He who can be persevering 
@@ -5135,39 +5258,43 @@ should remain true to our own natures and not listen to others.
     Incurred through no fault of your own.
     It will pass of itself.
 
-An unexpected evil may come accidentally from without. If it does not
-originate in one''s own nature or have a foothold there, one should
-not resort to external means to eradicate it, but should quietly let
-nature take its course.  Then improvement will come of itself.
+An unexpected evil may come accidentally from without. If it
+does not originate in one''s own nature or have a foothold
+there, one should not resort to external means to eradicate
+it, but should quietly let nature take its course.  Then
+improvement will come of itself.
 
 '  'Nine at the top means:
     Innocent action brings misfortune.
     Nothing furthers.
 
-When, in a given situation, the time is not ripe for further progress,
-the best thing to do is to wait quietly, without ulterior designs. If
-one acts thoughtlessly and tries to push ahead in opposition to fate,
-success will not be achieved.  ' )
+When, in a given situation, the time is not ripe for further
+progress, the best thing to do is to wait quietly, without
+ulterior designs. If one acts thoughtlessly and tries to
+push ahead in opposition to fate, success will not be
+achieved.  ' )
 
 #( '26. Ta Ch''u / The Taming Power of the Great
 
-The Creative is tamed by Kên, Keeping Still.  This produces great
-power, a situation in contrast to that of the ninth hexagram, Hsiao
-Ch''u, THE TAMING POWER OF THE SMALL, in which the Creative is tamed
-by the Gentle alone. There one weak line must tame five strong lines,
-but here four strong lines are restrained by two weak lines; in
-addition to a minister, there is a prince, and the restraining power
+The Creative is tamed by Kên, Keeping Still.  This
+produces great power, a situation in contrast to that of the
+ninth hexagram, Hsiao Ch''u, THE TAMING POWER OF THE SMALL,
+in which the Creative is tamed by the Gentle alone. There
+one weak line must tame five strong lines, but here four
+strong lines are restrained by two weak lines; in addition
+to a minister, there is a prince, and the restraining power
 therefore is afar stronger.
-  The hexagram has a threefold meaning, expressing different aspects
-of the concept "Holding firm." Heaven within the mountain gives the
-idea of holding firm in the sense of holding together; the trigram Kên
-which holds the trigram ch''ien still, gives the idea of holding firm
-in the sense of holding back; the third idea is that of holding firm
-in the sense of caring for and nourishing. This last is suggested by
-the fact that a strong line at the top, which is the ruler of the
-hexagram, is honored and tended as a sage. The third of these meanings
-also attaches specifically to this strong line at the top, which
-represents the sage.
+  The hexagram has a threefold meaning, expressing different
+aspects of the concept "holding firm." Heaven within the
+mountain gives the idea of holding firm in the sense of
+holding together; the trigram Kên which holds the
+trigram ch''ien still, gives the idea of holding firm in the
+sense of holding back; the third idea is that of holding
+firm in the sense of caring for and nourishing. This last is
+suggested by the fact that a strong line at the top, which
+is the ruler of the hexagram, is honored and tended as a
+sage. The third of these meanings also attaches specifically
+to this strong line at the top, which represents the sage.
 
     THE JUDGMENT
 
@@ -5176,20 +5303,23 @@ represents the sage.
     Not eating at home brings good fortune.
     It furthers one to cross the great water.
 
-To hold firmly to great creative powers and store them up, as set
-forth in this hexagram, there is need of a strong, clear-headed man
-who is honored by the ruler. The trigram Ch''ein points to strong
-creative power; Kên indicates firmness and truth. Both point to light
-and clarity and to the daily renewal of character. Only through such
-daily self-renewal can a man continue at the height of his
-powers. Force of habit helps to keep order in quiet times; but in
-periods when there is a great storing up of energy, everything depends
-on the power of the personality. However, since the worthy are
-honored, as in the case of the strong personality entrusted with
-leadership by the ruler, it is an advantage not to eat at home but
-rather to earn one''s bread by entering upon public office. Such a man
-is in harmony with heaven; therefore even great and difficult
-undertakings, such as crossing the great water, succeed.
+To hold firmly to great creative powers and store them up,
+as set forth in this hexagram, there is need of a strong,
+clear-headed man who is honored by the ruler. The trigram
+Ch''ein points to strong creative power; Kên
+indicates firmness and truth. Both point to light and
+clarity and to the daily renewal of character. Only through
+such daily self-renewal can a man continue at the height of
+his powers. Force of habit helps to keep order in quiet
+times; but in periods when there is a great storing up of
+energy, everything depends on the power of the
+personality. However, since the worthy are honored, as in
+the case of the strong personality entrusted with leadership
+by the ruler, it is an advantage not to eat at home but
+rather to earn one''s bread by entering upon public
+office. Such a man is in harmony with heaven; therefore even
+great and difficult undertakings, such as crossing the great
+water, succeed.
 
     THE IMAGE
 
@@ -5199,20 +5329,23 @@ undertakings, such as crossing the great water, succeed.
     And many deeds of the past,
     In order to strengthen his character thereby.
 
-Heaven within the mountain points to hidden treasures. In the words
-and deeds of the past there lies hidden a treasure that men may use to
-strengthen and elevate their own characters. The way to study the past
-is not to confine oneself to mere knowledge of history but, through
-application of this knowledge, to give actuality to the past.
+Heaven within the mountain points to hidden treasures. In
+the words and deeds of the past there lies hidden a treasure
+that men may use to strengthen and elevate their own
+characters. The way to study the past is not to confine
+oneself to mere knowledge of history but, through
+application of this knowledge, to give actuality to the
+past.
 
 '   'Nine at the beginning means:
     Danger is at hand. It furthers one to desist.
 
-A man wishes to make vigorous advance, but circumstances present an
-obstacle. He sees himself held back firmly. If he should attempt to
-fore an advance, it would lead him into misfortune. Therefore it is
-better for him to compose himself and to wait until an outlet is
-offered for release of his stored-up energies.
+A man wishes to make vigorous advance, but circumstances
+present an obstacle. He sees himself held back firmly. If he
+should attempt to force an advance, it would lead him into
+misfortune. Therefore it is better for him to compose
+himself and to wait until an outlet is offered for release
+of his stored-up energies.
 
 '  'Nine in the second place means:
     The axletrees are taken from the wagon.
@@ -5223,7 +5356,7 @@ thus a conflict arises between the propulsive and the restraining
 movement, as a result of which the spokes fall out of the wagon
 wheels, while here the restraining force is absolutely superior; hence
 no struggle takes place. One submits and removes the axletrees from
-the wagon , in other words, contents himself with waiting. In this way
+the wagon--in other words, contents himself with waiting. In this way
 energy accumulates for a vigorous advance later on.
 
  '   ' Nine in the third place means:
@@ -5233,13 +5366,14 @@ energy accumulates for a vigorous advance later on.
     Practice chariot driving and armed defense daily. 
     It furthers one to have somewhere to go.
 
-The way opens; the hindrance has been cleared away. A man is in
-contact with a strong will acting in the same direction as his own,
-and goes forward like one good horse following another. But danger
-still threatens, and he must remain aware of it, or he will be robbed
-of his firmness. Thus he must acquire skill on the one hand in what
-will take him forward, and on the other in what will protect him
-against unforeseen attacks. It is good in such a pass to have a goal
+The way opens; the hindrance has been cleared away. A man is
+in contact with a strong will acting in the same direction
+as his own, and goes forward like one good horse following
+another. But danger still threatens, and he must remain
+aware of it, or he will be robbed of his firmness. Thus he
+must acquire skill on the one hand in what will take him
+forward, and on the other in what will protect him against
+unforeseen attacks. It is good in such a pass to have a goal
 toward which to strive.
 
 '  'Six in the fourth place means:
@@ -5247,20 +5381,22 @@ toward which to strive.
     Great good fortune.
 
 This line and the one following it are the two that tame the
-forward, pushing lower lines. Before a bulls horns grow out, a
-headboard is fastened to its forehead, so that later when the horns
-appear they cannot do harm. A good way to restrain wild force is to
-forestall it. By so doing one achieves an easy and great success.
+forward, pushing lower lines. Before a bulls horns grow out,
+a headboard is fastened to its forehead, so that later when
+the horns appear they cannot do harm. A good way to restrain
+wild force is to forestall it. By so doing one achieves an
+easy and great success.
 
 '  'Six in the fifth place means:
     The tusk of a gelded boar.
     Good fortune.
 
-Here the restraining of the impetuous forward drive is achieved in an
-indirect way. A boar''s tusk is in itself dangerous, but if the
-boar''s nature is altered, the tusk is no longer a menace. Thus also
-where men are concerned, wild force should not be combated directly;
-instead, its roots should be eradicated.
+Here the restraining of the impetuous forward drive is
+achieved in an indirect way. A boar''s tusk is in itself
+dangerous, but if the boar''s nature is altered, the tusk is
+no longer a menace. Thus also where men are concerned, wild
+force should not be combated directly; instead, its roots
+should be eradicated.
 
 '  'Nine at the top means:
     One attains the way of heaven.
@@ -5273,13 +5409,14 @@ and shape the world.  ' )
 
 #( '27. I / Corners of the Mouth (Providing Nourishment)
 
-This hexagram is a picture of an open mouth; above and below are firm
-lines of the lips, and between them the opening. Starting with the
-mouth, through which we take food for nourishment, the thought leads
-to nourishment itself. Nourishment of oneself, specifically of the
-body, is represented in the three lower lines, while the three upper
-lines represent nourishment and care of others, in a higher, spiritual
-sense.
+This hexagram is a picture of an open mouth; above and below
+are firm lines of the lips, and between them the
+opening. Starting with the mouth, through which we take food
+for nourishment, the thought leads to nourishment
+itself. Nourishment of oneself, specifically of the body, is
+represented in the three lower lines, while the three upper
+lines represent nourishment and care of others, in a higher,
+spiritual sense.
 
     THE JUDGMENT
 
@@ -5289,21 +5426,25 @@ sense.
     And to what a man seeks
     To fill his own mouth with.
 
-In bestowing care and nourishment, it is important that the right
-people should be taken care of and that we should attend to our own
-nourishment in the right way. If we wish to know what anyone is like,
-we have only to observe on whom he bestows his care and what sides of
-his own nature he cultivates and nourishes. Nature nourishes all
-creatures. The great man fosters and takes care of superior men, in
-order to take care of all men through them. Mencius says about this:
+In bestowing care and nourishment, it is important that the
+right people should be taken care of and that we should
+attend to our own nourishment in the right way. If we wish
+to know what anyone is like, we have only to observe on whom
+he bestows his care and what sides of his own nature he
+cultivates and nourishes. Nature nourishes all creatures.
+The great man fosters and takes care of superior men, in
+order to take care of all men through them. Mencius says
+about this:
 
-  If we wish to know whether anyone is superior or not, we need only
-  observe what part of his being he regards as especially important. The
-  body has superior and inferior, important and unimportant parts. We
-  must not injure important parts for the sake of the unimportant, nor
-  must we injure the superior parts for the sake of the inferior. He who
-  cultivates the inferior parts of his nature is an inferior man. He who
-  cultivates the superior parts of his nature is a superior man.
+  If we wish to know whether anyone is superior or not, we
+  need only observe what part of his being he regards as
+  especially important. The body has superior and inferior,
+  important and unimportant parts. We must not injure
+  important parts for the sake of the unimportant, nor must
+  we injure the superior parts for the sake of the
+  inferior. He who cultivates the inferior parts of his
+  nature is an inferior man. He who cultivates the superior
+  parts of his nature is a superior man.
 
     THE IMAGE
     
@@ -5312,31 +5453,34 @@ order to take care of all men through them. Mencius says about this:
     Thus the superior man is careful of his words
     And temperate in eating and drinking.
 
-"God comes forth in the sign of the Arousing": when in the spring the
-life forces stir again, all things comes into being anew. "He brings
-to perfection in the sign of Keeping Still": thus in the early spring,
-when the seeds fall to earth, all things are made ready. This is an
-image of providing nourishment through movement and tranquillity.  The
-superior man takes it as a pattern for the nourishment and cultivation
-of his character. Words are a movement going form within
-outward. Eating and drinking are movements from without inward. Both
-kinds of movement can be modified by tranquillity.  For tranquillity
-keeps the words that come out of the mouth from exceeding proper
-measure, and keeps the food that goes into the mouth from exceeding
-its proper measure. Thus character is cultivated.
+"God comes forth in the sign of the Arousing": when in the
+spring the life forces stir again, all things comes into
+being anew. "He brings to perfection in the sign of Keeping
+Still": thus in the early spring, when the seeds fall to
+earth, all things are made ready. This is an image of
+providing nourishment through movement and tranquillity.
+The superior man takes it as a pattern for the nourishment
+and cultivation of his character. Words are a movement going
+from within outward. Eating and drinking are movements from
+without inward. Both kinds of movement can be modified by
+tranquillity.  For tranquillity keeps the words that come
+out of the mouth from exceeding proper measure, and keeps
+the food that goes into the mouth from exceeding its proper
+measure. Thus character is cultivated.
 
 '   'Nine at the beginning means:
     You let your magic tortoise go,
     And look at me with the corners of your mouth drooping.
     Misfortune.
 
-The magic tortoise is a creature possessed of such supernatural powers
-that it lives on air and needs no earthly nourishment. The image means
-that a man fitted by nature and position to live freely and
-independently renounces this self-reliance and instead looks with envy
-and discontent at others who are outwardly in better
-circumstances. But such base envy only arouses derision and contempt
-in those others. This has bad results.
+The magic tortoise is a creature possessed of such
+supernatural powers that it lives on air and needs no
+earthly nourishment. The image means that a man fitted by
+nature and position to live freely and independently
+renounces this self-reliance and instead looks with envy and
+discontent at others who are outwardly in better
+circumstances. But such base envy only arouses derision and
+contempt in those others. This has bad results.
 
 '  'Six in the second place means:
     Turning to the summit for nourishment,
@@ -5344,14 +5488,15 @@ in those others. This has bad results.
     To seek nourishment from the hill.
     Continuing to do this brings misfortune.
 
-Normally a person either provides his own means of nourishment or is
-supported in a proper way by those whose duty of privilege it is to
-provide for him. If, owing to weakness of spirit, a man cannot support
-himself, a feeling of uneasiness comes over him; this is because in
-shirking the proper way of obtaining a living, he accepts support as a
-favor from those in higher place.  This is unworthy, for he is
-deviating from his true nature. Kept up indefinitely, this course
-leads to misfortune.
+Normally a person either provides his own means of
+nourishment or is supported in a proper way by those whose
+duty of privilege it is to provide for him. If, owing to
+weakness of spirit, a man cannot support himself, a feeling
+of uneasiness comes over him; this is because in shirking
+the proper way of obtaining a living, he accepts support as
+a favor from those in higher place.  This is unworthy, for
+he is deviating from his true nature. Kept up indefinitely,
+this course leads to misfortune.
 
 '  'Six in the third place means:
     Turning away from nourishment.
@@ -5359,11 +5504,12 @@ leads to misfortune.
     Do not act thus for ten years.
     Nothing serves to further.
 
-He who seeks nourishment that does not nourish reels from desire to
-gratification and in gratification craves desire. Mad pursuit of
-pleasure for the satisfaction of the senses never brings one to the
-goal. One should never (ten years is a complete cycle of time) follow
-this path, for nothing good can come of it.
+He who seeks nourishment that does not nourish reels from
+desire to gratification and in gratification craves
+desire. Mad pursuit of pleasure for the satisfaction of the
+senses never brings one to the goal. One should never (ten
+years is a complete cycle of time) follow this path, for
+nothing good can come of it.
 
 '  'Six in the fourth place means:
     Turning to the summit
@@ -5373,26 +5519,28 @@ this path, for nothing good can come of it.
     Like a tiger with insatiable craving.
     No blame.
 
-In contrast to the six in the second place, which refers to a man bent
-exclusively on his own advantage, this line refers to one occupying a
-high position and striving to let his light sine forth. To do this he
-needs helpers, because he cannot attain his lofty aim alone. With the
-greed of a hungry tiger he is on the lookout for the right
-people. Since he is not working for himself but for the good of all,
-there is no wrong in such zeal.
+In contrast to the six in the second place, which refers to
+a man bent exclusively on his own advantage, this line
+refers to one occupying a high position and striving to let
+his light sine forth. To do this he needs helpers, because
+he cannot attain his lofty aim alone. With the greed of a
+hungry tiger he is on the lookout for the right
+people. Since he is not working for himself but for the good
+of all, there is no wrong in such zeal.
 
 '  'Six in the fifth place means:
     Turning away from the path.
     To remain persevering brings good fortune.
     One should not cross the great water.
 
-A man may be conscious of a deficiency in himself. He should be
-undertaking the nourishment of the people, but he has not the strength
-to do it. Thus he must turn from his accustomed path and beg counsel
-and help from a man who is spiritually his superior but
-undistinguished outwardly. If he maintains this attitude of mind
-perseveringly, success and good fortune are his. But he must remain
-aware of his dependence. He must not put his own person forward nor
+A man may be conscious of a deficiency in himself. He should
+be undertaking the nourishment of the people, but he has not
+the strength to do it. Thus he must turn from his accustomed
+path and beg counsel and help from a man who is spiritually
+his superior but undistinguished outwardly. If he maintains
+this attitude of mind perseveringly, success and good
+fortune are his. But he must remain aware of his
+dependence. He must not put his own person forward nor
 attempt great labors, such as crossing the great water.
 
 '  'Nine at the top means:
@@ -5400,12 +5548,14 @@ attempt great labors, such as crossing the great water.
     Awareness of danger brings good fortune.
     It furthers one to cross the great water.
 
-This describes a sage of the highest order, from whom emanate all
-influences that provide nourishment for others. Such a position brings
-with it heavy responsibility. If he remains conscious of this fact, he
-has good fortune and may confidently undertake even great and
-difficult labors, such as crossing the great water. These undertakings
-bring general happiness for him and for all others.  ' )
+This describes a sage of the highest order, from whom
+emanate all influences that provide nourishment for
+others. Such a position brings with it heavy
+responsibility. If he remains conscious of this fact, he has
+good fortune and may confidently undertake even great and
+difficult labors, such as crossing the great water. These
+undertakings bring general happiness for him and for all
+others.  ' )
 
 #( '28. Ta Kuo / Preponderance of the Great
 

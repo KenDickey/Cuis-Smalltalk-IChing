@@ -73,7 +73,7 @@ Chinese characters require Unicode to display.
 
 To view a translation of the bronze age text in Cuis, 
 open or load IChing.txt into tha TextEditor, select All, 
-change font (cmd-k) to "Taipei Sanc TC".
+change font (cmd-k) to "Taipei Sans TC".
 
 You can also require 'StyledIChing' and
 ````smalltalk

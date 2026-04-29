@@ -1,8 +1,8 @@
-'From Cuis7.7 [latest update: #7880] on 28 April 2026 at 5:34:43 pm'!
+'From Cuis7.7 [latest update: #7880] on 28 April 2026 at 6:21:06 pm'!
 'Description Book of Changes [I Ching] exploration.
 
 Note HexaGram class comment.'!
-!provides: 'IChing' 1 62!
+!provides: 'IChing' 1 63!
 !requires: 'Cuis-Base' 77 7872 nil!
 !requires: 'UI-Panel' 1 19 nil!
 !requires: 'Graphics-Files-Additional' 1 24 nil!
@@ -11173,7 +11173,7 @@ changedLinesDescription
 	layout morphExtent: layoutMorph minimumExtent.
 	^ layout! !
 
-!IChingResponsePanel methodsFor: 'GUI building' stamp: 'KenD 22/Apr/2026 14:44:17'!
+!IChingResponsePanel methodsFor: 'GUI building' stamp: 'KenD 28/Apr/2026 18:19:34'!
 changedLinesText
 	"Convert string of lines into layout of labelMorphs"
 	| hexagram englishText changes layout |
@@ -11238,12 +11238,13 @@ displayHexagram: hexagram banner: aString
 						proportionalWidth: 1.0 minimum: self minTextWidth;
 						offAxisEdgeWeight: #rowTop)! !
 
-!IChingResponsePanel methodsFor: 'GUI building' stamp: 'KenD 22/Apr/2026 13:24:03'!
+!IChingResponsePanel methodsFor: 'GUI building' stamp: 'KenD 28/Apr/2026 18:05:06'!
 newRowFormAndTrigramNames: aHexagram
 
-	| rowLayout image colLayout |
+	| rowLayout image colLayout hexImageSize |
 	rowLayout  := LayoutMorph newRow.
-	image := ImageMorph new :: image: (aHexagram form magnifyTo: 64@64).
+	hexImageSize := 4 * (Preferences at: #defaultFontSize).
+	image := ImageMorph new :: image: (aHexagram form magnifyTo: hexImageSize @ hexImageSize).
 	rowLayout 
 		addMorph: image 
 		layoutSpec: (LayoutSizeSpec proportionalWidth: 1.0 proportionalHeight: 0.01) ::
@@ -11270,11 +11271,11 @@ fontPreferenceChanged
 	self class fontPrefereneChanged 
 	! !
 
-!IChingResponsePanel methodsFor: 'change reporting' stamp: 'KenD 20/Apr/2026 20:48:04'!
+!IChingResponsePanel methodsFor: 'change reporting' stamp: 'KenD 28/Apr/2026 18:15:28'!
 minTextWidth
 
-	"36 characters at current font"
-	^(ChineseFont widthOf: $乾) * 36
+	"32 characters at current font"
+	^(ChineseFont widthOf: $乾) * 32
 ! !
 
 !IChingResponsePanel class methodsFor: 'new-morph participation' stamp: 'KenD 16/Jan/2022 15:35:01'!

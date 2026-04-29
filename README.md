@@ -73,14 +73,13 @@ Chinese characters require Unicode to display.
 
 To view a translation of the bronze age text in Cuis, 
 open or load IChing.txt into tha TextEditor, select All, 
-change font (cmd-k).
-"pingfang-sc-regular.ttf" font shows as "PingFang SC".
+change font (cmd-k) to "Taipei Sanc TC".
 
 You can also require 'StyledIChing' and
 ````smalltalk
   IChingText openStyledTextIChing.
 ````
-to view in the StyledText Editor.
+to view a translation of the bronze aged text in the StyledText Editor.
 
 A very interesting observation of hexagram structure is at
   https://www.yijing.nl/structures/Gritter.html   

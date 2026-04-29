@@ -1,7 +1,7 @@
 # I Ching -- Book of Changes
 Operational Mechanics for the Book of Changes
 
-
+````
 書不盡言
 Writing cannot express words completely.
 言不盡意
@@ -13,7 +13,7 @@ The sages set up the images to express their thoughts completely;
 they derived the hexagrams in order to express the true and false.
 繫辭以盡其言
 Then they appended judgements and so could express their words completely.
-
+````
 
 The Book of Changes
 (I Ching 易經 =Changes Classic, or Chou I 周易 =Zhou Changes)

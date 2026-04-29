@@ -1,8 +1,8 @@
-'From Cuis7.7 [latest update: #7880] on 27 April 2026 at 3:14:03 pm'!
+'From Cuis7.7 [latest update: #7880] on 28 April 2026 at 5:34:43 pm'!
 'Description Book of Changes [I Ching] exploration.
 
 Note HexaGram class comment.'!
-!provides: 'IChing' 1 61!
+!provides: 'IChing' 1 62!
 !requires: 'Cuis-Base' 77 7872 nil!
 !requires: 'UI-Panel' 1 19 nil!
 !requires: 'Graphics-Files-Additional' 1 24 nil!
@@ -116,23 +116,36 @@ IChingResponsePanel class
 !Hexagram commentStamp: '<historical>' prior: 0!
 The third discernment is among compositions of preexisting categories.
 
-Coin Casting:
+Coin Casting (easy):
+  Take 3 (preferebly old) coins.  Decide heads=3, tails=2.
+  Build lines from the bottom up.
+  Hold your question in mind. Toss the coins and note:
+    3 * number of heads
+    2 * number of tails
+This yields a line of 6, 7, 8, or 9.
+  6 and 8 are broken/yin.
+  7 and 9 are solid/yang
+Do five more times and build up hexagram from the bottom.
+If 1st coin toss yields a valie of 8, second of 9, then 6, 7, 8, 8
 
- (HexaGram fromArray: #( 8 9 6 7 8 8 )) hexagramForChange name.
- Hexagram cast name.
+To view:
+  IChingResponsePanel forHexagram: (Hexagram fromArray: #(8 9 6 7 8 9)).
+
+Or you can get the coimputer to do this for you using (Hexagram cast):
+  IChingResponsePanel forHexagram: (Hexagram cast).
 
 Gritter Pattern: Gert Gritter noted a pattern based upon hexagram symmetry.
   https://www.yijing.nl/structures/Gritter.html
 
 Most hexagrams are paired with their image mirrored about their center.
 The King Wen pattern:
-    HexaGram kingWenImage openInWorld.
+    Hexagram kingWenImage openInWorld.
 
 Marking Special hexagram pairs which are the same or inverses:
-    HexaGram kingWenPlusSpecialsImage openInWorld.
+    Hexagram kingWenPlusSpecialsImage openInWorld.
 
 And rearranging a bit with the Specials down the center:
-    HexaGram gritterImage openInWorld.
+    Hexagram gritterImage openInWorld.
 
 Number patterns mirror internal numeracy:
   6 - Old      Yin     [changing line]
@@ -205,7 +218,8 @@ Some are special.
 !IChingResponsePanel commentStamp: '<historical>' prior: 0!
 I display a hexagram, including its changes.
 
-(HexagramDisplayPanel forHexagram: (HexaGram cast)) openInWorld.!
+  IChingResponsePanel forHexagram: (Hexagram cast).
+!
 
 !Hexagram methodsFor: 'accessing' stamp: 'KenD 20/Apr/2026 13:09:08'!
 changedLinesDescription

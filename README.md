@@ -1,11 +1,19 @@
 # I Ching -- Book of Changes
 Operational Mechanics for the Book of Changes
 
-````smalltalk
-  Feature require: 'IChing'.
-  IChingResponsePanel forHexagram: (Hexagram cast).
-  "OR WorldMenu -> New Morph.. --> --> IChingResponsePanel"
-````
+
+書不盡言
+Writing cannot express words completely.
+言不盡意
+Words cannot express thoughts completely.
+...
+聖人立象以盡意
+The sages set up the images to express their thoughts completely;
+設卦以盡情偽
+they derived the hexagrams in order to express the true and false.
+繫辭以盡其言
+Then they appended judgements and so could express their words completely.
+
 
 The Book of Changes
 (I Ching 易經 =Changes Classic, or Chou I 周易 =Zhou Changes)
@@ -34,6 +42,13 @@ One usually starts being agitated/concerned about something.
 - Posing a terse question requires some focus.
 - Dividing bundles of Yarrow sticks or casting coins is a calming ritual.
 - Contemplating the resulting images leads to lateral thinking and widens one's point of view.
+
+
+````smalltalk
+  Feature require: 'IChing'.
+  IChingResponsePanel forHexagram: (Hexagram cast).
+  "OR WorldMenu -> New Morph.. --> --> IChingResponsePanel"
+````
 
 So you really don't have to have a specific set of beliefs about doing this to derive the benefit: more flexible thinking and calming effect similar to Japanese tea ceremony.
 

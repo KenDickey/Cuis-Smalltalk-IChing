@@ -1,8 +1,8 @@
-'From Cuis7.7 [latest update: #7899] on 1 May 2026 at 2:25:14 pm'!
+'From Cuis7.7 [latest update: #7899] on 1 May 2026 at 2:51:04 pm'!
 'Description Book of Changes [I Ching] exploration.
 
 Note HexaGram class comment.'!
-!provides: 'IChing' 1 67!
+!provides: 'IChing' 1 68!
 !requires: 'Cuis-Base' 77 7872 nil!
 !requires: 'UI-Panel' 1 19 nil!
 !requires: 'Graphics-Files-Additional' 1 24 nil!
@@ -499,7 +499,7 @@ initializeBinaryCode
 	BinaryCode := #(63 0 17 34 23 58 2 16 55 59 7 56 61 47 4 8 25 38 3 48 41 37 32 1 57 39 33 30 18 45 28 14 60 15 40 5 53 43 20 10 35 49 31 62 24 6 26 22 29 46 9 36 52 11 13 44 54 27 50 19 51 12 21 42)
 	! !
 
-!Hexagram class methodsFor: 'class initialization' stamp: 'KenD 12/Apr/2026 15:51:37'!
+!Hexagram class methodsFor: 'class initialization' stamp: 'KenD 1/May/2026 14:50:47'!
 initializeClassicText
 
 	"Chinese received text"
@@ -512,7 +512,7 @@ initializeClassicText
 '九二 見龍在田。利見大人'
 '九三 君子終日乾乾。夕惕若厲。无咎'
 '九四 或躍在淵。无咎'
-'九五 飛龍在天。利見大人'å˚
+'九五 飛龍在天。利見大人'
 '上九 亢龍有悔'
 '用九 見羣龍无首。吉'
 
@@ -576,7 +576,7 @@ initializeClassicText
 '初六 有孚比之。无咎。有孚盈缶。終來有它吉。'
 '六二 比之自內。貞吉。'
 '六三 比之匪人。'
-'六四 外比之。貞吉。x1'
+'六四 外比之。貞吉。'
 '九五 顯比。王用三驅。失前禽。邑人不誡。吉。'
 '上六 比之无首。凶。'
 

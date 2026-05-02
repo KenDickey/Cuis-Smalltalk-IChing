@@ -1,8 +1,8 @@
-'From Cuis7.7 [latest update: #7899] on 1 May 2026 at 2:51:04 pm'!
+'From Cuis7.7 [latest update: #7899] on 2 May 2026 at 12:56:25 pm'!
 'Description Book of Changes [I Ching] exploration.
 
 Note HexaGram class comment.'!
-!provides: 'IChing' 1 68!
+!provides: 'IChing' 1 69!
 !requires: 'Cuis-Base' 77 7872 nil!
 !requires: 'UI-Panel' 1 19 nil!
 !requires: 'Graphics-Files-Additional' 1 24 nil!
@@ -219,7 +219,8 @@ Some are special.
 I display a hexagram, including its changes.
 
   IChingResponsePanel forHexagram: (Hexagram cast).
-!
+  IChingResponsePanel forHexagram: (Hexagram thresholdFromKingWenIndex: 62). "all lines chage"
+  IChingResponsePanel forHexagram: (Hexagram fromArray: #(8 8 7 7 8 8)). "62: no lines change"!
 
 !Hexagram methodsFor: 'accessing' stamp: 'KenD 20/Apr/2026 13:09:08'!
 changedLinesDescription

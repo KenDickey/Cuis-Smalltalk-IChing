@@ -1,6 +1,6 @@
-'From Cuis7.7 [latest update: #7880] on 29 April 2026 at 1:29:40 pm'!
+'From Cuis7.7 [latest update: #7899] on 6 May 2026 at 8:42:35 am'!
 'Description Ken''s translation for StyledText Editor'!
-!provides: 'StyledText-IChing' 1 3!
+!provides: 'StyledText-IChing' 1 4!
 !requires: 'StyledText' 1 78 nil!
 !requires: 'IChing' 1 64 nil!
 SystemOrganization addCategory: #'StyledText-IChing'!
@@ -38,29 +38,36 @@ openStyledTextIChing
 	STETheme beCurrent.
 	^self new open: 'Kens I Ching'! !
 
-!StyleSet methodsFor: '*StyledText-IChing' stamp: 'KenD 29/Apr/2026 13:15:17'!
+!StyleSet methodsFor: '*StyledText-IChing' stamp: 'KenD 6/May/2026 08:41:11'!
 createIChingCharacterStyleSet
 	"Build one of the many possible sets of Styles. Maybe other methods like this will be added."
-	| title name plainStyle banner fontFamily familyName |
+	| title name plainStyle banner fontFamily familyName defaultSize |
 
 	familyName := 'Taipei Sans TC Beta'. 
 	fontFamily := FontFamily familyNamed:  familyName.  "Loaded by IChingPackage> prePackageInstall".
+	defaultSize := Preferences at: #defaultFontSize.
 	
 	title := self characterStyleNamedOrNew: 'Title'.
-	title privateFamilyName: familyName pointSize: 40 emphasis: AbstractFont boldCode color: Color black.
+	title privateFamilyName: familyName 
+		pointSize: (2 * defaultSize) rounded
+		emphasis: AbstractFont boldCode 
+		color: Color black.
 
 	banner := self characterStyleNamedOrNew: 'Hexagram Banner'.
-	banner privateFamilyName: familyName pointSize: 32 emphasis: AbstractFont boldCode color: Color black.
+	banner privateFamilyName: familyName 
+			pointSize:  (1.5 * defaultSize) rounded
+			emphasis: AbstractFont boldCode 
+			color: Color black.
 
 	name := self characterStyleNamedOrNew: 'Hexagram Name'.
 	name privateFamilyName: familyName 
-			pointSize: 40 
+			pointSize: (2 * defaultSize) rounded
 			emphasis: AbstractFont boldCode 
 			color: Color blue darker.
 
 	plainStyle := self characterStyleNamedOrNew: 'Plain'.
 	plainStyle privateFamilyName: familyName
-			pointSize: 12
+			pointSize: (Preferences at: #defaultFontSize)
 			emphasis: AbstractFont normalCode 
 			color: Color black.
 

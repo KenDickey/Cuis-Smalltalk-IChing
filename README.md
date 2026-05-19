@@ -102,6 +102,9 @@ I particularly like a recent reinterpretation:
 Four translations are available at
   http://www.russellcottrell.com/VirtualYarrowStalks/
 
+Most complete (encyclopedic) reference to the bronze age text:
+  https://www.hermetica.info/Yijing1+2.pdf
+
 Chinese characters require Unicode to display.
 
 To view a translation of the bronze age text in Cuis, 

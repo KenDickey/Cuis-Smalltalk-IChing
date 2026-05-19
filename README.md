@@ -43,14 +43,47 @@ One usually starts being agitated/concerned about something.
 - Dividing bundles of Yarrow sticks or casting coins is a calming ritual.
 - Contemplating the resulting images leads to lateral thinking and widens one's point of view.
 
+_The Coin method_
 
+Basically, write down a clear question of importance to you.
+
+Take 3 coins.  Choose sides (e.g heads=3, tails=2).
+
+Build up 6 lines from bottom to top.
+
+Cast coins. Count.  6 and 8 are broken/split "yin" lines; 7 and 9 are solid "yang" lines.
+
+Look up the hexagram and read about it -- the current situation.
+
+If you have lines valued 6 or 9, these "extremes" count as changing lines; read the line comments for these.
+
+Now make up a second hexagram with the changing lines reversed (broken<->solid) and read the commentary on the new  hexagram.
+
+This second hexagram is the direction of change from your current situation.
+
+E.g. bottom to top: 7 6 7 9 7 8
+````
+8 ---   --- top
+7 --------- 5th
+9 ----X---- 4th
+7 --------- 3rd
+6 --- O --- 2nd
+7 --------- first
+````
+````Smalltalk
+ IChingResponsePanel forHexagram: (Hexagram fromArray: #( 7 6 7 9 7 8 )).
+````
+Should yield a panel showing Hexagram 49 changing to Hexagram 5.
+
+
+Or the easy way:
 ````smalltalk
   Feature require: 'IChing'.
   IChingResponsePanel forHexagram: (Hexagram cast).
   "OR WorldMenu -> New Morph.. --> --> IChingResponsePanel"
 ````
 
-So you really don't have to have a specific set of beliefs about doing this to derive the benefit: more flexible thinking and calming effect similar to Japanese tea ceremony.
+You really don't have to have a specific set of beliefs about doing this to derive the benefit: more flexible thinking and calming effect similar to Japanese tea ceremony.
 
 The code here yields text derived from the  Wilhelm Baynes translation:
   https://clovemedia.github.io/i_ching

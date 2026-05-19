@@ -63,12 +63,12 @@ This second hexagram is the direction of change from your current situation.
 
 E.g. bottom to top: 7 6 7 9 7 8
 ````
-8 ---   --- top
-7 --------- 5th
-9 ----X---- 4th
-7 --------- 3rd
-6 --- O --- 2nd
-7 --------- first
+8 ===   === top
+7 ========= 5th
+9 ====X==== 4th
+7 ========= 3rd
+6 === O === 2nd
+7 ========= first
 ````
 ````Smalltalk
  IChingResponsePanel forHexagram: (Hexagram fromArray: #( 7 6 7 9 7 8 )).

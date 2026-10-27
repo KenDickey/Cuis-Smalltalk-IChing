@@ -2,10 +2,10 @@
 'Description Book of Changes [I Ching] exploration.
 
 Note HexaGram class comment.'!
-!provides: 'IChing' 1 69!
-!requires: 'Cuis-Base' 77 7872 nil!
-!requires: 'UI-Panel' 1 19 nil!
-!requires: 'Graphics-Files-Additional' 1 24 nil!
+!provides: 'IChing' '1.69.0'!
+!requires: 'Cuis-Base' '7.7.7872' '7.*.*'!
+!requires: 'UI-Panel' '1.19.0' '1.*.*'!
+!requires: 'Graphics-Files-Additional' '1.24.0' '1.*.*'!
 SystemOrganization addCategory: #IChing!
 
 

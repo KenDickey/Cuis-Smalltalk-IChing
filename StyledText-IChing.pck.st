@@ -1,8 +1,8 @@
 'From Cuis7.7 [latest update: #7899] on 6 May 2026 at 8:42:35 am'!
 'Description Ken''s translation for StyledText Editor'!
-!provides: 'StyledText-IChing' 1 4!
-!requires: 'StyledText' 1 78 nil!
-!requires: 'IChing' 1 64 nil!
+!provides: 'StyledText-IChing' '1.4.0'!
+!requires: 'StyledText' '1.78.0' '1.*.*'!
+!requires: 'IChing' '1.64.0' '1.*.*'!
 SystemOrganization addCategory: #'StyledText-IChing'!
 
 
